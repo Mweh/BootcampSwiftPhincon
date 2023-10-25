@@ -204,8 +204,7 @@
                         <outlet property="email" destination="iTW-qZ-7iP" id="5Ow-n1-fk8"/>
                         <outlet property="emailBorder" destination="OXZ-ot-zzu" id="R7k-qS-AbA"/>
                         <outlet property="imageProfile" destination="mtu-8c-vCW" id="Qkd-zT-fdE"/>
-                        <outlet property="mailInfo" destination="VGR-MM-cxG" id="4TD-Oe-joN"/>
-                        <outlet property="name" destination="rlN-MI-qC9" id="Ssd-uI-8df"/>
+                        <outlet property="name" destination="rlN-MI-qC9" id="KKd-aE-9O8"/>
                         <outlet property="phoneBorder" destination="Tmd-q4-uSi" id="Tnu-LZ-24a"/>
                         <outlet property="viewBottom" destination="Du3-MX-XFl" id="cBw-8Z-eBv"/>
                     </connections>
