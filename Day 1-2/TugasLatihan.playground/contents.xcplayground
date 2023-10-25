@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='01 var constant'/>
+        <page name='02 int double'/>
+        <page name='03 boolean'/>
+        <page name='04 string interpolation'/>
+        <page name='05 CP1 celciusToFahrenheit'/>
+        <page name='06 Arrays'/>
+        <page name='07 dictionary'/>
+        <page name='08 set'/>
+        <page name='09 enum'/>
+        <page name='10 CP2 arraysContains'/>
+        <page name='11 if 3 conditions'/>
+        <page name='12 if enum'/>
+        <page name='13 switch case'/>
+        <page name='14 ternary operator'/>
+        <page name='15 loop'/>
+        <page name='16 CP3 Fizz BuzzFizzBuzz'/>
+        <page name='17 func yugi game'/>
+        <page name='17_1 func challenge1'/>
+        <page name='18 CP4 throw'/>
+        <page name='19 closure yugi modifed'/>
+        <page name='20 CP5 closure'/>
+        <page name='21 struct akatsuki'/>
+        <page name='22 property dynamically set get'/>
+        <page name='23 property observer didSet willSet'/>
+        <page name='24 custom initializers'/>
+        <page name='25 static properties method'/>
+        <page name='26 CP6 struct car'/>
+        <page name='27 class final inheritance override superInit'/>
+        <page name='28 copy class'/>
+        <page name='29 CP7 class animal dog cat'/>
+        <page name='30 protocol no27 modified'/>
+        <page name='31 protocol used as type in parameter'/>
+        <page name='32 opaque return types'/>
+        <page name='33 extensions'/>
+        <page name='34 extension protocol'/>
+        <page name='35 CP8 extension protocol '/>
+        <page name='36 optional'/>
+        <page name='37 handle func failure with opt'/>
+        <page name='38 CP9 optional func 1 line'/>
+        <page name='0001 ATM Machine'/>
+        <page name='0002 Throws'/>
+    </pages>
+</playground>
