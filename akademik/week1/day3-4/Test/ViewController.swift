@@ -18,10 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var companyBorder: UIView!
     @IBOutlet weak var viewBottom: UIView!
     
-    @IBAction func thirdXIB(_ sender: Any) {
-        let vc = ThirdViewXIB()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     @IBAction func btnViewStory(_ sender: Any) { // storyboard Navigation
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationViewController = storyboard.instantiateViewController(withIdentifier: "secondViewStory")
@@ -30,50 +26,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapBtn: UIButton!
     @IBAction func seconBtnXIB(_ sender: Any) { // XIB Navigation
         let vc = SecondViewXIB()
-        self.navigationController?.pushViewController(vc, animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
-    //    @IBAction func seconXIBBtn(_ sender: Any) {
-    //        let vc = SecondViewXIB()
-    //        self.navigationController?.pushViewController(vc, animated: true)
-    //    }
+//    @IBAction func seconXIBBtn(_ sender: Any) {
+//        let vc = SecondViewXIB()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
     
     @IBAction func secondNaviButtonView(_ sender: Any) { // Segue Navigation
         performSegue(withIdentifier: "SecondViewController", sender: self)
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageProfile.setImage(fromURL: "https://tinyurl.com/yxdqvz88") // Steve jobs
         
-        //        emailBorder.addBorder()
-        //        phoneBorder.addBorder()
-        //        companyBorder.addBorder()
-        [emailBorder, phoneBorder, companyBorder].map{ $0.addBorder()}
+//        emailBorder.addBorder()
+//        phoneBorder.addBorder()
+//        companyBorder.addBorder()
+        [emailBorder, phoneBorder, companyBorder].map{ item in item.addBorder()}
         
         viewBottom.layer.cornerRadius = self.viewBottom.frame.size.width / 10
         
         tapBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside) // Segue Navigation
-        
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
-        imageProfile.addGestureRecognizer(tapGR)
-        imageProfile.isUserInteractionEnabled = true
     }
     
     @objc func buttonTapped() {
         performSegue(withIdentifier: "SecondViewController", sender: self)
-    }
-    
-    @objc func imageTapped(sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            print("UIImageView tapped")
-            let vc = ThirdViewXIB()
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-            
-        }
     }
 }
 

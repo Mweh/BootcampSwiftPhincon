@@ -16,8 +16,6 @@
 		CDBDE66F2AE9FB9700B6B779 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */; };
 		CDBDE6742AEA03DE00B6B779 /* SecondViewXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE6722AEA03DE00B6B779 /* SecondViewXIB.swift */; };
 		CDBDE6752AEA03DE00B6B779 /* SecondViewXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBDE6732AEA03DE00B6B779 /* SecondViewXIB.xib */; };
-		CDBDE6782AEA1ADD00B6B779 /* ThirdViewXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */; };
-		CDBDE6792AEA1ADD00B6B779 /* ThirdViewXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +30,6 @@
 		CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CDBDE6722AEA03DE00B6B779 /* SecondViewXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewXIB.swift; sourceTree = "<group>"; };
 		CDBDE6732AEA03DE00B6B779 /* SecondViewXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewXIB.xib; sourceTree = "<group>"; };
-		CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewXIB.swift; sourceTree = "<group>"; };
-		CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewXIB.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +65,6 @@
 				CDBDE6592AE8E9C800B6B779 /* AppDelegate.swift */,
 				CDBDE65B2AE8E9C800B6B779 /* SceneDelegate.swift */,
 				CDBDE65D2AE8E9C800B6B779 /* ViewController.swift */,
-				CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */,
-				CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */,
 				CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */,
 				CDBDE65F2AE8E9C800B6B779 /* Main.storyboard */,
 				CDBDE6722AEA03DE00B6B779 /* SecondViewXIB.swift */,
@@ -144,7 +138,6 @@
 				CDBDE6662AE8E9CA00B6B779 /* LaunchScreen.storyboard in Resources */,
 				CDBDE6632AE8E9CA00B6B779 /* Assets.xcassets in Resources */,
 				CDBDE6612AE8E9C800B6B779 /* Main.storyboard in Resources */,
-				CDBDE6792AEA1ADD00B6B779 /* ThirdViewXIB.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +150,6 @@
 			files = (
 				CDBDE66F2AE9FB9700B6B779 /* SecondViewController.swift in Sources */,
 				CDBDE65E2AE8E9C800B6B779 /* ViewController.swift in Sources */,
-				CDBDE6782AEA1ADD00B6B779 /* ThirdViewXIB.swift in Sources */,
 				CDBDE65A2AE8E9C800B6B779 /* AppDelegate.swift in Sources */,
 				CDBDE65C2AE8E9C800B6B779 /* SceneDelegate.swift in Sources */,
 				CDBDE6742AEA03DE00B6B779 /* SecondViewXIB.swift in Sources */,
