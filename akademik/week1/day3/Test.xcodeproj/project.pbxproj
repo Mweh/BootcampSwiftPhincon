@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1631272AEA621500995EB9 /* ThirdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1631252AEA621500995EB9 /* ThirdViewCell.swift */; };
+		CD1631282AEA621500995EB9 /* ThirdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1631262AEA621500995EB9 /* ThirdViewCell.xib */; };
 		CDBDE65A2AE8E9C800B6B779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE6592AE8E9C800B6B779 /* AppDelegate.swift */; };
 		CDBDE65C2AE8E9C800B6B779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE65B2AE8E9C800B6B779 /* SceneDelegate.swift */; };
 		CDBDE65E2AE8E9C800B6B779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDE65D2AE8E9C800B6B779 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD1631252AEA621500995EB9 /* ThirdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewCell.swift; sourceTree = "<group>"; };
+		CD1631262AEA621500995EB9 /* ThirdViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewCell.xib; sourceTree = "<group>"; };
 		CDBDE6562AE8E9C800B6B779 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBDE6592AE8E9C800B6B779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDBDE65B2AE8E9C800B6B779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		CD1631232AEA532D00995EB9 /* ThirdViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CD1631292AEA621900995EB9 /* ThirdCell */,
 				CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */,
 				CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */,
 			);
@@ -140,6 +145,15 @@
 				CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */,
 			);
 			path = SecondViewController;
+			sourceTree = "<group>";
+		};
+		CD1631292AEA621900995EB9 /* ThirdCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD1631252AEA621500995EB9 /* ThirdViewCell.swift */,
+				CD1631262AEA621500995EB9 /* ThirdViewCell.xib */,
+			);
+			path = ThirdCell;
 			sourceTree = "<group>";
 		};
 		CDBDE64D2AE8E9C700B6B779 = {
@@ -230,6 +244,7 @@
 			files = (
 				CDBDE6752AEA03DE00B6B779 /* SecondViewXIB.xib in Resources */,
 				CDBDE6662AE8E9CA00B6B779 /* LaunchScreen.storyboard in Resources */,
+				CD1631282AEA621500995EB9 /* ThirdViewCell.xib in Resources */,
 				CDBDE6632AE8E9CA00B6B779 /* Assets.xcassets in Resources */,
 				CDBDE6612AE8E9C800B6B779 /* Main.storyboard in Resources */,
 				CDBDE6792AEA1ADD00B6B779 /* ThirdViewXIB.xib in Resources */,
@@ -245,6 +260,7 @@
 			files = (
 				CDBDE66F2AE9FB9700B6B779 /* SecondViewController.swift in Sources */,
 				CDBDE65E2AE8E9C800B6B779 /* ViewController.swift in Sources */,
+				CD1631272AEA621500995EB9 /* ThirdViewCell.swift in Sources */,
 				CDBDE6782AEA1ADD00B6B779 /* ThirdViewXIB.swift in Sources */,
 				CDBDE65A2AE8E9C800B6B779 /* AppDelegate.swift in Sources */,
 				CDBDE65C2AE8E9C800B6B779 /* SceneDelegate.swift in Sources */,

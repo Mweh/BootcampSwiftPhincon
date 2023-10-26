@@ -71,8 +71,6 @@ class ViewController: UIViewController {
             print("UIImageView tapped")
             let vc = ThirdViewXIB()
             self.navigationController?.pushViewController(vc, animated: true)
-            
-            
         }
     }
 }
