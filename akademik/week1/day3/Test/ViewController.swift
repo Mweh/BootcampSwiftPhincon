@@ -18,16 +18,43 @@ class ViewController: UIViewController {
     @IBOutlet weak var companyBorder: UIView!
     @IBOutlet weak var viewBottom: UIView!
     
+    @IBAction func btnViewStory(_ sender: Any) { // storyboard Navigation
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "secondViewStory")
+        self.navigationController?.pushViewController(destinationViewController, animated: true)
+    }
+    @IBOutlet weak var tapBtn: UIButton!
+    @IBAction func seconBtnXIB(_ sender: Any) { // XIB Navigation
+        let vc = SecondViewXIB()
+                self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+//    @IBAction func seconXIBBtn(_ sender: Any) {
+//        let vc = SecondViewXIB()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+    
+    @IBAction func secondNaviButtonView(_ sender: Any) { // Segue Navigation
+        performSegue(withIdentifier: "SecondViewController", sender: self)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageProfile.setImage(fromURL: "https://tinyurl.com/yxdqvz88") // Steve jobs
         
-        emailBorder.addBorder()
-        phoneBorder.addBorder()
-        companyBorder.addBorder()
+//        emailBorder.addBorder()
+//        phoneBorder.addBorder()
+//        companyBorder.addBorder()
+        [emailBorder, phoneBorder, companyBorder].map{ item in item.addBorder()}
         
         viewBottom.layer.cornerRadius = self.viewBottom.frame.size.width / 10
+        
+        tapBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside) // Segue Navigation
+    }
+    
+    @objc func buttonTapped() {
+        performSegue(withIdentifier: "SecondViewController", sender: self)
     }
 }
 
@@ -37,6 +64,7 @@ extension UIView {
         self.layer.cornerRadius = self.frame.size.width / 30
         self.clipsToBounds = true
         self.layer.borderColor = UIColor.gray.cgColor
+        
     }
 }
 
