@@ -47,6 +47,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD16311A2AEA525700995EB9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE6592AE8E9C800B6B779 /* AppDelegate.swift */,
+				CDBDE65B2AE8E9C800B6B779 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CD16311B2AEA527800995EB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CD16311C2AEA528300995EB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CD16311E2AEA52AE00995EB9 /* Component */,
+				CD16311B2AEA527800995EB9 /* Extension */,
+				CD16311D2AEA529B00995EB9 /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CD16311D2AEA529B00995EB9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD16311E2AEA52AE00995EB9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		CD16311F2AEA52C700995EB9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE6622AE8E9CA00B6B779 /* Assets.xcassets */,
+				CDBDE6642AE8E9CA00B6B779 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CD1631202AEA52FA00995EB9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				CD1631212AEA531700995EB9 /* FirstViewController */,
+				CD1631242AEA536900995EB9 /* SecondViewController */,
+				CD1631222AEA532200995EB9 /* SecondViewXIB */,
+				CD1631232AEA532D00995EB9 /* ThirdViewController */,
+				CDBDE65F2AE8E9C800B6B779 /* Main.storyboard */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		CD1631212AEA531700995EB9 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE65D2AE8E9C800B6B779 /* ViewController.swift */,
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
+		CD1631222AEA532200995EB9 /* SecondViewXIB */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE6722AEA03DE00B6B779 /* SecondViewXIB.swift */,
+				CDBDE6732AEA03DE00B6B779 /* SecondViewXIB.xib */,
+			);
+			path = SecondViewXIB;
+			sourceTree = "<group>";
+		};
+		CD1631232AEA532D00995EB9 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */,
+				CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */,
+			);
+			path = ThirdViewController;
+			sourceTree = "<group>";
+		};
+		CD1631242AEA536900995EB9 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */,
+			);
+			path = SecondViewController;
+			sourceTree = "<group>";
+		};
 		CDBDE64D2AE8E9C700B6B779 = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +161,10 @@
 		CDBDE6582AE8E9C800B6B779 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				CDBDE6592AE8E9C800B6B779 /* AppDelegate.swift */,
-				CDBDE65B2AE8E9C800B6B779 /* SceneDelegate.swift */,
-				CDBDE65D2AE8E9C800B6B779 /* ViewController.swift */,
-				CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */,
-				CDBDE6772AEA1ADD00B6B779 /* ThirdViewXIB.xib */,
-				CDBDE66E2AE9FB9700B6B779 /* SecondViewController.swift */,
-				CDBDE65F2AE8E9C800B6B779 /* Main.storyboard */,
-				CDBDE6722AEA03DE00B6B779 /* SecondViewXIB.swift */,
-				CDBDE6732AEA03DE00B6B779 /* SecondViewXIB.xib */,
-				CDBDE6622AE8E9CA00B6B779 /* Assets.xcassets */,
-				CDBDE6642AE8E9CA00B6B779 /* LaunchScreen.storyboard */,
+				CD16311A2AEA525700995EB9 /* App */,
+				CD16311C2AEA528300995EB9 /* Common */,
+				CD16311F2AEA52C700995EB9 /* Resource */,
+				CD1631202AEA52FA00995EB9 /* Module */,
 				CDBDE6672AE8E9CA00B6B779 /* Info.plist */,
 			);
 			path = Test;
