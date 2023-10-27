@@ -35,22 +35,11 @@ class ViewController: UIViewController {
     
     
     
-    //    @IBAction func seconXIBBtn(_ sender: Any) {
-    //        let vc = SecondViewXIB()
-    //        self.navigationController?.pushViewController(vc, animated: true)
-    //    }
-    
-    @IBAction func secondNaviButtonView(_ sender: Any) { // Segue Navigation
-        performSegue(withIdentifier: "SecondViewController", sender: self)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageProfile.setImage(fromURL: "https://tinyurl.com/yxdqvz88") // Steve jobs
         
-        //        emailBorder.addBorder()
-        //        phoneBorder.addBorder()
-        //        companyBorder.addBorder()
         [emailBorder, phoneBorder, companyBorder].map{ $0.addBorder()}
         
         viewBottom.layer.cornerRadius = self.viewBottom.frame.size.width / 10
@@ -60,6 +49,23 @@ class ViewController: UIViewController {
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
         imageProfile.addGestureRecognizer(tapGR)
         imageProfile.isUserInteractionEnabled = true
+        
+        email.text = NSLocalizedString("welcome_screen_title", comment: "")
+    }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        about.text = NSLocalizedString("welcome_screen_title", comment: "")
+//            String(localized: "login_button")
+        print(NSLocalizedString("welcome_screen_title", comment: ""))
+        print(String(localized: "login_button")) // New in Xcode 13
+        print("""
+    \("welcome_screen_title")
+    
+    \("login_button")
+    """)
+        
+        return true
     }
     
     @objc func buttonTapped() {

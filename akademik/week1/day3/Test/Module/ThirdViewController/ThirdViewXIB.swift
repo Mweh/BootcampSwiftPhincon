@@ -18,13 +18,6 @@ class ThirdViewXIB: UIViewController {
                                        SectionData(title: "section dua", data: ListThirdEntity())
     ]
     
-//    var sectionData: [SectionData]{ num in
-//        var 
-//        for i in 1...5{
-//            SectionData(title: "section \(num)", data: ListThirdEntity())
-//        }
-//    }
-    
     var personData: [Person] = [] // blm terpakai
     
     @IBOutlet weak var tableView: UITableView!

@@ -23,6 +23,15 @@
 		CDD15ED72AEB4C87006287CA /* ListThirdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15ED62AEB4C87006287CA /* ListThirdEntity.swift */; };
 		CDD15EDB2AEB50BE006287CA /* PokeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15ED92AEB50BE006287CA /* PokeViewCell.swift */; };
 		CDD15EDC2AEB50BE006287CA /* PokeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EDA2AEB50BE006287CA /* PokeViewCell.xib */; };
+		CDD15EE12AEB735E006287CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EE32AEB735E006287CA /* Localizable.strings */; };
+		CDD15EE82AEB9853006287CA /* CollectionViewCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15EE62AEB9853006287CA /* CollectionViewCellCollectionViewController.swift */; };
+		CDD15EE92AEB9853006287CA /* CollectionViewCellCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EE72AEB9853006287CA /* CollectionViewCellCollectionViewController.xib */; };
+		CDD15EED2AEBA506006287CA /* ReusableFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15EEC2AEBA506006287CA /* ReusableFooter.swift */; };
+		CDD15EEF2AEBA5D2006287CA /* ReusableFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EEE2AEBA5D2006287CA /* ReusableFooter.xib */; };
+		CDD15EF52AEBAD49006287CA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15EF32AEBAD49006287CA /* CollectionViewController.swift */; };
+		CDD15EF62AEBAD49006287CA /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EF42AEBAD49006287CA /* CollectionViewController.xib */; };
+		CDD15EFA2AEBAD69006287CA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD15EF82AEBAD69006287CA /* CollectionViewCell.swift */; };
+		CDD15EFB2AEBAD69006287CA /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD15EF92AEBAD69006287CA /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +53,16 @@
 		CDD15ED62AEB4C87006287CA /* ListThirdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListThirdEntity.swift; sourceTree = "<group>"; };
 		CDD15ED92AEB50BE006287CA /* PokeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeViewCell.swift; sourceTree = "<group>"; };
 		CDD15EDA2AEB50BE006287CA /* PokeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeViewCell.xib; sourceTree = "<group>"; };
+		CDD15EE22AEB735E006287CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDD15EE42AEB7394006287CA /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDD15EE62AEB9853006287CA /* CollectionViewCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCollectionViewController.swift; sourceTree = "<group>"; };
+		CDD15EE72AEB9853006287CA /* CollectionViewCellCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCellCollectionViewController.xib; sourceTree = "<group>"; };
+		CDD15EEC2AEBA506006287CA /* ReusableFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFooter.swift; sourceTree = "<group>"; };
+		CDD15EEE2AEBA5D2006287CA /* ReusableFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableFooter.xib; sourceTree = "<group>"; };
+		CDD15EF32AEBAD49006287CA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CDD15EF42AEBAD49006287CA /* CollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
+		CDD15EF82AEBAD69006287CA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CDD15EF92AEBAD69006287CA /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +121,7 @@
 			children = (
 				CDBDE6622AE8E9CA00B6B779 /* Assets.xcassets */,
 				CDBDE6642AE8E9CA00B6B779 /* LaunchScreen.storyboard */,
+				CDD15EE32AEB735E006287CA /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -109,7 +129,8 @@
 		CD1631202AEA52FA00995EB9 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				CD1631212AEA531700995EB9 /* FirstViewController */,
+				CDD15EF02AEBAD14006287CA /* CollectionView */,
+				CDD15EEA2AEBA493006287CA /* ReusableView */,
 				CD1631242AEA536900995EB9 /* SecondViewController */,
 				CD1631222AEA532200995EB9 /* SecondViewXIB */,
 				CD1631232AEA532D00995EB9 /* ThirdViewController */,
@@ -138,6 +159,7 @@
 		CD1631232AEA532D00995EB9 /* ThirdViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CDD15EE52AEB9826006287CA /* CollectionView */,
 				CDD15ED82AEB5036006287CA /* PokemonCell */,
 				CD1631292AEA621900995EB9 /* ThirdCell */,
 				CDBDE6762AEA1ADD00B6B779 /* ThirdViewXIB.swift */,
@@ -201,6 +223,52 @@
 			path = PokemonCell;
 			sourceTree = "<group>";
 		};
+		CDD15EE52AEB9826006287CA /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDD15EE62AEB9853006287CA /* CollectionViewCellCollectionViewController.swift */,
+				CDD15EE72AEB9853006287CA /* CollectionViewCellCollectionViewController.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CDD15EEA2AEBA493006287CA /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				CDD15EEB2AEBA4B8006287CA /* ReusableFooter */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		CDD15EEB2AEBA4B8006287CA /* ReusableFooter */ = {
+			isa = PBXGroup;
+			children = (
+				CDD15EEC2AEBA506006287CA /* ReusableFooter.swift */,
+				CDD15EEE2AEBA5D2006287CA /* ReusableFooter.xib */,
+			);
+			path = ReusableFooter;
+			sourceTree = "<group>";
+		};
+		CDD15EF02AEBAD14006287CA /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CD1631212AEA531700995EB9 /* FirstViewController */,
+				CDD15EF72AEBAD4C006287CA /* CollectionViewCell */,
+				CDD15EF32AEBAD49006287CA /* CollectionViewController.swift */,
+				CDD15EF42AEBAD49006287CA /* CollectionViewController.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CDD15EF72AEBAD4C006287CA /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDD15EF82AEBAD69006287CA /* CollectionViewCell.swift */,
+				CDD15EF92AEBAD69006287CA /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +311,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = CDBDE64D2AE8E9C700B6B779;
 			productRefGroup = CDBDE6572AE8E9C800B6B779 /* Products */;
@@ -261,9 +330,14 @@
 			files = (
 				CDD15EDC2AEB50BE006287CA /* PokeViewCell.xib in Resources */,
 				CDBDE6752AEA03DE00B6B779 /* SecondViewXIB.xib in Resources */,
+				CDD15EFB2AEBAD69006287CA /* CollectionViewCell.xib in Resources */,
 				CDBDE6662AE8E9CA00B6B779 /* LaunchScreen.storyboard in Resources */,
 				CD1631282AEA621500995EB9 /* ThirdViewCell.xib in Resources */,
 				CDBDE6632AE8E9CA00B6B779 /* Assets.xcassets in Resources */,
+				CDD15EF62AEBAD49006287CA /* CollectionViewController.xib in Resources */,
+				CDD15EEF2AEBA5D2006287CA /* ReusableFooter.xib in Resources */,
+				CDD15EE92AEB9853006287CA /* CollectionViewCellCollectionViewController.xib in Resources */,
+				CDD15EE12AEB735E006287CA /* Localizable.strings in Resources */,
 				CDBDE6612AE8E9C800B6B779 /* Main.storyboard in Resources */,
 				CDBDE6792AEA1ADD00B6B779 /* ThirdViewXIB.xib in Resources */,
 			);
@@ -276,13 +350,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD15EF52AEBAD49006287CA /* CollectionViewController.swift in Sources */,
 				CDBDE66F2AE9FB9700B6B779 /* SecondViewController.swift in Sources */,
 				CDBDE65E2AE8E9C800B6B779 /* ViewController.swift in Sources */,
 				CDD15EDB2AEB50BE006287CA /* PokeViewCell.swift in Sources */,
+				CDD15EED2AEBA506006287CA /* ReusableFooter.swift in Sources */,
 				CD1631272AEA621500995EB9 /* ThirdViewCell.swift in Sources */,
 				CDBDE6782AEA1ADD00B6B779 /* ThirdViewXIB.swift in Sources */,
 				CDD15ED72AEB4C87006287CA /* ListThirdEntity.swift in Sources */,
+				CDD15EFA2AEBAD69006287CA /* CollectionViewCell.swift in Sources */,
 				CDBDE65A2AE8E9C800B6B779 /* AppDelegate.swift in Sources */,
+				CDD15EE82AEB9853006287CA /* CollectionViewCellCollectionViewController.swift in Sources */,
 				CDBDE65C2AE8E9C800B6B779 /* SceneDelegate.swift in Sources */,
 				CDBDE6742AEA03DE00B6B779 /* SecondViewXIB.swift in Sources */,
 			);
@@ -307,6 +385,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CDD15EE32AEB735E006287CA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDD15EE22AEB735E006287CA /* en */,
+				CDD15EE42AEB7394006287CA /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -315,6 +402,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -378,6 +466,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

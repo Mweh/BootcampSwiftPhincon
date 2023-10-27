@@ -8,7 +8,11 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBAction func collectionView(_ sender: Any) {
+        let vc = CollectionViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
