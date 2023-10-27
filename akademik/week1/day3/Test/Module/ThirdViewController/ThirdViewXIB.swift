@@ -8,13 +8,24 @@
 import UIKit
 
 class ThirdViewXIB: UIViewController {
-    var arraySatu: [String] {
-        return (1...6).map { "Customised Cell: \($0)" }
-    }
+    
+    var listThirdEntity = ListThirdEntity()
     
     var mainViewController = ViewController()
     var data: [String] = []
     
+    var sectionData: [SectionData] = [ SectionData(title: "section satu", data: ListThirdEntity()),
+                                       SectionData(title: "section dua", data: ListThirdEntity())
+    ]
+    
+//    var sectionData: [SectionData]{ num in
+//        var 
+//        for i in 1...5{
+//            SectionData(title: "section \(num)", data: ListThirdEntity())
+//        }
+//    }
+    
+    var personData: [Person] = [] // blm terpakai
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,60 +40,46 @@ class ThirdViewXIB: UIViewController {
         
         tableView.register(UINib(nibName: "ThirdViewCell", bundle: nil), forCellReuseIdentifier: "ThirdViewCell")
         setData()
+        
     }
     
     func setData() {
-        for i in 1...100 {
-            let item = "Regular list: \(i)"
-            data.append(item)
-        }
+        data = listThirdEntity.data
+        
     }
 }
 
 extension ThirdViewXIB: UITableViewDelegate, UITableViewDataSource{
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sectionData.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return arraySatu.count
-        case 1:
-            return data.count
-        default:
-            return 0
-        }
+//        switch section {
+//        case 0:
+//            return listThirdEntity.arraySatu.count // Use dataModel to get arraySatu
+//        case 1:
+//            return data.count // Use dataModel to get data
+//        default:
+//            return 0
+//        }
+        
+        return sectionData[section].data.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdViewCell", for: indexPath) as? ThirdViewCell {
-                cell.thirdCell.text = arraySatu[indexPath.row]
-                //                cell.laneAr.image = // how can add image from xcode built in like "\(arraySatu)lane.ar"
-                let imageName = "\(indexPath.row + 1).lane.ar"
-                cell.laneAr.image = UIImage(systemName: imageName)
-                return cell
-            }
-            return UITableViewCell()
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
-            cell.textLabel?.text = data[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdViewCell", for: indexPath) as? ThirdViewCell {
+            let data = sectionData[indexPath.section]
+            cell.thirdCell.text = data.data.data[indexPath.section]
+            let imageName = "\(indexPath.row + 1).lane.ar"
+            cell.laneAr.image = UIImage(systemName: imageName)
             return cell
-        default:
-            return UITableViewCell()
         }
+        return UITableViewCell()
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.section {
-//        case 0:
-//            return 100
-//        case 1:
-//            return 50
-//        default:
-//            return 0.0
-//        }
-//    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionData[section].title
+    }
+    
+    
 }
