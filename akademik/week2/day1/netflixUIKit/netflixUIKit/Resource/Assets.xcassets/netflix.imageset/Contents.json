@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Netflix-Logo.png",
       "idiom" : "universal"
     }
   ],

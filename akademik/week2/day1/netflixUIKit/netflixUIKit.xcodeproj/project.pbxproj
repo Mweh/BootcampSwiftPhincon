@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BD215CAFDF26B4855E9FDAD /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A12AEF38AA00140DFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4A02AEF38AA00140DFA /* ViewController.swift */; };
@@ -32,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E66B64694CAAEF44DE42400 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E9B23964A8CBE558624CD2 /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD215CAFDF26B4855E9FDAD /* Pods_netflixUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		607ECCCB6D5DDE2E9EAC1E6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD5DD4902AEF38AA00140DFA = {
 			isa = PBXGroup;
 			children = (
 				CD5DD49B2AEF38AA00140DFA /* netflixUIKit */,
 				CD5DD49A2AEF38AA00140DFA /* Products */,
+				D53A264A208A37DF9D31422B /* Pods */,
+				607ECCCB6D5DDE2E9EAC1E6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +226,16 @@
 			path = MoreViewController;
 			sourceTree = "<group>";
 		};
+		D53A264A208A37DF9D31422B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96E9B23964A8CBE558624CD2 /* Pods-netflixUIKit.debug.xcconfig */,
+				3E66B64694CAAEF44DE42400 /* Pods-netflixUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD5DD4AD2AEF38AB00140DFA /* Build configuration list for PBXNativeTarget "netflixUIKit" */;
 			buildPhases = (
+				D625758E190276B6B0405C3E /* [CP] Check Pods Manifest.lock */,
 				CD5DD4952AEF38AA00140DFA /* Sources */,
 				CD5DD4962AEF38AA00140DFA /* Frameworks */,
 				CD5DD4972AEF38AA00140DFA /* Resources */,
+				D67615C392FD8861A891C75B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +310,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D625758E190276B6B0405C3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-netflixUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D67615C392FD8861A891C75B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD5DD4952AEF38AA00140DFA /* Sources */ = {
@@ -443,6 +512,7 @@
 		};
 		CD5DD4AE2AEF38AB00140DFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96E9B23964A8CBE558624CD2 /* Pods-netflixUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +540,7 @@
 		};
 		CD5DD4AF2AEF38AB00140DFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E66B64694CAAEF44DE42400 /* Pods-netflixUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

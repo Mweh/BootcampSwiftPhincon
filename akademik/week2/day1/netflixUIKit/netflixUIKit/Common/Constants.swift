@@ -14,4 +14,8 @@ enum SFSymbol {
     static let comingSoonSymbol = UIImage(systemName: "play.rectangle.on.rectangle")
     static let downloadsSymbol = UIImage(systemName: "square.and.arrow.down")
     static let moreSymbol = UIImage(systemName: "line.3.horizontal")
+    
+    static func listCircle(_ number: Int) -> String {
+        "\(number).circle"
+    }
 }

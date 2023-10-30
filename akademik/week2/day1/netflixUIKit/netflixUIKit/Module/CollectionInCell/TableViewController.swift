@@ -45,7 +45,6 @@ class TableViewController: UITableViewController {
         switch tableViewCellType {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
-//            cell.label!.text = "VerticalCell"
             return cell
         case .HorizontalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
@@ -58,6 +57,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    
 }
 
 enum TableViewCellType: Int, CaseIterable {
