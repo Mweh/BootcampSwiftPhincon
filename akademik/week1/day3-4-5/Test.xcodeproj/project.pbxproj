@@ -129,6 +129,7 @@
 		CD1631202AEA52FA00995EB9 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CD1631212AEA531700995EB9 /* FirstViewController */,
 				CDD15EF02AEBAD14006287CA /* CollectionView */,
 				CDD15EEA2AEBA493006287CA /* ReusableView */,
 				CD1631242AEA536900995EB9 /* SecondViewController */,
@@ -252,7 +253,6 @@
 		CDD15EF02AEBAD14006287CA /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				CD1631212AEA531700995EB9 /* FirstViewController */,
 				CDD15EF72AEBAD4C006287CA /* CollectionViewCell */,
 				CDD15EF32AEBAD49006287CA /* CollectionViewController.swift */,
 				CDD15EF42AEBAD49006287CA /* CollectionViewController.xib */,
