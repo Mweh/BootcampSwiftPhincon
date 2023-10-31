@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="7Wf-ll-pTt" id="LDM-qJ-5kq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,17 +22,33 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLE-OR-BwM">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f6-An-Dyi">
-                            <rect key="frame" x="125" y="557" width="143" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f6-An-Dyi">
+                            <rect key="frame" x="125" y="547" width="143" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Ybf-Wm-n8D"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="CollectionInCell"/>
                             <connections>
                                 <action selector="toCollectionInCell:" destination="-1" eventType="touchUpInside" id="iMf-6y-mtd"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-ll-pTt" customClass="SearchBarReusableCustomView" customModule="netflixUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="41V-JK-iSF"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="7Wf-ll-pTt" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" id="Gev-YA-uAD"/>
+                        <constraint firstAttribute="bottom" secondItem="0f6-An-Dyi" secondAttribute="bottom" constant="167" id="OlZ-h4-4yo"/>
+                        <constraint firstAttribute="trailing" secondItem="7Wf-ll-pTt" secondAttribute="trailing" id="PW5-kk-47u"/>
+                        <constraint firstItem="7Wf-ll-pTt" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" id="iUx-rq-di5"/>
+                        <constraint firstItem="0f6-An-Dyi" firstAttribute="centerX" secondItem="XLE-OR-BwM" secondAttribute="centerX" id="t7h-Qe-irC"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -42,12 +59,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XLE-OR-BwM" secondAttribute="bottom" id="ca6-WC-jaA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XLE-OR-BwM" secondAttribute="trailing" id="k8O-Jq-BNO"/>
             </constraints>
-            <point key="canvasLocation" x="33" y="-11"/>
+            <point key="canvasLocation" x="32.824427480916029" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

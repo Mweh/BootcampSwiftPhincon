@@ -48,7 +48,7 @@
                                                 <constraint firstAttribute="width" constant="250" id="Yq9-ot-vGi"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                     </subviews>
                                 </stackView>

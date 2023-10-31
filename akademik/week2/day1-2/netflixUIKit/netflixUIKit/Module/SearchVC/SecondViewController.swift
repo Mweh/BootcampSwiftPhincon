@@ -8,15 +8,21 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var searchBar: SearchBarReusableCustomView!
+    
     @IBAction func toCollectionInCell(_ sender: Any) {
         let vc = TableViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UINavigationBar.appearance().isHidden = true
     }
 
 
