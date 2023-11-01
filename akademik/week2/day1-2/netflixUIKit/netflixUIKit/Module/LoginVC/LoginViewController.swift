@@ -6,28 +6,47 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    let vc = MainTabBarViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
+        self.view.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view.
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Hide the navigation bar
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Re-enable the navigation bar when leaving this view
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    @objc func googleSignInPressed(_ sender: UITapGestureRecognizer) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+            guard error == nil else { return }
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString
+            else { return }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            
+            print("Google Sign-In Success")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func buttonLogin(_ sender: Any) {
@@ -45,7 +64,6 @@ class LoginViewController: UIViewController {
         } else {
             // No stored user data
             // Show an error message
-            let vc = MainTabBarViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

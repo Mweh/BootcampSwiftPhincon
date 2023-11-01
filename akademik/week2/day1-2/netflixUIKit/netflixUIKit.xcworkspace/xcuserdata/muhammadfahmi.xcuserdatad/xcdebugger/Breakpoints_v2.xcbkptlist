@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "63F3747B-9E03-4D3E-92CE-34521C1C59F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "buttonLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "951F080B-B41B-433E-8C5E-81E57F3A0343"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "buttonLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "12152896-40AA-4692-9A18-EF398A64B616"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -46,42 +14,10 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "getUser()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "12152896-40AA-4692-9A18-EF398A64B616 - a97596346fdb7f87"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "netflixUIKit.LoginViewController.loginButtonPressed(Any) -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2/day1-2/netflixUIKit/netflixUIKit/Module/LoginVC/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1216">
-               </Location>
-               <Location
-                  uuid = "12152896-40AA-4692-9A18-EF398A64B616 - 87923dbecdbe6470"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "netflixUIKit.LoginViewController.getUser() -&gt; Swift.Optional&lt;(Swift.String, Swift.String)&gt;"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2/day1-2/netflixUIKit/netflixUIKit/Module/LoginVC/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "708">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,8 +30,8 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "getUser()"
             landmarkType = "7">
          </BreakpointContent>

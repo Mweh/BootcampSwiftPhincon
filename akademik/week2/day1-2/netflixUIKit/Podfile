@@ -11,5 +11,10 @@ target 'netflixUIKit' do
   pod 'lottie-ios'
   pod 'StepSlider'
   pod 'SkeletonView'
+  pod 'RxSwift'
+  
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
   
 end

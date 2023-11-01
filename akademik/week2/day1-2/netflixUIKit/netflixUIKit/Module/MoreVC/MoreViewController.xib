@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
-                <outlet property="label" destination="Owo-kO-6e2" id="sbQ-c0-Dek"/>
+                <outlet property="imageView" destination="53P-v2-iH0" id="ytL-c2-VD6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +19,67 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MoreViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owo-kO-6e2">
-                    <rect key="frame" x="205" y="416" width="151" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq4-iG-jAu">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="0ea-og-nAr">
+                            <rect key="frame" x="44" y="362" width="305.33333333333331" height="34.333333333333314"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-gF-ib7">
+                                    <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Import Gallery"/>
+                                    <connections>
+                                        <action selector="openGalleryPressed:" destination="-1" eventType="touchUpInside" id="vjU-4k-5in"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WC-zk-Lu4">
+                                    <rect key="frame" x="173.66666666666669" y="0.0" width="131.66666666666669" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Take Photo"/>
+                                    <connections>
+                                        <action selector="takePhotoPressed:" destination="-1" eventType="touchUpInside" id="Swk-Xy-hjP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53P-v2-iH0">
+                            <rect key="frame" x="8" y="27" width="377" height="288"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="288" id="6kM-ph-4y7"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-ls-Soc">
+                            <rect key="frame" x="16" y="654.66666666666663" width="90" height="34.333333333333371"/>
+                            <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Sign Out"/>
+                            <connections>
+                                <action selector="signOut:" destination="-1" eventType="touchUpInside" id="nLp-JA-1C0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="53P-v2-iH0" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leadingMargin" id="05Q-o8-1aD"/>
+                        <constraint firstItem="53P-v2-iH0" firstAttribute="top" secondItem="aq4-iG-jAu" secondAttribute="top" constant="27" id="0kA-iU-KlO"/>
+                        <constraint firstItem="53P-v2-iH0" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="CcU-aK-sCg"/>
+                        <constraint firstAttribute="bottom" secondItem="D4g-ls-Soc" secondAttribute="bottom" constant="70" id="IGY-XT-KZF"/>
+                        <constraint firstItem="0ea-og-nAr" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="TW6-AI-TFv"/>
+                        <constraint firstItem="0ea-og-nAr" firstAttribute="top" secondItem="53P-v2-iH0" secondAttribute="bottom" constant="47" id="TeM-89-Hzk"/>
+                        <constraint firstItem="D4g-ls-Soc" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="16" id="dC0-ef-0ph"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="118" y="-11"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aq4-iG-jAu" secondAttribute="trailing" id="F4W-Cm-nut"/>
+                <constraint firstItem="aq4-iG-jAu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fwG-6r-Sut"/>
+                <constraint firstItem="aq4-iG-jAu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lJz-3f-pR5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aq4-iG-jAu" secondAttribute="bottom" id="ve7-sN-UEC"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>

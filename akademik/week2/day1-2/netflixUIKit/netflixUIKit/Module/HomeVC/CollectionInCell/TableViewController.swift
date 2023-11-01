@@ -19,6 +19,7 @@ class TableViewController: UITableViewController {
         
         tblView.register(UINib(nibName: "HorizontalCell", bundle: nil), forCellReuseIdentifier: "HorizontalCell")
         tblView.register(UINib(nibName: "VerticalCell", bundle: nil), forCellReuseIdentifier: "VerticalCell")
+//        title = "Home"
         
     }
     // MARK: - Table view data source
@@ -40,6 +41,7 @@ class TableViewController: UITableViewController {
             return 1
         }
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCellType = TableViewCellType(rawValue: indexPath.section)
         switch tableViewCellType {
@@ -57,7 +59,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
     
 }
 

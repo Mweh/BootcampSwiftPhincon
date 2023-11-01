@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BD215CAFDF26B4855E9FDAD /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
@@ -15,6 +14,8 @@
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
 		CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */; };
 		CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */; };
+		CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */; };
+		CD60A63F2AF20F1F00B2E511 /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5B925BA96D77B38B5A50E8 /* Pods_netflixUIKit.framework */; };
 		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
 		CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */; };
 		CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */; };
@@ -40,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		3E66B64694CAAEF44DE42400 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
-		7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5B925BA96D77B38B5A50E8 /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E9B23964A8CBE558624CD2 /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		CD5DD4AA2AEF38AB00140DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD215CAFDF26B4855E9FDAD /* Pods_netflixUIKit.framework in Frameworks */,
+				CD60A63F2AF20F1F00B2E511 /* Pods_netflixUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +91,7 @@
 		607ECCCB6D5DDE2E9EAC1E6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FB366F61F447BB58A221642 /* Pods_netflixUIKit.framework */,
+				7A5B925BA96D77B38B5A50E8 /* Pods_netflixUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD5DD4B12AEF38B700140DFA /* Resource */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
+				CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */,
 			);
 			path = netflixUIKit;
 			sourceTree = "<group>";
@@ -156,7 +159,7 @@
 			children = (
 				CDCEABDB2AF0EC90004F37B8 /* SplashScreen */,
 				CD2C65112AEFB2130026B35B /* LoginVC */,
-				CD79F6AF2AEF82B700338C72 /* MainTabBarViewController.swift */,
+				CD60A6362AF1E89C00B2E511 /* MainTabVC */,
 				CDC05AEE2AF0AE7E00706AB7 /* HomeVC */,
 				CD5DD4B72AEF3ADE00140DFA /* SearchVC */,
 				CD5DD4B82AEF3AE400140DFA /* ComingSoonVC */,
@@ -182,6 +185,14 @@
 				CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */,
 			);
 			path = ComingSoonVC;
+			sourceTree = "<group>";
+		};
+		CD60A6362AF1E89C00B2E511 /* MainTabVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD79F6AF2AEF82B700338C72 /* MainTabBarViewController.swift */,
+			);
+			path = MainTabVC;
 			sourceTree = "<group>";
 		};
 		CD78336B2AEF3EBE0030AA43 /* CollectionInCell */ = {
@@ -366,6 +377,7 @@
 				CD79F6C02AEF844C00338C72 /* DownloadsViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
+				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +573,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7RK5YTXSM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -589,6 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7RK5YTXSM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

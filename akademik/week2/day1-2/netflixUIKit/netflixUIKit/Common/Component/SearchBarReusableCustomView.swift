@@ -33,7 +33,3 @@ class SearchBarReusableCustomView: UIView {
     }
     
 }
-//class ReusableFooter: UIView {
-//    @IBOutlet weak var containerView: UIView!
-//    @IBOutlet weak var footerText: UILabel!
-//}
