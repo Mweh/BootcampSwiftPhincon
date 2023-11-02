@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().isHidden = true
         self.window = window
         window.makeKeyAndVisible()
-        
+        window.tintColor = .systemRed /* or .orange on iOS < 13 */
       }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -71,8 +71,8 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         if let selectedData = dataTable?.results[indexPath.row] {
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.data = selectedData
+            detailViewController.hidesBottomBarWhenPushed = true // Show the tab bar when pushing DetailViewController
             navigationController?.pushViewController(detailViewController, animated: true)
-            UINavigationBar.appearance().isHidden = false
         }
     }
 

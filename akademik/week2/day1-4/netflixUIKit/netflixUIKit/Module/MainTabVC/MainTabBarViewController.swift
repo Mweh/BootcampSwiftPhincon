@@ -11,7 +11,6 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUITabBarItems()
     }
     

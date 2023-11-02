@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+
     
     @IBOutlet weak var labelMovie: UILabel!
     var data: ResultData?
@@ -15,16 +16,13 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tabBarController?.tabBar.isHidden = true
-        UINavigationBar.appearance().isHidden = false
         setupUp()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        UINavigationBar.appearance().isHidden = false
-    }
     override func viewDidAppear(_ animated: Bool) {
-        UINavigationBar.appearance().isHidden = false
+        super.viewDidAppear(animated)
+        hidesBottomBarWhenPushed = false // Show the tab bar when inside DetailViewController
     }
-
+    
     func setupUp(){
         if let data = data {
             // Use the data to populate your detail view
