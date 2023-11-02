@@ -15,17 +15,41 @@ class TableViewController: UITableViewController {
     let zoomAnimation = AnimationType.zoom(scale: 0.2)
     let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/2)
     
+    var dataTable: TMDBResponse? {
+        didSet {
+            tblView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureTable()
+        loadData()
+    }
+    
+    
+    func configureTable() {
         tblView.dataSource = self
         tblView.delegate = self
         
         tblView.register(UINib(nibName: "HorizontalCell", bundle: nil), forCellReuseIdentifier: "HorizontalCell")
         tblView.register(UINib(nibName: "VerticalCell", bundle: nil), forCellReuseIdentifier: "VerticalCell")
-        //        title = "Home"
-        
     }
+    
+    func loadData() {
+        APIManager.fetchPopularMovies { result in
+            switch result {
+            case .success(let tmdbResponse):
+                self.dataTable = tmdbResponse
+            case .failure(let error):
+                // Handle the error
+                print("Error fetching popular movies: \(error)")
+            }
+        }
+    }
+    
+    
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,17 +82,21 @@ class TableViewController: UITableViewController {
             
             return cell
         case .HorizontalCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
-            // Configure your HorizontalCell here
             
-            // Animate the HorizontalCell when it appears
-            UIView.animate(views: [cell], animations: [fromAnimation, rotateAnimation, zoomAnimation], delay: 0.3)
-            return cell
+            if let data = dataTable {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
+                
+                cell.dataCollection = data.results
+       
+                UIView.animate(views: [cell], animations: [fromAnimation, rotateAnimation, zoomAnimation], delay: 0.3)
+                return cell
+            }
+            return UITableViewCell()
+     
         default:
             return UITableViewCell()
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension

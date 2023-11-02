@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     let vc = MainTabBarViewController()
     
+//    var handle: AuthStateDidChangeListenerHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
@@ -79,6 +81,11 @@ class LoginViewController: UIViewController {
             return (username, password)
         }
         return nil
+    }
+    
+    @IBAction func buttonRegister(_ sender: Any) {
+        let vc = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

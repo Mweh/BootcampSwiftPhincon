@@ -80,21 +80,31 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX">
-                            <rect key="frame" x="20" y="561" width="353" height="62.666666666666629"/>
+                            <rect key="frame" x="20" y="561" width="353" height="76.666666666666629"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member yet? Start your free month!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL2-CY-fLu">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="19.333333333333332"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o68-TV-RJu">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="33.333333333333336"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Not a member yet? Start your free month!"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Not a member yet? Start your free month!">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="buttonRegister:" destination="-1" eventType="touchUpInside" id="j4Q-eD-Vyb"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L47-6c-2Wo">
-                                    <rect key="frame" x="0.0" y="43.333333333333371" width="353" height="19.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="57.333333333333378" width="353" height="19.333333333333336"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="L47-6c-2Wo" firstAttribute="top" secondItem="o68-TV-RJu" secondAttribute="bottom" constant="24.000000000000043" id="HJg-nu-eFi"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,6 +134,9 @@
     </objects>
     <resources>
         <image name="netflix" width="3000" height="2000"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

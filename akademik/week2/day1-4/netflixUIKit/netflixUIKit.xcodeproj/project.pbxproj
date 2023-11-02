@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD16E3062AF3538A00669456 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E3052AF3538A00669456 /* APIManager.swift */; };
+		CD16E3082AF35CBC00669456 /* TMDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E3072AF35CBC00669456 /* TMDBResponse.swift */; };
+		CD16E30C2AF36F6300669456 /* TableControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30B2AF36F6300669456 /* TableControllerViewModel.swift */; };
+		CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30E2AF37B9400669456 /* RegisterViewController.swift */; };
+		CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E30F2AF37B9400669456 /* RegisterViewController.xib */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
@@ -43,6 +48,11 @@
 		83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8AD6DC11A357D8394CE92E /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9F9C92B73F86A50AB327CE80 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		CD16E3052AF3538A00669456 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CD16E3072AF35CBC00669456 /* TMDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBResponse.swift; sourceTree = "<group>"; };
+		CD16E30B2AF36F6300669456 /* TableControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerViewModel.swift; sourceTree = "<group>"; };
+		CD16E30E2AF37B9400669456 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CD16E30F2AF37B9400669456 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +98,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD16E3022AF352C200669456 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD16E3042AF352E400669456 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD16E3042AF352E400669456 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD16E3052AF3538A00669456 /* APIManager.swift */,
+				CD16E3072AF35CBC00669456 /* TMDBResponse.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD16E3092AF36F4300669456 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD16E30B2AF36F6300669456 /* TableControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD16E30D2AF37B7400669456 /* RegisterVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD16E30E2AF37B9400669456 /* RegisterViewController.swift */,
+				CD16E30F2AF37B9400669456 /* RegisterViewController.xib */,
+			);
+			path = RegisterVC;
+			sourceTree = "<group>";
+		};
 		CD2C65112AEFB2130026B35B /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +165,7 @@
 				CD5DD4B02AEF38B100140DFA /* App */,
 				CD79F6AA2AEF806500338C72 /* Common */,
 				CD5DD4B22AEF38BC00140DFA /* Module */,
+				CD16E3022AF352C200669456 /* Network */,
 				CD5DD4B12AEF38B700140DFA /* Resource */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
 				CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */,
@@ -151,6 +196,7 @@
 			children = (
 				CDCEABDB2AF0EC90004F37B8 /* SplashScreen */,
 				CD2C65112AEFB2130026B35B /* LoginVC */,
+				CD16E30D2AF37B7400669456 /* RegisterVC */,
 				CD60A6362AF1E89C00B2E511 /* MainTabVC */,
 				CDC05AEE2AF0AE7E00706AB7 /* HomeVC */,
 				CD5DD4B72AEF3ADE00140DFA /* SearchVC */,
@@ -190,6 +236,7 @@
 		CD78336B2AEF3EBE0030AA43 /* CollectionInCell */ = {
 			isa = PBXGroup;
 			children = (
+				CD16E3092AF36F4300669456 /* ViewModel */,
 				CD7833702AEF3EEB0030AA43 /* Cell */,
 				CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */,
 				CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */,
@@ -375,6 +422,7 @@
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD79F6C02AEF844C00338C72 /* DownloadsViewController.xib in Resources */,
+				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
@@ -432,11 +480,15 @@
 			files = (
 				CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */,
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
+				CD16E3082AF35CBC00669456 /* TMDBResponse.swift in Sources */,
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
+				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CD79F6BF2AEF844C00338C72 /* DownloadsViewController.swift in Sources */,
+				CD16E3062AF3538A00669456 /* APIManager.swift in Sources */,
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
 				CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */,
 				CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */,
+				CD16E30C2AF36F6300669456 /* TableControllerViewModel.swift in Sources */,
 				CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */,
 				CD79F6B02AEF82B700338C72 /* MainTabBarViewController.swift in Sources */,
 				CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */,

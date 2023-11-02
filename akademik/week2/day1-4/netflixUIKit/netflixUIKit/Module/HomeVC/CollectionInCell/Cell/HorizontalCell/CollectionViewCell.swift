@@ -13,6 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var container: UIView!
     
+    
     let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/2)
 
     var isCircle = true // Initially, it's a circle
@@ -29,6 +30,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     @objc func handleTap() {
         toggleShape()
+
     }
     
     func toggleShape(){
@@ -46,4 +48,5 @@ class CollectionViewCell: UICollectionViewCell {
             isCircle = true
         }
     }
+    
 }

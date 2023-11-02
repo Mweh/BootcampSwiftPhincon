@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HorizontalCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var dataCollection: [ResultData] = []
+    
     var imageNames: [String] {
         return (1...10).map { "movie\($0)" } // Generates ["movie1", "movie2", ..., "movie20"]
     }
@@ -35,7 +39,7 @@ class HorizontalCell: UITableViewCell {
 
 extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageNames.count
+        return dataCollection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,9 +48,11 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         
         // Assuming you have an array of image names (e.g., "movie1", "movie2", etc.)
 
-        if indexPath.row < imageNames.count {
-            let imageName = imageNames[indexPath.row]
-            cell.movieImage.image = UIImage(named: imageName)
+        if indexPath.row < dataCollection.count {
+            let imageName = "https://image.tmdb.org/t/p/w500/\(dataCollection[indexPath.row].posterPath)"
+            
+            let url = URL(string: imageName)
+            cell.movieImage.kf.setImage(with: url)
         }
         
         return cell
