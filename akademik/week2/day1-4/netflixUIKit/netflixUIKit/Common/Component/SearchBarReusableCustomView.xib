@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,40 +15,40 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="62"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cvk-El-8cV">
-                    <rect key="frame" x="40" y="14" width="313" height="34.333333333333336"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EHM-KO-KvL">
-                            <rect key="frame" x="0.0" y="2" width="247.33333333333334" height="30"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-Za-vCw">
-                                    <rect key="frame" x="0.0" y="0.99999999999999822" width="20.333333333333332" height="28.333333333333336"/>
-                                    <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </imageView>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a show, movies, genre, e.t.c." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nab-P0-BPD">
-                                    <rect key="frame" x="25.333333333333314" y="0.0" width="222" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="LQG-0B-VFH"/>
-                                    </constraints>
-                                    <nil key="textColor"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                            </subviews>
-                        </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYu-Ty-C6K">
-                            <rect key="frame" x="267.33333333333331" y="0.0" width="45.666666666666686" height="34.333333333333336"/>
-                            <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
-                        </button>
-                    </subviews>
-                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-Za-vCw">
+                    <rect key="frame" x="16" y="17" width="30" height="28.333333333333336"/>
+                    <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="bxE-j4-6rb"/>
+                        <constraint firstAttribute="height" constant="30" id="kPy-zo-PsB"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYu-Ty-C6K">
+                    <rect key="frame" x="341" y="14" width="36" height="34.333333333333336"/>
+                    <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a show, movies, genre, e.t.c." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nab-P0-BPD">
+                    <rect key="frame" x="46" y="14" width="222" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="Ybm-Dg-WhI"/>
+                        <constraint firstAttribute="width" constant="222" id="fzO-cU-Ufw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cvk-El-8cV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dqu-IB-vn3"/>
-                <constraint firstItem="cvk-El-8cV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hN6-iy-2Nr"/>
+                <constraint firstItem="nab-P0-BPD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="01F-Jb-0pX"/>
+                <constraint firstItem="oYu-Ty-C6K" firstAttribute="leading" secondItem="nab-P0-BPD" secondAttribute="trailing" constant="72.999999999999943" id="0Ab-od-lv1"/>
+                <constraint firstItem="u7Q-Za-vCw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ROt-R5-ZTl"/>
+                <constraint firstItem="oYu-Ty-C6K" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UVo-c1-gxE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oYu-Ty-C6K" secondAttribute="trailing" constant="16" id="Yhd-5C-jej"/>
+                <constraint firstItem="u7Q-Za-vCw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bhc-W5-58l"/>
+                <constraint firstItem="nab-P0-BPD" firstAttribute="leading" secondItem="u7Q-Za-vCw" secondAttribute="trailing" id="wil-bt-7a9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="118.32061068702289" y="-268.3098591549296"/>

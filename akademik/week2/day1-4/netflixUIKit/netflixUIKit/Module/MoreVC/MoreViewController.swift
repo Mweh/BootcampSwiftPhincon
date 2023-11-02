@@ -75,7 +75,8 @@ class MoreViewController: UIViewController {
     
 }
 
-extension MoreViewController: UIImagePickerControllerDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate {
+extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UINavigationControllerDelegate {
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }

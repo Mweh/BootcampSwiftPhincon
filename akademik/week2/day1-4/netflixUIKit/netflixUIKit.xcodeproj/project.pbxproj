@@ -12,8 +12,12 @@
 		CD16E30C2AF36F6300669456 /* TableControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30B2AF36F6300669456 /* TableControllerViewModel.swift */; };
 		CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30E2AF37B9400669456 /* RegisterViewController.swift */; };
 		CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E30F2AF37B9400669456 /* RegisterViewController.xib */; };
+		CD16E3142AF3826100669456 /* ListMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E3122AF3826100669456 /* ListMovieCell.swift */; };
+		CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E3132AF3826100669456 /* ListMovieCell.xib */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
+		CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FA4432AF39ECE00226717 /* DetailViewController.swift */; };
+		CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4FA4442AF39ECE00226717 /* DetailViewController.xib */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
@@ -53,8 +57,12 @@
 		CD16E30B2AF36F6300669456 /* TableControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerViewModel.swift; sourceTree = "<group>"; };
 		CD16E30E2AF37B9400669456 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CD16E30F2AF37B9400669456 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		CD16E3122AF3826100669456 /* ListMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieCell.swift; sourceTree = "<group>"; };
+		CD16E3132AF3826100669456 /* ListMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMovieCell.xib; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CD4FA4432AF39ECE00226717 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CD4FA4442AF39ECE00226717 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +140,15 @@
 			path = RegisterVC;
 			sourceTree = "<group>";
 		};
+		CD16E3162AF3826400669456 /* ListMovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD16E3122AF3826100669456 /* ListMovieCell.swift */,
+				CD16E3132AF3826100669456 /* ListMovieCell.xib */,
+			);
+			path = ListMovieCell;
+			sourceTree = "<group>";
+		};
 		CD2C65112AEFB2130026B35B /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +156,15 @@
 				CD2C65132AEFB2340026B35B /* LoginViewController.xib */,
 			);
 			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		CD4FA4472AF39ED700226717 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FA4432AF39ECE00226717 /* DetailViewController.swift */,
+				CD4FA4442AF39ECE00226717 /* DetailViewController.xib */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		CD5DD4902AEF38AA00140DFA = {
@@ -210,6 +236,8 @@
 		CD5DD4B72AEF3ADE00140DFA /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
+				CD16E3162AF3826400669456 /* ListMovieCell */,
+				CD4FA4472AF39ED700226717 /* DetailViewController */,
 				CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */,
 				CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */,
 			);
@@ -413,6 +441,7 @@
 			files = (
 				CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */,
 				CDCEABDA2AF0E9EB004F37B8 /* SplashScreen.xib in Resources */,
+				CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */,
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
 				CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */,
@@ -425,6 +454,7 @@
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
+				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +514,8 @@
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CD79F6BF2AEF844C00338C72 /* DownloadsViewController.swift in Sources */,
+				CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */,
+				CD16E3142AF3826100669456 /* ListMovieCell.swift in Sources */,
 				CD16E3062AF3538A00669456 /* APIManager.swift in Sources */,
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
 				CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */,

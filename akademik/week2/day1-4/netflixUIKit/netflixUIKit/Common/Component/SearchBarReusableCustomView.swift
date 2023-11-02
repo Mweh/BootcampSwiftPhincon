@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 class SearchBarReusableCustomView: UIView {
     
     let nibName = "SearchBarReusableCustomView"
