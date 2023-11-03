@@ -16,10 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        window.rootViewController = UINavigationController(rootViewController: SplashScreen()) // edit this to enable SplashScreen
-//        window.rootViewController = UINavigationController(rootViewController: LoginViewController())
+//        window.rootViewController = UINavigationController(rootViewController: SplashScreen()) // edit this to enable SplashScreen
+        window.rootViewController = UINavigationController(rootViewController: LoginViewController())
 
-        UINavigationBar.appearance().isHidden = true
+//        UINavigationBar.appearance().isHidden = true
         self.window = window
         window.makeKeyAndVisible()
         window.tintColor = .systemRed /* or .orange on iOS < 13 */

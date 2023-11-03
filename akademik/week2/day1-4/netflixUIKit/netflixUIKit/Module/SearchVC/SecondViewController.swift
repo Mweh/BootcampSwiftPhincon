@@ -19,14 +19,12 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureTable()
         loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UINavigationBar.appearance().isHidden = true
     }
     
     func loadData() {
@@ -72,6 +70,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.data = selectedData
             detailViewController.hidesBottomBarWhenPushed = true // Show the tab bar when pushing DetailViewController
+            // how to show the back button chatgppt?
             navigationController?.pushViewController(detailViewController, animated: true)
         }
     }

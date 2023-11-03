@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComingSoonViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Ci5-mQ-ZN0" id="O1X-yY-gqF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,30 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfQ-7t-Niq">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGM-ah-EWA">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ComingSoonViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLl-kh-h1K">
-                            <rect key="frame" x="91.666666666666686" y="369" width="210" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-mQ-ZN0">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="aLl-kh-h1K" firstAttribute="centerX" secondItem="PfQ-7t-Niq" secondAttribute="centerX" id="0M7-BB-0sT"/>
-                        <constraint firstItem="aLl-kh-h1K" firstAttribute="centerY" secondItem="PfQ-7t-Niq" secondAttribute="centerY" id="os3-t5-hHp"/>
+                        <constraint firstItem="Ci5-mQ-ZN0" firstAttribute="leading" secondItem="qGM-ah-EWA" secondAttribute="leading" id="WtO-r4-Un8"/>
+                        <constraint firstAttribute="trailing" secondItem="Ci5-mQ-ZN0" secondAttribute="trailing" id="ghU-hL-gAN"/>
+                        <constraint firstAttribute="bottom" secondItem="Ci5-mQ-ZN0" secondAttribute="bottom" id="oZf-mV-oQH"/>
+                        <constraint firstItem="Ci5-mQ-ZN0" firstAttribute="top" secondItem="qGM-ah-EWA" secondAttribute="top" id="oeb-MI-Zg0"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="PfQ-7t-Niq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="04K-BT-Qe8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PfQ-7t-Niq" secondAttribute="bottom" id="Y39-lt-2E7"/>
-                <constraint firstAttribute="trailing" secondItem="PfQ-7t-Niq" secondAttribute="trailing" id="kwB-dN-lFc"/>
-                <constraint firstItem="PfQ-7t-Niq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pNP-gU-ZYM"/>
+                <constraint firstItem="qGM-ah-EWA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Km-zF-Wlp"/>
+                <constraint firstItem="qGM-ah-EWA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XWj-p4-Hnx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qGM-ah-EWA" secondAttribute="bottom" id="pUq-0w-79m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qGM-ah-EWA" secondAttribute="trailing" id="rqk-yj-WuA"/>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="-12.67605633802817"/>
         </view>

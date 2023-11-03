@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    
+    @IBOutlet var imgView: UIImageView!
     @IBOutlet weak var labelMovie: UILabel!
     var data: ResultData?
     
@@ -20,7 +20,9 @@ class DetailViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        hidesBottomBarWhenPushed = false // Show the tab bar when inside DetailViewController
+        hidesBottomBarWhenPushed = false
+        // Show the tab bar when inside DetailViewController
+        UINavigationBar.appearance().isHidden = false
     }
     
     func setupUp(){
@@ -28,6 +30,9 @@ class DetailViewController: UIViewController {
             // Use the data to populate your detail view
             // For example, display details related to the selected movie.
             labelMovie.text = data.title
+            let imageName = "https://image.tmdb.org/t/p/w500/\(data.posterPath)"
+            let url = URL(string: imageName)
+            imgView.kf.setImage(with: url)
         }
     }
 }

@@ -45,6 +45,8 @@
 		CDCEABDA2AF0E9EB004F37B8 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEABD82AF0E9EB004F37B8 /* SplashScreen.xib */; };
 		CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */; };
 		CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */; };
+		CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */; };
+		CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */; };
 		CE8BAC8DDC2A8108BBB58847 /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		CDCEABD82AF0E9EB004F37B8 /* SplashScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
 		CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarReusableCustomView.swift; sourceTree = "<group>"; };
 		CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarReusableCustomView.xib; sourceTree = "<group>"; };
+		CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDescriptionTableCell.swift; sourceTree = "<group>"; };
+		CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDescriptionTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,9 +194,9 @@
 			children = (
 				CD5DD4B02AEF38B100140DFA /* App */,
 				CD79F6AA2AEF806500338C72 /* Common */,
-				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD16E3022AF352C200669456 /* Network */,
 				CD5DD4B12AEF38B700140DFA /* Resource */,
+				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
 				CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */,
 			);
@@ -236,10 +240,10 @@
 		CD5DD4B72AEF3ADE00140DFA /* SearchVC */ = {
 			isa = PBXGroup;
 			children = (
-				CD16E3162AF3826400669456 /* ListMovieCell */,
-				CD4FA4472AF39ED700226717 /* DetailViewController */,
 				CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */,
 				CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */,
+				CD16E3162AF3826400669456 /* ListMovieCell */,
+				CD4FA4472AF39ED700226717 /* DetailViewController */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -249,6 +253,7 @@
 			children = (
 				CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */,
 				CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */,
+				CDD2AE9F2AF49B08002362C6 /* Cell */,
 			);
 			path = ComingSoonVC;
 			sourceTree = "<group>";
@@ -362,6 +367,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		CDD2AE9F2AF49B08002362C6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */,
+				CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D53A264A208A37DF9D31422B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +463,7 @@
 				CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */,
 				CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */,
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
+				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD79F6C02AEF844C00338C72 /* DownloadsViewController.xib in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
@@ -520,6 +535,7 @@
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
 				CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */,
 				CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */,
+				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CD16E30C2AF36F6300669456 /* TableControllerViewModel.swift in Sources */,
 				CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */,
 				CD79F6B02AEF82B700338C72 /* MainTabBarViewController.swift in Sources */,

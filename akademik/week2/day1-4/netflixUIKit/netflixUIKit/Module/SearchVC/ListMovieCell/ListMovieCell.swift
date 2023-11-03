@@ -9,9 +9,7 @@ import UIKit
 import Kingfisher
 
 class ListMovieCell: UITableViewCell {
-    
     @IBOutlet weak var imageFilm: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,18 +18,14 @@ class ListMovieCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
     func setup(data: ResultData?) {
         if let validData = data {
             titleLabel.text = validData.title
             let imageName = "https://image.tmdb.org/t/p/w500/\(validData.posterPath)"
-            
             let url = URL(string: imageName)
-            imageFilm.kf.setImage(with: url)
+            imageFilm.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass")) // but this one works like charm?
         }
     }
-    
-
 }
