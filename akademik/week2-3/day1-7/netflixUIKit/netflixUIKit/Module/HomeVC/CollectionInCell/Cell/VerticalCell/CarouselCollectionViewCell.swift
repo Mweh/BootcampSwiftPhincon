@@ -14,5 +14,4 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

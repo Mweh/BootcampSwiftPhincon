@@ -14,18 +14,18 @@
         <tableViewCell contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VerticalCell" rowHeight="372" id="KGk-i7-Jjw" customClass="VerticalCell" customModule="netflixUIKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duh-tC-SQc">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duh-tC-SQc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="v2H-9n-vZR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="v2H-9n-vZR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="c8U-1m-zhd"/>
+                                    <constraint firstAttribute="height" constant="372" id="1p0-2Z-pxY"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RZN-8Y-qSb">
                                     <size key="itemSize" width="128" height="128"/>
@@ -34,78 +34,55 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrw-NY-rTl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="9m1-t2-v2R"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="XYB-y7-ngt"/>
-                                </constraints>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-JC-wXb">
-                                <rect key="frame" x="102.33333333333331" y="249.66666666666663" width="115.66666666666669" height="26"/>
-                                <color key="pageIndicatorTintColor" systemColor="tintColor"/>
-                            </pageControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9M-Pq-Dxc">
-                                <rect key="frame" x="0.0" y="300" width="320" height="65"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9M-Pq-Dxc">
+                                <rect key="frame" x="16" y="301.33333333333331" width="288" height="54.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BX0-6X-W0G" userLabel="My List">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="54.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" imagePlacement="top" title="My List"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-0F-NEX" userLabel="Play">
-                                        <rect key="frame" x="106.66666666666666" y="0.0" width="106.66666666666666" height="65"/>
+                                        <rect key="frame" x="96" y="0.0" width="96" height="54.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="play" catalog="system" title="Play" imagePadding="10"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-UT-Y7R" userLabel="Info">
-                                        <rect key="frame" x="213.33333333333334" y="0.0" width="106.66666666666666" height="65"/>
+                                        <rect key="frame" x="192" y="0.0" width="96" height="54.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" imagePlacement="top" title="Info"/>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="fU6-JC-ObE"/>
-                                </constraints>
                             </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-JC-wXb">
+                                <rect key="frame" x="102.33333333333331" y="252" width="115.66666666666669" height="26"/>
+                                <color key="pageIndicatorTintColor" systemColor="tintColor"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x9M-Pq-Dxc" firstAttribute="top" secondItem="tjO-JC-wXb" secondAttribute="bottom" constant="24.333333333333371" id="1YX-T2-u6X"/>
-                            <constraint firstItem="x9M-Pq-Dxc" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="A7o-Xj-Pr4"/>
-                            <constraint firstAttribute="trailing" secondItem="wrw-NY-rTl" secondAttribute="trailing" id="DWB-JV-jKS"/>
-                            <constraint firstItem="wrw-NY-rTl" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="Dsv-Pv-h3G"/>
-                            <constraint firstAttribute="trailing" secondItem="v2H-9n-vZR" secondAttribute="trailing" id="FS2-AU-F2M"/>
-                            <constraint firstAttribute="trailing" secondItem="x9M-Pq-Dxc" secondAttribute="trailing" id="Zzz-1Z-LdK"/>
-                            <constraint firstItem="v2H-9n-vZR" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" id="bYA-fk-T6a"/>
-                            <constraint firstItem="v2H-9n-vZR" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="cC8-LE-Ct5"/>
-                            <constraint firstItem="wrw-NY-rTl" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" id="jr9-qK-Czq"/>
-                            <constraint firstAttribute="bottom" secondItem="v2H-9n-vZR" secondAttribute="bottom" id="kDy-UA-a3Y"/>
-                            <constraint firstAttribute="bottom" secondItem="wrw-NY-rTl" secondAttribute="bottom" id="mIp-wB-Osw"/>
-                            <constraint firstAttribute="bottom" secondItem="x9M-Pq-Dxc" secondAttribute="bottom" id="vmS-h0-ot8"/>
+                            <constraint firstAttribute="trailing" secondItem="v2H-9n-vZR" secondAttribute="trailing" id="23k-bj-3DC"/>
+                            <constraint firstAttribute="trailing" secondItem="x9M-Pq-Dxc" secondAttribute="trailing" constant="16" id="2pb-pF-Mqd"/>
+                            <constraint firstItem="v2H-9n-vZR" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" id="5QE-kS-HoA"/>
+                            <constraint firstItem="v2H-9n-vZR" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="L6N-xM-v1P"/>
+                            <constraint firstItem="x9M-Pq-Dxc" firstAttribute="top" secondItem="tjO-JC-wXb" secondAttribute="bottom" constant="23.333333333333314" id="RER-C6-NFi"/>
+                            <constraint firstAttribute="bottom" secondItem="x9M-Pq-Dxc" secondAttribute="bottom" constant="16" id="ZIG-BJ-yWH"/>
+                            <constraint firstItem="tjO-JC-wXb" firstAttribute="centerX" secondItem="duh-tC-SQc" secondAttribute="centerX" id="mxv-x3-IJq"/>
+                            <constraint firstAttribute="bottom" secondItem="v2H-9n-vZR" secondAttribute="bottom" id="r9A-KE-dgr"/>
+                            <constraint firstItem="x9M-Pq-Dxc" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" constant="16" id="yWm-uA-qSF"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="wrw-NY-rTl"/>
-                            </mask>
-                        </variation>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="duh-tC-SQc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MVR-Uh-aHZ"/>
-                    <constraint firstAttribute="bottom" secondItem="duh-tC-SQc" secondAttribute="bottom" id="c7F-CK-ref"/>
-                    <constraint firstItem="duh-tC-SQc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hz1-7d-n7A"/>
-                    <constraint firstAttribute="trailing" secondItem="duh-tC-SQc" secondAttribute="trailing" id="v8i-bW-Avj"/>
+                    <constraint firstAttribute="bottom" secondItem="duh-tC-SQc" secondAttribute="bottom" id="5It-xO-eQW"/>
+                    <constraint firstItem="duh-tC-SQc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AoS-qP-H5M"/>
+                    <constraint firstItem="duh-tC-SQc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gbd-gQ-4Tq"/>
+                    <constraint firstAttribute="trailing" secondItem="duh-tC-SQc" secondAttribute="trailing" id="cxj-43-egh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="tjO-JC-wXb" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="hbr-xP-qsp"/>
-            </constraints>
             <connections>
                 <outlet property="collectionView" destination="v2H-9n-vZR" id="hOP-ko-KU6"/>
-                <outlet property="imageMovie" destination="wrw-NY-rTl" id="UIq-lP-smC"/>
                 <outlet property="infoLabel" destination="aOu-UT-Y7R" id="jnJ-rc-aJ9"/>
                 <outlet property="myListLabel" destination="BX0-6X-W0G" id="PuO-QU-44r"/>
                 <outlet property="pageAutoCarousel" destination="tjO-JC-wXb" id="uQj-d9-Ueg"/>
@@ -116,7 +93,6 @@
     </objects>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="123"/>
-        <image name="netflix" width="3000" height="2000"/>
         <image name="play" catalog="system" width="117" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
