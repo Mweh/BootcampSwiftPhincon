@@ -1,0 +1,11 @@
+//
+//  Keys.xcconfig
+//  netflixUIKit
+//
+//  Created by Muhammad Fahmi on 06/11/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+TMDB_API_KEY = a00ec533701ca1b960681db195770497
