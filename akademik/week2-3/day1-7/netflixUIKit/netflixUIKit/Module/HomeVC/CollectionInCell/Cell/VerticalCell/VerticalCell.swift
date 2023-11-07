@@ -10,18 +10,20 @@ import UIKit
 
 class VerticalCell: UITableViewCell {
     
+    @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageAutoCarousel: UIPageControl!
     @IBOutlet weak var myListLabel: UIButton!
     @IBOutlet weak var playLabel: UIButton!
     @IBOutlet weak var infoLabel: UIButton!
     
-    let images = (1...6).compactMap { UIImage(named: "movie\($0)") }
+    var images = (1...7).compactMap { UIImage(named: "movie\($0)") }
     var timer: Timer?
     var currentIndex = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        containerStackView.layer.cornerRadius = containerStackView.frame.height / 5
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         setUpCollection()

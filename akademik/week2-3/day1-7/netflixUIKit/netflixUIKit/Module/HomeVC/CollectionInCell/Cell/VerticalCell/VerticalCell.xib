@@ -53,6 +53,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" imagePlacement="top" title="Info"/>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </stackView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-JC-wXb">
                                 <rect key="frame" x="102.33333333333331" y="252" width="115.66666666666669" height="26"/>
@@ -83,6 +84,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="v2H-9n-vZR" id="hOP-ko-KU6"/>
+                <outlet property="containerStackView" destination="x9M-Pq-Dxc" id="6JZ-qi-qkW"/>
                 <outlet property="infoLabel" destination="aOu-UT-Y7R" id="jnJ-rc-aJ9"/>
                 <outlet property="myListLabel" destination="BX0-6X-W0G" id="PuO-QU-44r"/>
                 <outlet property="pageAutoCarousel" destination="tjO-JC-wXb" id="uQj-d9-Ueg"/>

@@ -29,6 +29,8 @@ class TableViewController: UITableViewController {
         }
     }
     
+    var dataPopular: Popular?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
@@ -88,9 +90,6 @@ class TableViewController: UITableViewController {
         switch tableViewCellType {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
-            
-            UIView.animate(views: [cell], animations: [fromAnimation, rotateAnimation, zoomAnimation], delay: 0.3)
-            
             return cell
         case .HorizontalCell:
             
