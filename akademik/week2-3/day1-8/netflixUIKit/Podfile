@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'netflixUIKit' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for netflixUIKit
+
+  # network
+  pod 'Alamofire'
+
+  # image
+  pod 'Kingfisher'
+  pod 'StepSlider'
+  pod 'SkeletonView'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  # LogInWithGoogle
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+
+  # animation
+  pod "ViewAnimator"
+  pod 'lottie-ios'
+  
+
+
+end
