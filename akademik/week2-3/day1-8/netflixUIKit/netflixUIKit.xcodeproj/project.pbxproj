@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */; };
+		CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */; };
+		CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */; };
+		CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */; };
+		CD07093C2AFB3B500079FC45 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */; };
+		CD0709432AFB599E0079FC45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709422AFB599E0079FC45 /* Extensions.swift */; };
 		CD136FD12AFA33770046BB44 /* SearchVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD136FD02AFA33770046BB44 /* SearchVCViewModel.swift */; };
 		CD16E3082AF35CBC00669456 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E3072AF35CBC00669456 /* Popular.swift */; };
 		CD16E30C2AF36F6300669456 /* HomeVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30B2AF36F6300669456 /* HomeVCViewModel.swift */; };
@@ -16,6 +22,8 @@
 		CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E3132AF3826100669456 /* ListMovieCell.xib */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
+		CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */; };
+		CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */; };
 		CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */; };
 		CD40E1E72AF7DD56002D2407 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E62AF7DD56002D2407 /* Endpoint.swift */; };
 		CD40E1EA2AF875DA002D2407 /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E92AF875DA002D2407 /* TopRated.swift */; };
@@ -66,6 +74,12 @@
 		83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8AD6DC11A357D8394CE92E /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9F9C92B73F86A50AB327CE80 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilm.swift; sourceTree = "<group>"; };
+		CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonViewController.swift; sourceTree = "<group>"; };
+		CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchButtonViewController.xib; sourceTree = "<group>"; };
+		CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		CD0709422AFB599E0079FC45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CD136FD02AFA33770046BB44 /* SearchVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCViewModel.swift; sourceTree = "<group>"; };
 		CD16E3072AF35CBC00669456 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
 		CD16E30B2AF36F6300669456 /* HomeVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +89,8 @@
 		CD16E3132AF3826100669456 /* ListMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMovieCell.xib; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedReusableCustomView.swift; sourceTree = "<group>"; };
+		CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedReusableCustomView.xib; sourceTree = "<group>"; };
 		CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAPIManager.swift; sourceTree = "<group>"; };
 		CD40E1E62AF7DD56002D2407 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CD40E1E92AF875DA002D2407 /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
@@ -134,6 +150,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0709332AFB32970079FC45 /* SearchButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */,
+				CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */,
+				CD0709382AFB3B0F0079FC45 /* SearchCollectionViewCell */,
+			);
+			path = SearchButtonView;
+			sourceTree = "<group>";
+		};
+		CD0709382AFB3B0F0079FC45 /* SearchCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */,
+				CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */,
+			);
+			path = SearchCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CD0709412AFB59750079FC45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD0709422AFB599E0079FC45 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CD136FCF2AFA33270046BB44 /* SearchVCViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +245,7 @@
 				CD40E1E92AF875DA002D2407 /* TopRated.swift */,
 				CDAF8A6C2AF8D72700CB670D /* Upcoming.swift */,
 				CDAF8A802AF94B2200CB670D /* DiscoverTV.swift */,
+				CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +332,7 @@
 			children = (
 				CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */,
 				CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */,
+				CD0709332AFB32970079FC45 /* SearchButtonView */,
 				CD136FCF2AFA33270046BB44 /* SearchVCViewModel */,
 				CD16E3162AF3826400669456 /* ListMovieCell */,
 				CD4FA4472AF39ED700226717 /* DetailViewController */,
@@ -357,8 +402,9 @@
 		CD79F6AA2AEF806500338C72 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CDCEABDC2AF0F44D004F37B8 /* Class */,
-				CDCEABDD2AF0F453004F37B8 /* Component */,
+				CDCEABDC2AF0F44D004F37B8 /* Classes */,
+				CDCEABDD2AF0F453004F37B8 /* Components */,
+				CD0709412AFB59750079FC45 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -409,22 +455,24 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
-		CDCEABDC2AF0F44D004F37B8 /* Class */ = {
+		CDCEABDC2AF0F44D004F37B8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				CD79F6AD2AEF80C500338C72 /* Constants.swift */,
 				CDAF8A672AF8A6B000CB670D /* String.swift */,
 			);
-			path = Class;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		CDCEABDD2AF0F453004F37B8 /* Component */ = {
+		CDCEABDD2AF0F453004F37B8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */,
 				CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */,
+				CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */,
+				CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */,
 			);
-			path = Component;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CDD2AE9F2AF49B08002362C6 /* Cell */ = {
@@ -529,8 +577,11 @@
 				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD79F6C02AEF844C00338C72 /* DownloadsViewController.xib in Resources */,
+				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
+				CD07093C2AFB3B500079FC45 /* SearchCollectionViewCell.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
+				CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
 				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
@@ -590,6 +641,7 @@
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
 				CD16E3082AF35CBC00669456 /* Popular.swift in Sources */,
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
+				CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */,
 				CDAF8A812AF94B2200CB670D /* DiscoverTV.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CD136FD12AFA33770046BB44 /* SearchVCViewModel.swift in Sources */,
@@ -604,14 +656,18 @@
 				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CDAF8A6B2AF8D48400CB670D /* NowPlaying.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
+				CD0709432AFB599E0079FC45 /* Extensions.swift in Sources */,
+				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
 				CDAF8A682AF8A6B000CB670D /* String.swift in Sources */,
 				CD16E30C2AF36F6300669456 /* HomeVCViewModel.swift in Sources */,
+				CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */,
 				CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */,
 				CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */,
 				CD79F6B02AEF82B700338C72 /* MainTabBarViewController.swift in Sources */,
 				CD40E1EA2AF875DA002D2407 /* TopRated.swift in Sources */,
 				CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */,
 				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
+				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CDAF8A6D2AF8D72700CB670D /* Upcoming.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,

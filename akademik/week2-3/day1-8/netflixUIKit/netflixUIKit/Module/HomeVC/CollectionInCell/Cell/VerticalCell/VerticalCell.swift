@@ -22,6 +22,7 @@ class VerticalCell: UITableViewCell {
     var currentIndex = 0
     
     override func awakeFromNib() {
+        images.shuffle()
         super.awakeFromNib()
         containerStackView.layer.cornerRadius = containerStackView.frame.height / 5
         let layout = UICollectionViewFlowLayout()

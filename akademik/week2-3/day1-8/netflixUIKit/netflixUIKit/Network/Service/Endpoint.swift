@@ -32,22 +32,21 @@ enum Endpoint {
     
     func method() -> HTTPMethod {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV:
+        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV: // Switch must be exhaustive
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV:
+        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV: //Switch must be exhaustive
             return nil
         }
     }
     
-    
     var headers: HTTPHeaders {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV:
+        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV: //Switch must be exhaustive
             let params: HTTPHeaders = [
                 "Content-Type": "Application/json"]
             return params
@@ -61,10 +60,5 @@ enum Endpoint {
 
 class BaseConstant {
     static var host = "https://api.themoviedb.org/3/"
-    //    static let apiKey = ProcessInfo.processInfo.environment["TMDB_API_KEY"] ?? ""
     static let tmdbApiKey = "TMDB_API_KEY".apiKey
-    
 }
-
-// You can access the API key using the environment variable
-

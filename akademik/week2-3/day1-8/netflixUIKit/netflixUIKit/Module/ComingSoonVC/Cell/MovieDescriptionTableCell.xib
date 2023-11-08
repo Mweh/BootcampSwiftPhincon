@@ -39,7 +39,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Remind Me">
                                                     <attributes>
-                                                        <font key="NSFont" size="12" name=".SFNS-Regular"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -56,7 +56,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Share">
                                                     <attributes>
-                                                        <font key="NSFont" size="12" name=".SFNS-Regular"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>

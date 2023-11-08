@@ -23,33 +23,35 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLE-OR-BwM">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-ll-pTt" customClass="SearchBarReusableCustomView" customModule="netflixUIKit" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="70" id="41V-JK-iSF"/>
-                            </constraints>
-                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f21-eW-dbF">
-                            <rect key="frame" x="16" y="75" width="183.33333333333334" height="36"/>
+                            <rect key="frame" x="16" y="0.0" width="183.33333333333334" height="36"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-va-ANe">
-                            <rect key="frame" x="0.0" y="116" width="393" height="643"/>
+                            <rect key="frame" x="0.0" y="41" width="393" height="718"/>
                             <color key="separatorColor" systemColor="systemFillColor"/>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-bh-S31">
+                            <rect key="frame" x="359.33333333333331" y="2" width="25.666666666666686" height="37"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="magnifyingglass" catalog="system"/>
+                            <connections>
+                                <action selector="buttonToSearchButtonVC:" destination="-1" eventType="touchUpInside" id="sk6-eg-S7E"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="EdW-va-ANe" secondAttribute="trailing" id="2ue-FM-6ny"/>
-                        <constraint firstItem="7Wf-ll-pTt" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" id="Gev-YA-uAD"/>
-                        <constraint firstAttribute="trailing" secondItem="7Wf-ll-pTt" secondAttribute="trailing" id="PW5-kk-47u"/>
-                        <constraint firstItem="f21-eW-dbF" firstAttribute="top" secondItem="7Wf-ll-pTt" secondAttribute="bottom" constant="5" id="VUL-F7-ICx"/>
+                        <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="oyE-bh-S31" secondAttribute="bottom" constant="2" id="7e0-EP-RIP"/>
+                        <constraint firstItem="f21-eW-dbF" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" id="Dft-lb-qra"/>
+                        <constraint firstItem="oyE-bh-S31" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" constant="2" id="K4P-VW-Da5"/>
+                        <constraint firstAttribute="trailing" secondItem="oyE-bh-S31" secondAttribute="trailing" constant="8" id="Nrh-lO-5OQ"/>
                         <constraint firstAttribute="bottom" secondItem="EdW-va-ANe" secondAttribute="bottom" id="adu-UW-0ZW"/>
+                        <constraint firstItem="f21-eW-dbF" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" constant="16" id="fF4-wv-0br"/>
                         <constraint firstItem="EdW-va-ANe" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" id="hOU-LW-H7a"/>
-                        <constraint firstItem="7Wf-ll-pTt" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" id="iUx-rq-di5"/>
                         <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="f21-eW-dbF" secondAttribute="bottom" constant="5" id="kHX-j7-fnV"/>
                         <constraint firstAttribute="trailing" secondItem="f21-eW-dbF" secondAttribute="trailing" constant="193.66999999999999" id="mUG-u4-2Md"/>
                     </constraints>
@@ -67,14 +69,12 @@
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -26,30 +26,11 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         configureTable()
         loadData()
-//        bindData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-//    func bindData() {
-//        vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
-//            guard let self = self else {
-//                return
-//            }
-//            self.dataNowPlaying = data
-//            self.tableView.reloadData()
-//        }).disposed(by: bag)
-//
-//        vm.dataDiscoverTV.asObservable().subscribe(onNext: { [weak self] data in
-//            guard let self = self else {
-//                return
-//            }
-//            self.dataDiscoverTV = data
-//            self.tableView.reloadData()
-//        }).disposed(by: bag)
-//    }
     
     func loadData(){
         customAPIManager.makeAPICall(endpoint: .getTopRated) { (response: Result<TopRated, Error>)  in
@@ -67,6 +48,11 @@ class SecondViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ListMovieCell", bundle: nil), forCellReuseIdentifier: "ListMovieCell")
+    }
+    @IBAction func buttonToSearchButtonVC(_ sender: Any) {
+        let vc = SearchButtonViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -96,8 +82,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         if let selectedData = dataTopRated?.results[indexPath.row] {
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.data = selectedData
-            detailViewController.hidesBottomBarWhenPushed = true // Show the tab bar when pushing DetailViewController
-            // how to show the back button chatgppt?
+            detailViewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
