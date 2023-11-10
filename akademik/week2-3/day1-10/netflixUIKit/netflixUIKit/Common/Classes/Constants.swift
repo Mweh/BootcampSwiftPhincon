@@ -19,3 +19,15 @@ enum SFSymbol {
         "\(number).circle"
     }
 }
+
+enum RefreshTextLabel{
+    static func refreshTL() -> UILabel{
+        let textLabel = UILabel()
+        textLabel.text = "Pull to refresh"
+        textLabel.textAlignment = .center
+        textLabel.textColor = .systemRed
+        textLabel.font = UIFont.systemFont(ofSize: 14.0)
+        
+        return textLabel
+    }
+}

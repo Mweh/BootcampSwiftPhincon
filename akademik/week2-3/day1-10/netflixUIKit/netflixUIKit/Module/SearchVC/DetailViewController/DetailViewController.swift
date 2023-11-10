@@ -17,18 +17,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tabBarController?.tabBar.isHidden = true
         setupUp()
-        showSkeleton()
-    }
-    
-    func showSkeleton(){
-        [imgView,
-         labelMovie,
-         overviewMovie
-        ].forEach{
-            $0?.showAnimatedGradientSkeleton()
-        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

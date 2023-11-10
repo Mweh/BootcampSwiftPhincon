@@ -303,6 +303,21 @@
                   endingLineNumber = "69"
                   offsetFromSymbolStart = "64">
                </Location>
+               <Location
+                  uuid = "7ED15282-0A4B-4316-A16A-5B5A17A08BD3 - cb2fbbb3357eadc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (netflixUIKit.SearchResponse) -&gt; () in netflixUIKit.SearchButtonViewController.configure() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-3/day1-10/netflixUIKit/netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "64">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -318,7 +333,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -366,6 +381,21 @@
                   endingLineNumber = "59"
                   offsetFromSymbolStart = "148">
                </Location>
+               <Location
+                  uuid = "A45C4793-BD39-4691-A67A-E9D5A4BF965B - f3fcd83a0f7d87dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;netflixUIKit.SearchResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;netflixUIKit.SearchResponse&gt;) -&gt; RxSwift.Disposable in closure #1 (Swift.String) -&gt; RxSwift.Observable&lt;netflixUIKit.SearchResponse&gt; in netflixUIKit.SearchButtonViewController.configure() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-3/day1-10/netflixUIKit/netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "148">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -381,7 +411,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -429,6 +459,21 @@
                   endingLineNumber = "62"
                   offsetFromSymbolStart = "284">
                </Location>
+               <Location
+                  uuid = "C153FC0F-104E-4CB5-8949-3231BFBF3FDF - f3fcd83a0f7d847e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;netflixUIKit.SearchResponse, Swift.Error&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;netflixUIKit.SearchResponse&gt;) -&gt; RxSwift.Disposable in closure #1 (Swift.String) -&gt; RxSwift.Observable&lt;netflixUIKit.SearchResponse&gt; in netflixUIKit.SearchButtonViewController.configure() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-3/day1-10/netflixUIKit/netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "284">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -444,8 +489,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "disposeBag"
-            landmarkType = "24">
+            landmarkName = "configure()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "9F1FE0CA-9D85-48F9-80B7-3BDA001F9168 - 925838720af63ec"
@@ -507,7 +552,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -515,7 +560,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C9E52604-A6D4-4D76-9881-EA2E0D52B8DE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
@@ -547,7 +592,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "256C2623-1B7F-4514-9CAC-CC781F2861A3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"

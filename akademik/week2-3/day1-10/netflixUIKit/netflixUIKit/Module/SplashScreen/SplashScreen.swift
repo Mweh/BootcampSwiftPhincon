@@ -14,12 +14,21 @@ class SplashScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delay()
+        lottieConfig()
+    }
+    
+    func delay(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             if let navigation = self.navigationController {
                 let vc = LoginViewController()
                 navigation.pushViewController(vc, animated: true)
             }
         }
+    }
+    
+    func lottieConfig(){
+
         animationView = .init(name: "netflixLottie")
         
         animationView!.frame = view.bounds
@@ -41,6 +50,7 @@ class SplashScreen: UIViewController {
         // 6. Play animation
         
         animationView!.play()
+
     }
     
 }

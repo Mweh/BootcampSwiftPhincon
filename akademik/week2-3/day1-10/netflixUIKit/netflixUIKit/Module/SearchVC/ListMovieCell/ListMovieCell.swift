@@ -18,17 +18,6 @@ class ListMovieCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         containerView.layer.cornerRadius = containerView.frame.height / 10
-
-        showSkeleton()
-    }
-    
-    func showSkeleton(){
-        [containerView,
-         imageFilm,
-         titleLabel
-        ].forEach{
-            $0?.showAnimatedGradientSkeleton()
-        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
