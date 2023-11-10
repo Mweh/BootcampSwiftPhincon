@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="MovieDescriptionTableCell" customModule="netflixUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOC-N4-gq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="p5g-dV-M4x">
+                                <rect key="frame" x="-20" y="20" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yMS-mU-oTb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BGW-HG-s2l" userLabel="StackViewIcon">
+                                <rect key="frame" x="136" y="165" width="176" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgk-yV-kFB">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="60"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Remind Me" image="bell.fill" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system" imagePlacement="top" imagePadding="5" titleAlignment="center">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Remind Me">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-7C-gNH">
+                                        <rect key="frame" x="88" y="0.0" width="88" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="Meb-ka-OZB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" imagePlacement="top" imagePadding="5" titleAlignment="center">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Share">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bUS-fE-xw1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fSU-n1-FeN">
+                                <rect key="frame" x="8" y="231" width="160" height="37.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season 1 Coming in December" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hy-LX-FMa" userLabel="seasonLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="13.333333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-4Z-NR4" userLabel="titleLabel">
+                                        <rect key="frame" x="0.0" y="18.333333333333343" width="42.333333333333336" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-89-Bct" userLabel="loremLabel">
+                                <rect key="frame" x="8" y="277" width="304" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="oet-i7-Upp"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam, ipsum id viverra aliquam, metus elit tempus lectus, vel vehicula lectus risus sed ex. Sed luctus suscipit sem a dignissim. Sed tincidunt massa vitae est dapibus, vel tincidunt mi mattis. In eget lectus facilisis, egestas dolor id, feugiat nulla. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre - Genre - Genre - Genre " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adU-jU-iPb" userLabel="genreLabel">
+                                <rect key="frame" x="8" y="365" width="197" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BGW-HG-s2l" firstAttribute="top" secondItem="p5g-dV-M4x" secondAttribute="bottom" constant="-55" id="1t1-w4-SoI"/>
+                            <constraint firstItem="Wy8-89-Bct" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="7Mj-oU-i7e"/>
+                            <constraint firstAttribute="trailing" secondItem="BGW-HG-s2l" secondAttribute="trailing" constant="8" id="8LI-v8-mml"/>
+                            <constraint firstItem="p5g-dV-M4x" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="-20" id="CZz-UG-Xbm"/>
+                            <constraint firstAttribute="trailing" secondItem="adU-jU-iPb" secondAttribute="trailing" constant="115" id="DW2-mN-ZO0"/>
+                            <constraint firstAttribute="trailing" secondItem="p5g-dV-M4x" secondAttribute="trailing" constant="20" id="DZU-gv-CIv"/>
+                            <constraint firstItem="adU-jU-iPb" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="Jel-Du-Jp2"/>
+                            <constraint firstItem="Wy8-89-Bct" firstAttribute="top" secondItem="fSU-n1-FeN" secondAttribute="bottom" constant="8.3333333333333144" id="K7K-8s-Sti"/>
+                            <constraint firstAttribute="trailing" secondItem="Wy8-89-Bct" secondAttribute="trailing" constant="8" id="NLF-W0-CIu"/>
+                            <constraint firstItem="adU-jU-iPb" firstAttribute="top" secondItem="Wy8-89-Bct" secondAttribute="bottom" constant="8" id="UzJ-gi-1LF"/>
+                            <constraint firstItem="p5g-dV-M4x" firstAttribute="top" secondItem="dOC-N4-gq6" secondAttribute="top" constant="20" id="Vee-sV-PWO"/>
+                            <constraint firstAttribute="trailing" secondItem="fSU-n1-FeN" secondAttribute="trailing" constant="152" id="ZwH-yB-P45"/>
+                            <constraint firstItem="BGW-HG-s2l" firstAttribute="trailing" secondItem="dOC-N4-gq6" secondAttribute="trailingMargin" id="fHb-8K-rTc"/>
+                            <constraint firstItem="fSU-n1-FeN" firstAttribute="top" secondItem="BGW-HG-s2l" secondAttribute="bottom" constant="6" id="sGt-W4-SPh"/>
+                            <constraint firstAttribute="height" constant="440" id="stS-IS-FQH"/>
+                            <constraint firstItem="fSU-n1-FeN" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="xj8-tM-tZf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="dOC-N4-gq6" secondAttribute="bottom" constant="2" id="5WO-Ia-f8k"/>
+                    <constraint firstItem="dOC-N4-gq6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6EB-bh-X3e"/>
+                    <constraint firstItem="dOC-N4-gq6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hN4-Ph-oHw"/>
+                    <constraint firstAttribute="trailing" secondItem="dOC-N4-gq6" secondAttribute="trailing" id="j0e-iq-MH1"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="tintColor"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="containerStackViewIcon" destination="BGW-HG-s2l" id="2Q6-NU-Pa1"/>
+                <outlet property="containerView" destination="dOC-N4-gq6" id="KQN-XO-8dH"/>
+                <outlet property="genreLabel" destination="adU-jU-iPb" id="fR0-uW-eeV"/>
+                <outlet property="imgView" destination="p5g-dV-M4x" id="hCH-UX-XGU"/>
+                <outlet property="loremLabel" destination="Wy8-89-Bct" id="se2-64-5ib"/>
+                <outlet property="seasonLabel" destination="7Hy-LX-FMa" id="CBx-ME-JJv"/>
+                <outlet property="titileLabel" destination="1wK-4Z-NR4" id="lUy-dV-KWH"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="139.43661971830986"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bell.fill" catalog="system" width="123" height="128"/>
+        <image name="netflix" width="3000" height="2000"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

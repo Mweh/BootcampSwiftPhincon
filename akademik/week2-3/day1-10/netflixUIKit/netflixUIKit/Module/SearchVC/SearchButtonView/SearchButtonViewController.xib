@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchButtonViewController" customModule="netflixUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Q6n-CB-ePn" id="bzg-wT-0NY"/>
+                <outlet property="textFieldSearch" destination="MHL-h9-EQN" id="e9f-fH-NgV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjm-hL-MeG">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pez-eN-b65">
+                            <rect key="frame" x="-7" y="-1" width="400" height="66"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-h9-EQN" userLabel="textFieldSearch">
+                                    <rect key="frame" x="60" y="16" width="316" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bl9-Ly-SFK">
+                                    <rect key="frame" x="22" y="17.000000000000007" width="35" height="32.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="Ops-ce-hqF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="MHL-h9-EQN" secondAttribute="trailing" constant="24" id="Ic2-4F-BvD"/>
+                                <constraint firstItem="MHL-h9-EQN" firstAttribute="leading" secondItem="bl9-Ly-SFK" secondAttribute="trailing" constant="3" id="JZd-Zl-f5q"/>
+                                <constraint firstAttribute="bottom" secondItem="bl9-Ly-SFK" secondAttribute="bottom" constant="16" id="XD3-XR-Ruw"/>
+                                <constraint firstItem="MHL-h9-EQN" firstAttribute="top" secondItem="pez-eN-b65" secondAttribute="top" constant="16" id="Y2g-ww-i8Q"/>
+                                <constraint firstItem="bl9-Ly-SFK" firstAttribute="leading" secondItem="pez-eN-b65" secondAttribute="leading" constant="22" id="dkg-8p-BqD"/>
+                                <constraint firstItem="bl9-Ly-SFK" firstAttribute="top" secondItem="pez-eN-b65" secondAttribute="top" constant="16" id="lf7-s2-LMm"/>
+                                <constraint firstAttribute="bottom" secondItem="MHL-h9-EQN" secondAttribute="bottom" constant="16" id="qt8-Zd-yu4"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q6n-CB-ePn">
+                            <rect key="frame" x="24" y="81" width="345" height="678"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KEA-kn-0Lc">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Q6n-CB-ePn" secondAttribute="bottom" id="BdM-Sr-f5B"/>
+                        <constraint firstAttribute="trailing" secondItem="Q6n-CB-ePn" secondAttribute="trailing" constant="24" id="OE7-A0-aZM"/>
+                        <constraint firstItem="pez-eN-b65" firstAttribute="leading" secondItem="sjm-hL-MeG" secondAttribute="leading" constant="-7" id="baG-Im-rL7"/>
+                        <constraint firstAttribute="trailing" secondItem="pez-eN-b65" secondAttribute="trailing" id="uNt-tZ-8wJ"/>
+                        <constraint firstItem="pez-eN-b65" firstAttribute="top" secondItem="sjm-hL-MeG" secondAttribute="top" constant="-1" id="woj-jc-1kA"/>
+                        <constraint firstItem="Q6n-CB-ePn" firstAttribute="leading" secondItem="sjm-hL-MeG" secondAttribute="leading" constant="24" id="wrL-3d-4eS"/>
+                        <constraint firstItem="Q6n-CB-ePn" firstAttribute="top" secondItem="pez-eN-b65" secondAttribute="bottom" constant="16" id="xRS-C5-YGZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1MU-aI-H9b"/>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5RY-eE-bV2"/>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ihj-xb-wbq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sjm-hL-MeG" secondAttribute="bottom" id="L4f-aM-ucI"/>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="PAg-5v-uDX"/>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bxe-fG-pRr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sjm-hL-MeG" secondAttribute="trailing" id="dVn-qc-Jxg"/>
+                <constraint firstItem="sjm-hL-MeG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jII-cv-zCS"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

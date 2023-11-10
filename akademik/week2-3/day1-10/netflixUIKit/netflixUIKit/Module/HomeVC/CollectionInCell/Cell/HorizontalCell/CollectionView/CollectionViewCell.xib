@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="netflixUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pf-i4-pWS">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-We-Zil">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KSc-We-Zil" firstAttribute="top" secondItem="5pf-i4-pWS" secondAttribute="top" id="6Gh-kc-QoY"/>
+                            <constraint firstItem="KSc-We-Zil" firstAttribute="leading" secondItem="5pf-i4-pWS" secondAttribute="leading" id="YHX-zI-Eji"/>
+                            <constraint firstAttribute="trailing" secondItem="KSc-We-Zil" secondAttribute="trailing" id="ouw-o3-Qi8"/>
+                            <constraint firstAttribute="bottom" secondItem="KSc-We-Zil" secondAttribute="bottom" id="tVV-JN-aec"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5pf-i4-pWS" secondAttribute="trailing" id="376-7u-wLX"/>
+                <constraint firstItem="5pf-i4-pWS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PiD-nm-47K"/>
+                <constraint firstAttribute="bottom" secondItem="5pf-i4-pWS" secondAttribute="bottom" id="hUU-Js-5Gq"/>
+                <constraint firstItem="5pf-i4-pWS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yaP-7b-1FG"/>
+            </constraints>
+            <size key="customSize" width="203" height="123"/>
+            <connections>
+                <outlet property="container" destination="5pf-i4-pWS" id="zH7-8e-PzR"/>
+                <outlet property="movieImage" destination="KSc-We-Zil" id="Mq3-oW-IQU"/>
+            </connections>
+            <point key="canvasLocation" x="162.59541984732823" y="14.43661971830986"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="movie1" width="1280" height="1920"/>
+    </resources>
+</document>
