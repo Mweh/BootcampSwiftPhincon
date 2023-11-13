@@ -73,7 +73,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
         UIView.animate(withDuration: 0.2, delay: 0, options: [.autoreverse, .curveEaseInOut], animations: {
             imageView.transform = originalTransform.scaledBy(x: 1.2, y: 1.2)
         }) { _ in
-            imageView.transform = originalTransform
+            imageView.transform = .identity
         }
     }
 }

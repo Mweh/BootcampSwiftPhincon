@@ -40,7 +40,8 @@ Keep track of tasks, improvements, and future plans for your project.
 
 - [ ] Implement Onboarding View.
 - [ ] Integrate CoreData or UserDefault for data storage.
-- [ ] Implement Login Authentication with the right logic.
+- [+] Implement Login Authentication with the right logic.
+- [+] Add more pages dynamically when scrolling to the bottom/vertical.
 - [ ] Integrate YouTube API to play trailer videos.
 - [ ] Add feature X.
 - [ ] Refactor code in module Y.

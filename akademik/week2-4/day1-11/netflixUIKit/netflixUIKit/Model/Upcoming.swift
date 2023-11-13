@@ -16,7 +16,7 @@ import Foundation
 struct Upcoming: Codable {
     let dates: Dates
     let page: Int
-    let results: [ResultUpcoming]
+    var results: [ResultUpcoming]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {

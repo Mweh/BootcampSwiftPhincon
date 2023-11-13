@@ -89,5 +89,4 @@ class LoginViewController: UIViewController {
         let registerVC = RegisterViewController()
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
-    
 }

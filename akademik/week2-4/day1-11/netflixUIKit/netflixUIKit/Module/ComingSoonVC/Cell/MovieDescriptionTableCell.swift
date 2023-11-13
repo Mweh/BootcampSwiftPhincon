@@ -23,19 +23,6 @@ class MovieDescriptionTableCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         imgView.layer.cornerRadius = imgView.frame.height / 10
-        showSkeleton()
-    }
-    
-    func showSkeleton(){
-        [
-          containerView,
-          containerStackViewIcon,
-          imgView,
-          seasonLabel,
-          titileLabel,
-          loremLabel,
-          genreLabel
-        ].forEach{ $0.showAnimatedGradientSkeleton() }
     }
     
     func containerStyle(){

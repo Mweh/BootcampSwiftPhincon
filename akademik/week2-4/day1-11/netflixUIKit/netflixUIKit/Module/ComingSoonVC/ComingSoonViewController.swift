@@ -16,7 +16,9 @@ class ComingSoonViewController: UIViewController {
     private var animationView: LottieAnimationView?
     
     let customAPIManager = CustomAPIManager()
-
+    
+    var currentPage = 1 // Add this property
+    
     var dataTable: Upcoming? {
         didSet {
             tableView.reloadData()
@@ -29,6 +31,7 @@ class ComingSoonViewController: UIViewController {
         configureTable()
         loadData()
         lottieConfig()
+        tableView.delegate = self
     }
     
     func configureTable(){
@@ -107,17 +110,28 @@ class ComingSoonViewController: UIViewController {
         }
     }
     
-    func loadData(){
+    func loadData(page: Int = 1) {
         tableView.showAnimatedGradientSkeleton()
-
-        customAPIManager.makeAPICall(endpoint: .getUpcoming) { (response: Result<Upcoming, Error>)  in
+        
+        customAPIManager.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<Upcoming, Error>)  in
+            guard let self = self else { return }
+            
             switch response {
             case .success(let upcoming):
-                self.dataTable = upcoming
+                if page == 1 {
+                    // For the initial load or refreshing, set the entire data
+                    self.dataTable = upcoming
+                } else {
+                    // For pagination, append the new data to the existing data
+                    self.dataTable?.results.append(contentsOf: upcoming.results)
+                }
+                
+                self.tableView.reloadData()
             case .failure(let error):
                 // Handle the error
-                print("Error fetching popular movies: \(error)")
+                print("Error fetching upcoming movies: \(error)")
             }
+            
             self.tableView.hideSkeleton()
         }
     }
@@ -126,29 +140,56 @@ class ComingSoonViewController: UIViewController {
 
 extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource{
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dataTable?.results.count ?? 1
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
         return "MovieDescriptionTableCell"
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dataTable?.results.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let data = dataTable {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDescriptionTableCell", for: indexPath) as! MovieDescriptionTableCell
             cell.setup(data: data.results[indexPath.row])
+            
             let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].posterPath)"
-            cell.imgView.kf.setImage(with: URL(string: imageName), placeholder: UIImage(systemName: "hourglass"))
+            if let url = URL(string: imageName) {
+                cell.imgView.kf.indicatorType = .activity
+                cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass")) { result in
+                    switch result {
+                    case .success(_):
+                        print("Image loaded successfully.")
+                    case .failure(let error):
+                        print("Error loading image: \(error.localizedDescription)")
+                    }
+                }
+            }
+            print("Image URL: \(imageName)")
             return cell
         }
+        
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (dataTable?.results.count ?? 0) - 1 {
+            // You are at the last cell, load more data
+            loadMoreData()
+        }
+    }
     
+    func loadMoreData() {
+        // Increment the page number or take any action needed to load the next set of data
+        currentPage += 1
+        
+        // Call the common loadData method with the updated page number
+        loadData(page: currentPage)
+    }
 }
+

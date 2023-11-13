@@ -8,11 +8,18 @@
 import Foundation
 import Alamofire
 
+struct ParamAddFavorite {
+    let mediaType: String
+    let mediaId: Int
+    let favorite: Bool
+}
+
 enum Endpoint {
     case getNowPlaying
     case getPopular
     case getTopRated
-    case getUpcoming
+    case addFavorite(param: ParamAddFavorite)
+    case getUpcoming(page: Int)
     case getDiscoverTV
     case searchMovie(query: String)
     
@@ -30,19 +37,34 @@ enum Endpoint {
             return "discover/tv"
         case .searchMovie:
             return "search/movie"
+        case .addFavorite:
+            return "/addfavorite"
         }
     }
     
     func method() -> HTTPMethod {
-        return .get
+        switch self {
+        case .addFavorite:
+            return .post
+        default:
+            return .get
+        }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getUpcoming, .getDiscoverTV: //Switch must be exhaustive
+        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV:
             return nil
+        case .getUpcoming(let page):
+            return ["page": page]
         case .searchMovie(let query):
             return ["query": query]
+        case .addFavorite(let param):
+            return [
+                "media_type": param.mediaType,
+                "media_id": param.mediaId,
+                "favorite": param.favorite
+            ]
         }
     }
     
@@ -54,12 +76,12 @@ enum Endpoint {
     }
     
     func urlString() -> String {
-        return BaseConstant.host + self.path() + "?api_key=\(BaseConstant.tmdbApiKey)"
+        return BaseConstant.host + self.path() + "?api_key=\(BaseConstant.tmdbApiKey)" // found the error, should put & here
     }
     
     var encoding: ParameterEncoding {
         switch self {
-        case.searchMovie:
+        case.searchMovie, .getUpcoming:
             return URLEncoding.queryString
         default: return JSONEncoding.default
         }
