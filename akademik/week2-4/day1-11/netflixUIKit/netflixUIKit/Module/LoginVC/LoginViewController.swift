@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 
@@ -14,9 +13,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    let vc = MainTabBarViewController()
     
-//    var handle: AuthStateDidChangeListenerHandle?
+    let vc = MainTabBarViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,45 +45,49 @@ class LoginViewController: UIViewController {
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
             
             print("Google Sign-In Success")
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true) // why this one works
         }
     }
     
-    @IBAction func buttonLogin(_ sender: Any) {
-        if let storedUser = getUser(), let enteredUsername = emailTextField.text, let enteredPassword = passwordTextField.text {
-            if storedUser.0 == enteredUsername && storedUser.1 == enteredPassword {
-                // Successful login
-                // You can perform a segue to the main screen or show an alert
-                let vc = MainTabBarViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
+    @IBAction func regularLoginPressed(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            // Handle invalid input
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if let error = error {
+                // Handle login error
+                self?.showAlert(title: "Login Error", message: error.localizedDescription)
+                print("Login Error: \(error.localizedDescription)")
             } else {
-                // Incorrect credentials
-                // Show an error message
-                print("email salah")
+                // Successful login
+                self?.showAlert(title: "Success", message: "Login Successful", completion: {
+                    self?.navigateToHome()
+                })
             }
-        } else {
-            // No stored user data
-            // Show an error message
-            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
-    func saveUser(username: String, password: String) {
-        UserDefaults.standard.set(username, forKey: "username")
-        UserDefaults.standard.set(password, forKey: "password")
-    }
-    
-    func getUser() -> (String, String)? {
-        if let username = UserDefaults.standard.string(forKey: "username"),
-           let password = UserDefaults.standard.string(forKey: "password") {
-            return (username, password)
+    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            completion?()
         }
-        return nil
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func buttonRegister(_ sender: Any) {
-        let vc = RegisterViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+    func navigateToHome() {
+        // Push to MainTabBarViewController
+        let mainTabVC = MainTabBarViewController()
+        self.navigationController?.pushViewController(mainTabVC, animated: true)
+        // user: 1@a.com
+        // pass: 123456
+    }
+    
+    @IBAction func toRegisterVC(_ sender: Any) {
+        let registerVC = RegisterViewController()
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
     
 }

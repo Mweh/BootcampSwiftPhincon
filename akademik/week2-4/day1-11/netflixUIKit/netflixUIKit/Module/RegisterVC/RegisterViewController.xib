@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="wOQ-Sa-DR8" id="JZw-iA-gp2"/>
+                <outlet property="passTextField" destination="5Qa-mX-InQ" id="R8J-yv-QGi"/>
+                <outlet property="registerButton" destination="n5K-Wb-WQH" id="bAM-rz-vCJ"/>
                 <outlet property="view" destination="JXr-IL-R0L" id="Kfw-hm-LI8"/>
             </connections>
         </placeholder>
