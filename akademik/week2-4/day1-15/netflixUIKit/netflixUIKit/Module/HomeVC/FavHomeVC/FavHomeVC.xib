@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavHomeVC" customModule="netflixUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Znh-Nt-NbC" id="KPQ-nE-3hd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTD-Uy-HON">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite Movies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kta-O1-zVs">
+                            <rect key="frame" x="16" y="8" width="361" height="33.666666666666664"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-Nt-NbC">
+                            <rect key="frame" x="0.0" y="57.666666666666686" width="393" height="701.33333333333326"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="KIL-iX-yE7">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Znh-Nt-NbC" secondAttribute="bottom" id="4Lz-a9-gx7"/>
+                        <constraint firstItem="Znh-Nt-NbC" firstAttribute="top" secondItem="kta-O1-zVs" secondAttribute="bottom" constant="16" id="7t9-aq-P8G"/>
+                        <constraint firstItem="kta-O1-zVs" firstAttribute="top" secondItem="ZTD-Uy-HON" secondAttribute="top" constant="8" id="8hK-Lo-DYW"/>
+                        <constraint firstItem="kta-O1-zVs" firstAttribute="leading" secondItem="ZTD-Uy-HON" secondAttribute="leading" constant="16" id="bhz-Pc-Oxe"/>
+                        <constraint firstAttribute="trailing" secondItem="kta-O1-zVs" secondAttribute="trailing" constant="16" id="buy-nn-Hlt"/>
+                        <constraint firstItem="Znh-Nt-NbC" firstAttribute="leading" secondItem="ZTD-Uy-HON" secondAttribute="leading" id="kJ0-uQ-4st"/>
+                        <constraint firstAttribute="trailing" secondItem="Znh-Nt-NbC" secondAttribute="trailing" id="ucg-LQ-Ieb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZTD-Uy-HON" secondAttribute="bottom" id="4Z3-RH-uwk"/>
+                <constraint firstItem="ZTD-Uy-HON" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8iI-kq-1Jq"/>
+                <constraint firstItem="ZTD-Uy-HON" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RO8-Iw-TD1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZTD-Uy-HON" secondAttribute="trailing" id="kcL-9T-oU7"/>
+            </constraints>
+            <point key="canvasLocation" x="64.885496183206101" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

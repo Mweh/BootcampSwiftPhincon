@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavHomeCollectionViewCell" id="gTV-IL-0wX" customClass="FavHomeCollectionViewCell" customModule="netflixUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g78-3c-WCA">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie7" translatesAutoresizingMaskIntoConstraints="NO" id="I5c-oY-IyB">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ayr-r7-O3C"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="I5c-oY-IyB" secondAttribute="bottom" id="Ay2-0u-dTx"/>
+                            <constraint firstAttribute="trailing" secondItem="I5c-oY-IyB" secondAttribute="trailing" id="DqY-uF-6Ey"/>
+                            <constraint firstItem="I5c-oY-IyB" firstAttribute="top" secondItem="g78-3c-WCA" secondAttribute="top" id="JkQ-6T-4zD"/>
+                            <constraint firstItem="I5c-oY-IyB" firstAttribute="leading" secondItem="g78-3c-WCA" secondAttribute="leading" id="Upm-sO-sJZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="g78-3c-WCA" secondAttribute="trailing" id="7O8-Nk-dQM"/>
+                <constraint firstAttribute="bottom" secondItem="g78-3c-WCA" secondAttribute="bottom" id="DyA-bL-nuh"/>
+                <constraint firstItem="g78-3c-WCA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MBZ-IO-WJH"/>
+                <constraint firstItem="g78-3c-WCA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gRO-1m-8wO"/>
+            </constraints>
+            <size key="customSize" width="191" height="157"/>
+            <connections>
+                <outlet property="imgView" destination="I5c-oY-IyB" id="quW-1J-xYT"/>
+            </connections>
+            <point key="canvasLocation" x="233.58778625954199" y="24.647887323943664"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="movie7" width="1280" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
