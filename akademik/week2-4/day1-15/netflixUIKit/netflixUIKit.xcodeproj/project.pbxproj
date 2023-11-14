@@ -53,6 +53,11 @@
 		CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD87BC642B0344C0008B9531 /* FavHomeVC.xib */; };
 		CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87BC672B034683008B9531 /* FavHomeCollectionViewCell.swift */; };
 		CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */; };
+		CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */; };
+		CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */; };
+		CDA5BAD62B039D170053CF05 /* VideoTrailerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA5BAD42B039D170053CF05 /* VideoTrailerVC.xib */; };
+		CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD72B03BD3E0053CF05 /* DesignableUITextField.swift */; };
+		CDA5BAE02B03D4750053CF05 /* movieLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = CDA5BADF2B03D4750053CF05 /* movieLoading.json */; };
 		CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = CDA849DC2AF09A5B0043F9AD /* netflixLottie.json */; };
 		CDAD7DBA2AFDD96E00BF41B8 /* refreshControl.json in Resources */ = {isa = PBXBuildFile; fileRef = CDAD7DB92AFDD96E00BF41B8 /* refreshControl.json */; };
 		CDAD7DBD2AFDE82400BF41B8 /* loadingCheckMark.json in Resources */ = {isa = PBXBuildFile; fileRef = CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */; };
@@ -133,6 +138,11 @@
 		CD87BC642B0344C0008B9531 /* FavHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavHomeVC.xib; sourceTree = "<group>"; };
 		CD87BC672B034683008B9531 /* FavHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailer.swift; sourceTree = "<group>"; };
+		CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailerVC.swift; sourceTree = "<group>"; };
+		CDA5BAD42B039D170053CF05 /* VideoTrailerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTrailerVC.xib; sourceTree = "<group>"; };
+		CDA5BAD72B03BD3E0053CF05 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		CDA5BADF2B03D4750053CF05 /* movieLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movieLoading.json; sourceTree = "<group>"; };
 		CDA849DC2AF09A5B0043F9AD /* netflixLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = netflixLottie.json; sourceTree = "<group>"; };
 		CDAD7DB92AFDD96E00BF41B8 /* refreshControl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = refreshControl.json; sourceTree = "<group>"; };
 		CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingCheckMark.json; sourceTree = "<group>"; };
@@ -179,6 +189,7 @@
 				CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */,
 				CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */,
 				CD0709382AFB3B0F0079FC45 /* SearchCollectionViewCell */,
+				CDA5BAD22B039CD50053CF05 /* YoutubeTrailerVC */,
 			);
 			path = SearchButtonView;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 				CDAF8A6C2AF8D72700CB670D /* Upcoming.swift */,
 				CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */,
 				CD723D042B03004C00C191A9 /* Favorites.swift */,
+				CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,12 +485,22 @@
 			path = FavHomeCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		CDA5BAD22B039CD50053CF05 /* YoutubeTrailerVC */ = {
+			isa = PBXGroup;
+			children = (
+				CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */,
+				CDA5BAD42B039D170053CF05 /* VideoTrailerVC.xib */,
+			);
+			path = YoutubeTrailerVC;
+			sourceTree = "<group>";
+		};
 		CDAD7DB82AFDD94E00BF41B8 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */,
+				CDA5BADF2B03D4750053CF05 /* movieLoading.json */,
 				CDA849DC2AF09A5B0043F9AD /* netflixLottie.json */,
 				CDAD7DB92AFDD96E00BF41B8 /* refreshControl.json */,
-				CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */,
 				CDAD7DBE2AFE03E200BF41B8 /* refreshDownArrow.json */,
 			);
 			path = LottieFiles;
@@ -530,6 +552,7 @@
 				CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */,
 				CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */,
 				CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */,
+				CDA5BAD72B03BD3E0053CF05 /* DesignableUITextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -637,8 +660,10 @@
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
 				CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */,
 				CDAD7DBA2AFDD96E00BF41B8 /* refreshControl.json in Resources */,
+				CDA5BAE02B03D4750053CF05 /* movieLoading.json in Resources */,
 				CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */,
 				CDAF8A792AF8DEF400CB670D /* SquareCollectionViewCell.xib in Resources */,
+				CDA5BAD62B039D170053CF05 /* VideoTrailerVC.xib in Resources */,
 				CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */,
 				CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */,
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
@@ -709,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */,
+				CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */,
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
 				CD16E3082AF35CBC00669456 /* Popular.swift in Sources */,
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
@@ -747,10 +773,12 @@
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CDAF8A6D2AF8D72700CB670D /* Upcoming.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
+				CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,
 				CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */,
 				CDD85AD62AFDBE5B00683CFE /* SystemConfiguration.swift in Sources */,
 				CD79F6AE2AEF80C500338C72 /* Constants.swift in Sources */,
+				CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
