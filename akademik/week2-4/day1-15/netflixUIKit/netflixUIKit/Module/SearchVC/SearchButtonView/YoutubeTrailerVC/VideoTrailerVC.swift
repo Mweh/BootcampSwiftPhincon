@@ -10,27 +10,46 @@ import WebKit
 
 class VideoTrailerVC: UIViewController {
     
-    var videoKey: String?
+    var movieId: Int?
+    @IBOutlet weak var webYoutubeView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
-    }
-    
-    func setup(){
-        if let videoKey = videoKey {
-            let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(videoKey)")!
-            let webView = WKWebView(frame: view.bounds)
-            webView.navigationDelegate = self
-            view.addSubview(webView)
-            
-            let request = URLRequest(url: youtubeURL)
-            webView.load(request)
+        // Check if movieId is available before loading the YouTube video
+        if let movieId = movieId {
+            loadYouTubeVideo(for: movieId)
         }
     }
-}
-
-extension VideoTrailerVC: WKNavigationDelegate{
     
+    func loadYouTubeVideo(for movieId: Int) {
+        let videoTrailerEndpoint = Endpoint.getVideoTrailer(id: movieId)
+        
+        // Make a network request to get the video information
+        CustomAPIManager.shared.makeAPICall(endpoint: videoTrailerEndpoint) { [weak self] (result: Result<VideoTrailer, Error>) in
+            switch result {
+            case .success(let videoTrailer):
+                // Assuming the first result is the video you want
+                if let firstVideo = videoTrailer.results.first {
+                    // Extract the key from the video information
+                    let videoKey = firstVideo.key
+                    
+                    // Use the video key to construct the YouTube URL and load it into WKWebView
+                    let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(videoKey)")
+                    let request = URLRequest(url: youtubeURL!)
+                    self?.webYoutubeView.load(request)
+                }
+            case .failure(let error):
+                print("Error fetching video trailer: \(error)")
+            }
+        }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .landscapeLeft
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        return .landscapeLeft
+    }
 }

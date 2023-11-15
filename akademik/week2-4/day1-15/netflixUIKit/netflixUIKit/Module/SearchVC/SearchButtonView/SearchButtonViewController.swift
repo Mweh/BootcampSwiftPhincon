@@ -11,13 +11,11 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-
 class SearchButtonViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var animationView: LottieAnimationView!
-    
     
     var searchResults: SearchResponse?  {
         didSet {
@@ -93,7 +91,6 @@ class SearchButtonViewController: UIViewController {
         let isEmpty = textFieldSearch.text?.isEmpty ?? true
         animationView.isHidden = !isEmpty
     }
-    
 }
 
 extension SearchButtonViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -113,7 +110,6 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
             return cell
         }
         return UICollectionViewCell()
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -121,8 +117,14 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
-        videoTrailerVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(videoTrailerVC, animated: true)
+        if let selectedMovie = searchResults?.results?[indexPath.row] {
+            let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+            videoTrailerVC.hidesBottomBarWhenPushed = true
+            
+            // Pass the movie ID to the VideoTrailerVC
+            videoTrailerVC.movieId = selectedMovie.id
+            
+            navigationController?.pushViewController(videoTrailerVC, animated: true)
+        }
     }
 }
