@@ -33,7 +33,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="105"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XY-wy-6CT">
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XY-wy-6CT" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="250" id="SQm-TK-okW"/>
@@ -41,8 +41,14 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="envelope" catalog="system"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-WN-oFT">
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-WN-oFT" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="55" width="250" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="WKD-A3-Eht"/>
@@ -50,6 +56,13 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock" catalog="system"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="showPasswordButton" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -141,7 +154,17 @@
             <point key="canvasLocation" x="35.877862595419849" y="-12.67605633802817"/>
         </view>
     </objects>
+    <designables>
+        <designable name="7gf-WN-oFT">
+            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+        </designable>
+        <designable name="9XY-wy-6CT">
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="lock" catalog="system" width="125" height="128"/>
         <image name="netflix" width="3000" height="2000"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

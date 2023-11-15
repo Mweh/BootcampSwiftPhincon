@@ -10,6 +10,44 @@ import UIKit
 @IBDesignable
 class DesignableUITextField: UITextField {
     
+    let passwordVisibilityButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(systemName: "eye"), for: .normal)
+        button.tintColor = .lightGray
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        return button
+    }()
+    
+    @IBInspectable var showPasswordButton: Bool = false {
+        didSet {
+            updatePasswordVisibilityButton()
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        updatePasswordVisibilityButton()
+    }
+    
+    private func updatePasswordVisibilityButton() {
+        if showPasswordButton {
+            rightViewMode = .always
+            rightView = passwordVisibilityButton
+        } else {
+            rightViewMode = .never
+            rightView = nil
+        }
+    }
+    
+    @objc private func togglePasswordVisibility() {
+        isSecureTextEntry.toggle()
+        
+        // Toggle the eye icon based on the secureTextEntry state
+        let imageName = isSecureTextEntry ? "eye" : "eye.fill"
+        passwordVisibilityButton.setImage(UIImage(systemName: imageName), for: .normal)
+    }
+    
     // Provides left padding for images
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         var textRect = super.leftViewRect(forBounds: bounds)
