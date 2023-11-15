@@ -84,6 +84,7 @@
                                 </label>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="uoO-fH-AQ4" secondAttribute="trailing" constant="87" id="3qc-3n-GEV"/>
                                 <constraint firstAttribute="height" constant="300" id="JMb-oZ-877"/>
                                 <constraint firstAttribute="bottom" secondItem="uoO-fH-AQ4" secondAttribute="bottom" id="MOS-B0-tkw"/>
                                 <constraint firstItem="uoO-fH-AQ4" firstAttribute="leading" secondItem="Sfw-rD-AuH" secondAttribute="leading" id="atN-JO-QEo"/>

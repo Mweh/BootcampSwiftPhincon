@@ -44,12 +44,4 @@ class VideoTrailerVC: UIViewController {
             }
         }
     }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        return .landscapeLeft
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-        return .landscapeLeft
-    }
 }

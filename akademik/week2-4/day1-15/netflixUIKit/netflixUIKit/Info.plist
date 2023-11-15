@@ -18,6 +18,8 @@
 	<string>255830166852-80e6ljqvp1e7jc7opi68ekpesml094i5.apps.googleusercontent.com</string>
 	<key>TMDB_API_KEY</key>
 	<string>a00ec533701ca1b960681db195770497</string>
+	<key>TMDB_TOKEN_KEY</key>
+	<string>Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMDBlYzUzMzcwMWNhMWI5NjA2ODFkYjE5NTc3MDQ5NyIsInN1YiI6IjY1NDJmODlmZWQyYWMyMDBlM2M5NDZlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0h72RSgCAlF8WP35k2NEgei9lyo37Btogq9DlO-56Gw</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

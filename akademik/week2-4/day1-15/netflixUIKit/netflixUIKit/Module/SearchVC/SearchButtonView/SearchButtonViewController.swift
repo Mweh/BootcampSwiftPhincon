@@ -32,9 +32,21 @@ class SearchButtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+//        settextFieldSearchInsideNavItem()
         setupAnimation()
+        configure()
     }
+    
+    func settextFieldSearchInsideNavItem() {
+        
+        // Create the custom view with the container view
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width - 20, height: 40)) //takes no effect
+        customView.addSubview(textFieldSearch)
+        
+        // Set the custom view as the title view
+        self.navigationItem.titleView = customView
+    }
+    
     
     func setupAnimation() {
         animationView.animation = LottieAnimation.named("movieLoading")
@@ -126,5 +138,25 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
             
             navigationController?.pushViewController(videoTrailerVC, animated: true)
         }
+    }
+}
+
+class ContentContainerViewController: UIViewController {
+    
+    let contentContainerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupContentContainer()
+    }
+    
+    func setupContentContainer() {
+        view.addSubview(contentContainerView)
+        // Adjust the frame of contentContainerView to position it beside the navigation item
+        // You may also want to consider safe area insets
+        contentContainerView.frame = CGRect(x: 20, y: 40, width: view.bounds.width, height: view.bounds.height)
     }
 }

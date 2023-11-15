@@ -14,8 +14,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -152,8 +152,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -275,8 +275,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -398,8 +398,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -461,8 +461,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
@@ -978,8 +978,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>

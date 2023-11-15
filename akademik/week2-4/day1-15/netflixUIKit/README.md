@@ -42,11 +42,11 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Integrate CoreData or UserDefault for data storage.
 - [ ] Add filter with viewModel using RxSwift, so my app can filter what genre should the user want by tapping the genre option and will filter the movie based on the selected genre.
 - [ ] Make my project full MVVM by adding viewModel in every module folder.
+- [ ] Implement Face ID feature for secure login.
 
 - [ ] Combine 2 endpoint/struct model buat perbandingan.
 - [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
 
-- ...
 
 ## DONE
 

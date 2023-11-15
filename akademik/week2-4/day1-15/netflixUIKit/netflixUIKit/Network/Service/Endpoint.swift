@@ -74,7 +74,7 @@ enum Endpoint {
         let params: HTTPHeaders = [
             "content-type": "application/json",
             "accept": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMDBlYzUzMzcwMWNhMWI5NjA2ODFkYjE5NTc3MDQ5NyIsInN1YiI6IjY1NDJmODlmZWQyYWMyMDBlM2M5NDZlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0h72RSgCAlF8WP35k2NEgei9lyo37Btogq9DlO-56Gw"
+            "Authorization": "\(BaseConstant.tmdbTokenKey)"
         ]
         return params
     }
@@ -96,5 +96,6 @@ enum Endpoint {
 
 class BaseConstant {
     static var host = "https://api.themoviedb.org/3/"
-    static let tmdbApiKey = "TMDB_API_KEY".apiKey
+    static let tmdbApiKey = "TMDB_API_KEY".apiKeyTMDB
+    static let tmdbTokenKey = "TMDB_TOKEN_KEY".tokenKeyTMDB
 }
