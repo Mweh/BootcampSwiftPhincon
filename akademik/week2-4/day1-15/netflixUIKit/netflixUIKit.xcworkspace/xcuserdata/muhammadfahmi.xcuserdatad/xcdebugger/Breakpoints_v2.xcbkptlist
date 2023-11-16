@@ -1041,8 +1041,8 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1057,8 +1057,8 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "googleSignInPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1073,8 +1073,8 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "navigateToHome()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1089,8 +1089,8 @@
             filePath = "netflixUIKit/Module/LoginVC/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "toRegisterVC(_:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -130,6 +130,7 @@
         <designable name="MHL-h9-EQN">
             <size key="intrinsicContentSize" width="273.66666666666669" height="34"/>
         </designable>
+        <designable name="Sfw-rD-AuH"/>
     </designables>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

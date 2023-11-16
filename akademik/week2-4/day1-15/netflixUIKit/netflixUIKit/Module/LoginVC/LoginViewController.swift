@@ -5,9 +5,11 @@
 //  Created by Muhammad Fahmi on 30/10/23.
 //
 
-import LocalAuthentication
 import FirebaseAuth
 import GoogleSignIn
+import LocalAuthentication
+import RxSwift
+import RxCocoa
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -16,15 +18,37 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var faceIdButton: UIButton!
     @IBOutlet weak var customGSignInButton: GIDSignInButton!
     
-    let vc = MainTabBarViewController()
+    private let faceID = FaceID()
+    private let disposeBag = DisposeBag()
+    private let vc = MainTabBarViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let googleSignInButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
         customGSignInButton.addGestureRecognizer(googleSignInButtonTapGesture)
         changeRegisterLabel()
+        faceIDPressed()
+    }
+    
+    func faceIDPressed(){ // then pls change this instead to use rxswift/cocoa
+        faceIdButton.setAnimateBounce()
+        // Use RxSwift for faceIDButton tap event
+        faceIdButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.faceID.authenticateUser() { isSuccess in
+                    if isSuccess {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self?.navigationController?.pushViewController(self?.vc ?? UIViewController(), animated: true)
+                        }
+                    } else {
+                        self?.showAlert(title: "Invalid Biometric", message: "This app does not get permission for biometric")
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     func changeRegisterLabel(){

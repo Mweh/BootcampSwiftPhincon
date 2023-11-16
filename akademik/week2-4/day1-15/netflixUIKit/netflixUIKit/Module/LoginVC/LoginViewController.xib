@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="customGSignInButton" destination="g1F-lW-5De" id="WPa-Si-0rF"/>
                 <outlet property="emailTextField" destination="9XY-wy-6CT" id="v9z-4o-0wg"/>
+                <outlet property="faceIdButton" destination="7py-Ng-ys2" id="5Ud-Dl-ThQ"/>
                 <outlet property="passwordTextField" destination="7gf-WN-oFT" id="6Eh-yP-fse"/>
                 <outlet property="registerButton" destination="o68-TV-RJu" id="dfx-xl-ql9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -98,7 +99,7 @@
                                                         <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
                                                     </connections>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2" userLabel="FaceID">
                                                     <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
