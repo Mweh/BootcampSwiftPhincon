@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="customGSignInButton" destination="g1F-lW-5De" id="WPa-Si-0rF"/>
                 <outlet property="emailTextField" destination="9XY-wy-6CT" id="v9z-4o-0wg"/>
                 <outlet property="passwordTextField" destination="7gf-WN-oFT" id="6Eh-yP-fse"/>
+                <outlet property="registerButton" destination="o68-TV-RJu" id="dfx-xl-ql9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,13 +27,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-PK-mOr">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Zk-nLQ">
-                            <rect key="frame" x="-1303.6666666666667" y="84.999999999999986" width="3000.3333333333335" height="179.66666666666663"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Zk-nLQ" userLabel="netflixImage">
+                            <rect key="frame" x="-1303.6666666666667" y="6" width="3000.3333333333335" height="251"/>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-n8-SS5">
-                            <rect key="frame" x="71.666666666666686" y="269.66666666666669" width="250" height="220"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-n8-SS5" userLabel="FormSV">
+                            <rect key="frame" x="71.666666666666686" y="262" width="250" height="235.33333333333337"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG" userLabel="Email/PassSV">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="105"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XY-wy-6CT" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
@@ -66,8 +69,8 @@
                                         </textField>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-MJ-CDI">
-                                    <rect key="frame" x="0.0" y="125" width="250" height="95"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-MJ-CDI" userLabel="LoginSV">
+                                    <rect key="frame" x="0.0" y="125" width="250" height="110.33333333333331"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-ux-gGh">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -81,28 +84,51 @@
                                                 <action selector="regularLoginPressed:" destination="-1" eventType="touchUpInside" id="neo-dD-AQg"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
-                                            <rect key="frame" x="0.0" y="45" width="250" height="50"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
+                                            <rect key="frame" x="0.0" y="44.999999999999993" width="250" height="65.333333333333314"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
+                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="65.333333333333329"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65.329999999999998" id="RIS-VH-fch"/>
+                                                        <constraint firstAttribute="width" constant="190" id="ao5-dd-nGh"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
+                                                    </connections>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2">
+                                                    <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
+                                                    </state>
+                                                    <buttonConfiguration key="configuration" style="gray" cornerStyle="dynamic">
+                                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43"/>
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="250" id="AD9-OV-iC5"/>
+                                                <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="J5d-Zv-DMV" secondAttribute="top" id="KTd-ue-STn"/>
+                                                <constraint firstItem="7py-Ng-ys2" firstAttribute="leading" secondItem="g1F-lW-5De" secondAttribute="trailing" constant="10" id="VcC-WJ-CYI"/>
+                                                <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="J5d-Zv-DMV" secondAttribute="leading" id="XkO-Fq-4rZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="nUn-nF-n2M"/>
                                             </constraints>
-                                            <connections>
-                                                <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
-                                            </connections>
-                                        </view>
+                                        </stackView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="IWe-oW-AAE"/>
-                                        <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="EbI-MJ-CDI" secondAttribute="leading" id="T8k-xd-j4q"/>
-                                        <constraint firstAttribute="trailing" secondItem="g1F-lW-5De" secondAttribute="trailing" id="Zn8-fo-8l0"/>
-                                        <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="Z2u-ux-gGh" secondAttribute="bottom" constant="5" id="fOE-JG-MAG"/>
-                                    </constraints>
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX">
-                            <rect key="frame" x="20" y="553.66666666666663" width="353" height="76.666666666666629"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX" userLabel="RegisterSv">
+                            <rect key="frame" x="20" y="561" width="353" height="76.666666666666629"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o68-TV-RJu">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="33.333333333333336"/>
@@ -131,15 +157,16 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" secondItem="kxi-PK-mOr" secondAttribute="top" priority="750" constant="6" id="5Id-0j-Qsh"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="leading" secondItem="kxi-PK-mOr" secondAttribute="leading" constant="20" id="CVv-vH-vv8"/>
                         <constraint firstAttribute="trailing" secondItem="roC-VC-UhX" secondAttribute="trailing" constant="20" id="CnP-Vf-7fX"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="top" secondItem="j6b-n8-SS5" secondAttribute="bottom" constant="64" id="KBZ-0r-tp2"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="ORS-kt-BNC"/>
+                        <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="kxi-PK-mOr" secondAttribute="top" constant="85" id="YTn-vX-Q66"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="top" secondItem="cYH-Zk-nLQ" secondAttribute="bottom" constant="5" id="ZBP-dD-Gpo"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="dSV-cy-3vp"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="centerY" secondItem="kxi-PK-mOr" secondAttribute="centerY" id="nQU-5f-PuA"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="wWo-DL-WAE"/>
-                        <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" secondItem="kxi-PK-mOr" secondAttribute="top" constant="85" id="x2x-OF-5Co"/>
                     </constraints>
                 </view>
             </subviews>
@@ -164,6 +191,7 @@
     </designables>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="netflix" width="3000" height="2000"/>
         <systemColor name="labelColor">
@@ -171,6 +199,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

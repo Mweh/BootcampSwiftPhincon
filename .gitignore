@@ -1,0 +1,3 @@
+# .gitignore
+/GoogleService-Info.plist  # or the name of your configuration file
+/Info.plist    # only if necessary, some projects may need to keep Info.plist

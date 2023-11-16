@@ -15,15 +15,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var customGSignInButton: GIDSignInButton!
+    
     let vc = MainTabBarViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
-        self.view.addGestureRecognizer(tapGesture)
-        // Do any additional setup after loading the view.
-        
+        let googleSignInButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
+        customGSignInButton.addGestureRecognizer(googleSignInButtonTapGesture)
+        changeRegisterLabel()
     }
+    
+    func changeRegisterLabel(){
+        // Get the current title of the button
+        guard let currentTitle = registerButton.title(for: .normal) else {
+            return
+        }
+        // Create an attributed string
+        let attributedString = NSMutableAttributedString(string: currentTitle)
+        
+        if let range = currentTitle.range(of: "Start") {
+            // Apply the desired attributes to the specified range
+            attributedString.addAttribute(.foregroundColor, value: UIColor.systemRed, range: NSRange(range, in: currentTitle))
+            attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 20), range: NSRange(range, in: currentTitle))
+        }
+        // Set the attributed string as the new title of the button
+        registerButton.setAttributedTitle(attributedString, for: .normal)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Hide the navigation bar
@@ -46,7 +66,7 @@ class LoginViewController: UIViewController {
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
             
             print("Google Sign-In Success")
-            self.navigationController?.pushViewController(vc, animated: true) // why this one works
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
