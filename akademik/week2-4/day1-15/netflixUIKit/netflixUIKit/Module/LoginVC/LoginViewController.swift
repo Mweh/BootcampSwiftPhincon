@@ -16,24 +16,32 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var faceIdButton: UIButton!
+    @IBOutlet weak var regularLoginButton: UIButton!
     @IBOutlet weak var customGSignInButton: GIDSignInButton!
+    @IBOutlet weak var faceIdButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var forgotPassButton: UIButton!
     
     private let faceID = FaceID()
     private let disposeBag = DisposeBag()
     private let vc = MainTabBarViewController()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        let googleSignInButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
-        customGSignInButton.addGestureRecognizer(googleSignInButtonTapGesture)
-        changeRegisterLabel()
+        performGSignIn()
         faceIDPressed()
+        changeRegisterLabel()
+        performRegularLoginRx()
+        toRegisterVCRx()
+        performForgotPassRx()
     }
     
-    func faceIDPressed(){ // then pls change this instead to use rxswift/cocoa
+    func performGSignIn(){
+        let googleSignInButtonTapGesture = UITapGestureRecognizer(target: self, action: #selector(googleSignInPressed(_:)))
+        customGSignInButton.addGestureRecognizer(googleSignInButtonTapGesture)
+    }
+    
+    func faceIDPressed(){
         faceIdButton.setAnimateBounce()
         // Use RxSwift for faceIDButton tap event
         faceIdButton.rx.tap
@@ -68,33 +76,15 @@ class LoginViewController: UIViewController {
         registerButton.setAttributedTitle(attributedString, for: .normal)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    func performRegularLoginRx(){
+        regularLoginButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                self?.performRegularLogin()
+            })
+            .disposed(by: disposeBag)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    @objc func googleSignInPressed(_ sender: UITapGestureRecognizer) {
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
-            guard error == nil else { return }
-            guard let user = result?.user,
-                  let idToken = user.idToken?.tokenString
-            else { return }
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-            
-            print("Google Sign-In Success")
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @IBAction func regularLoginPressed(_ sender: Any) {
+    func performRegularLogin(){
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             // Handle invalid input
             return
@@ -113,13 +103,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func toRegisterVCRx(){
+        registerButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                let registerVC = RegisterViewController()
+                self?.navigationController?.pushViewController(registerVC, animated: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    
     func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            completion?()
-        }
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
     }
     
     func navigateToHome() {
@@ -130,8 +124,79 @@ class LoginViewController: UIViewController {
         // pass: 123456
     }
     
-    @IBAction func toRegisterVC(_ sender: Any) {
-        let registerVC = RegisterViewController()
-        self.navigationController?.pushViewController(registerVC, animated: true)
+    func performForgotPassRx(){
+        forgotPassButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                self?.showForgotPasswordPanel()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func showForgotPasswordPanel() {
+        let contentVC = ForgotPassViewController()
+        contentVC.modalPresentationStyle = .custom
+        contentVC.transitioningDelegate = self
+        present(contentVC, animated: true, completion: nil)
+        
+        // Add swipe down gesture for dismissal
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissHalfModal))
+        swipeDown.direction = .down
+        contentVC.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func dismissHalfModal() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - FloatingPanel Forgot Password
+extension LoginViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
+
+// MARK: - Perform GSignIn
+extension LoginViewController {
+    @objc func googleSignInPressed(_ sender: UITapGestureRecognizer) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+            guard error == nil else { return }
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString
+            else { return }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            
+            print("Google Sign-In Success")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func showAlertForLoginError(_ error: Error?) {
+        if let error = error {
+            self.showAlert(title: "Login Error", message: error.localizedDescription)
+            print("Login Error: \(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - Hide Navigation
+extension LoginViewController{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+}
+
+// TODO: - Crash when FaceID didnt match
+
+

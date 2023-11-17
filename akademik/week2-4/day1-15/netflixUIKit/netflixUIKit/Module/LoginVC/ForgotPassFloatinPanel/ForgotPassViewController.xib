@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgotPassViewController" customModule="netflixUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="PGs-i3-ggG" id="AwY-yf-bVN"/>
+                <outlet property="resetEmailButton" destination="2vg-QE-wsB" id="EOs-1D-ObD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="386"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ui-6Q-g2r">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="386"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-wr-yWu">
+                            <rect key="frame" x="56.666666666666657" y="132.33333333333334" width="280" height="121.33333333333334"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send email verification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-i3-ggG" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="N9P-gZ-Sal"/>
+                                        <constraint firstAttribute="width" constant="280" id="gQi-Y5-9fA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                            <imageReference key="value" image="envelope" catalog="system" symbolScale="large"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vg-QE-wsB" userLabel="Send email!">
+                                    <rect key="frame" x="0.0" y="70" width="280" height="51.333333333333343"/>
+                                    <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="Reset password">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2vg-QE-wsB" firstAttribute="width" secondItem="PGs-i3-ggG" secondAttribute="width" id="U7K-Ox-8IO"/>
+                                <constraint firstItem="2vg-QE-wsB" firstAttribute="height" secondItem="PGs-i3-ggG" secondAttribute="height" multiplier="0.858333" id="Wv2-sT-kqX"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="mLA-wr-yWu" firstAttribute="centerX" secondItem="9ui-6Q-g2r" secondAttribute="centerX" id="7lK-ZW-dzq"/>
+                        <constraint firstItem="mLA-wr-yWu" firstAttribute="centerY" secondItem="9ui-6Q-g2r" secondAttribute="centerY" id="bN5-zR-SM3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9ui-6Q-g2r" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9cw-Mo-Kyy"/>
+                <constraint firstItem="9ui-6Q-g2r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Kas-Gl-1Um"/>
+                <constraint firstItem="9ui-6Q-g2r" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="eY9-G5-hvR"/>
+                <constraint firstItem="9ui-6Q-g2r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oah-3B-6wu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-175.35211267605635"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="PGs-i3-ggG">
+            <size key="intrinsicContentSize" width="192" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="envelope" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

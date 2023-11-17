@@ -6,6 +6,7 @@
 //
 import RxCocoa
 import RxSwift
+import SwiftUI
 import UIKit
 
 class MoreViewController: UIViewController {
@@ -48,6 +49,14 @@ class MoreViewController: UIViewController {
         loginVC.hidesBottomBarWhenPushed = true // Hide the tab bar
         navigationController?.pushViewController(loginVC, animated: true)
     }
+    
+    
+    @IBAction func toSwiftUI(_ sender: Any) {
+        let moreViewWrapper = MoreViewWrapper()
+        let hostingController = UIHostingController(rootView: moreViewWrapper)
+        navigationController?.pushViewController(hostingController, animated: true)
+    }
+    
     
     func openGallary() {
         picker!.allowsEditing = false

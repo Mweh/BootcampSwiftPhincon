@@ -5,10 +5,12 @@ An amazing project that does incredible things.
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
+  - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [TODOs](#todos)
+- [DONE](#done)
 
 ## Features
 
@@ -21,6 +23,32 @@ List of key features in your project.
 ## Installation
 
 Steps to install and set up your project.
+
+### Set up Info.plist and GoogleService-Info.plist
+
+Before running the project, make sure to set up the `Info.plist` and `GoogleService-Info.plist` files.
+
+1. **Info.plist:**
+   - Duplicate the `Info.plist` file in the `netflixUIKit` folder.
+   - Rename the duplicated file to `Info-dev.plist` for development.
+   - Update the necessary configurations such as API keys, endpoints, etc. in the `Info-dev.plist` file.
+
+   ```bash
+   cp netflixUIKit/Info.plist netflixUIKit/Info-dev.plist
+   ```
+
+2. **GoogleService-Info.plist:**
+   - If your project uses Firebase or Google services, make sure to create a `GoogleService-Info.plist` file and add it to the `netflixUIKit` folder.
+   - Update the configurations in the `GoogleService-Info.plist` file.
+
+   ```bash
+   cp path/to/your/GoogleService-Info.plist netflixUIKit/GoogleService-Info.plist
+   ```
+
+3. **Note:**
+   - Ensure that both `Info-dev.plist` and `GoogleService-Info.plist` are added to your `.gitignore` file to prevent them from being accidentally committed to version control.
+
+### Continue with the rest of the installation steps...
 
 ## Usage
 
@@ -58,3 +86,5 @@ Tasks that have been completed.
 - [x] Implement POST method from TMDB API.
 - [x] Integrate YouTube API to play trailer videos.
 - [x] Implement Face ID feature for secure login.
+- [x] Add reset password feature
+

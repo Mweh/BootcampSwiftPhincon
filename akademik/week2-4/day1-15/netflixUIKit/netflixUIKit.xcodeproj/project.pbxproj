@@ -20,6 +20,11 @@
 		CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E30F2AF37B9400669456 /* RegisterViewController.xib */; };
 		CD16E3142AF3826100669456 /* ListMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E3122AF3826100669456 /* ListMovieCell.swift */; };
 		CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16E3132AF3826100669456 /* ListMovieCell.xib */; };
+		CD21917B2B073A380038BE86 /* ModalHalfUIPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */; };
+		CD21917D2B074E600038BE86 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917C2B074E600038BE86 /* AlertUtility.swift */; };
+		CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917E2B0757550038BE86 /* PopUpLoading.swift */; };
+		CD2191812B0759250038BE86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2191802B0759250038BE86 /* Common.swift */; };
+		CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = CD2191822B07654A0038BE86 /* loadingIndicator.json */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
 		CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */; };
@@ -31,12 +36,15 @@
 		CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4FA4442AF39ECE00226717 /* DetailViewController.xib */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* ExtUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* ExtUIButton.swift */; };
+		CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A42B05F5DB005718D2 /* MoreView.swift */; };
+		CD59D0A92B061401005718D2 /* client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD59D0A82B061401005718D2 /* client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
 		CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */; };
 		CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */; };
 		CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */; };
+		CD6254012B071EAE00C000CC /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6254002B071EAE00C000CC /* ExtUIView.swift */; };
 		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
 		CD723D052B03004C00C191A9 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723D042B03004C00C191A9 /* Favorites.swift */; };
 		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
@@ -76,6 +84,8 @@
 		CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAF8A832AF95B5200CB670D /* CarouselCollectionViewCell.xib */; };
 		CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */; };
 		CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */; };
+		CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC320DF2B07075300726140 /* ForgotPassViewController.swift */; };
+		CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC320E02B07075300726140 /* ForgotPassViewController.xib */; };
 		CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEABD72AF0E9EB004F37B8 /* SplashScreen.swift */; };
 		CDCEABDA2AF0E9EB004F37B8 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEABD82AF0E9EB004F37B8 /* SplashScreen.xib */; };
 		CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */; };
@@ -105,6 +115,11 @@
 		CD16E30F2AF37B9400669456 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		CD16E3122AF3826100669456 /* ListMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieCell.swift; sourceTree = "<group>"; };
 		CD16E3132AF3826100669456 /* ListMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMovieCell.xib; sourceTree = "<group>"; };
+		CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHalfUIPresentationController.swift; sourceTree = "<group>"; };
+		CD21917C2B074E600038BE86 /* AlertUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
+		CD21917E2B0757550038BE86 /* PopUpLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLoading.swift; sourceTree = "<group>"; };
+		CD2191802B0759250038BE86 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CD2191822B07654A0038BE86 /* loadingIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingIndicator.json; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedReusableCustomView.swift; sourceTree = "<group>"; };
@@ -116,6 +131,8 @@
 		CD4FA4442AF39ECE00226717 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* ExtUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIButton.swift; sourceTree = "<group>"; };
+		CD59D0A42B05F5DB005718D2 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		CD59D0A82B061401005718D2 /* client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +141,7 @@
 		CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD6254002B071EAE00C000CC /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
 		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
 		CD723D042B03004C00C191A9 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../../Downloads/UpcomingMovies/Favorites.swift; sourceTree = "<group>"; };
 		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +182,8 @@
 		CDAF8A832AF95B5200CB670D /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
 		CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
 		CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComingSoonViewController.xib; sourceTree = "<group>"; };
+		CDC320DF2B07075300726140 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		CDC320E02B07075300726140 /* ForgotPassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassViewController.xib; sourceTree = "<group>"; };
 		CDCEABD72AF0E9EB004F37B8 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		CDCEABD82AF0E9EB004F37B8 /* SplashScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
 		CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarReusableCustomView.swift; sourceTree = "<group>"; };
@@ -213,6 +233,7 @@
 				CD0709422AFB599E0079FC45 /* ExtUIImageView.swift */,
 				CDAD7DC02AFE065900BF41B8 /* ExtUIViewController.swift */,
 				CD59D0A12B05E811005718D2 /* ExtUIButton.swift */,
+				CD6254002B071EAE00C000CC /* ExtUIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +295,8 @@
 			children = (
 				CD2C65122AEFB2340026B35B /* LoginViewController.swift */,
 				CD2C65132AEFB2340026B35B /* LoginViewController.xib */,
+				CD16E30D2AF37B7400669456 /* RegisterVC */,
+				CDCACE062B07062A0065E963 /* ForgotPassFloatinPanel */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -311,6 +334,14 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
+		CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */ = {
+			isa = PBXGroup;
+			children = (
+				CD59D0A42B05F5DB005718D2 /* MoreView.swift */,
+			);
+			path = SwiftUILittleProject;
+			sourceTree = "<group>";
+		};
 		CD5DD4902AEF38AA00140DFA = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +372,7 @@
 				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
 				CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */,
+				CD59D0A82B061401005718D2 /* client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist */,
 			);
 			path = netflixUIKit;
 			sourceTree = "<group>";
@@ -369,7 +401,6 @@
 			children = (
 				CDCEABDB2AF0EC90004F37B8 /* SplashScreen */,
 				CD2C65112AEFB2130026B35B /* LoginVC */,
-				CD16E30D2AF37B7400669456 /* RegisterVC */,
 				CD60A6362AF1E89C00B2E511 /* MainTabVC */,
 				CDC05AEE2AF0AE7E00706AB7 /* HomeVC */,
 				CD5DD4B72AEF3ADE00140DFA /* SearchVC */,
@@ -484,6 +515,7 @@
 		CD79F6B22AEF833500338C72 /* MoreVC */ = {
 			isa = PBXGroup;
 			children = (
+				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
 				CD79F6B92AEF83A300338C72 /* MoreViewController.swift */,
 				CD79F6BA2AEF83A300338C72 /* MoreViewController.xib */,
 			);
@@ -512,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */,
+				CD2191822B07654A0038BE86 /* loadingIndicator.json */,
 				CDA5BADF2B03D4750053CF05 /* movieLoading.json */,
 				CDA849DC2AF09A5B0043F9AD /* netflixLottie.json */,
 				CDAD7DB92AFDD96E00BF41B8 /* refreshControl.json */,
@@ -540,6 +573,15 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		CDCACE062B07062A0065E963 /* ForgotPassFloatinPanel */ = {
+			isa = PBXGroup;
+			children = (
+				CDC320DF2B07075300726140 /* ForgotPassViewController.swift */,
+				CDC320E02B07075300726140 /* ForgotPassViewController.xib */,
+			);
+			path = ForgotPassFloatinPanel;
+			sourceTree = "<group>";
+		};
 		CDCEABDB2AF0EC90004F37B8 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,9 +594,13 @@
 		CDCEABDC2AF0F44D004F37B8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CD21917C2B074E600038BE86 /* AlertUtility.swift */,
 				CD79F6AD2AEF80C500338C72 /* Constants.swift */,
 				CDAF8A672AF8A6B000CB670D /* String.swift */,
 				CDFAB1472AFBC73C00D2963D /* Protocol.swift */,
+				CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */,
+				CD21917E2B0757550038BE86 /* PopUpLoading.swift */,
+				CD2191802B0759250038BE86 /* Common.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -673,6 +719,7 @@
 				CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */,
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
 				CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */,
+				CD59D0A92B061401005718D2 /* client_255830166852-jb8c75csolpae37kal710ibo004ltpho.apps.googleusercontent.com.plist in Resources */,
 				CDAD7DBA2AFDD96E00BF41B8 /* refreshControl.json in Resources */,
 				CDA5BAE02B03D4750053CF05 /* movieLoading.json in Resources */,
 				CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */,
@@ -684,7 +731,9 @@
 				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
 				CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */,
 				CDAD7DBF2AFE03E200BF41B8 /* refreshDownArrow.json in Resources */,
+				CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */,
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
+				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */,
@@ -747,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD21917D2B074E600038BE86 /* AlertUtility.swift in Sources */,
 				CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */,
 				CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */,
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
@@ -754,11 +804,13 @@
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
 				CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* ExtUIViewController.swift in Sources */,
+				CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */,
 				CDAF8A812AF94B2200CB670D /* DiscoverTV.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CDFAB1462AFB61EA00D2963D /* SearchResponse.swift in Sources */,
 				CD136FD12AFA33770046BB44 /* SearchVCViewModel.swift in Sources */,
 				CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */,
+				CD21917B2B073A380038BE86 /* ModalHalfUIPresentationController.swift in Sources */,
 				CDAF8A842AF95B5200CB670D /* CarouselCollectionViewCell.swift in Sources */,
 				CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */,
 				CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */,
@@ -776,6 +828,7 @@
 				CD0709432AFB599E0079FC45 /* ExtUIImageView.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
+				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,
 				CDAF8A682AF8A6B000CB670D /* String.swift in Sources */,
 				CD16E30C2AF36F6300669456 /* HomeVCViewModel.swift in Sources */,
 				CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */,
@@ -784,11 +837,14 @@
 				CD79F6B02AEF82B700338C72 /* MainTabBarViewController.swift in Sources */,
 				CD40E1EA2AF875DA002D2407 /* TopRated.swift in Sources */,
 				CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */,
+				CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */,
+				CD6254012B071EAE00C000CC /* ExtUIView.swift in Sources */,
 				CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */,
 				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CDAF8A6D2AF8D72700CB670D /* Upcoming.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
+				CD2191812B0759250038BE86 /* Common.swift in Sources */,
 				CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,
 				CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */,

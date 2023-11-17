@@ -15,8 +15,10 @@
                 <outlet property="customGSignInButton" destination="g1F-lW-5De" id="WPa-Si-0rF"/>
                 <outlet property="emailTextField" destination="9XY-wy-6CT" id="v9z-4o-0wg"/>
                 <outlet property="faceIdButton" destination="7py-Ng-ys2" id="5Ud-Dl-ThQ"/>
+                <outlet property="forgotPassButton" destination="2nb-Pz-m7S" id="Qby-e3-Sdg"/>
                 <outlet property="passwordTextField" destination="7gf-WN-oFT" id="6Eh-yP-fse"/>
                 <outlet property="registerButton" destination="o68-TV-RJu" id="dfx-xl-ql9"/>
+                <outlet property="regularLoginButton" destination="Z2u-ux-gGh" id="R9A-P8-PLU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -81,9 +83,6 @@
                                             <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="gray" title="Sign In"/>
-                                            <connections>
-                                                <action selector="regularLoginPressed:" destination="-1" eventType="touchUpInside" id="neo-dD-AQg"/>
-                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
                                             <rect key="frame" x="0.0" y="44.999999999999993" width="250" height="65.333333333333314"/>
@@ -129,7 +128,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX" userLabel="RegisterSv">
-                            <rect key="frame" x="20" y="561" width="353" height="76.666666666666629"/>
+                            <rect key="frame" x="20" y="561" width="353" height="90.333333333333371"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o68-TV-RJu">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="33.333333333333336"/>
@@ -140,20 +139,17 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Not a member yet? Start your free month!">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                     </buttonConfiguration>
-                                    <connections>
-                                        <action selector="toRegisterVC:" destination="-1" eventType="touchUpInside" id="j4Q-eD-Vyb"/>
-                                    </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L47-6c-2Wo">
-                                    <rect key="frame" x="0.0" y="57.333333333333378" width="353" height="19.333333333333336"/>
-                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-Pz-m7S">
+                                    <rect key="frame" x="0.0" y="57.333333333333371" width="353" height="33"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Forgot your password?">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                    </buttonConfiguration>
+                                </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="L47-6c-2Wo" firstAttribute="top" secondItem="o68-TV-RJu" secondAttribute="bottom" constant="24.000000000000043" id="HJg-nu-eFi"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -197,6 +193,9 @@
         <image name="netflix" width="3000" height="2000"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

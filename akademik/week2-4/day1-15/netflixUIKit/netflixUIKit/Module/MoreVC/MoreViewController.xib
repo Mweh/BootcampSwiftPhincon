@@ -72,20 +72,31 @@
                                 <action selector="signOut:" destination="-1" eventType="touchUpInside" id="nLp-JA-1C0"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-5c-sWf">
+                            <rect key="frame" x="285" y="654.66666666666663" width="75" height="34.333333333333371"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="toSwiftUI:" destination="-1" eventType="touchUpInside" id="nkC-aj-fZN"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="53P-v2-iH0" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leadingMargin" id="05Q-o8-1aD"/>
                         <constraint firstItem="53P-v2-iH0" firstAttribute="top" secondItem="aq4-iG-jAu" secondAttribute="top" constant="27" id="0kA-iU-KlO"/>
+                        <constraint firstAttribute="bottom" secondItem="DDc-5c-sWf" secondAttribute="bottom" constant="70" id="BZZ-EX-6PT"/>
                         <constraint firstItem="53P-v2-iH0" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="CcU-aK-sCg"/>
                         <constraint firstItem="9hq-eL-CV5" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="32" id="GkS-pc-zRK"/>
                         <constraint firstAttribute="bottom" secondItem="D4g-ls-Soc" secondAttribute="bottom" constant="70" id="IGY-XT-KZF"/>
                         <constraint firstItem="d1K-15-Gi3" firstAttribute="top" secondItem="9hq-eL-CV5" secondAttribute="bottom" constant="32" id="OfM-Za-D9u"/>
                         <constraint firstItem="0ea-og-nAr" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="TW6-AI-TFv"/>
                         <constraint firstItem="0ea-og-nAr" firstAttribute="top" secondItem="53P-v2-iH0" secondAttribute="bottom" constant="47" id="TeM-89-Hzk"/>
+                        <constraint firstItem="DDc-5c-sWf" firstAttribute="leading" secondItem="D4g-ls-Soc" secondAttribute="trailing" constant="179" id="Y1X-V4-KSB"/>
                         <constraint firstItem="D4g-ls-Soc" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="16" id="dC0-ef-0ph"/>
                         <constraint firstItem="9hq-eL-CV5" firstAttribute="top" secondItem="0ea-og-nAr" secondAttribute="bottom" constant="12.67" id="kh8-nh-akb"/>
                         <constraint firstAttribute="trailing" secondItem="9hq-eL-CV5" secondAttribute="trailing" constant="33" id="nBM-8J-fYo"/>
+                        <constraint firstAttribute="trailing" secondItem="DDc-5c-sWf" secondAttribute="trailing" constant="33" id="ttl-6f-cgk"/>
                         <constraint firstAttribute="trailing" secondItem="d1K-15-Gi3" secondAttribute="trailing" constant="33" id="wtV-4z-x7D"/>
                         <constraint firstItem="d1K-15-Gi3" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="32" id="xrF-Dd-qRr"/>
                     </constraints>

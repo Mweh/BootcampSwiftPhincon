@@ -43,7 +43,7 @@ class MainTabBarViewController: UITabBarController {
         searchVC.navigationItem.largeTitleDisplayMode = .automatic
         comingSoonVC.navigationItem.largeTitleDisplayMode = .automatic
         moreVC.navigationItem.largeTitleDisplayMode = .automatic
-        
+                
         let nav1 = UINavigationController(rootViewController: homeVC)
         let nav2 = UINavigationController(rootViewController: searchVC)
         let nav3 = UINavigationController(rootViewController: comingSoonVC)
