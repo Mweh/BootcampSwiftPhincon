@@ -73,7 +73,6 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add more pages/VC for movie credits, including actors and other relevant information.
 - [ ] Combine 2 endpoint/struct model buat perbandingan.
 - [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
-- [ ] add number(ranking 1-10) beside the imageView of best rated movie 
 
 - ...
 
@@ -88,4 +87,5 @@ Tasks that have been completed.
 - [x] Integrate YouTube API to play trailer videos.
 - [x] Implement Face ID feature for secure login.
 - [x] Add reset password feature
+- [x] add number(ranking 1-10) beside the imageView of best rated movie 
 

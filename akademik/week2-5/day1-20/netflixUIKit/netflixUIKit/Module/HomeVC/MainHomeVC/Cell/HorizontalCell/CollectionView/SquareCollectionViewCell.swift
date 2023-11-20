@@ -13,11 +13,14 @@ class SquareCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var ratedNumberLabel: UILabel!
     @IBOutlet weak var containerNewMovie: UIView!
+    @IBOutlet weak var tagTop10Img: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         container.layer.cornerRadius = container.frame.height / 20
+        imgView.layer.cornerRadius = imgView.frame.height / 20
+        imgView.clipsToBounds = true
         containerNewMovie.makeRounded(20)
         container.clipsToBounds = true
         

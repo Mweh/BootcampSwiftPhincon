@@ -14,8 +14,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -152,8 +152,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -275,8 +275,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -398,8 +398,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -461,8 +461,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
@@ -902,6 +902,21 @@
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "1604">
                </Location>
+               <Location
+                  uuid = "3993DF16-72CD-46DB-A528-0D4C71528E79 - 695174725f16825f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.FavHomeVC.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/FavHomeVC/FavHomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1604">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -965,6 +980,21 @@
                   endingLineNumber = "91"
                   offsetFromSymbolStart = "2044">
                </Location>
+               <Location
+                  uuid = "41A98A7E-ED44-40A9-B905-2883A61948CF - 695174725f16fddb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.FavHomeVC.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/FavHomeVC/FavHomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2044">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -978,8 +1008,8 @@
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "configure()"
             landmarkType = "7">
             <Locations>
@@ -1027,6 +1057,21 @@
                   startingLineNumber = "98"
                   endingLineNumber = "98"
                   offsetFromSymbolStart = "3180">
+               </Location>
+               <Location
+                  uuid = "27BC32EF-0EAE-476E-95A7-9405411D2804 - 2550329cd3eeb902"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.SearchButtonViewController.configure() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "3184">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1156,6 +1201,22 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "setupRx()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC12A404-CA68-40F9-AD1F-BCF0369EFAA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/HomeVC/MainHomeVC/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

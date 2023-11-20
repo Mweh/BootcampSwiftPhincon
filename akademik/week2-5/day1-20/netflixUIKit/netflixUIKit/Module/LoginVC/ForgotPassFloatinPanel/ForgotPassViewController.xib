@@ -59,11 +59,21 @@
                                 <constraint firstItem="2vg-QE-wsB" firstAttribute="height" secondItem="PGs-i3-ggG" secondAttribute="height" multiplier="0.858333" id="Wv2-sT-kqX"/>
                             </constraints>
                         </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.compact.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-EP-x9z">
+                            <rect key="frame" x="136.66666666666666" y="12" width="119.99999999999997" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="5wA-2L-QLZ"/>
+                                <constraint firstAttribute="height" constant="40" id="Fze-KH-kI1"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="mLA-wr-yWu" firstAttribute="centerX" secondItem="9ui-6Q-g2r" secondAttribute="centerX" id="7lK-ZW-dzq"/>
+                        <constraint firstAttribute="trailing" secondItem="a8T-EP-x9z" secondAttribute="trailing" constant="136.5" id="MgR-lQ-12Y"/>
+                        <constraint firstItem="a8T-EP-x9z" firstAttribute="top" secondItem="9ui-6Q-g2r" secondAttribute="top" constant="5" id="TBs-tP-Q53"/>
                         <constraint firstItem="mLA-wr-yWu" firstAttribute="centerY" secondItem="9ui-6Q-g2r" secondAttribute="centerY" id="bN5-zR-SM3"/>
+                        <constraint firstItem="a8T-EP-x9z" firstAttribute="leading" secondItem="9ui-6Q-g2r" secondAttribute="leading" constant="136.5" id="shC-aA-q2n"/>
                     </constraints>
                 </view>
             </subviews>
@@ -81,10 +91,11 @@
     </objects>
     <designables>
         <designable name="PGs-i3-ggG">
-            <size key="intrinsicContentSize" width="192" height="34"/>
+            <size key="intrinsicContentSize" width="231" height="34"/>
         </designable>
     </designables>
     <resources>
+        <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

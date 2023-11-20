@@ -16,7 +16,7 @@ class VerticalCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageAutoCarousel: UIPageControl!
     @IBOutlet weak var playLabel: UIButton!
-    @IBOutlet weak var infoLabel: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var myFavButton: UIButton!
     
     let bag = DisposeBag()

@@ -24,10 +24,10 @@ class FavHomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showNaviItem()
         configure()
         bindData()
         vm.loadData(for: .getFavoriteNoPaging, resultType: Favorites.self)
+        showNaviItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {

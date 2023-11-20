@@ -76,19 +76,28 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                 
                 let url = URL(string: imageName)
                 cell.imgView.kf.setImage(with: url)
-                // Set the ratedNumberLabel text to the indexPath.row + 1
-                cell.ratedNumberLabel.text = "\(indexPath.row + 1)"
-                //                cell.containerNewMovie -> and how to show only in first cell? but other cell not
+                
+                // Set ratedNumberLabel only for the first 9 cells
+                (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
+                
             }
+            
             // Show containerNewMovie only in the first cell
             if indexPath.row == 0 {
                 cell.containerNewMovie.isHidden = false
-            } else {
-                cell.containerNewMovie.isHidden = true
+                cell.tagTop10Img.isHidden = false
+                
+            } else if indexPath.row >= 9 {
+                cell.containerNewMovie.isHidden = false
+                cell.tagTop10Img.isHidden = true
             }
+            else {
+                cell.containerNewMovie.isHidden = true
+                cell.tagTop10Img.isHidden = false
+            }
+            
             return cell
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -98,7 +107,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             let cellHeight = 150
             return CGSize(width: cellWidth, height: cellHeight)
         case .SquareCell:
-            let cellWidth = 190
+            let cellWidth = 200
             let cellHeight = 250
             return CGSize(width: cellWidth, height: cellHeight)
         }

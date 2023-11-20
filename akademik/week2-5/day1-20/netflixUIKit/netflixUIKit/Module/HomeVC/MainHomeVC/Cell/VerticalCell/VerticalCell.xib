@@ -68,10 +68,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9M-Pq-Dxc">
-                                <rect key="frame" x="16" y="301.33333333333331" width="288" height="54.666666666666686"/>
+                                <rect key="frame" x="16" y="302.66666666666669" width="288" height="53.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BX0-6X-W0G" userLabel="My Fav">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="54.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="53.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="star.square.on.square" catalog="system" imagePlacement="top" imagePadding="5">
                                             <attributedString key="attributedTitle">
@@ -86,20 +86,30 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-0F-NEX" userLabel="Play">
-                                        <rect key="frame" x="96" y="0.0" width="96" height="54.666666666666664"/>
+                                        <rect key="frame" x="96" y="0.0" width="96" height="53.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="play" catalog="system" title="Play" imagePadding="10"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-UT-Y7R" userLabel="Info">
-                                        <rect key="frame" x="192" y="0.0" width="96" height="54.666666666666664"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-UT-Y7R">
+                                        <rect key="frame" x="192" y="0.0" width="96" height="53.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" imagePlacement="top" title="Info"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="top">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Search">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </stackView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-JC-wXb">
-                                <rect key="frame" x="102.33333333333331" y="252" width="115.66666666666669" height="26"/>
+                                <rect key="frame" x="102.33333333333331" y="253.33333333333337" width="115.66666666666669" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="tintColor"/>
                             </pageControl>
                         </subviews>
@@ -116,12 +126,21 @@
                             <constraint firstItem="x9M-Pq-Dxc" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" constant="16" id="yWm-uA-qSF"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="xLL-YJ-F5S">
+                        <rect key="frame" x="10" y="136" width="300" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="YP5-uv-WcY"/>
+                            <constraint firstAttribute="width" constant="300" id="uxd-xt-yrq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="duh-tC-SQc" secondAttribute="bottom" id="5It-xO-eQW"/>
                     <constraint firstItem="duh-tC-SQc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AoS-qP-H5M"/>
                     <constraint firstItem="duh-tC-SQc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gbd-gQ-4Tq"/>
+                    <constraint firstItem="xLL-YJ-F5S" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="H3M-kb-age"/>
                     <constraint firstAttribute="trailing" secondItem="duh-tC-SQc" secondAttribute="trailing" id="cxj-43-egh"/>
+                    <constraint firstItem="xLL-YJ-F5S" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sM2-HR-IAg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -133,17 +152,18 @@
             <connections>
                 <outlet property="collectionView" destination="v2H-9n-vZR" id="hOP-ko-KU6"/>
                 <outlet property="containerStackView" destination="x9M-Pq-Dxc" id="6JZ-qi-qkW"/>
-                <outlet property="infoLabel" destination="aOu-UT-Y7R" id="jnJ-rc-aJ9"/>
                 <outlet property="myFavButton" destination="BX0-6X-W0G" id="Mxg-sf-TmO"/>
                 <outlet property="pageAutoCarousel" destination="tjO-JC-wXb" id="uQj-d9-Ueg"/>
                 <outlet property="playLabel" destination="yfb-0F-NEX" id="9CF-xx-Z47"/>
+                <outlet property="searchButton" destination="aOu-UT-Y7R" id="jnJ-rc-aJ9"/>
             </connections>
             <point key="canvasLocation" x="48.854961832061065" y="127.46478873239437"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="netflix" width="3000" height="2000"/>
         <image name="play" catalog="system" width="117" height="128"/>
         <image name="star.square.on.square" catalog="system" width="128" height="116"/>
         <namedColor name="transparentBlack30">

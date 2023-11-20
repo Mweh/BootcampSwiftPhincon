@@ -114,6 +114,13 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-gf-XIY">
+                                <rect key="frame" x="0.0" y="30" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VZi-nv-Zhe"/>
+                                    <constraint firstAttribute="width" constant="40" id="k9s-v2-h0b"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -126,9 +133,11 @@
                             <constraint firstItem="Wy8-89-Bct" firstAttribute="top" secondItem="fSU-n1-FeN" secondAttribute="bottom" constant="8.3333333333333144" id="K7K-8s-Sti"/>
                             <constraint firstAttribute="trailing" secondItem="BGW-HG-s2l" secondAttribute="trailing" constant="12" id="KC1-9R-AED"/>
                             <constraint firstAttribute="trailing" secondItem="Wy8-89-Bct" secondAttribute="trailing" constant="8" id="NLF-W0-CIu"/>
+                            <constraint firstItem="p5g-dV-M4x" firstAttribute="leading" secondItem="7aj-gf-XIY" secondAttribute="trailing" constant="-60" id="QN6-rT-0Z3"/>
                             <constraint firstItem="adU-jU-iPb" firstAttribute="top" secondItem="Wy8-89-Bct" secondAttribute="bottom" constant="8" id="UzJ-gi-1LF"/>
                             <constraint firstAttribute="trailing" secondItem="fSU-n1-FeN" secondAttribute="trailing" constant="152" id="ZwH-yB-P45"/>
                             <constraint firstItem="p5g-dV-M4x" firstAttribute="top" secondItem="dOC-N4-gq6" secondAttribute="top" constant="20" id="jLe-WK-149"/>
+                            <constraint firstItem="p5g-dV-M4x" firstAttribute="top" secondItem="7aj-gf-XIY" secondAttribute="bottom" constant="-60" id="pEw-Go-UyM"/>
                             <constraint firstItem="fSU-n1-FeN" firstAttribute="top" secondItem="BGW-HG-s2l" secondAttribute="bottom" constant="6" id="sGt-W4-SPh"/>
                             <constraint firstAttribute="height" constant="420" id="stS-IS-FQH"/>
                             <constraint firstItem="fSU-n1-FeN" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="xj8-tM-tZf"/>
@@ -167,6 +176,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Netflix-N" width="70" height="126"/>
         <image name="netflix" width="3000" height="2000"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">

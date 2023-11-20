@@ -72,11 +72,20 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-Kw-92h">
+                        <rect key="frame" x="6" y="6" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="DBS-po-dHl"/>
+                            <constraint firstAttribute="width" constant="20" id="PA8-0K-cm1"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="qqx-Kw-92h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="1Sc-2u-uMA"/>
                     <constraint firstItem="QZa-hx-sMO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1pf-IO-WJz"/>
                     <constraint firstItem="QZa-hx-sMO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="BRW-ha-pF1"/>
                     <constraint firstAttribute="trailing" secondItem="QZa-hx-sMO" secondAttribute="trailing" id="CG5-4k-6fF"/>
+                    <constraint firstItem="qqx-Kw-92h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="ThE-Yd-xHv"/>
                     <constraint firstAttribute="bottom" secondItem="QZa-hx-sMO" secondAttribute="bottom" constant="5" id="oGr-Qp-qsL"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
@@ -96,6 +105,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Netflix-N" width="70" height="126"/>
         <image name="netflix" width="3000" height="2000"/>
         <image name="play.circle" catalog="system" width="128" height="123"/>
     </resources>

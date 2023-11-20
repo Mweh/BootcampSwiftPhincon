@@ -85,7 +85,7 @@ class TableViewController: UITableViewController {
         tblView.register(UINib(nibName: "HorizontalCell", bundle: nil), forCellReuseIdentifier: "HorizontalCell")
         tblView.register(UINib(nibName: "VerticalCell", bundle: nil), forCellReuseIdentifier: "VerticalCell")
     }
-        
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -111,6 +111,14 @@ class TableViewController: UITableViewController {
         switch tableViewCellType {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
+            cell.searchButton.rx.tap
+                .subscribe(onNext: {[weak self] in
+                    let vc = SearchButtonViewController()
+                    vc.hidesBottomBarWhenPushed = true
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                    print("Di push trus")
+                })
+                .disposed(by: bag)
             return cell
         case .HorizontalCell:
             

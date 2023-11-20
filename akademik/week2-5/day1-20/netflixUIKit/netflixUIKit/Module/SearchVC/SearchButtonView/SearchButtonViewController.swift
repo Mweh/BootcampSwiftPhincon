@@ -35,6 +35,24 @@ class SearchButtonViewController: UIViewController {
 //        settextFieldSearchInsideNavItem()
         setupAnimation()
         configure()
+        showNaviItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        showNaviItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        showNaviItem()
+    }
+    
+    func showNaviItem(){
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func settextFieldSearchInsideNavItem() {

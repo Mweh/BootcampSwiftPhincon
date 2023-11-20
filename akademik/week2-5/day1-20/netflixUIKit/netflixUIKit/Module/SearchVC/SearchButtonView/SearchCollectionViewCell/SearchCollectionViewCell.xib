@@ -33,12 +33,30 @@
                             <constraint firstAttribute="trailing" secondItem="iyN-st-P7e" secondAttribute="trailing" id="ue5-Mc-Ani"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kZb-Tg-fTc">
+                        <rect key="frame" x="40" y="72" width="40" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="CXL-fJ-Sjb"/>
+                            <constraint firstAttribute="width" constant="40" id="W0Y-ck-EBl"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-ou-pF7">
+                        <rect key="frame" x="4" y="8" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="7ND-pH-iLK"/>
+                            <constraint firstAttribute="height" constant="20" id="9s9-20-BJi"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="l6u-6W-cmg" secondAttribute="bottom" id="8I0-ih-r64"/>
+                <constraint firstItem="Tgi-ou-pF7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="GaM-56-4Ut"/>
                 <constraint firstItem="l6u-6W-cmg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xdb-5I-iR0"/>
+                <constraint firstItem="kZb-Tg-fTc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="b72-fK-kKM"/>
+                <constraint firstItem="kZb-Tg-fTc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="cDM-od-zi5"/>
+                <constraint firstItem="Tgi-ou-pF7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="cyY-gV-23s"/>
                 <constraint firstAttribute="trailing" secondItem="l6u-6W-cmg" secondAttribute="trailing" id="gAE-Nd-Lyw"/>
                 <constraint firstItem="l6u-6W-cmg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pe4-MX-zQf"/>
             </constraints>
@@ -50,7 +68,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Netflix-N" width="70" height="126"/>
         <image name="movie7" width="1280" height="1920"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

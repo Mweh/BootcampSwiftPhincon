@@ -26,11 +26,29 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-QH-Obn">
+                                <rect key="frame" x="55" y="57" width="40" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="MdJ-y1-g9B"/>
+                                    <constraint firstAttribute="height" constant="40" id="UHi-ue-e1z"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-M5-eN4">
+                                <rect key="frame" x="65" y="6" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CQg-XE-LkE"/>
+                                    <constraint firstAttribute="width" constant="20" id="YhP-3T-gXC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KSc-We-Zil" firstAttribute="top" secondItem="5pf-i4-pWS" secondAttribute="top" id="6Gh-kc-QoY"/>
+                            <constraint firstItem="Vfj-M5-eN4" firstAttribute="top" secondItem="5pf-i4-pWS" secondAttribute="top" constant="6" id="JSg-xA-p9q"/>
                             <constraint firstItem="KSc-We-Zil" firstAttribute="leading" secondItem="5pf-i4-pWS" secondAttribute="leading" id="YHX-zI-Eji"/>
+                            <constraint firstItem="L0f-QH-Obn" firstAttribute="centerX" secondItem="5pf-i4-pWS" secondAttribute="centerX" id="Zeg-vq-PPd"/>
+                            <constraint firstItem="L0f-QH-Obn" firstAttribute="centerY" secondItem="5pf-i4-pWS" secondAttribute="centerY" id="bLP-Sn-T7m"/>
+                            <constraint firstItem="Vfj-M5-eN4" firstAttribute="centerX" secondItem="5pf-i4-pWS" secondAttribute="centerX" id="j7m-bE-leh"/>
                             <constraint firstAttribute="trailing" secondItem="KSc-We-Zil" secondAttribute="trailing" id="ouw-o3-Qi8"/>
                             <constraint firstAttribute="bottom" secondItem="KSc-We-Zil" secondAttribute="bottom" id="tVV-JN-aec"/>
                         </constraints>
@@ -56,6 +74,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Netflix-N" width="70" height="126"/>
         <image name="movie1" width="1280" height="1920"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
     </resources>
 </document>
