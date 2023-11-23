@@ -7,20 +7,16 @@
 
 import Foundation
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let topRated = try? JSONDecoder().decode(TopRated.self, from: jsonData)
-
 // MARK: - TopRated
 struct NowPlaying: Codable {
-    let dates: Dates
+    let dates: Dates?
     let page: Int
     let results: [ResultNowPlaying]
     let totalPages, totalResults: Int
-
+    
     enum CodingKeys: String, CodingKey {
-        case dates, page, results
+        case dates
+        case page, results
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
@@ -33,18 +29,21 @@ struct Dates: Codable {
 
 // MARK: - Result
 struct ResultNowPlaying: Codable {
-    let adult: Bool
+    let adult: Bool?
     let backdropPath: String
     let genreIDS: [Int]
     let id: Int
     let originalLanguage: String
-    let originalTitle, overview: String
+    let originalTitle: String?
+    let overview: String
     let popularity: Double
-    let posterPath, releaseDate, title: String
-    let video: Bool
+    let releaseDate: String?
+    let posterPath: String
+    let title: String?
+    let video: Bool?
     let voteAverage: Double
     let voteCount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"

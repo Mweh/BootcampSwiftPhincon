@@ -4,9 +4,10 @@
 //
 //  Created by Muhammad Fahmi on 30/10/23.
 //
+
+//import Hero
 import UIKit
 import RxSwift
-import ViewAnimator
 
 class TableViewController: UITableViewController {
     
@@ -14,9 +15,6 @@ class TableViewController: UITableViewController {
     
     let bag = DisposeBag()
     let customAPIManager = CustomAPIManager()
-    let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
-    let zoomAnimation = AnimationType.zoom(scale: 0.2)
-    let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/2)
     
     var dataNowPlaying: NowPlaying? {
         didSet {
@@ -24,7 +22,7 @@ class TableViewController: UITableViewController {
         }
     }
     
-    var dataDiscoverTV: DiscoverTV? {
+    var dataDiscoverTV: NowPlaying? {
         didSet {
             tblView.reloadData()
         }
@@ -36,7 +34,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         configureTable()
         vm.loadData(for: .getNowPlaying, resultType: NowPlaying.self)
-        vm.loadData(for: .getDiscoverTV, resultType: DiscoverTV.self)
+        vm.loadData(for: .getDiscoverTV, resultType: NowPlaying.self)
         noSafeArea()
         bindData()
     }
@@ -111,33 +109,43 @@ class TableViewController: UITableViewController {
         switch tableViewCellType {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
-            cell.searchButton.rx.tap
-                .subscribe(onNext: {[weak self] in
-                    let vc = SearchButtonViewController()
-                    vc.hidesBottomBarWhenPushed = true
-                    self?.navigationController?.pushViewController(vc, animated: true)
-                    print("Di push trus")
-                })
-                .disposed(by: bag)
+            
+            cell.searchAction = { [weak self] in
+                let vc = SearchButtonViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)
+                print("Di push trus")
+                
+            }
+            
+            cell.myFavAction = { [weak self] in
+                let vc = FavHomeVC()
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+
             return cell
         case .HorizontalCell:
             
             if let dataNowPlaying = dataNowPlaying, let dataDiscoverTV = dataDiscoverTV {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
-                
+                cell.parentNavigationController = self.navigationController
+
                 switch indexPath.row {
                 case 0:
+                    cell.delegate = self
                     cell.typeCell = .CircleCell
                     cell.collectionNowPlaying = dataNowPlaying.results
                     cell.collectionViewHeightConstraint.constant = 175
                 case 1:
+                    cell.delegate = self
                     cell.typeCell = .SquareCell
                     cell.collectionDiscoverTV = dataDiscoverTV.results
+                    
                 default:
                     break
                 }
                 
-                UIView.animate(views: [cell], animations: [fromAnimation, rotateAnimation, zoomAnimation], delay: 0.3)
                 return cell
             }
             return UITableViewCell()
@@ -145,12 +153,34 @@ class TableViewController: UITableViewController {
             return UITableViewCell()
         }
     }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
 
+
+extension TableViewController: HorizontalCellDelegate {
+    func didTapCellCircle(index: Int) {
+        if let dataNowPlaying = dataNowPlaying {
+            let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+            videoTrailerVC.hidesBottomBarWhenPushed = true
+            videoTrailerVC.movieId = dataNowPlaying.results[index].id
+            self.navigationController?.pushViewController(videoTrailerVC, animated: true)
+            
+        }
+    }
+    func didTapCellSquare(index: Int) {
+        if let dataDiscoverTV = dataDiscoverTV  {
+            let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+            detailViewController.hidesBottomBarWhenPushed = true
+            detailViewController.data = dataDiscoverTV.results[index]
+            
+            self.navigationController?.hero.isEnabled = true
+            
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+}
 enum TableViewCellType: Int, CaseIterable {
     case VerticalCell
     case HorizontalCell

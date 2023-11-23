@@ -20,13 +20,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pf-i4-pWS">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-We-Zil">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-We-Zil">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-QH-Obn">
+                            <imageView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleAspectFit" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-QH-Obn">
                                 <rect key="frame" x="55" y="57" width="40" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="MdJ-y1-g9B"/>
@@ -69,6 +69,7 @@
             <connections>
                 <outlet property="container" destination="5pf-i4-pWS" id="zH7-8e-PzR"/>
                 <outlet property="movieImage" destination="KSc-We-Zil" id="Mq3-oW-IQU"/>
+                <outlet property="playImg" destination="L0f-QH-Obn" id="Pw6-Gv-p9u"/>
             </connections>
             <point key="canvasLocation" x="162.59541984732823" y="14.43661971830986"/>
         </collectionViewCell>

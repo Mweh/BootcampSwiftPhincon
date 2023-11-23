@@ -155,7 +155,7 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
 
             cell.setup(data: data.results[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
             
-            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].posterPath)"
+            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].backdropPath)"
             if let url = URL(string: imageName) {
                 cell.imgView.kf.indicatorType = .activity
                 cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass"))

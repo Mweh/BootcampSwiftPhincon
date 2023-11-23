@@ -18,12 +18,17 @@ class VerticalCell: UITableViewCell {
     @IBOutlet weak var playLabel: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var myFavButton: UIButton!
-    
+
+    @IBOutlet weak var containerImgView: UIView!
     let bag = DisposeBag()
     
     var images = (1...7).compactMap { UIImage(named: "movie\($0)") }
     var timer: Timer?
     var currentIndex = 0
+    
+    var searchAction: (() -> Void)?
+    var myFavAction: (() -> Void)?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,12 +71,14 @@ class VerticalCell: UITableViewCell {
         myFavButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
-                
-                if let navigationController = self.findViewController()?.navigationController {
-                    let vc = FavHomeVC()
-                    vc.hidesBottomBarWhenPushed = true
-                    navigationController.pushViewController(vc, animated: true)
-                }
+                self.myFavAction?()
+            })
+            .disposed(by: bag)
+        
+        searchButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.searchAction?()
             })
             .disposed(by: bag)
     }

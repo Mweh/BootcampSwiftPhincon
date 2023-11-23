@@ -846,7 +846,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3993DF16-72CD-46DB-A528-0D4C71528E79"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Module/HomeVC/FavHomeVC/FavHomeVC.swift"
@@ -924,7 +924,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "41A98A7E-ED44-40A9-B905-2883A61948CF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Module/HomeVC/FavHomeVC/FavHomeVC.swift"
@@ -1002,7 +1002,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "27BC32EF-0EAE-476E-95A7-9405411D2804"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Module/SearchVC/SearchButtonView/SearchButtonViewController.swift"
@@ -1080,7 +1080,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5BEB1DC5-B440-43AE-A4A8-8435E1AC3A5B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "netflixUIKit/Common/Feature/FaceID.swift"
@@ -1207,16 +1207,599 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AC12A404-CA68-40F9-AD1F-BCF0369EFAA4"
+            uuid = "C17BB531-E12E-42E0-A2CA-1BDFB96249D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C17BB531-E12E-42E0-A2CA-1BDFB96249D0 - a0b51f3b6471f0e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "C17BB531-E12E-42E0-A2CA-1BDFB96249D0 - a0b51f3b6471f162"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93DE490F-A3E9-4321-B497-6B938E5A3EDA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "93DE490F-A3E9-4321-B497-6B938E5A3EDA - a0b51f3b6471f0e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "93DE490F-A3E9-4321-B497-6B938E5A3EDA - a0b51f3b6471f007"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "93DE490F-A3E9-4321-B497-6B938E5A3EDA - a0b51f3b6471f007"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "93DE490F-A3E9-4321-B497-6B938E5A3EDA - a0b51f3b6471f028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "089E9D9D-55B9-4039-84AF-CF065592AC87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "089E9D9D-55B9-4039-84AF-CF065592AC87 - a0b51f3b6471f028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "089E9D9D-55B9-4039-84AF-CF065592AC87 - a0b51f3b6471f049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "089E9D9D-55B9-4039-84AF-CF065592AC87 - a0b51f3b6471f007"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "089E9D9D-55B9-4039-84AF-CF065592AC87 - a0b51f3b6471f028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.HorizontalCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/HomeVC/MainHomeVC/Cell/HorizontalCell/HorizontalCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F95B8B77-C398-4E51-B310-5E585D21572F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "setupUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F95B8B77-C398-4E51-B310-5E585D21572F - 2d9b728e2fe1d7dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "936">
+               </Location>
+               <Location
+                  uuid = "F95B8B77-C398-4E51-B310-5E585D21572F - 2d9b728e2fe1d7dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  uuid = "F95B8B77-C398-4E51-B310-5E585D21572F - 2d9b728e2fe1d692"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "980">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7610445-4EB3-4095-AB4E-A29E02C4E336"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "setUpInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CBBFC40-A510-46EF-85B7-FC714773E773"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "setupUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8CBBFC40-A510-46EF-85B7-FC714773E773 - 2d9b728e2fe1d428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "3092">
+               </Location>
+               <Location
+                  uuid = "8CBBFC40-A510-46EF-85B7-FC714773E773 - 2d9b728e2fe1d428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "3108">
+               </Location>
+               <Location
+                  uuid = "8CBBFC40-A510-46EF-85B7-FC714773E773 - 2d9b728e2fe1d7bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.DetailViewController.setupUp() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "4176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBBFA080-0C21-4500-B07D-54663D37192B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CBBFA080-0C21-4500-B07D-54663D37192B - 12742ff774bbba4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "528">
+               </Location>
+               <Location
+                  uuid = "CBBFA080-0C21-4500-B07D-54663D37192B - 12742ff774bbba4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "CBBFA080-0C21-4500-B07D-54663D37192B - 12742ff774bbba2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "CBBFA080-0C21-4500-B07D-54663D37192B - 12742ff774bbba2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58418D47-738A-4522-929E-AADC1E3838DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58418D47-738A-4522-929E-AADC1E3838DD - 12742ff774bbba94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "58418D47-738A-4522-929E-AADC1E3838DD - 12742ff774bbba94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64B3D1C4-AE6E-4471-8CEE-B0019C833ADC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64B3D1C4-AE6E-4471-8CEE-B0019C833ADC - 12742ff774bbbab5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1248">
+               </Location>
+               <Location
+                  uuid = "64B3D1C4-AE6E-4471-8CEE-B0019C833ADC - 12742ff774bbbab5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+               <Location
+                  uuid = "64B3D1C4-AE6E-4471-8CEE-B0019C833ADC - 12742ff774bbbab5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1572">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35C6AB21-8F19-46AA-B181-4ABFBBA0D799"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/HomeVC/MainHomeVC/TableViewController.swift"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setupAPI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35C6AB21-8F19-46AA-B181-4ABFBBA0D799 - 4c580af7814c8121"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "netflixUIKit.CastingViewController.setupAPI() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "35C6AB21-8F19-46AA-B181-4ABFBBA0D799 - b173e123225ecb1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;netflixUIKit.Credit, Swift.Error&gt;) -&gt; () in netflixUIKit.CastingViewController.setupAPI() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-5/day1-20/netflixUIKit/netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87BF9BDC-0E2A-4BEB-B6E0-A105EF6BBFB0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/SearchVC/DetailViewController/CastingVC/CastingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setupAPI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

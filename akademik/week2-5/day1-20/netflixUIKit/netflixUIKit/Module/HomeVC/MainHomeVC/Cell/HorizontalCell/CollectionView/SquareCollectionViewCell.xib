@@ -78,12 +78,22 @@
                                     <constraint firstAttribute="height" constant="25" id="ZPf-NJ-mRR"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmR-z4-qF3" userLabel="fireAnimation" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="47" y="169" width="133" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="QFl-Bb-021"/>
+                                    <constraint firstAttribute="height" constant="31" id="fmz-Ph-HwO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="g9V-uf-XaG" secondAttribute="bottom" constant="-37" id="7U4-RP-zV6"/>
                             <constraint firstItem="vY5-Cp-ddU" firstAttribute="leading" secondItem="EBh-u7-jIn" secondAttribute="trailing" constant="-26" id="KdO-41-rRT"/>
                             <constraint firstAttribute="bottom" secondItem="pKQ-6Q-Gvp" secondAttribute="bottom" id="Nor-w6-G0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="OmR-z4-qF3" secondAttribute="bottom" id="Phq-h7-JIC"/>
+                            <constraint firstItem="OmR-z4-qF3" firstAttribute="leading" secondItem="vY5-Cp-ddU" secondAttribute="trailing" constant="-136" id="Rxw-LG-igg"/>
                             <constraint firstItem="pKQ-6Q-Gvp" firstAttribute="leading" secondItem="g9V-uf-XaG" secondAttribute="trailing" constant="-28" id="TL2-8j-nLW"/>
                             <constraint firstItem="vY5-Cp-ddU" firstAttribute="trailing" secondItem="2Or-4v-q4x" secondAttribute="trailing" id="Z8R-iR-zlg"/>
                             <constraint firstItem="2Or-4v-q4x" firstAttribute="top" secondItem="BqK-xd-2gj" secondAttribute="top" constant="-4" id="ZLD-sd-LQm"/>
@@ -92,6 +102,7 @@
                             <constraint firstItem="vY5-Cp-ddU" firstAttribute="top" secondItem="BqK-xd-2gj" secondAttribute="top" id="jyq-IQ-AtM"/>
                             <constraint firstItem="EBh-u7-jIn" firstAttribute="top" secondItem="BqK-xd-2gj" secondAttribute="top" constant="9" id="q5M-bY-TaR"/>
                             <constraint firstAttribute="trailing" secondItem="2Or-4v-q4x" secondAttribute="trailing" id="qZv-f0-hq9"/>
+                            <constraint firstAttribute="trailing" secondItem="OmR-z4-qF3" secondAttribute="trailing" constant="3" id="sJg-iV-VfC"/>
                             <constraint firstItem="pKQ-6Q-Gvp" firstAttribute="centerX" secondItem="vY5-Cp-ddU" secondAttribute="centerX" id="vjj-Mq-xvB"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -112,6 +123,7 @@
                 <outlet property="container" destination="BqK-xd-2gj" id="skw-yq-2xG"/>
                 <outlet property="containerNewMovie" destination="pKQ-6Q-Gvp" id="tpH-ta-AsW"/>
                 <outlet property="imgView" destination="vY5-Cp-ddU" id="ClP-kq-pWp"/>
+                <outlet property="lottieView" destination="OmR-z4-qF3" id="7xm-gx-MTo"/>
                 <outlet property="ratedNumberLabel" destination="g9V-uf-XaG" id="jgJ-Gs-xns"/>
                 <outlet property="tagTop10Img" destination="2Or-4v-q4x" id="TNQ-ya-zXM"/>
             </connections>

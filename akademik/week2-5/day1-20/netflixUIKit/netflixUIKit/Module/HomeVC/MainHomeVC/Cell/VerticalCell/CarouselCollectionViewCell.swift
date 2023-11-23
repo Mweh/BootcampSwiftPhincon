@@ -13,5 +13,6 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgView.makeImageRounded(5)
     }
 }

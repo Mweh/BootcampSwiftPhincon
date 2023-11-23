@@ -51,8 +51,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
-                                <rect key="frame" x="292.33333333333331" y="40" width="19.666666666666686" height="20.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.compact.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
+                                <rect key="frame" x="303.66666666666669" y="40.666666666666664" width="8.3333333333333144" height="18.666666666666671"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -106,7 +106,7 @@
     </objects>
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
+        <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
         <image name="netflix" width="3000" height="2000"/>
-        <image name="play.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

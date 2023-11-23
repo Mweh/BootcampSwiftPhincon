@@ -5,8 +5,14 @@
 //  Created by Muhammad Fahmi on 30/10/23.
 //
 
+import Hero
 import UIKit
 import Kingfisher
+
+protocol HorizontalCellDelegate: AnyObject {
+    func didTapCellCircle(index: Int)
+    func didTapCellSquare(index: Int)
+}
 
 class HorizontalCell: UITableViewCell {
     
@@ -15,10 +21,13 @@ class HorizontalCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
+    var parentNavigationController: UINavigationController?
+    
     var typeCell: SectionCell = .CircleCell
+    weak var delegate: HorizontalCellDelegate?
     
     var collectionNowPlaying: [ResultNowPlaying]?
-    var collectionDiscoverTV: [ResultDiscoverTV] = []
+    var collectionDiscoverTV: [ResultNowPlaying]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,8 +45,19 @@ class HorizontalCell: UITableViewCell {
         
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.register(UINib(nibName: "SquareCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SquareCollectionViewCell")
+        // Add a tap gesture recognizer for didSelect functionality
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(collectionViewTapped))
+        collectionView.addGestureRecognizer(tapGesture)
     }
     
+    // Handle tap on collectionView
+    @objc private func collectionViewTapped(_ gesture: UITapGestureRecognizer) {
+        let touchPoint = gesture.location(in: collectionView)
+        if let indexPath = collectionView.indexPathForItem(at: touchPoint) {
+            collectionView.delegate?.collectionView?(collectionView, didSelectItemAt: indexPath)
+        }
+    }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -50,9 +70,23 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         case .CircleCell:
             return collectionNowPlaying?.count ?? 1
         case .SquareCell:
-            return collectionDiscoverTV.count
+            return collectionDiscoverTV?.count ?? 1
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(indexPath.row)
+        switch typeCell {
+        case .CircleCell:
+            delegate?.didTapCellCircle(index: indexPath.row)
+        case .SquareCell:
+            delegate?.didTapCellSquare(index: indexPath.row)
+//            break
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch typeCell {
@@ -71,12 +105,14 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareCollectionViewCell", for: indexPath) as! SquareCollectionViewCell
             self.titleLabel.text = typeCell.title
             
-            if indexPath.row < collectionDiscoverTV.count {
-                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionDiscoverTV[indexPath.row].posterPath)"
+            if indexPath.row < collectionDiscoverTV?.count ?? 1 {
+                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
                 
                 let url = URL(string: imageName)
                 cell.imgView.kf.setImage(with: url)
-                
+                cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
+                print(collectionDiscoverTV?[indexPath.row].posterPath)
+
                 // Set ratedNumberLabel only for the first 9 cells
                 (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
                 
@@ -95,7 +131,6 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                 cell.containerNewMovie.isHidden = true
                 cell.tagTop10Img.isHidden = false
             }
-            
             return cell
         }
     }
@@ -112,6 +147,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             return CGSize(width: cellWidth, height: cellHeight)
         }
     }
+    
 }
 
 enum SectionCell: Int, CaseIterable {

@@ -4,6 +4,8 @@
 //
 //  Created by Muhammad Fahmi on 30/10/23.
 //
+
+import FirebaseAuth
 import RxCocoa
 import RxSwift
 import SwiftUI
@@ -11,11 +13,12 @@ import UIKit
 
 class MoreViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField! // how can I implement RxSwift, so whenever user input, live, the label will updated it in live
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var uploadImg: UIButton!
     
     let disposeBag = DisposeBag()
+    
+    var resultImg: UIImage!
     
     var picker: UIImagePickerController? = UIImagePickerController()
     
@@ -23,12 +26,34 @@ class MoreViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         picker?.delegate = self
-        setup()
+        uploadToFire()
     }
     
-    func setup(){
-        textField.rx.text
-            .bind(to: label.rx.text)
+    func uploadToFire(){
+        imageView.makeRounded(10)
+        uploadImg.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let uid = Auth.auth().currentUser?.uid else{
+                    return
+                }
+                
+                let dispatchGroup = DispatchGroup()
+                
+                if let dataImg = self?.resultImg {
+                    let storagePath = "profileImages/profileId-\(uid)"
+                    dispatchGroup.enter()
+                    FStorage.uploadImage(dataImg, toPath: storagePath){ result in
+                        switch result{
+                        case .success(let downloadURL):
+                            print("Image uploaded successfully. Download URL: \(downloadURL)")
+                            dispatchGroup.leave()
+                        case .failure(let error):
+                            print("Something was error: \(error.localizedDescription)")
+                        }
+                    }
+                    
+                }
+            })
             .disposed(by: disposeBag)
     }
     
@@ -104,8 +129,8 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var chosenImage = info[.originalImage] as! UIImage
-        imageView.contentMode = .scaleAspectFit
         imageView.image = chosenImage
+        resultImg = chosenImage
         dismiss(animated: true, completion: nil)
     }
 }

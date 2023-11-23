@@ -24,9 +24,10 @@ class ListMovieCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(data: ResultTopRated?) {
+    func setup(data: ResultNowPlaying?) {
         if let validData = data {
             titleLabel.text = validData.title
+            titleLabel.hero.id = "\(validData.title!)"
         }
     }
 }

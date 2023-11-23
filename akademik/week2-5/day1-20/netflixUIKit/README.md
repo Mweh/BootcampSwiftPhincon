@@ -1,4 +1,4 @@
-# My Awesome Project
+# My NetlixUIKit Clone Project
 
 An amazing project that does incredible things.
 
@@ -68,11 +68,9 @@ Keep track of tasks, improvements, and future plans for your project.
 
 - [ ] Implement Onboarding View.
 - [ ] Integrate CoreData or UserDefault for data storage.
-- [ ] Add filter with viewModel using RxSwift, so my app can filter what genre should the user want by tapping the genre option and will filter the movie based on the selected genre.
-- [ ] Make my project full MVVM by adding viewModel in every module folder.
-- [ ] Add more pages/VC for movie credits, including actors and other relevant information.
-- [ ] Combine 2 endpoint/struct model buat perbandingan.
-- [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
+- [ ] Add reviewsVC inside
+- [ ] Add recommendationVC inside slidingtabs
+- [ ] Add download when doing longpress
 
 - ...
 
@@ -88,4 +86,13 @@ Tasks that have been completed.
 - [x] Implement Face ID feature for secure login.
 - [x] Add reset password feature
 - [x] add number(ranking 1-10) beside the imageView of best rated movie 
+- [x] Add sliding tabs in detailView using Parchment
+- [x] Add creditsVC inside slidingtabs
+
+## BUG
+
+- [ ] Combine 2 endpoint/struct model buat perbandingan.
+- [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
+- [ ] Add filter with viewModel using RxSwift, so my app can filter what genre should the user want by tapping the genre option and will filter the movie based on the selected genre.
+- [ ] Make my project full MVVM by adding viewModel in every module folder.
 

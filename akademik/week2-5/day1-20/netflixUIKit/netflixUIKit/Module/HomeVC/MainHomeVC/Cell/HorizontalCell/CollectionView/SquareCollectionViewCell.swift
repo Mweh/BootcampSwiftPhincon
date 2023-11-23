@@ -5,6 +5,7 @@
 //  Created by Muhammad Fahmi on 06/11/23.
 //
 
+import Lottie
 import UIKit
 
 class SquareCollectionViewCell: UICollectionViewCell {
@@ -14,6 +15,7 @@ class SquareCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ratedNumberLabel: UILabel!
     @IBOutlet weak var containerNewMovie: UIView!
     @IBOutlet weak var tagTop10Img: UIImageView!
+    @IBOutlet weak var lottieView: LottieAnimationView! //it's not connected to this????
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +27,18 @@ class SquareCollectionViewCell: UICollectionViewCell {
         container.clipsToBounds = true
         
         addStrokeToLabel()
+        
     }
-    
+    func addFireAnimtion() {
+        lottieView.animation = LottieAnimation.named("fireAnimation")
+        lottieView.loopMode = .loop
+        lottieView.contentMode = .scaleAspectFit
+        lottieView.frame = container.bounds
+        container.addSubview(lottieView)
+        lottieView.play()
+    }
+
+
     func addStrokeToLabel(){
         // Set up stroke attributes
         let strokeTextAttributes: [NSAttributedString.Key: Any] = [

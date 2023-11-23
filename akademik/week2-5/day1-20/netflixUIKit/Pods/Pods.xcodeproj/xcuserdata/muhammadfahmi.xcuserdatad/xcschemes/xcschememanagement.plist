@@ -34,7 +34,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FirebaseAuthInterop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FirebaseCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseCoreExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -45,6 +55,11 @@
 			<false/>
 		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseStorage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -79,6 +94,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -90,6 +110,11 @@
 			<false/>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parchment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -130,11 +155,6 @@
 			<false/>
 		</dict>
 		<key>StepSlider.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ViewAnimator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

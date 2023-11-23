@@ -18,7 +18,8 @@ enum Endpoint {
     case getFavoriteNoPaging
     case getFavorite(page: Int)
     case addFavorite(param: ParamAddFavorite)
-    case getVideoTrailer(id: Int) // pls continue for this case like path etc below
+    case getVideoTrailer(id: Int)
+    case getCredits(id: Int)
     
     func path() -> String {
         switch self {
@@ -29,7 +30,7 @@ enum Endpoint {
         case .getTopRated:
             return "movie/top_rated"
         case .getDiscoverTV:
-            return "discover/tv"
+            return "discover/movie"
         case .getUpcoming:
             return "movie/upcoming"
         case .searchMovie:
@@ -42,6 +43,8 @@ enum Endpoint {
             return "account/20655384/favorite"
         case .getVideoTrailer(let id):
             return "movie/\(id)/videos"
+        case .getCredits(let id):
+            return "/movie/\(id)/credits"
         }
     }
     
@@ -56,7 +59,7 @@ enum Endpoint {
     
     var parameters: [String: Any]? {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer:
+        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer, .getCredits:
             return nil
         case .getUpcoming(let page), .getFavorite(page: let page):
             return ["page": page]
@@ -66,7 +69,8 @@ enum Endpoint {
             return [
                 "media_type": param.mediaType,
                 "media_id": param.mediaId,
-                "favorite": param.favorite            ]
+                "favorite": param.favorite
+            ]
         }
     }
     

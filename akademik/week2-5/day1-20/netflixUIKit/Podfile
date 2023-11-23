@@ -14,7 +14,8 @@ target 'netflixUIKit' do
   # Image
   pod 'Kingfisher'
   pod 'StepSlider'
-  
+  pod 'FirebaseStorage'
+
   # Placeholder
   pod 'SkeletonView'
   
@@ -28,10 +29,12 @@ target 'netflixUIKit' do
   pod 'GoogleSignIn'
 
   # Animation
-  pod "ViewAnimator"
+  pod 'Hero'
   pod 'lottie-ios'
+  #pod "ViewAnimator"
   
   # View
+  pod 'Parchment'
   #pod 'SnapKit'
   #pod 'FloatingPanel'
 

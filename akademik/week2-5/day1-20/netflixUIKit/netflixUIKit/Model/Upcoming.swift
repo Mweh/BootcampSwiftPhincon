@@ -5,14 +5,8 @@
 //  Created by Muhammad Fahmi on 06/11/23.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let topRated = try? JSONDecoder().decode(TopRated.self, from: jsonData)
-
 import Foundation
 
-// MARK: - TopRated
 struct Upcoming: Codable {
     let dates: Dates
     let page: Int

@@ -66,7 +66,7 @@ class MovieDescriptionTableCell: UITableViewCell {
     func setup(data: ResultUpcoming?, favoriteModel: ParamAddFavorite?) {
         if let validData = data {
             if let validData = data {
-                popularityLabel.text = "Popularity: \(validData.popularity)"
+                popularityLabel.text = "Views: \(validData.popularity)"
                 titileLabel.text = validData.title
                 loremLabel.text = "Synopsis: \n\(validData.overview)"
                 loremLabel.sizeToFit()

@@ -12,7 +12,7 @@ class DesignableUITextField: UITextField {
     
     let passwordVisibilityButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(systemName: "eye"), for: .normal)
+        button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         button.tintColor = .lightGray
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         button.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
@@ -44,7 +44,7 @@ class DesignableUITextField: UITextField {
         isSecureTextEntry.toggle()
         
         // Toggle the eye icon based on the secureTextEntry state
-        let imageName = isSecureTextEntry ? "eye" : "eye.fill"
+        let imageName = isSecureTextEntry ? "eye.slash" : "eye"
         passwordVisibilityButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
     

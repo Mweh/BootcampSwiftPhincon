@@ -35,6 +35,21 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n94-Ja-sIa" customClass="FadedImageView" customModule="netflixUIKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="302" width="320" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cDF-2x-bru"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeHeight">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DL8-sQ-LO1">
                                 <rect key="frame" x="0.0" y="50" width="336" height="50"/>
                                 <subviews>
@@ -118,11 +133,14 @@
                             <constraint firstAttribute="trailing" secondItem="v2H-9n-vZR" secondAttribute="trailing" id="23k-bj-3DC"/>
                             <constraint firstAttribute="trailing" secondItem="x9M-Pq-Dxc" secondAttribute="trailing" constant="16" id="2pb-pF-Mqd"/>
                             <constraint firstItem="v2H-9n-vZR" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" id="5QE-kS-HoA"/>
+                            <constraint firstAttribute="bottom" secondItem="n94-Ja-sIa" secondAttribute="bottom" id="G1V-88-wXT"/>
                             <constraint firstItem="v2H-9n-vZR" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="L6N-xM-v1P"/>
+                            <constraint firstAttribute="trailing" secondItem="n94-Ja-sIa" secondAttribute="trailing" id="Lj2-sU-NgG"/>
                             <constraint firstItem="x9M-Pq-Dxc" firstAttribute="top" secondItem="tjO-JC-wXb" secondAttribute="bottom" constant="23.333333333333314" id="RER-C6-NFi"/>
                             <constraint firstAttribute="bottom" secondItem="x9M-Pq-Dxc" secondAttribute="bottom" constant="16" id="ZIG-BJ-yWH"/>
                             <constraint firstItem="tjO-JC-wXb" firstAttribute="centerX" secondItem="duh-tC-SQc" secondAttribute="centerX" id="mxv-x3-IJq"/>
                             <constraint firstAttribute="bottom" secondItem="v2H-9n-vZR" secondAttribute="bottom" id="r9A-KE-dgr"/>
+                            <constraint firstItem="n94-Ja-sIa" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="uwh-T4-ZGT"/>
                             <constraint firstItem="x9M-Pq-Dxc" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" constant="16" id="yWm-uA-qSF"/>
                         </constraints>
                     </view>
@@ -169,6 +187,9 @@
         <namedColor name="transparentBlack30">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

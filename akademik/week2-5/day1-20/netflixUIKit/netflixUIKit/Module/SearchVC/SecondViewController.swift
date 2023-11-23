@@ -5,6 +5,7 @@
 //  Created by Muhammad Fahmi on 30/10/23.
 //
 
+import Hero
 import Lottie
 import Kingfisher
 import SkeletonView
@@ -19,7 +20,7 @@ class SecondViewController: UIViewController {
 
     let customAPIManager = CustomAPIManager()
     
-    var dataTopRated: TopRated? {
+    var dataTopRated: NowPlaying? {
         didSet {
             tableView.reloadData()
         }
@@ -78,11 +79,10 @@ class SecondViewController: UIViewController {
     func loadData(){
         tableView.showAnimatedGradientSkeleton()
         
-        customAPIManager.makeAPICall(endpoint: .getTopRated) { (response: Result<TopRated, Error>)  in
+        customAPIManager.makeAPICall(endpoint: .getTopRated) { (response: Result<NowPlaying, Error>)  in
             switch response {
             case .success(let topRated):
                 self.dataTopRated = topRated
-
                 self.isDataLoaded = true // Set to true when data is successfully loaded
 
             case .failure(let error):
@@ -153,9 +153,10 @@ extension SecondViewController: SkeletonTableViewDelegate, SkeletonTableViewData
         if let data = dataTopRated {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ListMovieCell", for: indexPath) as! ListMovieCell
             cell.setup(data: data.results[indexPath.row])
-            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].posterPath)"
+            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].backdropPath)"
             cell.imageFilm.kf.indicatorType = .activity
             cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(systemName: "hourglass"))
+            cell.imageFilm.hero.id = "\(data.results[indexPath.row].backdropPath)"
             cell.imageFilm.sizeToFit()
             return cell
         }
@@ -171,6 +172,7 @@ extension SecondViewController: SkeletonTableViewDelegate, SkeletonTableViewData
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.data = selectedData
             detailViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.hero.isEnabled = true
             navigationController?.pushViewController(detailViewController, animated: true)
         }
     }

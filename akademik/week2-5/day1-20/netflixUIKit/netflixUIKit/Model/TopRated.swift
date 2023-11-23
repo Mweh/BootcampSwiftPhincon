@@ -7,11 +7,13 @@ import Foundation
 
 // MARK: - TopRated
 struct TopRated: Codable {
+    let dates: Dates?
     let page: Int
     let results: [ResultTopRated]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
+        case dates
         case page, results
         case totalPages = "total_pages"
         case totalResults = "total_results"
