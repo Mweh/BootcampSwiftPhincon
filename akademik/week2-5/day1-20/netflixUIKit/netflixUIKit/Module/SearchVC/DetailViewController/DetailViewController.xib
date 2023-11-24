@@ -17,6 +17,7 @@
                 <outlet property="ratingContainer" destination="MyA-NQ-0se" id="kEl-Kv-9cq"/>
                 <outlet property="ratingLabel" destination="Dit-f7-NIh" id="kQf-Kt-dXd"/>
                 <outlet property="slidingTabs" destination="l9l-vU-uJA" id="0ax-Ur-EMX"/>
+                <outlet property="tappableFadedImageView" destination="p4k-fv-KtL" id="F0K-hs-WPT"/>
                 <outlet property="titleMovieLabel" destination="LyH-lf-YQg" id="6Kb-Se-Nnt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewsTotalLabel" destination="U3i-Ir-6Jt" id="43j-4R-iDN"/>
@@ -40,7 +41,21 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4k-fv-KtL" customClass="FadedImageView" customModule="netflixUIKit" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-go-Lkc">
+                            <rect key="frame" x="-80.333333333333329" y="-17" width="300" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="2ZR-8X-1Cx"/>
+                                <constraint firstAttribute="width" constant="300" id="XDu-pe-urx"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PKq-DT-CBy">
+                            <rect key="frame" x="171.66666666666666" y="86.666666666666657" width="50" height="48.666666666666657"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="7Pg-0l-bxD"/>
+                                <constraint firstAttribute="width" constant="50" id="tZo-4C-x5K"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4k-fv-KtL" customClass="TappableFadedImageView" customModule="netflixUIKit" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
@@ -52,13 +67,6 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-go-Lkc">
-                            <rect key="frame" x="46.666666666666657" y="0.0" width="300" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="2ZR-8X-1Cx"/>
-                                <constraint firstAttribute="width" constant="300" id="XDu-pe-urx"/>
-                            </constraints>
-                        </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie2" translatesAutoresizingMaskIntoConstraints="NO" id="yl3-ms-Qm8" userLabel="posterPath">
                             <rect key="frame" x="32" y="144.33333333333334" width="100" height="150.00000000000003"/>
                             <constraints>
@@ -153,11 +161,12 @@
                         <constraint firstItem="LyH-lf-YQg" firstAttribute="top" secondItem="WJh-p3-MFT" secondAttribute="bottom" constant="8" id="WYl-NZ-cmR"/>
                         <constraint firstAttribute="trailing" secondItem="WJh-p3-MFT" secondAttribute="trailing" id="XYG-jG-jjm"/>
                         <constraint firstItem="yl3-ms-Qm8" firstAttribute="leading" secondItem="8Mb-Mp-bQ8" secondAttribute="leading" constant="32" id="Xvf-t3-AXc"/>
+                        <constraint firstItem="PKq-DT-CBy" firstAttribute="centerY" secondItem="p4k-fv-KtL" secondAttribute="centerY" id="alx-Y9-Mgb"/>
                         <constraint firstItem="hXC-Iw-B83" firstAttribute="top" secondItem="yl3-ms-Qm8" secondAttribute="bottom" constant="16" id="bH9-8A-6VV"/>
-                        <constraint firstItem="z5v-go-Lkc" firstAttribute="centerX" secondItem="8Mb-Mp-bQ8" secondAttribute="centerX" id="dxJ-P5-INZ"/>
+                        <constraint firstItem="z5v-go-Lkc" firstAttribute="centerX" secondItem="8Mb-Mp-bQ8" secondAttribute="centerX" constant="-126.83333333333334" id="dxJ-P5-INZ"/>
                         <constraint firstItem="exR-9h-GKA" firstAttribute="centerY" secondItem="Pbb-jJ-dFe" secondAttribute="centerY" id="h2b-Zq-Hfr"/>
                         <constraint firstItem="yl3-ms-Qm8" firstAttribute="top" secondItem="C3s-MS-ikZ" secondAttribute="bottom" constant="-32.666666666666657" id="hE6-h3-Gil"/>
-                        <constraint firstItem="z5v-go-Lkc" firstAttribute="top" secondItem="8Mb-Mp-bQ8" secondAttribute="top" id="hOL-fy-77G"/>
+                        <constraint firstItem="z5v-go-Lkc" firstAttribute="top" secondItem="8Mb-Mp-bQ8" secondAttribute="top" constant="-17" id="hOL-fy-77G"/>
                         <constraint firstItem="yl3-ms-Qm8" firstAttribute="top" secondItem="WJh-p3-MFT" secondAttribute="bottom" constant="-76.666666666666742" id="if1-xc-veU"/>
                         <constraint firstItem="LyH-lf-YQg" firstAttribute="top" secondItem="p4k-fv-KtL" secondAttribute="bottom" constant="8" id="kHN-BT-bnf"/>
                         <constraint firstItem="l9l-vU-uJA" firstAttribute="leading" secondItem="8Mb-Mp-bQ8" secondAttribute="leading" id="mnD-h7-hGq"/>
@@ -166,6 +175,7 @@
                         <constraint firstItem="l9l-vU-uJA" firstAttribute="top" secondItem="Pbb-jJ-dFe" secondAttribute="bottom" constant="32" id="pH1-9k-opW"/>
                         <constraint firstItem="LyH-lf-YQg" firstAttribute="leading" secondItem="yl3-ms-Qm8" secondAttribute="trailing" constant="8" id="pR9-rh-gSs"/>
                         <constraint firstItem="MyA-NQ-0se" firstAttribute="top" secondItem="WJh-p3-MFT" secondAttribute="bottom" constant="-50" id="poj-QU-Z2K"/>
+                        <constraint firstItem="PKq-DT-CBy" firstAttribute="centerX" secondItem="p4k-fv-KtL" secondAttribute="centerX" id="rxG-lv-Tp8"/>
                         <constraint firstItem="WJh-p3-MFT" firstAttribute="leading" secondItem="8Mb-Mp-bQ8" secondAttribute="leading" id="tCT-11-462"/>
                         <constraint firstAttribute="trailing" secondItem="l9l-vU-uJA" secondAttribute="trailing" id="tUA-5U-tpA"/>
                         <constraint firstItem="U3i-Ir-6Jt" firstAttribute="centerY" secondItem="Rtl-8j-oWu" secondAttribute="centerY" id="uOw-wg-iae"/>
@@ -196,6 +206,7 @@
         <image name="Netflix-N" width="70" height="126"/>
         <image name="movie2" width="1280" height="1920"/>
         <image name="netflix" width="3000" height="2000"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

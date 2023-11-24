@@ -60,6 +60,7 @@
 		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
 		CD723D052B03004C00C191A9 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723D042B03004C00C191A9 /* Favorites.swift */; };
 		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
+		CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D182B1054B3006D3046 /* TappableMovieView.swift */; };
 		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
 		CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */; };
 		CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */; };
@@ -179,6 +180,7 @@
 		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
 		CD723D042B03004C00C191A9 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../../Downloads/UpcomingMovies/Favorites.swift; sourceTree = "<group>"; };
 		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		CD729D182B1054B3006D3046 /* TappableMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableMovieView.swift; sourceTree = "<group>"; };
 		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 			children = (
 				CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */,
 				CDA5BAD42B039D170053CF05 /* VideoTrailerVC.xib */,
+				CD729D182B1054B3006D3046 /* TappableMovieView.swift */,
 			);
 			path = YoutubeTrailerVC;
 			sourceTree = "<group>";
@@ -974,6 +977,7 @@
 				CD678AA82B0DF65600B2261F /* ReviewsViewController.swift in Sources */,
 				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */,
+				CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */,
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
 				CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */,
 				CDAF8A6B2AF8D48400CB670D /* NowPlaying.swift in Sources */,

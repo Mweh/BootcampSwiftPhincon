@@ -17,7 +17,7 @@ class SearchButtonViewController: UIViewController {
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var animationView: LottieAnimationView!
     
-    var searchResults: SearchResponse?  {
+    var nowPlaying: NowPlaying?  {
         didSet {
             self.collectionView.reloadData()
         }
@@ -32,7 +32,7 @@ class SearchButtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        settextFieldSearchInsideNavItem()
+        //        settextFieldSearchInsideNavItem()
         setupAnimation()
         configure()
         showNaviItem()
@@ -94,9 +94,9 @@ class SearchButtonViewController: UIViewController {
         searchSubject
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { (query: String) -> Observable<SearchResponse> in
+            .flatMapLatest { (query: String) -> Observable<NowPlaying> in
                 return Observable.create { observer in
-                    self.apiManager.makeAPICall(endpoint: .searchMovie(query: query)){ (result: Result<SearchResponse, Error>) in
+                    self.apiManager.makeAPICall(endpoint: .searchMovie(query: query)){ (result: Result<NowPlaying, Error>) in
                         switch result {
                         case .success(let movies):
                             observer.onNext(movies)
@@ -108,8 +108,8 @@ class SearchButtonViewController: UIViewController {
                     return Disposables.create()
                 }
             }
-            .subscribe(onNext: { [weak self] (results: SearchResponse ) in
-                self?.searchResults = results
+            .subscribe(onNext: { [weak self] (results: NowPlaying ) in
+                self?.nowPlaying = results
             })
             .disposed(by: disposeBag)
         // Initial update of placeholder visibility
@@ -125,18 +125,20 @@ class SearchButtonViewController: UIViewController {
 
 extension SearchButtonViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let validCount = self.searchResults?.results?.count ?? 0
+        let validCount = self.nowPlaying?.results.count ?? 0
         return validCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let validData = self.searchResults?.results {
+        if let validData = self.nowPlaying?.results {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
-            if let urlString = validData[indexPath.row].posterPath {
-                let imageName = "https://image.tmdb.org/t/p/w500/\(urlString)"
-                let url = URL(string: imageName)
-                cell.imgView.kf.setImage(with: url)
-            }
+            let urlString = validData[indexPath.row].posterPath
+            let imageName = "https://image.tmdb.org/t/p/w500/\(urlString)"
+            let url = URL(string: imageName)
+            cell.imgView.kf.setImage(with: url)
+            
+            cell.imgView.hero.id = "\(validData[indexPath.row].posterPath)"
+            
             return cell
         }
         return UICollectionViewCell()
@@ -147,14 +149,18 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let selectedMovie = searchResults?.results?[indexPath.row] {
-            let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
-            videoTrailerVC.hidesBottomBarWhenPushed = true
+        if let selectedMovie = nowPlaying?.results[indexPath.row] {
+            let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+            detailViewController.data = selectedMovie
+            detailViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.hero.isEnabled = true
+            navigationController?.pushViewController(detailViewController, animated: true)
             
-            // Pass the movie ID to the VideoTrailerVC
-            videoTrailerVC.movieId = selectedMovie.id
-            
-            navigationController?.pushViewController(videoTrailerVC, animated: true)
+//                        let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+//                        videoTrailerVC.hidesBottomBarWhenPushed = true
+//                        // Pass the movie ID to the VideoTrailerVC
+//                        videoTrailerVC.movieId = selectedMovie.id
+//                        navigationController?.pushViewController(videoTrailerVC, animated: true)
         }
     }
 }

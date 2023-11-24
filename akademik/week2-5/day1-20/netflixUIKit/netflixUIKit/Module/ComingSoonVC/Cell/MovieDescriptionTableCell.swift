@@ -20,6 +20,7 @@ class MovieDescriptionTableCell: UITableViewCell {
     @IBOutlet var loremLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
     @IBOutlet weak var addToFavButton: UIButton!
+    @IBOutlet weak var tappableFadedImageView: TappableFadedImageView!
     
     private var isFav = BehaviorRelay<Bool>(value: false)
     private var favoriteModel: ParamAddFavorite?
@@ -115,21 +116,6 @@ class MovieDescriptionTableCell: UITableViewCell {
             }
         }
     }
-    
-    
-    //    func setup(data: ResultUpcoming?) {
-//            if let validData = data {
-//                popularityLabel.text = "Popularity: \(validData.popularity)"
-//                titileLabel.text = validData.title
-//                loremLabel.text = "Synopsis: \n\(validData.overview)"
-//                loremLabel.sizeToFit()
-//                loremLabel.preferredMaxLayoutWidth = loremLabel.bounds.width
-//                // Format releaseDate to a specific date format
-//                let dateString = formatDate(validData.releaseDate)
-//                releaseDateLabel.text = "Release date: \(dateString)"
-//
-//            }
-    //    }
     
     // Helper function to format date
     private func formatDate(_ dateString: String) -> String {

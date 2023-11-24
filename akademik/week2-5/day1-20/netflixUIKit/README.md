@@ -74,6 +74,8 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add a suggest when searching a movie 
 - [ ] Add a feature that can show all list of items
 - [ ] Add a share button
+- [ ] Remove duplicate unnecessary Model
+
 
 - ...
 

@@ -30,6 +30,25 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Gj-1Zi">
+                                <rect key="frame" x="115" y="96" width="50" height="48.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TeX-Yx-p4Y"/>
+                                    <constraint firstAttribute="width" constant="50" id="gGR-Sc-yxo"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-T2-0fW" customClass="TappableFadedImageView" customModule="netflixUIKit" customModuleProvider="target">
+                                <rect key="frame" x="-56.666666666666657" y="9.6666666666666714" width="393.33333333333326" height="221"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeHeight">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BGW-HG-s2l" userLabel="StackViewIcon">
                                 <rect key="frame" x="220" y="162" width="88" height="60"/>
                                 <subviews>
@@ -125,19 +144,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BGW-HG-s2l" firstAttribute="top" secondItem="p5g-dV-M4x" secondAttribute="bottom" constant="-58" id="1t1-w4-SoI"/>
+                            <constraint firstItem="XDc-Gj-1Zi" firstAttribute="centerY" secondItem="fYr-T2-0fW" secondAttribute="centerY" id="2Fn-UB-ZAw"/>
+                            <constraint firstItem="XDc-Gj-1Zi" firstAttribute="centerX" secondItem="fYr-T2-0fW" secondAttribute="centerX" id="3kU-dE-ZR9"/>
                             <constraint firstItem="Wy8-89-Bct" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="7Mj-oU-i7e"/>
+                            <constraint firstItem="fYr-T2-0fW" firstAttribute="height" secondItem="p5g-dV-M4x" secondAttribute="height" multiplier="1.105" id="A6x-Qn-huq"/>
+                            <constraint firstItem="fYr-T2-0fW" firstAttribute="centerY" secondItem="p5g-dV-M4x" secondAttribute="centerY" id="AVn-GL-ZW3"/>
                             <constraint firstItem="p5g-dV-M4x" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="-20" id="CZz-UG-Xbm"/>
                             <constraint firstAttribute="trailing" secondItem="adU-jU-iPb" secondAttribute="trailing" constant="115" id="DW2-mN-ZO0"/>
                             <constraint firstAttribute="trailing" secondItem="p5g-dV-M4x" secondAttribute="trailing" constant="20" id="DZU-gv-CIv"/>
                             <constraint firstItem="adU-jU-iPb" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="Jel-Du-Jp2"/>
                             <constraint firstItem="Wy8-89-Bct" firstAttribute="top" secondItem="fSU-n1-FeN" secondAttribute="bottom" constant="8.3333333333333144" id="K7K-8s-Sti"/>
                             <constraint firstAttribute="trailing" secondItem="BGW-HG-s2l" secondAttribute="trailing" constant="12" id="KC1-9R-AED"/>
+                            <constraint firstItem="fYr-T2-0fW" firstAttribute="centerX" secondItem="p5g-dV-M4x" secondAttribute="centerX" id="N2W-u0-2jL"/>
                             <constraint firstAttribute="trailing" secondItem="Wy8-89-Bct" secondAttribute="trailing" constant="8" id="NLF-W0-CIu"/>
                             <constraint firstItem="p5g-dV-M4x" firstAttribute="leading" secondItem="7aj-gf-XIY" secondAttribute="trailing" constant="-60" id="QN6-rT-0Z3"/>
                             <constraint firstItem="adU-jU-iPb" firstAttribute="top" secondItem="Wy8-89-Bct" secondAttribute="bottom" constant="8" id="UzJ-gi-1LF"/>
                             <constraint firstAttribute="trailing" secondItem="fSU-n1-FeN" secondAttribute="trailing" constant="152" id="ZwH-yB-P45"/>
                             <constraint firstItem="p5g-dV-M4x" firstAttribute="top" secondItem="dOC-N4-gq6" secondAttribute="top" constant="20" id="jLe-WK-149"/>
                             <constraint firstItem="p5g-dV-M4x" firstAttribute="top" secondItem="7aj-gf-XIY" secondAttribute="bottom" constant="-60" id="pEw-Go-UyM"/>
+                            <constraint firstItem="fYr-T2-0fW" firstAttribute="width" secondItem="p5g-dV-M4x" secondAttribute="width" multiplier="1.22812" id="sFg-MK-B1Y"/>
                             <constraint firstItem="fSU-n1-FeN" firstAttribute="top" secondItem="BGW-HG-s2l" secondAttribute="bottom" constant="6" id="sGt-W4-SPh"/>
                             <constraint firstAttribute="height" constant="420" id="stS-IS-FQH"/>
                             <constraint firstItem="fSU-n1-FeN" firstAttribute="leading" secondItem="dOC-N4-gq6" secondAttribute="leading" constant="8" id="xj8-tM-tZf"/>
@@ -170,6 +195,7 @@
                 <outlet property="loremLabel" destination="Wy8-89-Bct" id="se2-64-5ib"/>
                 <outlet property="popularityLabel" destination="7Hy-LX-FMa" id="CBx-ME-JJv"/>
                 <outlet property="releaseDateLabel" destination="adU-jU-iPb" id="fR0-uW-eeV"/>
+                <outlet property="tappableFadedImageView" destination="fYr-T2-0fW" id="Jbm-HQ-HUx"/>
                 <outlet property="titileLabel" destination="1wK-4Z-NR4" id="lUy-dV-KWH"/>
             </connections>
             <point key="canvasLocation" x="19.847328244274809" y="139.43661971830986"/>
@@ -178,7 +204,11 @@
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
         <image name="netflix" width="3000" height="2000"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

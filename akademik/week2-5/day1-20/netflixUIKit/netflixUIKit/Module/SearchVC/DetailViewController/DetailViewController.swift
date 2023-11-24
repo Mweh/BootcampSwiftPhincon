@@ -21,6 +21,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var likedTotalLabel: UILabel!
     @IBOutlet weak var slidingTabs: UIView!
     
+    @IBOutlet weak var tappableFadedImageView: TappableFadedImageView!
+    
     var data: ResultNowPlaying?
     
     var counterValue: Int = 0
@@ -35,6 +37,7 @@ class DetailViewController: UIViewController {
         
         setupHero()
         setupShare()
+        tappableFadedImageView.tapDelegate = self
     }
     
     func setupShare(){
@@ -196,7 +199,16 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
         }
     }
     
-    
+}
+
+extension DetailViewController: Tappable {
+    func didTap() {
+        let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+        videoTrailerVC.hidesBottomBarWhenPushed = true
+        // Pass the movie ID to the VideoTrailerVC
+        videoTrailerVC.movieId = data?.id
+        navigationController?.pushViewController(videoTrailerVC, animated: true)
+    }
 }
 
 enum DetailSlidingTabs: Int, CaseIterable{

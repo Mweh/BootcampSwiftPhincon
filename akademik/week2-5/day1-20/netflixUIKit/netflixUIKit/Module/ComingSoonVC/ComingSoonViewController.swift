@@ -133,9 +133,24 @@ class ComingSoonViewController: UIViewController {
             self.tableView.hideSkeleton()
         }
     }
+    // Handle tap gesture
+    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
+        // Get the movie ID from the tapped cell
+        let movieId = sender.view?.tag ?? 0
+        
+        // Perform navigation to another view using the movie ID
+        let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+        // Pass the movie ID to the next view controller
+        videoTrailerVC.hidesBottomBarWhenPushed = true
+        videoTrailerVC.movieId = movieId
+        navigationController?.pushViewController(videoTrailerVC, animated: true)
+    }
+
 }
 
-extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource{
+extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
+  
+    
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataTable?.results.count ?? 1
     }
@@ -161,6 +176,14 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
                 cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass"))
             }
             print("Image URL: \(imageName)")
+            
+            // Add a tap gesture recognizer to cell.movieImage
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+            cell.tappableFadedImageView.addGestureRecognizer(tapGesture)
+
+            // Set tag to the movie ID for later retrieval
+            cell.tappableFadedImageView.tag = data.results[indexPath.row].id
+
             return cell
         }
         
@@ -180,7 +203,6 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
     func loadMoreData() {
         // Increment the page number or take any action needed to load the next set of data
         currentPage += 1
-        
         // Call the common loadData method with the updated page number
         loadData(page: currentPage)
     }
