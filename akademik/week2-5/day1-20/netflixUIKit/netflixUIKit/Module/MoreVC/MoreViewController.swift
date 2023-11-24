@@ -15,18 +15,40 @@ class MoreViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var uploadImg: UIButton!
-    
+    @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var currentAppVersionLabel: UILabel!
     let disposeBag = DisposeBag()
     
     var resultImg: UIImage!
     
     var picker: UIImagePickerController? = UIImagePickerController()
+    let cellData: [MoreCellData] = [
+        MoreCellData(title: "My List", symbolName: "checkmark"),
+        MoreCellData(title: "App Settings", symbolName: "gear"),
+        MoreCellData(title: "Account", symbolName: "person.circle"),
+        MoreCellData(title: "Help", symbolName: "questionmark.circle")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         picker?.delegate = self
         uploadToFire()
+        setTextToCurrentAppVersion()
+        setupTable()
+    }
+    
+    func setTextToCurrentAppVersion(){
+        // Get the app version from the info dictionary
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            currentAppVersionLabel.text = "Version \(version)"
+        }
+    }
+    
+    func setupTable(){
+        tblView.delegate = self
+        tblView.dataSource = self
+        tblView.register(UINib(nibName: "MoreTableViewCell", bundle: nil), forCellReuseIdentifier: "MoreTableViewCell")
     }
     
     func uploadToFire(){
@@ -133,4 +155,33 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
         resultImg = chosenImage
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblView.dequeueReusableCell(withIdentifier: "MoreTableViewCell", for: indexPath) as! MoreTableViewCell
+        
+        // Use data from the cellData array
+        let data = cellData[indexPath.row]
+        
+        // Set title and image for the button
+        cell.buttonLabel.setTitle(data.title, for: .normal)
+        cell.buttonLabel.setImage(UIImage(systemName: data.symbolName), for: .normal)
+        
+        return cell
+    }
+
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+}
+
+struct MoreCellData {
+    let title: String
+    let symbolName: String
 }

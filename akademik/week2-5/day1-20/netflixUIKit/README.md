@@ -75,6 +75,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add a feature that can show all list of items
 - [ ] Add a share button
 - [ ] Remove duplicate unnecessary Model
+- [ ] Add a changelog inside the app
 
 
 - ...

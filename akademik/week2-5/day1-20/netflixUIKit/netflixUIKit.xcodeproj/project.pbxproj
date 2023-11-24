@@ -118,6 +118,8 @@
 		CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */; };
 		CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */; };
 		CDD85AD62AFDBE5B00683CFE /* SystemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */; };
+		CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */; };
+		CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */; };
 		CDFAB1462AFB61EA00D2963D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */; };
 		CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1472AFBC73C00D2963D /* Protocol.swift */; };
 		CE8BAC8DDC2A8108BBB58847 /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */; };
@@ -241,6 +243,8 @@
 		CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDescriptionTableCell.swift; sourceTree = "<group>"; };
 		CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDescriptionTableCell.xib; sourceTree = "<group>"; };
 		CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConfiguration.swift; sourceTree = "<group>"; };
+		CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		CDFAB1472AFBC73C00D2963D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -478,9 +482,9 @@
 			children = (
 				CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */,
 				CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */,
+				CD16E3162AF3826400669456 /* ListMovieCell */,
 				CD0709332AFB32970079FC45 /* SearchButtonView */,
 				CD136FCF2AFA33270046BB44 /* SearchVCViewModel */,
-				CD16E3162AF3826400669456 /* ListMovieCell */,
 				CD4FA4472AF39ED700226717 /* DetailViewController */,
 			);
 			path = SearchVC;
@@ -628,9 +632,10 @@
 		CD79F6B22AEF833500338C72 /* MoreVC */ = {
 			isa = PBXGroup;
 			children = (
-				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
 				CD79F6B92AEF83A300338C72 /* MoreViewController.swift */,
 				CD79F6BA2AEF83A300338C72 /* MoreViewController.xib */,
+				CDE7D5842B109B1200C41630 /* MoreViewControllerCell */,
+				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
 			);
 			path = MoreVC;
 			sourceTree = "<group>";
@@ -789,6 +794,15 @@
 			path = SystemConfiguration;
 			sourceTree = "<group>";
 		};
+		CDE7D5842B109B1200C41630 /* MoreViewControllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */,
+				CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */,
+			);
+			path = MoreViewControllerCell;
+			sourceTree = "<group>";
+		};
 		D53A264A208A37DF9D31422B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +910,7 @@
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD678AAD2B0DF84D00B2261F /* SimilarViewController.xib in Resources */,
 				CD729D1E2B108981006D3046 /* TermAgreementViewController.xib in Resources */,
+				CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */,
 				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */,
@@ -964,6 +979,7 @@
 				CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */,
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
 				CD16E3082AF35CBC00669456 /* Popular.swift in Sources */,
+				CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */,
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
 				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */,
@@ -1172,7 +1188,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "1.21.1 (18) 5.0.1 - 001";
 				OTHER_SWIFT_FLAGS = "-DTMDB_API_KEY";
 				PRODUCT_BUNDLE_IDENTIFIER = me.fahmi.muhammad.netflixUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1203,7 +1219,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "1.21.1 (18) 5.0.1 - 001";
 				OTHER_SWIFT_FLAGS = "-DTMDB_API_KEY";
 				PRODUCT_BUNDLE_IDENTIFIER = me.fahmi.muhammad.netflixUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
