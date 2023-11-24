@@ -26,8 +26,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeW-mh-EdG">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQx-11-jM2">
-                            <rect key="frame" x="32" y="700.66666666666663" width="329" height="46.333333333333371"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQx-11-jM2">
+                            <rect key="frame" x="32" y="719" width="329" height="28"/>
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button">
@@ -35,22 +35,11 @@
                                     <fragment content="By creating an account or signing you agree to our Terms and Conditions">
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                             </state>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="By creating an account or signing you agree to our Terms and Conditions">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </buttonConfiguration>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLJ-qT-db2">
                             <rect key="frame" x="12" y="-92" width="369" height="300"/>
@@ -197,14 +186,15 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="bO2-sh-peG" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="32" id="2mh-l9-bcs"/>
+                        <constraint firstAttribute="trailing" secondItem="qQx-11-jM2" secondAttribute="trailing" constant="32" id="2wa-23-Hck"/>
                         <constraint firstItem="bO2-sh-peG" firstAttribute="top" secondItem="Cwo-T5-XKu" secondAttribute="bottom" constant="6" id="59W-Br-HxZ"/>
                         <constraint firstItem="Szq-P7-1i8" firstAttribute="top" secondItem="LDh-vF-czI" secondAttribute="bottom" constant="8" id="5WA-rB-v1p"/>
+                        <constraint firstItem="qQx-11-jM2" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="32" id="7UR-Hs-p3b"/>
                         <constraint firstAttribute="bottom" secondItem="qQx-11-jM2" secondAttribute="bottom" constant="12" id="Erz-Hs-YdN"/>
                         <constraint firstAttribute="trailing" secondItem="2uO-qh-7Wa" secondAttribute="trailing" constant="48" id="IZR-Do-aUJ"/>
                         <constraint firstAttribute="trailing" secondItem="bO2-sh-peG" secondAttribute="trailing" constant="32" id="Iav-rr-c4g"/>
                         <constraint firstItem="2uO-qh-7Wa" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="48" id="KBQ-th-SM5"/>
                         <constraint firstItem="Szq-P7-1i8" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="48" id="R1v-W8-mDV"/>
-                        <constraint firstItem="qQx-11-jM2" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="32" id="TVs-Xd-wGh"/>
                         <constraint firstItem="Cwo-T5-XKu" firstAttribute="top" secondItem="dLJ-qT-db2" secondAttribute="bottom" constant="-46" id="bQP-Hd-AaC"/>
                         <constraint firstItem="dLJ-qT-db2" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="12" id="bR1-SU-F33"/>
                         <constraint firstItem="LDh-vF-czI" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="48" id="bWu-z0-KHe"/>
@@ -213,7 +203,7 @@
                         <constraint firstItem="Cwo-T5-XKu" firstAttribute="centerX" secondItem="VeW-mh-EdG" secondAttribute="centerX" id="hT5-ux-QrN"/>
                         <constraint firstAttribute="trailing" secondItem="LDh-vF-czI" secondAttribute="trailing" constant="102" id="iYw-Cx-70x"/>
                         <constraint firstItem="dLJ-qT-db2" firstAttribute="top" secondItem="VeW-mh-EdG" secondAttribute="top" constant="-92" id="jDO-wc-5Fw"/>
-                        <constraint firstAttribute="trailing" secondItem="qQx-11-jM2" secondAttribute="trailing" constant="32" id="qLU-0B-tcA"/>
+                        <constraint firstItem="qQx-11-jM2" firstAttribute="centerX" secondItem="VeW-mh-EdG" secondAttribute="centerX" id="mVl-r0-KGf"/>
                         <constraint firstItem="LDh-vF-czI" firstAttribute="top" secondItem="2uO-qh-7Wa" secondAttribute="bottom" constant="32" id="rK0-iB-FZA"/>
                         <constraint firstAttribute="trailing" secondItem="Szq-P7-1i8" secondAttribute="trailing" constant="102" id="sLr-OK-uW7"/>
                     </constraints>

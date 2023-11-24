@@ -25,7 +25,36 @@ class RegisterViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
         toTermAgreementWebTap()
+        setTextTermAgreement()
     }
+    
+    func setTextTermAgreement() {
+        let fullText = "By creating an account or signing you agree to our Terms and Conditions"
+
+        let attributedString = NSMutableAttributedString(string: fullText)
+
+        // Find the range of "Terms and Conditions" in the full text
+        if let range = fullText.range(of: "Terms and Conditions") {
+            let nsRange = NSRange(range, in: fullText)
+
+            // Apply bold and underline attributes to the specified range
+            attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 15), range: nsRange)
+            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
+        }
+
+        // Apply the attributed string to the button's title
+        toTermAgreementWeb.setAttributedTitle(attributedString, for: .normal)
+
+        // Center-align the text within the button
+        toTermAgreementWeb.contentHorizontalAlignment = .center
+
+        // Adjust title label properties for centering
+        toTermAgreementWeb.titleLabel?.textAlignment = .center
+        toTermAgreementWeb.titleLabel?.adjustsFontSizeToFitWidth = true
+        toTermAgreementWeb.titleLabel?.minimumScaleFactor = 0.5
+    }
+
+
     
     func toTermAgreementWebTap() {
         toTermAgreementWeb.rx.tap
