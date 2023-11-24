@@ -31,10 +31,34 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Zk-nLQ" userLabel="netflixImage">
-                            <rect key="frame" x="-1303.6666666666667" y="6" width="3000.3333333333335" height="251"/>
+                            <rect key="frame" x="-1303.6666666666667" y="6" width="3000.3333333333335" height="286"/>
                         </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX" userLabel="RegisterSv">
+                            <rect key="frame" x="20" y="672.66666666666663" width="353" height="74.333333333333371"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o68-TV-RJu">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="33.333333333333336"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Not a member yet? Start your free month!"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Not a member yet? Start your free month!">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    </buttonConfiguration>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-Pz-m7S">
+                                    <rect key="frame" x="0.0" y="41.333333333333371" width="353" height="33"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Forgot your password?">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-n8-SS5" userLabel="FormSV">
-                            <rect key="frame" x="71.666666666666686" y="262" width="250" height="235.33333333333337"/>
+                            <rect key="frame" x="71.666666666666686" y="244" width="250" height="165"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG" userLabel="Email/PassSV">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="105"/>
@@ -76,7 +100,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-MJ-CDI" userLabel="LoginSV">
-                                    <rect key="frame" x="0.0" y="125" width="250" height="110.33333333333331"/>
+                                    <rect key="frame" x="0.0" y="125" width="250" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-ux-gGh">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -87,85 +111,72 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="gray" title="Sign In"/>
                                         </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
-                                            <rect key="frame" x="0.0" y="44.999999999999993" width="250" height="65.333333333333314"/>
-                                            <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
-                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="65.333333333333329"/>
-                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="65.329999999999998" id="RIS-VH-fch"/>
-                                                        <constraint firstAttribute="width" constant="190" id="ao5-dd-nGh"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
-                                                    </connections>
-                                                </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2" userLabel="FaceID">
-                                                    <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal">
-                                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
-                                                    </state>
-                                                    <buttonConfiguration key="configuration" style="gray" cornerStyle="dynamic">
-                                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43"/>
-                                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    </buttonConfiguration>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="J5d-Zv-DMV" secondAttribute="top" id="KTd-ue-STn"/>
-                                                <constraint firstItem="7py-Ng-ys2" firstAttribute="leading" secondItem="g1F-lW-5De" secondAttribute="trailing" constant="10" id="VcC-WJ-CYI"/>
-                                                <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="J5d-Zv-DMV" secondAttribute="leading" id="XkO-Fq-4rZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="nUn-nF-n2M"/>
-                                            </constraints>
-                                        </stackView>
                                     </subviews>
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX" userLabel="RegisterSv">
-                            <rect key="frame" x="20" y="561" width="353" height="90.333333333333371"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------------  Or Login with  ------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-Ri-C5a">
+                            <rect key="frame" x="30" y="421" width="333.33333333333331" height="17"/>
+                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                            <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
+                            <rect key="frame" x="71.666666666666686" y="450" width="250" height="65.333333333333371"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o68-TV-RJu">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="33.333333333333336"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                    <color key="tintColor" systemColor="labelColor"/>
+                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="65.333333333333329"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65.329999999999998" id="RIS-VH-fch"/>
+                                        <constraint firstAttribute="width" constant="190" id="ao5-dd-nGh"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
+                                    </connections>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2" userLabel="FaceID">
+                                    <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Not a member yet? Start your free month!"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Not a member yet? Start your free month!">
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                    </buttonConfiguration>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nb-Pz-m7S">
-                                    <rect key="frame" x="0.0" y="57.333333333333371" width="353" height="33"/>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Forgot your password?">
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
+                                    </state>
+                                    <buttonConfiguration key="configuration" style="gray" cornerStyle="dynamic">
+                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43"/>
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     </buttonConfiguration>
                                 </button>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="J5d-Zv-DMV" secondAttribute="top" id="KTd-ue-STn"/>
+                                <constraint firstItem="7py-Ng-ys2" firstAttribute="leading" secondItem="g1F-lW-5De" secondAttribute="trailing" constant="10" id="VcC-WJ-CYI"/>
+                                <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="J5d-Zv-DMV" secondAttribute="leading" id="XkO-Fq-4rZ"/>
+                                <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="nUn-nF-n2M"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="J5d-Zv-DMV" firstAttribute="top" secondItem="6Kq-Ri-C5a" secondAttribute="bottom" constant="12" id="3kz-Ov-MXb"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" secondItem="kxi-PK-mOr" secondAttribute="top" priority="750" constant="6" id="5Id-0j-Qsh"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="leading" secondItem="kxi-PK-mOr" secondAttribute="leading" constant="20" id="CVv-vH-vv8"/>
                         <constraint firstAttribute="trailing" secondItem="roC-VC-UhX" secondAttribute="trailing" constant="20" id="CnP-Vf-7fX"/>
-                        <constraint firstItem="roC-VC-UhX" firstAttribute="top" secondItem="j6b-n8-SS5" secondAttribute="bottom" constant="64" id="KBZ-0r-tp2"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="ORS-kt-BNC"/>
+                        <constraint firstItem="6Kq-Ri-C5a" firstAttribute="top" secondItem="j6b-n8-SS5" secondAttribute="bottom" constant="12" id="SIe-sw-m3c"/>
+                        <constraint firstItem="6Kq-Ri-C5a" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="TaH-nU-PpO"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="kxi-PK-mOr" secondAttribute="top" constant="85" id="YTn-vX-Q66"/>
-                        <constraint firstItem="j6b-n8-SS5" firstAttribute="top" secondItem="cYH-Zk-nLQ" secondAttribute="bottom" constant="5" id="ZBP-dD-Gpo"/>
+                        <constraint firstItem="j6b-n8-SS5" firstAttribute="top" secondItem="cYH-Zk-nLQ" secondAttribute="bottom" constant="-48" id="ZBP-dD-Gpo"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="dSV-cy-3vp"/>
-                        <constraint firstItem="j6b-n8-SS5" firstAttribute="centerY" secondItem="kxi-PK-mOr" secondAttribute="centerY" id="nQU-5f-PuA"/>
+                        <constraint firstAttribute="bottom" secondItem="roC-VC-UhX" secondAttribute="bottom" constant="12" id="hKj-SO-Br9"/>
+                        <constraint firstItem="J5d-Zv-DMV" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="lOe-hz-Zi5"/>
+                        <constraint firstItem="j6b-n8-SS5" firstAttribute="centerY" secondItem="kxi-PK-mOr" secondAttribute="centerY" constant="-53" id="nQU-5f-PuA"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="wWo-DL-WAE"/>
                     </constraints>
                 </view>

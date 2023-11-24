@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    
+    @IBOutlet weak var toTermAgreementWeb: UIButton!
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -24,18 +24,19 @@ class RegisterViewController: UIViewController {
         setupBindings()
         navigationController?.navigationBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        toTermAgreementWebTap()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        navigationController?.setNavigationBarHidden(false, animated: true)
+    func toTermAgreementWebTap() {
+        toTermAgreementWeb.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let vc = TermAgreementViewController()
+
+                // Present the TermAgreementViewController as a sheet
+                vc.modalPresentationStyle = .pageSheet
+                self?.present(vc, animated: true, completion: nil)
+            })
+            .disposed(by: bag)
     }
 
     func setupBindings(){
@@ -67,5 +68,19 @@ class RegisterViewController: UIViewController {
     @IBAction func btnRegisterPressed(_ sender: Any) {
         let vc = MainTabBarViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension RegisterViewController{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }

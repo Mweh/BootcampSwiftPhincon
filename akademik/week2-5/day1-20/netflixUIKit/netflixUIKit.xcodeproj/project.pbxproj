@@ -61,6 +61,8 @@
 		CD723D052B03004C00C191A9 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723D042B03004C00C191A9 /* Favorites.swift */; };
 		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
 		CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D182B1054B3006D3046 /* TappableMovieView.swift */; };
+		CD729D1D2B108981006D3046 /* TermAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D1B2B108981006D3046 /* TermAgreementViewController.swift */; };
+		CD729D1E2B108981006D3046 /* TermAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD729D1C2B108981006D3046 /* TermAgreementViewController.xib */; };
 		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
 		CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */; };
 		CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */; };
@@ -181,6 +183,8 @@
 		CD723D042B03004C00C191A9 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../../Downloads/UpcomingMovies/Favorites.swift; sourceTree = "<group>"; };
 		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		CD729D182B1054B3006D3046 /* TappableMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableMovieView.swift; sourceTree = "<group>"; };
+		CD729D1B2B108981006D3046 /* TermAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAgreementViewController.swift; sourceTree = "<group>"; };
+		CD729D1C2B108981006D3046 /* TermAgreementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermAgreementViewController.xib; sourceTree = "<group>"; };
 		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 			children = (
 				CD16E30E2AF37B9400669456 /* RegisterViewController.swift */,
 				CD16E30F2AF37B9400669456 /* RegisterViewController.xib */,
+				CD729D1A2B10894C006D3046 /* TermAgreement */,
 			);
 			path = RegisterVC;
 			sourceTree = "<group>";
@@ -557,6 +562,15 @@
 				CD87BC6B2B03491E008B9531 /* FavHomeCollectionViewCell */,
 			);
 			path = FavHomeVC;
+			sourceTree = "<group>";
+		};
+		CD729D1A2B10894C006D3046 /* TermAgreement */ = {
+			isa = PBXGroup;
+			children = (
+				CD729D1B2B108981006D3046 /* TermAgreementViewController.swift */,
+				CD729D1C2B108981006D3046 /* TermAgreementViewController.xib */,
+			);
+			path = TermAgreement;
 			sourceTree = "<group>";
 		};
 		CD78336B2AEF3EBE0030AA43 /* MainHomeVC */ = {
@@ -881,6 +895,7 @@
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD678AAD2B0DF84D00B2261F /* SimilarViewController.xib in Resources */,
+				CD729D1E2B108981006D3046 /* TermAgreementViewController.xib in Resources */,
 				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */,
@@ -993,6 +1008,7 @@
 				CD16E30C2AF36F6300669456 /* HomeVCViewModel.swift in Sources */,
 				CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */,
 				CDB9FD662B0C3D0B00128B03 /* String+Extension.swift in Sources */,
+				CD729D1D2B108981006D3046 /* TermAgreementViewController.swift in Sources */,
 				CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */,
 				CD678A9E2B0DAD7500B2261F /* Credit.swift in Sources */,
 				CD678AA12B0DD44100B2261F /* CastingCollectionViewCell.swift in Sources */,
