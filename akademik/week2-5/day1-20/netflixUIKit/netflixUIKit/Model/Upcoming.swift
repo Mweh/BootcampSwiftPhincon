@@ -8,7 +8,7 @@
 import Foundation
 
 struct Upcoming: Codable {
-    let dates: Dates
+    let dates: Dates?
     let page: Int
     var results: [ResultUpcoming]
     let totalPages, totalResults: Int
@@ -46,6 +46,6 @@ struct ResultUpcoming: Codable {
         case releaseDate = "release_date"
         case title, video
         case voteAverage = "vote_average"
-        case voteCount = "vote_count"        
+        case voteCount = "vote_count"
     }
 }

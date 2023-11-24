@@ -153,10 +153,10 @@ extension SecondViewController: SkeletonTableViewDelegate, SkeletonTableViewData
         if let data = dataTopRated {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ListMovieCell", for: indexPath) as! ListMovieCell
             cell.setup(data: data.results[indexPath.row])
-            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].backdropPath)"
+            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].backdropPath ?? "")"
             cell.imageFilm.kf.indicatorType = .activity
             cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(systemName: "hourglass"))
-            cell.imageFilm.hero.id = "\(data.results[indexPath.row].backdropPath)"
+            cell.imageFilm.hero.id = "\(data.results[indexPath.row].backdropPath ?? "")"
             cell.imageFilm.sizeToFit()
             return cell
         }

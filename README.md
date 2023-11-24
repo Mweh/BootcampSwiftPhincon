@@ -1,4 +1,4 @@
-# Materi Pembelajaran "Enterprise Python Developer"
+# Materi Pembelajaran "Enterprise iOS Developer"
 
 [Minggu 01](isi/01.md)
 

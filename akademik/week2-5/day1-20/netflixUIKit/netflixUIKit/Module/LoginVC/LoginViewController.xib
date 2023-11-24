@@ -68,6 +68,9 @@
                                                     <real key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="showPasswordButton" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shakeMagnitude">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>

@@ -57,12 +57,27 @@ class HorizontalCell: UITableViewCell {
             collectionView.delegate?.collectionView?(collectionView, didSelectItemAt: indexPath)
         }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func downloadImageURL(imageURL: URL){
+        CustomAPIManager.shared.downloadImage(imageURL: imageURL) { result in
+            switch result {
+            case .success(let data):
+                // Handle downloaded image data
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+                print("Image downloaded successfully: \(data)")
+            case .failure(let error):
+                // Handle download failure
+                print("Error downloading image: \(error)")
+            }
+        }
+    }
 }
 
+@available(iOS 15.0, *)
 extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,7 +89,6 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         }
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print(indexPath.row)
@@ -83,10 +97,9 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             delegate?.didTapCellCircle(index: indexPath.row)
         case .SquareCell:
             delegate?.didTapCellSquare(index: indexPath.row)
-//            break
+            //            break
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch typeCell {
@@ -112,10 +125,9 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                 cell.imgView.kf.setImage(with: url)
                 cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
                 print(collectionDiscoverTV?[indexPath.row].posterPath)
-
+                
                 // Set ratedNumberLabel only for the first 9 cells
                 (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
-                
             }
             
             // Show containerNewMovie only in the first cell
@@ -148,6 +160,31 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) {[weak self] _ in
+                let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                    let urlName = "https://image.tmdb.org/t/p/w500/\(self?.collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
+                    
+                    let url = URL(string: urlName)
+                    self?.downloadImageURL(imageURL: url!)
+                    // Assuming imageURL is the URL of the downloaded image
+                    PhotoLibraryManager.saveImageToPhotos(url: url!) { error in
+                        if let error = error {
+                            print("Error saving image: \(error.localizedDescription)")
+                        } else {
+                            print("Image saved successfully.")
+                        }
+                    }
+
+                }
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
+            }
+        
+        return config
+    }
 }
 
 enum SectionCell: Int, CaseIterable {

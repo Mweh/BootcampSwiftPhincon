@@ -32,7 +32,9 @@ enum Endpoint {
         case .getDiscoverTV:
             return "discover/movie"
         case .getUpcoming:
-            return "movie/upcoming"
+            return "discover/movie?primary_release_date.gte=2023-11-23"
+//        case .getUpcoming:
+//            return "movie/upcoming"
         case .searchMovie:
             return "search/movie"
         case .getFavoriteNoPaging:

@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
     
     var counterValue: Int = 0
     var counterTimer: Timer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUp()
@@ -34,7 +34,27 @@ class DetailViewController: UIViewController {
         showNaviItem()
         
         setupHero()
+        setupShare()
     }
+    
+    func setupShare(){
+        let shareButton = UIBarButtonItem(systemItem: .action)
+        shareButton.target = self
+        shareButton.action = #selector(shareButtonTapped)
+        navigationItem.rightBarButtonItem = shareButton
+    }
+    
+    @objc func shareButtonTapped() {
+        // Your movie link from IMDb
+        let movieLink = "https://www.imdb.com/title/example" //change this later
+        // Create an instance of UIActivityViewController
+        let activityViewController = UIActivityViewController(activityItems: [movieLink], applicationActivities: nil)
+        
+        // Exclude some activities if needed (optional)
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.assignToContact]
+        
+        // Present the share sheet
+        present(activityViewController, animated: true, completion: nil)    }
     
     func setupHero(){
         self.hero.isEnabled = true
@@ -77,6 +97,7 @@ class DetailViewController: UIViewController {
     }
     
     func setupUp(){
+        self.navigationItem.title = data?.originalTitle ?? "Detail"
         backdropImgView.makeRounded(30)
         posterImgView.makeImageRounded(10)
         ratingContainer.makeRounded(10)
@@ -86,12 +107,12 @@ class DetailViewController: UIViewController {
             
             titleMovieLabel.hero.id = "\(data.title!)"
             
-            let backdropImgName = "https://image.tmdb.org/t/p/w500\(data.backdropPath)"
+            let backdropImgName = "https://image.tmdb.org/t/p/w500\(data.backdropPath ?? "")"
             let backdropURL = URL(string: backdropImgName)
             backdropImgView.kf.setImage(with: backdropURL)
             backdropImgView.sizeToFit()
             
-            backdropImgView.hero.id = "\(data.backdropPath)"
+            backdropImgView.hero.id = "\(data.backdropPath ?? "")"
             
             let posterImgName = "https://image.tmdb.org/t/p/w300\(data.posterPath)"
             let posterURL = URL(string: posterImgName)

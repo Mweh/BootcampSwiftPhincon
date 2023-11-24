@@ -48,4 +48,20 @@ class CustomAPIManager: NSObject {
             }
         }
     }
+    
+    func downloadImage(imageURL: URL, completion: @escaping (Result<URL, Error>) -> Void) {
+        let destination: DownloadRequest.Destination = { _, _ in
+            let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        
+        AF.download(imageURL, to: destination).validate().response { response in
+            switch response.result {
+            case .success(let url):
+                completion(.success(url!))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

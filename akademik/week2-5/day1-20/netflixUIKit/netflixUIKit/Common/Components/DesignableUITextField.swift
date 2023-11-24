@@ -10,6 +10,24 @@ import UIKit
 @IBDesignable
 class DesignableUITextField: UITextField {
     
+    @IBInspectable
+    var shakeMagnitude: CGFloat = 10.0
+
+    @IBInspectable
+    var shakeDuration: TimeInterval = 0.5
+
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "position.x")
+        animation.values = [0, shakeMagnitude, -shakeMagnitude, shakeMagnitude, 0]
+        animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+        animation.duration = shakeDuration
+        layer.add(animation, forKey: "shake")
+    }
+
+    func stopShaking() {
+        layer.removeAnimation(forKey: "shake")
+    }
+    
     let passwordVisibilityButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
@@ -87,3 +105,31 @@ class DesignableUITextField: UITextField {
         attributedPlaceholder = NSAttributedString(string: placeholder != nil ?  placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: UIColor.systemGray])
     }
 }
+
+//@IBDesignable
+//class ShakingTextField: UITextField {
+//
+//    @IBInspectable
+//    var shakeMagnitude: CGFloat = 10.0
+//
+//    @IBInspectable
+//    var shakeDuration: TimeInterval = 0.5
+//
+//    func shake() {
+//        let animation = CAKeyframeAnimation(keyPath: "position.x")
+//        animation.values = [0, shakeMagnitude, -shakeMagnitude, shakeMagnitude, 0]
+//        animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+//        animation.duration = shakeDuration
+//        layer.add(animation, forKey: "shake")
+//    }
+//
+//    func stopShaking() {
+//        layer.removeAnimation(forKey: "shake")
+//    }
+//
+//    // Add any other customization or functionality you need for the UITextField
+//}
+//
+//// Usage:
+//// You can set the ShakingTextField class for your UITextField in the Interface Builder.
+//// You can customize the shakeMagnitude and shakeDuration properties from the Attributes Inspector.

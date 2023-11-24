@@ -49,4 +49,3 @@ struct ResultSearchFilm: Codable {
         case voteCount = "vote_count"
     }
 }
-

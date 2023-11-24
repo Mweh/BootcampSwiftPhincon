@@ -13,7 +13,7 @@ class SearchVCViewModel {
     let api = CustomAPIManager()
     
     var dataNowPlaying = BehaviorRelay<NowPlaying?>(value: nil)
-    var dataDiscoverTV = BehaviorRelay<DiscoverTV?>(value: nil)
+//    var dataDiscoverTV = BehaviorRelay<DiscoverTV?>(value: nil)
     
     func loadData<T: Codable>(for endpoint: Endpoint, resultType: T.Type) {
         
@@ -23,8 +23,8 @@ class SearchVCViewModel {
                 switch endpoint { // Switch must be exhaustive
                 case .getNowPlaying:
                     self.dataNowPlaying.accept(data as? NowPlaying )
-                case .getDiscoverTV:
-                    self.dataDiscoverTV.accept(data as? DiscoverTV)
+//                case .getDiscoverTV:
+//                    self.dataDiscoverTV.accept(data as? DiscoverTV)
                 default:
                     break
                 }

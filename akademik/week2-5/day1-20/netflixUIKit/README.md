@@ -70,7 +70,10 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Integrate CoreData or UserDefault for data storage.
 - [ ] Add reviewsVC inside
 - [ ] Add recommendationVC inside slidingtabs
-- [ ] Add download when doing longpress
+- [ ] A feature to push to other detailView when click the moviePoster inside detailView itself
+- [ ] Add a suggest when searching a movie 
+- [ ] Add a feature that can show all list of items
+- [ ] Add a share button
 
 - ...
 
@@ -88,6 +91,7 @@ Tasks that have been completed.
 - [x] add number(ranking 1-10) beside the imageView of best rated movie 
 - [x] Add sliding tabs in detailView using Parchment
 - [x] Add creditsVC inside slidingtabs
+- [x] Add download when doing longpress
 
 ## BUG
 

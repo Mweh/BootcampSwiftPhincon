@@ -55,8 +55,11 @@
 		CD678AAF2B0E293100B2261F /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678AAE2B0E293100B2261F /* Reviews.swift */; };
 		CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */; };
 		CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */; };
+		CD678ABC2B0F04CB00B2261F /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678ABB2B0F04CB00B2261F /* DataPersistenceManager.swift */; };
+		CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */; };
 		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
 		CD723D052B03004C00C191A9 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723D042B03004C00C191A9 /* Favorites.swift */; };
+		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
 		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
 		CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */; };
 		CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */; };
@@ -171,8 +174,11 @@
 		CD678AAE2B0E293100B2261F /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
+		CD678ABB2B0F04CB00B2261F /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
 		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
 		CD723D042B03004C00C191A9 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../../Downloads/UpcomingMovies/Favorites.swift; sourceTree = "<group>"; };
+		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
@@ -289,8 +295,9 @@
 		CD16E3022AF352C200669456 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CDD85AD42AFDBE4300683CFE /* SystemConfiguration */,
+				CD678ABA2B0F04B400B2261F /* DataManagers */,
 				CD16E3042AF352E400669456 /* Service */,
+				CDD85AD42AFDBE4300683CFE /* SystemConfiguration */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -348,11 +355,12 @@
 				CD40E1E92AF875DA002D2407 /* TopRated.swift */,
 				CD16E3072AF35CBC00669456 /* Popular.swift */,
 				CDAF8A802AF94B2200CB670D /* DiscoverTV.swift */,
-				CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */,
 				CDAF8A6C2AF8D72700CB670D /* Upcoming.swift */,
+				CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */,
 				CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */,
 				CD723D042B03004C00C191A9 /* Favorites.swift */,
 				CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */,
+				CD729D162B102B59006D3046 /* Details.swift */,
 				CD678A9D2B0DAD7500B2261F /* Credit.swift */,
 				CD678AAE2B0E293100B2261F /* Reviews.swift */,
 			);
@@ -521,6 +529,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD678ABA2B0F04B400B2261F /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				CD678ABB2B0F04CB00B2261F /* DataPersistenceManager.swift */,
+			);
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 		CD723CED2B023D5800C191A9 /* ComingSoonViewModel */ = {
@@ -722,6 +738,7 @@
 				CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */,
 				CD21917E2B0757550038BE86 /* PopUpLoading.swift */,
 				CD2191802B0759250038BE86 /* Common.swift */,
+				CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -930,10 +947,13 @@
 				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
 				CD16E3082AF35CBC00669456 /* Popular.swift in Sources */,
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
+				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */,
 				CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */,
+				CD678ABC2B0F04CB00B2261F /* DataPersistenceManager.swift in Sources */,
 				CDAF8A812AF94B2200CB670D /* DiscoverTV.swift in Sources */,
+				CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CDFAB1462AFB61EA00D2963D /* SearchResponse.swift in Sources */,
 				CD136FD12AFA33770046BB44 /* SearchVCViewModel.swift in Sources */,
