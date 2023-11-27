@@ -48,6 +48,10 @@ class DesignableUITextField: UITextField {
         updatePasswordVisibilityButton()
     }
     
+//    override var intrinsicContentSize: CGSize {
+//        return UIView.layoutFittingExpandedSize
+//    }
+    
     private func updatePasswordVisibilityButton() {
         if showPasswordButton {
             rightViewMode = .always

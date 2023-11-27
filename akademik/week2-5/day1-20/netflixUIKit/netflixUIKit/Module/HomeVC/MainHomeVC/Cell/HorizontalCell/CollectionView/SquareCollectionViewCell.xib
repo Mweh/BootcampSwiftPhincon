@@ -130,6 +130,9 @@
             <point key="canvasLocation" x="95.419847328244273" y="40.140845070422536"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="OmR-z4-qF3"/>
+    </designables>
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
         <image name="movie7" width="1280" height="1920"/>

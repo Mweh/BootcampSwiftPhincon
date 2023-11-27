@@ -6,8 +6,10 @@
 //
 
 import Hero
-import UIKit
 import Kingfisher
+import RxCocoa
+import RxSwift
+import UIKit
 
 protocol HorizontalCellDelegate: AnyObject {
     func didTapCellCircle(index: Int)
@@ -20,14 +22,15 @@ class HorizontalCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var seeAllButton: UIButton!
     
     var parentNavigationController: UINavigationController?
-    
     var typeCell: SectionCell = .CircleCell
     weak var delegate: HorizontalCellDelegate?
     
     var collectionNowPlaying: [ResultNowPlaying]?
     var collectionDiscoverTV: [ResultNowPlaying]?
+    let bag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +40,34 @@ class HorizontalCell: UITableViewCell {
         collectionView.collectionViewLayout = layout
         
         setUp()
+        setUpSeeAll()
     }
+    
+    func setUpSeeAll(){
+        seeAllButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else { return }
+                self.handleShowAll()
+            })
+            .disposed(by: bag)
+    }
+    
+    private func handleShowAll(){
+        switch typeCell {
+        case .CircleCell:
+            print("CircleCell in handleShowAll")
+        case .SquareCell:
+            print("SquareCell in handleShowAll")
+            
+        }
+    }
+    
+//    private func showAllForCircleCell() {
+//        // Example: Push a new view controller for "Show All" in CircleCell
+//        let seeAllVC = SeeAllViewController()
+//        seeAllVC.data = collectionNowPlaying // Pass the data to the next view controller if needed
+//        parentNavigationController?.pushViewController(seeAllVC, animated: true)
+//    }
     
     func setUp(){
         collectionView.dataSource = self
@@ -97,7 +127,6 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             delegate?.didTapCellCircle(index: indexPath.row)
         case .SquareCell:
             delegate?.didTapCellSquare(index: indexPath.row)
-            //            break
         }
     }
     
@@ -124,7 +153,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                 let url = URL(string: imageName)
                 cell.imgView.kf.setImage(with: url)
                 cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
-                print(collectionDiscoverTV?[indexPath.row].posterPath)
+                //                print(collectionDiscoverTV?[indexPath.row].posterPath)
                 
                 // Set ratedNumberLabel only for the first 9 cells
                 (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
@@ -178,7 +207,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                             print("Image saved successfully.")
                         }
                     }
-
+                    
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }

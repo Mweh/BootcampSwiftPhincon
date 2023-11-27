@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchButtonViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="Sfw-rD-AuH" id="EvF-Zk-O79"/>
+                <outlet property="backButton" destination="SXc-eZ-Q3D" id="DCw-ID-UvT"/>
                 <outlet property="collectionView" destination="Q6n-CB-ePn" id="bzg-wT-0NY"/>
                 <outlet property="textFieldSearch" destination="MHL-h9-EQN" id="e9f-fH-NgV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,10 +32,18 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pez-eN-b65">
-                            <rect key="frame" x="0.0" y="-1" width="393" height="42"/>
+                            <rect key="frame" x="0.0" y="-1" width="393" height="34"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXc-eZ-Q3D" userLabel="backButton">
+                                    <rect key="frame" x="3" y="5.9999999999999982" width="20" height="22.333333333333329"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="9yN-X5-YcT"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chevron.backward" catalog="system"/>
+                                </button>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a show, movie, genre, e.t.c." textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-h9-EQN" userLabel="textFieldSearch" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="0.0" width="377" height="34"/>
+                                    <rect key="frame" x="29" y="0.0" width="352" height="34"/>
                                     <color key="backgroundColor" systemColor="systemFillColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="BC1-RS-tPm"/>
@@ -52,14 +61,16 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="MHL-h9-EQN" secondAttribute="trailing" constant="8" id="Ic2-4F-BvD"/>
+                                <constraint firstItem="MHL-h9-EQN" firstAttribute="leading" secondItem="SXc-eZ-Q3D" secondAttribute="trailing" constant="6" id="3ZO-LL-Bjr"/>
+                                <constraint firstAttribute="trailing" secondItem="MHL-h9-EQN" secondAttribute="trailing" constant="12" id="Ic2-4F-BvD"/>
                                 <constraint firstItem="MHL-h9-EQN" firstAttribute="top" secondItem="pez-eN-b65" secondAttribute="top" id="Y2g-ww-i8Q"/>
-                                <constraint firstItem="MHL-h9-EQN" firstAttribute="leading" secondItem="pez-eN-b65" secondAttribute="leading" constant="8" id="iV0-F2-3V9"/>
-                                <constraint firstAttribute="bottom" secondItem="MHL-h9-EQN" secondAttribute="bottom" constant="8" id="qt8-Zd-yu4"/>
+                                <constraint firstItem="SXc-eZ-Q3D" firstAttribute="centerY" secondItem="MHL-h9-EQN" secondAttribute="centerY" id="Yb8-Ug-tgq"/>
+                                <constraint firstItem="SXc-eZ-Q3D" firstAttribute="leading" secondItem="pez-eN-b65" secondAttribute="leading" constant="3" id="kcj-Ii-WoB"/>
+                                <constraint firstAttribute="bottom" secondItem="MHL-h9-EQN" secondAttribute="bottom" id="qt8-Zd-yu4"/>
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q6n-CB-ePn">
-                            <rect key="frame" x="24" y="57" width="345" height="702"/>
+                            <rect key="frame" x="24" y="49" width="345" height="710"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KEA-kn-0Lc">
                                 <size key="itemSize" width="128" height="128"/>
@@ -77,7 +88,7 @@
                             <rect key="frame" x="90" y="229.66666666666669" width="300" height="300.00000000000006"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your movie and play a Trailer instantly!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-fH-AQ4">
-                                    <rect key="frame" x="0.0" y="260.33333333333331" width="213" height="39.666666666666686"/>
+                                    <rect key="frame" x="0.0" y="259.99999999999994" width="213" height="40"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -128,11 +139,12 @@
     </objects>
     <designables>
         <designable name="MHL-h9-EQN">
-            <size key="intrinsicContentSize" width="273.66666666666669" height="34"/>
+            <size key="intrinsicContentSize" width="301.66666666666669" height="34"/>
         </designable>
         <designable name="Sfw-rD-AuH"/>
     </designables>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

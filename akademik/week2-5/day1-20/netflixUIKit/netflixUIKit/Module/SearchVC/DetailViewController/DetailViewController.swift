@@ -117,13 +117,14 @@ class DetailViewController: UIViewController {
             
             backdropImgView.hero.id = "\(data.backdropPath ?? "")"
             
-            let posterImgName = "https://image.tmdb.org/t/p/w300\(data.posterPath)"
+            let posterPath = data.posterPath ?? ""
+            
+            let posterImgName = "https://image.tmdb.org/t/p/w300\(posterPath)"
             let posterURL = URL(string: posterImgName)
             posterImgView.kf.setImage(with: posterURL)
             posterImgView.sizeToFit()
             
-            posterImgView.hero.id = "\(data.posterPath)"
-            print(data.posterPath)
+            posterImgView.hero.id = "\(posterPath)"
             
             let voteAverageText = String(format: "%.1f", data.voteAverage)
             let attributedText = NSAttributedString(string: voteAverageText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])

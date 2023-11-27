@@ -76,7 +76,8 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add a share button
 - [ ] Remove duplicate unnecessary Model
 - [ ] Add a changelog inside the app
-
+- [ ] Add CV, images to Text in searchTextField
+- [ ] Add changelog in MoreVC
 
 - ...
 

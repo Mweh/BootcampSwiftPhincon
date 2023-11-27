@@ -33,12 +33,12 @@ struct ResultNowPlaying: Codable {
     let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: String
+    let originalLanguage: String?
     let originalTitle: String?
     let overview: String
     let popularity: Double
     let releaseDate: String?
-    let posterPath: String
+    let posterPath: String?
     let title: String?
     let video: Bool?
     let voteAverage: Double

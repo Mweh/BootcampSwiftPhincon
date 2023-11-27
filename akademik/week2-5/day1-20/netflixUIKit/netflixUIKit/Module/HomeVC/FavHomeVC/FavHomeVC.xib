@@ -23,14 +23,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTD-Uy-HON">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite Movies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kta-O1-zVs">
-                            <rect key="frame" x="16" y="8" width="361" height="33.666666666666664"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-Nt-NbC">
-                            <rect key="frame" x="0.0" y="57.666666666666686" width="393" height="701.33333333333326"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="KIL-iX-yE7">
                                 <size key="itemSize" width="128" height="128"/>
@@ -43,10 +37,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Znh-Nt-NbC" secondAttribute="bottom" id="4Lz-a9-gx7"/>
-                        <constraint firstItem="Znh-Nt-NbC" firstAttribute="top" secondItem="kta-O1-zVs" secondAttribute="bottom" constant="16" id="7t9-aq-P8G"/>
-                        <constraint firstItem="kta-O1-zVs" firstAttribute="top" secondItem="ZTD-Uy-HON" secondAttribute="top" constant="8" id="8hK-Lo-DYW"/>
-                        <constraint firstItem="kta-O1-zVs" firstAttribute="leading" secondItem="ZTD-Uy-HON" secondAttribute="leading" constant="16" id="bhz-Pc-Oxe"/>
-                        <constraint firstAttribute="trailing" secondItem="kta-O1-zVs" secondAttribute="trailing" constant="16" id="buy-nn-Hlt"/>
+                        <constraint firstItem="Znh-Nt-NbC" firstAttribute="top" secondItem="ZTD-Uy-HON" secondAttribute="top" id="RsN-CN-u1a"/>
                         <constraint firstItem="Znh-Nt-NbC" firstAttribute="leading" secondItem="ZTD-Uy-HON" secondAttribute="leading" id="kJ0-uQ-4st"/>
                         <constraint firstAttribute="trailing" secondItem="Znh-Nt-NbC" secondAttribute="trailing" id="ucg-LQ-Ieb"/>
                     </constraints>

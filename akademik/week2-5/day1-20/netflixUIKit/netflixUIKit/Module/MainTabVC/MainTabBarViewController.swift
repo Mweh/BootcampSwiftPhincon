@@ -17,6 +17,7 @@ class MainTabBarViewController: UITabBarController {
         removeTextNaviItem()
     }
     
+    
     func removeTextNaviItem(){
         navigationItem.backButtonTitle = ""
     }
@@ -25,12 +26,14 @@ class MainTabBarViewController: UITabBarController {
         super.viewWillAppear(animated)
         // Hide the navigation bar
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Re-enable the navigation bar when leaving this view
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func configureUITabBarItems() {
@@ -57,6 +60,7 @@ class MainTabBarViewController: UITabBarController {
         nav4.tabBarItem.badgeValue = "4"
         
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
+        
     }
 }
 

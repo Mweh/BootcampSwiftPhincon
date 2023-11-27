@@ -25,6 +25,8 @@
 		CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917E2B0757550038BE86 /* PopUpLoading.swift */; };
 		CD2191812B0759250038BE86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2191802B0759250038BE86 /* Common.swift */; };
 		CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = CD2191822B07654A0038BE86 /* loadingIndicator.json */; };
+		CD23A13B2B1422FB000D2303 /* SeeAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23A1392B1422FB000D2303 /* SeeAllViewController.swift */; };
+		CD23A13C2B1422FB000D2303 /* SeeAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
 		CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */; };
@@ -147,6 +149,8 @@
 		CD21917E2B0757550038BE86 /* PopUpLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLoading.swift; sourceTree = "<group>"; };
 		CD2191802B0759250038BE86 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		CD2191822B07654A0038BE86 /* loadingIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingIndicator.json; sourceTree = "<group>"; };
+		CD23A1392B1422FB000D2303 /* SeeAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewController.swift; sourceTree = "<group>"; };
+		CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllViewController.xib; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedReusableCustomView.swift; sourceTree = "<group>"; };
@@ -346,6 +350,15 @@
 				CD16E3132AF3826100669456 /* ListMovieCell.xib */,
 			);
 			path = ListMovieCell;
+			sourceTree = "<group>";
+		};
+		CD23A1382B1422D9000D2303 /* SeeAllVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD23A1392B1422FB000D2303 /* SeeAllViewController.swift */,
+				CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */,
+			);
+			path = SeeAllVC;
 			sourceTree = "<group>";
 		};
 		CD2C65112AEFB2130026B35B /* LoginVC */ = {
@@ -593,6 +606,7 @@
 			children = (
 				CD78337E2AEF61000030AA43 /* VerticalCell */,
 				CD78337D2AEF60E80030AA43 /* HorizontalCell */,
+				CD23A1382B1422D9000D2303 /* SeeAllVC */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -905,6 +919,7 @@
 				CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */,
 				CDAD7DBF2AFE03E200BF41B8 /* refreshDownArrow.json in Resources */,
 				CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */,
+				CD23A13C2B1422FB000D2303 /* SeeAllViewController.xib in Resources */,
 				CD678AA22B0DD44100B2261F /* CastingCollectionViewCell.xib in Resources */,
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
@@ -1008,6 +1023,7 @@
 				CD678AA82B0DF65600B2261F /* ReviewsViewController.swift in Sources */,
 				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */,
+				CD23A13B2B1422FB000D2303 /* SeeAllViewController.swift in Sources */,
 				CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */,
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
 				CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */,

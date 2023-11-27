@@ -14,6 +14,9 @@ import UIKit
 class MoreViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var user1Img: UIImageView!
+    @IBOutlet weak var user2Img: UIImageView!
+    @IBOutlet weak var plusImg: UIImageView!
     @IBOutlet weak var uploadImg: UIButton!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var currentAppVersionLabel: UILabel!
@@ -23,9 +26,9 @@ class MoreViewController: UIViewController {
     
     var picker: UIImagePickerController? = UIImagePickerController()
     let cellData: [MoreCellData] = [
-        MoreCellData(title: "My List", symbolName: "checkmark"),
-        MoreCellData(title: "App Settings", symbolName: "gear"),
         MoreCellData(title: "Account", symbolName: "person.circle"),
+        MoreCellData(title: "App Settings", symbolName: "gear"),
+        MoreCellData(title: "Changelog", symbolName: "gearshape.arrow.triangle.2.circlepath"),
         MoreCellData(title: "Help", symbolName: "questionmark.circle")
     ]
     
@@ -49,10 +52,13 @@ class MoreViewController: UIViewController {
         tblView.delegate = self
         tblView.dataSource = self
         tblView.register(UINib(nibName: "MoreTableViewCell", bundle: nil), forCellReuseIdentifier: "MoreTableViewCell")
+        imageView.makeRounded(10)
+        user1Img.makeRounded(10)
+        user2Img.makeRounded(10)
+        plusImg.makeRounded(10)
     }
     
     func uploadToFire(){
-        imageView.makeRounded(10)
         uploadImg.rx.tap
             .subscribe(onNext: {[weak self] in
                 guard let uid = Auth.auth().currentUser?.uid else{

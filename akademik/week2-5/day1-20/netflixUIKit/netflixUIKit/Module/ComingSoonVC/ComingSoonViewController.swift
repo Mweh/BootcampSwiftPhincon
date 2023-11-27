@@ -31,6 +31,13 @@ class ComingSoonViewController: UIViewController {
         configureTable()
         loadData()
         lottieConfig()
+//        setupTitle()
+    }
+    
+    func setupTitle(){
+        self.navigationItem.title = "Coming Soon"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     func configureTable(){

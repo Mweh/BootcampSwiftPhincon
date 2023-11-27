@@ -30,27 +30,13 @@ class FavHomeVC: UIViewController {
         showNaviItem()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        showNaviItem()
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        showNaviItem()
-    }
-    
-    func showNaviItem(){
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
     
     func configure(){
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "FavHomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavHomeCollectionViewCell")
+        self.navigationItem.title = "My Favorites Movie"
     }
     
     func bindData() {
@@ -96,4 +82,23 @@ extension FavHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         return CGSize(width: (screenWidth/2)-7, height: 240)
     }
     
+}
+
+extension FavHomeVC{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        showNaviItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        showNaviItem()
+    }
+    
+    func showNaviItem(){
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }

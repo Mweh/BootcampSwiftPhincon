@@ -194,10 +194,10 @@
     </objects>
     <designables>
         <designable name="7gf-WN-oFT">
-            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
+            <size key="intrinsicContentSize" width="149.33333333333334" height="34"/>
         </designable>
         <designable name="9XY-wy-6CT">
-            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
+            <size key="intrinsicContentSize" width="94.666666666666671" height="34"/>
         </designable>
     </designables>
     <resources>

@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private var animationView: LottieAnimationView?
     var isDataLoaded: Bool = false
-
+    
     let customAPIManager = CustomAPIManager()
     
     var dataTopRated: NowPlaying? {
@@ -28,10 +28,38 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setupNavBar()
         configureTable()
         loadData()
         lottieConfig()
     }
+    
+//    func setupNavBar() {
+//    self.navigationItem.title = "Top Searches"
+//    navigationController?.navigationBar.prefersLargeTitles = true
+//        let rightButton = UIButton()
+//        rightButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+//        rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
+//        navigationController?.navigationBar.addSubview(rightButton)
+//        rightButton.tag = 97
+//        rightButton.frame = CGRect(x: self.view.frame.width, y: 0, width: 120, height: self.view.frame.height)
+//
+//        let targetView = self.navigationController?.navigationBar
+//        let trailingConstraint = NSLayoutConstraint(item: rightButton, attribute:
+//                .trailingMargin, relatedBy: .equal, toItem: targetView,
+//                                                    attribute: .trailingMargin, multiplier: 1.0, constant: -16)
+//        let bottomConstraint = NSLayoutConstraint(item: rightButton, attribute: .bottom, relatedBy: .equal,
+//                                                  toItem: targetView, attribute: .bottom, multiplier: 1.0, constant: -6)
+//        rightButton.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([trailingConstraint, bottomConstraint])
+//    }
+//
+//    @objc
+//    func rightButtonTapped() {
+//        let vc = SearchButtonViewController()
+//        vc.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
     
     func lottieConfig(){
         animationView = LottieAnimationView(name: "refreshDownArrow")
@@ -72,9 +100,6 @@ class SecondViewController: UIViewController {
         tableView.refreshControl = refreshControl
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     func loadData(){
         tableView.showAnimatedGradientSkeleton()
@@ -84,7 +109,7 @@ class SecondViewController: UIViewController {
             case .success(let topRated):
                 self.dataTopRated = topRated
                 self.isDataLoaded = true // Set to true when data is successfully loaded
-
+                
             case .failure(let error):
                 print("Error fetching top rated movies: \(error)")
             }

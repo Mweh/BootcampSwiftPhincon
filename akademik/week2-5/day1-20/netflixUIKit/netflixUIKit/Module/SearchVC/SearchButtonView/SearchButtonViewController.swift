@@ -14,6 +14,7 @@ import UIKit
 class SearchButtonViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var animationView: LottieAnimationView!
     
@@ -36,23 +37,18 @@ class SearchButtonViewController: UIViewController {
         setupAnimation()
         configure()
         showNaviItem()
+        toBackVC()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        showNaviItem()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        showNaviItem()
-    }
-    
-    func showNaviItem(){
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
+    func toBackVC(){
+        backButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     func settextFieldSearchInsideNavItem() {
@@ -132,12 +128,12 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let validData = self.nowPlaying?.results {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
-            let urlString = validData[indexPath.row].posterPath
+            let urlString = validData[indexPath.row].posterPath ?? ""
             let imageName = "https://image.tmdb.org/t/p/w500/\(urlString)"
             let url = URL(string: imageName)
             cell.imgView.kf.setImage(with: url)
             
-            cell.imgView.hero.id = "\(validData[indexPath.row].posterPath)"
+            cell.imgView.hero.id = "\(urlString)"
             
             return cell
         }
@@ -162,6 +158,25 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
 //                        videoTrailerVC.movieId = selectedMovie.id
 //                        navigationController?.pushViewController(videoTrailerVC, animated: true)
         }
+    }
+}
+
+extension SearchButtonViewController{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        showNaviItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        showNaviItem()
+    }
+    
+    func showNaviItem(){
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
 

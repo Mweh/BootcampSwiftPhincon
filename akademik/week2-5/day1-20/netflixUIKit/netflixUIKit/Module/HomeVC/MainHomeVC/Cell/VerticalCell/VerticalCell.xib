@@ -46,7 +46,7 @@
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fadeHeight">
-                                        <real key="value" value="50"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
