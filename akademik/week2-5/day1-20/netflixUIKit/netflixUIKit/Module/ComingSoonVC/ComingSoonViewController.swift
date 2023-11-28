@@ -15,11 +15,11 @@ class ComingSoonViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private var animationView: LottieAnimationView?
     
-    let customAPIManager = CustomAPIManager()
+    let vm = ComingSoonViewModel()
     
     var currentPage = 1
     
-    var dataTable: Upcoming? {
+    var dataTable: NowPlaying? {
         didSet {
             tableView.reloadData()
         }
@@ -31,13 +31,12 @@ class ComingSoonViewController: UIViewController {
         configureTable()
         loadData()
         lottieConfig()
-//        setupTitle()
     }
     
-    func setupTitle(){
-        self.navigationItem.title = "Coming Soon"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        vm.loadData(for: .getUpcoming(page: currentPage), resultType: NowPlaying.self)
     }
     
     func configureTable(){
@@ -119,17 +118,17 @@ class ComingSoonViewController: UIViewController {
     func loadData(page: Int = 1) {
         tableView.showAnimatedGradientSkeleton()
         
-        customAPIManager.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<Upcoming, Error>)  in
+        self.vm.api.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<NowPlaying, Error>)  in
             guard let self = self else { return }
             
             switch response {
-            case .success(let upcoming):
+            case .success(let nowPlaying):
                 if page == 1 {
                     // For the initial load or refreshing, set the entire data
-                    self.dataTable = upcoming
+                    self.dataTable = nowPlaying
                 } else {
                     // For pagination, append the new data to the existing data
-                    self.dataTable?.results.append(contentsOf: upcoming.results)
+                    self.dataTable?.results.append(contentsOf: nowPlaying.results)
                 }
                 
                 self.tableView.reloadData()
@@ -170,14 +169,14 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let data = dataTable {
+        if let data = self.dataTable?.results {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDescriptionTableCell", for: indexPath) as! MovieDescriptionTableCell
             // Assuming you have the necessary information to create a ParamAddFavorite instance
-            let favoriteModel = ParamAddFavorite(mediaType: "movie", mediaId: data.results[indexPath.row].id, favorite: false)
+            let favoriteModel = ParamAddFavorite(mediaType: "movie", mediaId: data[indexPath.row].id, favorite: false)
 
-            cell.setup(data: data.results[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
-            
-            let imageName = "https://image.tmdb.org/t/p/w500/\(data.results[indexPath.row].backdropPath)"
+            cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
+            let backDropPath = data[indexPath.row].backdropPath ?? ""
+            let imageName = "https://image.tmdb.org/t/p/w500/\(backDropPath)"
             if let url = URL(string: imageName) {
                 cell.imgView.kf.indicatorType = .activity
                 cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass"))
@@ -189,7 +188,7 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
             cell.tappableFadedImageView.addGestureRecognizer(tapGesture)
 
             // Set tag to the movie ID for later retrieval
-            cell.tappableFadedImageView.tag = data.results[indexPath.row].id
+            cell.tappableFadedImageView.tag = data[indexPath.row].id
 
             return cell
         }

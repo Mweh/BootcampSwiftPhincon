@@ -56,18 +56,28 @@ class HorizontalCell: UITableViewCell {
         switch typeCell {
         case .CircleCell:
             print("CircleCell in handleShowAll")
+            showAllForCircleCell()
         case .SquareCell:
             print("SquareCell in handleShowAll")
-            
+            showAllForSquareCell()
         }
     }
     
-//    private func showAllForCircleCell() {
-//        // Example: Push a new view controller for "Show All" in CircleCell
-//        let seeAllVC = SeeAllViewController()
+    private func showAllForCircleCell() {
+        // Example: Push a new view controller for "Show All" in CircleCell
+        let seeAllVC = SeeAllViewController()
+        seeAllVC.dataNowPlaying = collectionNowPlaying
 //        seeAllVC.data = collectionNowPlaying // Pass the data to the next view controller if needed
-//        parentNavigationController?.pushViewController(seeAllVC, animated: true)
-//    }
+        parentNavigationController?.present(seeAllVC, animated: true)
+    }
+    
+    private func showAllForSquareCell() {
+        // Example: Push a new view controller for "Show All" in CircleCell
+        let seeAllVC = SeeAllViewController()
+        seeAllVC.dataNowPlaying = collectionDiscoverTV
+//        seeAllVC.data = collectionNowPlaying // Pass the data to the next view controller if needed
+        parentNavigationController?.present(seeAllVC, animated: true)
+    }
     
     func setUp(){
         collectionView.dataSource = self

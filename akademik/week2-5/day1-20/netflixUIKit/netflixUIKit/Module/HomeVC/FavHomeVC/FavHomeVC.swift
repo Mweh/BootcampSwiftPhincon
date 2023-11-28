@@ -18,7 +18,7 @@ class FavHomeVC: UIViewController {
         }
     }
     
-    var vm = HomeVCViewModel()
+    var vm = HomeViewModel()
     let bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -29,8 +29,6 @@ class FavHomeVC: UIViewController {
         vm.loadData(for: .getFavoriteNoPaging, resultType: Favorites.self)
         showNaviItem()
     }
-    
-    
     
     func configure(){
         collectionView.delegate = self

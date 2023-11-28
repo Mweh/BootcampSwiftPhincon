@@ -12,6 +12,7 @@ class VideoTrailerVC: UIViewController {
     
     var movieId: Int?
     @IBOutlet weak var webYoutubeView: WKWebView!
+    let vm = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class VideoTrailerVC: UIViewController {
         let videoTrailerEndpoint = Endpoint.getVideoTrailer(id: movieId)
         
         // Make a network request to get the video information
-        CustomAPIManager.shared.makeAPICall(endpoint: videoTrailerEndpoint) { [weak self] (result: Result<VideoTrailer, Error>) in
+        vm.api.makeAPICall(endpoint: videoTrailerEndpoint) { [weak self] (result: Result<VideoTrailer, Error>) in
             switch result {
             case .success(let videoTrailer):
                 // Assuming the first result is the video you want

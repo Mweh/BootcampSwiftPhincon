@@ -64,7 +64,7 @@ class MovieDescriptionTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(data: ResultUpcoming?, favoriteModel: ParamAddFavorite?) {
+    func setup(data: ResultNowPlaying?, favoriteModel: ParamAddFavorite?) {
         if let validData = data {
             if let validData = data {
                 popularityLabel.text = "Views: \(validData.popularity)"
@@ -73,7 +73,7 @@ class MovieDescriptionTableCell: UITableViewCell {
                 loremLabel.sizeToFit()
                 loremLabel.preferredMaxLayoutWidth = loremLabel.bounds.width
                 // Format releaseDate to a specific date format
-                let dateString = formatDate(validData.releaseDate)
+                let dateString = formatDate(validData.releaseDate ?? "")
                 releaseDateLabel.text = "Release date: \(dateString)"
     
             }

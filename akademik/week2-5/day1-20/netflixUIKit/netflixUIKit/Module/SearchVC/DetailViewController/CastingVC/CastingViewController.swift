@@ -15,7 +15,7 @@ class CastingViewController: UIViewController {
     let index: Int
     var creditId: Int?
     var isDataLoaded: Bool = false
-    let customAPIManager = CustomAPIManager()
+    let vm = SearchViewModel()
     
     var data: ResultNowPlaying?{
         didSet{
@@ -23,7 +23,6 @@ class CastingViewController: UIViewController {
         }
     }
 
-    
     var dataCredit: Credit?{
         didSet{
             collectionview.reloadData()
@@ -50,7 +49,7 @@ class CastingViewController: UIViewController {
     
     func setupAPI(){
         if let data = data{
-            customAPIManager.makeAPICall(endpoint: .getCredits(id: data.id)) { (response: Result<Credit, Error>)  in 
+            self.vm.api.makeAPICall(endpoint: .getCredits(id: data.id)) { (response: Result<Credit, Error>)  in 
                 switch response {
                 case .success(let creditId):
                     self.dataCredit = creditId

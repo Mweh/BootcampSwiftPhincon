@@ -9,13 +9,16 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class SearchVCViewModel {
+class SearchViewModel {
     let api = CustomAPIManager()
+    let bag = DisposeBag()
+    let stateLoading = BehaviorRelay<StateLoading>(value: .loading)
     
     var dataNowPlaying = BehaviorRelay<NowPlaying?>(value: nil)
-//    var dataDiscoverTV = BehaviorRelay<DiscoverTV?>(value: nil)
     
     func loadData<T: Codable>(for endpoint: Endpoint, resultType: T.Type) {
+        
+        stateLoading.accept(.loading)
         
         api.makeAPICall(endpoint: endpoint) { (response: Result<T, Error>)  in
             switch response {
@@ -23,8 +26,6 @@ class SearchVCViewModel {
                 switch endpoint { // Switch must be exhaustive
                 case .getNowPlaying:
                     self.dataNowPlaying.accept(data as? NowPlaying )
-//                case .getDiscoverTV:
-//                    self.dataDiscoverTV.accept(data as? DiscoverTV)
                 default:
                     break
                 }
@@ -32,6 +33,12 @@ class SearchVCViewModel {
                 // Handle the error
                 print("Error fetching data for \(endpoint): \(error)")
             }
+            
+            self.stateLoading.accept(.fisnished)
         }
     }
+}
+
+enum StateLoading: Int {
+    case loading, fisnished
 }

@@ -25,15 +25,13 @@ class SearchButtonViewController: UIViewController {
     }
     // Update the data source for your collection view
     let disposeBag = DisposeBag() // Create a DisposeBag to manage disposables
-    
-    let apiManager = CustomAPIManager.shared
+    let vm = SearchViewModel()
     
     // Create a BehaviorRelay to hold the search query
     var searchSubject: BehaviorRelay<String> = BehaviorRelay(value: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        settextFieldSearchInsideNavItem()
         setupAnimation()
         configure()
         showNaviItem()
@@ -60,7 +58,6 @@ class SearchButtonViewController: UIViewController {
         // Set the custom view as the title view
         self.navigationItem.titleView = customView
     }
-    
     
     func setupAnimation() {
         animationView.animation = LottieAnimation.named("movieLoading")
@@ -92,7 +89,9 @@ class SearchButtonViewController: UIViewController {
             .distinctUntilChanged()
             .flatMapLatest { (query: String) -> Observable<NowPlaying> in
                 return Observable.create { observer in
-                    self.apiManager.makeAPICall(endpoint: .searchMovie(query: query)){ (result: Result<NowPlaying, Error>) in
+                    self.vm.loadData(for: .searchMovie(query: query), resultType: NowPlaying.self)
+                    self.vm.api.makeAPICall(endpoint: .searchMovie(query: query)){
+                        (result: Result<NowPlaying, Error>) in
                         switch result {
                         case .success(let movies):
                             observer.onNext(movies)
@@ -151,12 +150,6 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
             detailViewController.hidesBottomBarWhenPushed = true
             self.navigationController?.hero.isEnabled = true
             navigationController?.pushViewController(detailViewController, animated: true)
-            
-//                        let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
-//                        videoTrailerVC.hidesBottomBarWhenPushed = true
-//                        // Pass the movie ID to the VideoTrailerVC
-//                        videoTrailerVC.movieId = selectedMovie.id
-//                        navigationController?.pushViewController(videoTrailerVC, animated: true)
         }
     }
 }

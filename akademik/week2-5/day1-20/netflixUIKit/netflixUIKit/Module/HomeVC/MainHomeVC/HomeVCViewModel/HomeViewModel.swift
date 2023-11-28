@@ -8,7 +8,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class HomeVCViewModel {
+class HomeViewModel {
     let api = CustomAPIManager()
     
     var dataNowPlaying = BehaviorRelay<NowPlaying?>(value: nil)

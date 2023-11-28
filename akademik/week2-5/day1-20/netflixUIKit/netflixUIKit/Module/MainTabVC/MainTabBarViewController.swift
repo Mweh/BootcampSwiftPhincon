@@ -17,7 +17,6 @@ class MainTabBarViewController: UITabBarController {
         removeTextNaviItem()
     }
     
-    
     func removeTextNaviItem(){
         navigationItem.backButtonTitle = ""
     }
@@ -70,7 +69,6 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
               let tabBarItems = tabBarController.tabBar.items else {
             return
         }
-        
         let selectedItem = tabBarItems[selectedViewControllerIndex]
         animateTabBarItem(selectedItem)
     }
@@ -79,7 +77,6 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
         guard let imageView = item.value(forKey: "view") as? UIView else {
             return
         }
-        
         let originalTransform = imageView.transform
         UIView.animate(withDuration: 0.2, delay: 0, options: [.autoreverse, .curveEaseInOut], animations: {
             imageView.transform = originalTransform.scaledBy(x: 1.2, y: 1.2)

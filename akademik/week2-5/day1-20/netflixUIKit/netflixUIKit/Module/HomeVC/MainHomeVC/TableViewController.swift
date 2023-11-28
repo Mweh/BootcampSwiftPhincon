@@ -15,7 +15,8 @@ class TableViewController: UITableViewController {
     
     let bag = DisposeBag()
     let customAPIManager = CustomAPIManager()
-    
+    var vm = HomeViewModel()
+
     var dataNowPlaying: NowPlaying? {
         didSet {
             tblView.reloadData()
@@ -27,8 +28,6 @@ class TableViewController: UITableViewController {
             tblView.reloadData()
         }
     }
-    
-    var vm = HomeVCViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
