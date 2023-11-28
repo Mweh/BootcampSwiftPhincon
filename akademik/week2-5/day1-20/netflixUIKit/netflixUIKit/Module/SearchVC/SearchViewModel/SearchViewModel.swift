@@ -24,7 +24,7 @@ class SearchViewModel {
             switch response {
             case .success(let data):
                 switch endpoint { // Switch must be exhaustive
-                case .getNowPlaying:
+                case .getTopRated:
                     self.dataNowPlaying.accept(data as? NowPlaying )
                 default:
                     break

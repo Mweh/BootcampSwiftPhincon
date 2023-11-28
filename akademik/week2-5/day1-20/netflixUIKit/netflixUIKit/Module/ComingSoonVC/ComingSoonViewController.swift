@@ -3,9 +3,10 @@
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 31/10/23.
-//
+
 import Lottie
 import Kingfisher
+import RxSwift
 import SkeletonView
 import UIKit
 
@@ -16,6 +17,7 @@ class ComingSoonViewController: UIViewController {
     private var animationView: LottieAnimationView?
     
     let vm = ComingSoonViewModel()
+    let bag = DisposeBag()
     
     var currentPage = 1
     
@@ -31,12 +33,36 @@ class ComingSoonViewController: UIViewController {
         configureTable()
         loadData()
         lottieConfig()
+        bindApiData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         vm.loadData(for: .getUpcoming(page: currentPage), resultType: NowPlaying.self)
+    }
+    
+    func bindApiData() {
+        vm.loadData(for: .getUpcoming(page: 1), resultType: NowPlaying.self)
+        vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
+            guard let self = self else {
+                return
+            }
+            self.dataTable = data
+            self.tableView.reloadData()
+        }).disposed(by: bag)
+        vm.stateLoading.asObservable().subscribe(onNext: {[weak self] state in
+            guard let self = self else {
+                return
+            }
+            switch state {
+            case .loading:
+                self.tableView.showAnimatedGradientSkeleton()
+            case .fisnished:
+                self.tableView.hideSkeleton()
+            }
+        })
+        .disposed(by: bag)
     }
     
     func configureTable(){

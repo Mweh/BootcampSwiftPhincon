@@ -43,7 +43,7 @@
                                     <state key="normal" image="chevron.backward" catalog="system"/>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a show, movie, genre, e.t.c." textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-h9-EQN" userLabel="textFieldSearch" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
-                                    <rect key="frame" x="29" y="0.0" width="352" height="34"/>
+                                    <rect key="frame" x="29" y="0.0" width="316" height="34"/>
                                     <color key="backgroundColor" systemColor="systemFillColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="BC1-RS-tPm"/>
@@ -58,13 +58,23 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kp-lQ-3cu">
+                                    <rect key="frame" x="351" y="-0.3333333333333357" width="30" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Q1m-yE-86U"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="MHL-h9-EQN" firstAttribute="leading" secondItem="SXc-eZ-Q3D" secondAttribute="trailing" constant="6" id="3ZO-LL-Bjr"/>
-                                <constraint firstAttribute="trailing" secondItem="MHL-h9-EQN" secondAttribute="trailing" constant="12" id="Ic2-4F-BvD"/>
+                                <constraint firstItem="4kp-lQ-3cu" firstAttribute="leading" secondItem="MHL-h9-EQN" secondAttribute="trailing" constant="6" id="3fR-Hh-LEq"/>
+                                <constraint firstItem="4kp-lQ-3cu" firstAttribute="centerY" secondItem="MHL-h9-EQN" secondAttribute="centerY" id="Dpv-fO-hxe"/>
                                 <constraint firstItem="MHL-h9-EQN" firstAttribute="top" secondItem="pez-eN-b65" secondAttribute="top" id="Y2g-ww-i8Q"/>
                                 <constraint firstItem="SXc-eZ-Q3D" firstAttribute="centerY" secondItem="MHL-h9-EQN" secondAttribute="centerY" id="Yb8-Ug-tgq"/>
+                                <constraint firstAttribute="trailing" secondItem="4kp-lQ-3cu" secondAttribute="trailing" constant="12" id="ciJ-qH-omi"/>
                                 <constraint firstItem="SXc-eZ-Q3D" firstAttribute="leading" secondItem="pez-eN-b65" secondAttribute="leading" constant="3" id="kcj-Ii-WoB"/>
                                 <constraint firstAttribute="bottom" secondItem="MHL-h9-EQN" secondAttribute="bottom" id="qt8-Zd-yu4"/>
                             </constraints>
@@ -139,11 +149,11 @@
     </objects>
     <designables>
         <designable name="MHL-h9-EQN">
-            <size key="intrinsicContentSize" width="301.66666666666669" height="34"/>
+            <size key="intrinsicContentSize" width="273.66666666666669" height="34"/>
         </designable>
-        <designable name="Sfw-rD-AuH"/>
     </designables>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">

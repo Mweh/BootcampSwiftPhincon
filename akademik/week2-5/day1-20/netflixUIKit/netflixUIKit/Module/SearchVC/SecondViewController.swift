@@ -37,10 +37,11 @@ class SecondViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        vm.loadData(for: .getNowPlaying, resultType: NowPlaying.self)
+        vm.loadData(for: .getTopRated, resultType: NowPlaying.self)
     }
     
     func bindApiData() {
+        vm.loadData(for: .getTopRated, resultType: NowPlaying.self)
         vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
             guard let self = self else {
                 return

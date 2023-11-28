@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AAA082175510BC83DFF5FA4 /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF48A3D08613BB640675BC2 /* Pods_netflixUIKit.framework */; };
 		CD0709322AFA9E0B0079FC45 /* SearchFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */; };
 		CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */; };
 		CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */; };
@@ -125,13 +126,11 @@
 		CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */; };
 		CDFAB1462AFB61EA00D2963D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */; };
 		CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1472AFBC73C00D2963D /* Protocol.swift */; };
-		CE8BAC8DDC2A8108BBB58847 /* Pods_netflixUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F8AD6DC11A357D8394CE92E /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
-		9F9C92B73F86A50AB327CE80 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		47817F51428FBB25EBB6FB13 /* Pods-netflixUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.release.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		8BF48A3D08613BB640675BC2 /* Pods_netflixUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_netflixUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0709312AFA9E0B0079FC45 /* SearchFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilm.swift; sourceTree = "<group>"; };
 		CD0709342AFB32C40079FC45 /* SearchButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonViewController.swift; sourceTree = "<group>"; };
 		CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchButtonViewController.xib; sourceTree = "<group>"; };
@@ -253,6 +252,7 @@
 		CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		CDFAB1452AFB61EA00D2963D /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		CDFAB1472AFBC73C00D2963D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		E81E4B2B0F4E9AC1BBA44414 /* Pods-netflixUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netflixUIKit.debug.xcconfig"; path = "Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,13 +260,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8BAC8DDC2A8108BBB58847 /* Pods_netflixUIKit.framework in Frameworks */,
+				7AAA082175510BC83DFF5FA4 /* Pods_netflixUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3D4772EAB2D191DAA131FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BF48A3D08613BB640675BC2 /* Pods_netflixUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD0709332AFB32970079FC45 /* SearchButtonView */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +449,7 @@
 				CD5DD49B2AEF38AA00140DFA /* netflixUIKit */,
 				CD5DD49A2AEF38AA00140DFA /* Products */,
 				D53A264A208A37DF9D31422B /* Pods */,
-				D79A8631043C38C595064E00 /* Frameworks */,
+				BE3D4772EAB2D191DAA131FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -823,18 +831,10 @@
 		D53A264A208A37DF9D31422B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9F8AD6DC11A357D8394CE92E /* Pods-netflixUIKit.debug.xcconfig */,
-				9F9C92B73F86A50AB327CE80 /* Pods-netflixUIKit.release.xcconfig */,
+				E81E4B2B0F4E9AC1BBA44414 /* Pods-netflixUIKit.debug.xcconfig */,
+				47817F51428FBB25EBB6FB13 /* Pods-netflixUIKit.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D79A8631043C38C595064E00 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				83A152BD06544788959DDECC /* Pods_netflixUIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -844,11 +844,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD5DD4AD2AEF38AB00140DFA /* Build configuration list for PBXNativeTarget "netflixUIKit" */;
 			buildPhases = (
-				C38DAD15ECF20340290E4BB1 /* [CP] Check Pods Manifest.lock */,
+				95758DEECCB0B164774BBAEB /* [CP] Check Pods Manifest.lock */,
 				CD5DD4952AEF38AA00140DFA /* Sources */,
 				CD5DD4962AEF38AA00140DFA /* Frameworks */,
 				CD5DD4972AEF38AA00140DFA /* Resources */,
-				7CD83DC818FA582220A79023 /* [CP] Embed Pods Frameworks */,
+				26E2F9E93C8E31D45B1281EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -946,7 +946,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7CD83DC818FA582220A79023 /* [CP] Embed Pods Frameworks */ = {
+		26E2F9E93C8E31D45B1281EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -963,7 +963,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-netflixUIKit/Pods-netflixUIKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38DAD15ECF20340290E4BB1 /* [CP] Check Pods Manifest.lock */ = {
+		95758DEECCB0B164774BBAEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1189,13 +1189,14 @@
 		};
 		CD5DD4AE2AEF38AB00140DFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F8AD6DC11A357D8394CE92E /* Pods-netflixUIKit.debug.xcconfig */;
+			baseConfigurationReference = E81E4B2B0F4E9AC1BBA44414 /* Pods-netflixUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7RK5YTXSM;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1220,13 +1221,14 @@
 		};
 		CD5DD4AF2AEF38AB00140DFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F9C92B73F86A50AB327CE80 /* Pods-netflixUIKit.release.xcconfig */;
+			baseConfigurationReference = 47817F51428FBB25EBB6FB13 /* Pods-netflixUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7RK5YTXSM;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
