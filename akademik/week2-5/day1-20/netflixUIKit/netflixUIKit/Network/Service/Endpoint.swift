@@ -20,6 +20,9 @@ enum Endpoint {
     case addFavorite(param: ParamAddFavorite)
     case getVideoTrailer(id: Int)
     case getCredits(id: Int)
+    case getSimilar(id: Int)
+    case getReviews(id: Int)
+    case getDetails(id: Int)
     
     func path() -> String {
         switch self {
@@ -33,8 +36,6 @@ enum Endpoint {
             return "discover/movie"
         case .getUpcoming:
             return "discover/movie?primary_release_date.gte=2023-11-23"
-//        case .getUpcoming:
-//            return "movie/upcoming"
         case .searchMovie:
             return "search/movie"
         case .getFavoriteNoPaging:
@@ -47,6 +48,12 @@ enum Endpoint {
             return "movie/\(id)/videos"
         case .getCredits(let id):
             return "/movie/\(id)/credits"
+        case .getSimilar(let id):
+            return "/movie/\(id)/similar"
+        case .getReviews(let id):
+            return "/movie/\(id)/reviews"
+        case .getDetails(let id):
+            return "/movie/\(id)"
         }
     }
     
@@ -61,7 +68,7 @@ enum Endpoint {
     
     var parameters: [String: Any]? {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer, .getCredits:
+        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer, .getCredits, .getSimilar, .getReviews, .getDetails:
             return nil
         case .getUpcoming(let page), .getFavorite(page: let page):
             return ["page": page]
@@ -93,7 +100,7 @@ enum Endpoint {
     
     var encoding: ParameterEncoding {
         switch self {
-        case .searchMovie, .getUpcoming, .getFavorite, .getFavoriteNoPaging:
+        case .searchMovie, .getUpcoming, .getFavorite, .getFavoriteNoPaging, .getSimilar, .getReviews, .getDetails:
             return URLEncoding.queryString
         default: return JSONEncoding.default
         }

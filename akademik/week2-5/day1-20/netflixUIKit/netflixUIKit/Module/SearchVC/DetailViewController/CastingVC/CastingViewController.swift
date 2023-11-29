@@ -13,8 +13,6 @@ class CastingViewController: UIViewController {
     lazy var loadingIndicator = PopUpLoading(on: view)
     
     let index: Int
-    var creditId: Int?
-    var isDataLoaded: Bool = false
     let vm = SearchViewModel()
     
     var data: ResultNowPlaying?{
@@ -53,7 +51,6 @@ class CastingViewController: UIViewController {
                 switch response {
                 case .success(let creditId):
                     self.dataCredit = creditId
-                    self.isDataLoaded = true // Set to true when data is successfully loaded
                 case .failure(let error):
                     print("Error fetching top rated movies: \(error)")
                 }
@@ -81,7 +78,6 @@ extension CastingViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.actorImgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
             cell.characterLabel.text = dataCredit?.cast[indexPath.row].character?.truncateToWords(2)
             cell.actorLabel.text = dataCredit?.cast[indexPath.row].name.truncateToWords(2)
-            
         }
         return cell
     }

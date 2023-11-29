@@ -28,7 +28,8 @@ target 'netflixUIKit' do
   
   # LogInWithGoogle
   pod 'Firebase/Core'
-  pod 'FirebaseAuth', '>= 9.6.0'
+  pod 'FirebaseAuth'
+  #, '>= 9.6.0'
   #pod 'GoogleSignIn'
 
   # Animation
@@ -45,8 +46,10 @@ target 'netflixUIKit' do
   pod 'IQKeyboardManagerSwift'
 
   # Temp
-  pod 'GoogleSignIn', '7.0.0'
-  pod 'FirebaseStorage', '10.18.0'
+  pod 'GoogleSignIn'
+  #, '7.0.0'
+  pod 'FirebaseStorage'
+  #, '10.18.0'
 #  pod 'GoogleMLKit/TextRecognition', '>= 0.6.0'
   
   

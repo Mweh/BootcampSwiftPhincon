@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimilarViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="d1w-g0-pXd" id="z9o-1K-Kfd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +20,24 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-VL-G1V">
-                    <rect key="frame" x="157.66666666666666" y="415.66666666666669" width="78" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="d1w-g0-pXd">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hjA-II-T7G">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="9ly-VL-G1V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JUo-j9-GKL"/>
-                <constraint firstItem="9ly-VL-G1V" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="STV-ns-Vlq"/>
+                <constraint firstItem="d1w-g0-pXd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NqP-x4-z2C"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="d1w-g0-pXd" secondAttribute="bottom" id="UKU-EA-Q9Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d1w-g0-pXd" secondAttribute="trailing" id="cBq-p5-l2H"/>
+                <constraint firstItem="d1w-g0-pXd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="j5l-3k-vFI"/>
             </constraints>
             <point key="canvasLocation" x="76" y="-12"/>
         </view>

@@ -34,12 +34,12 @@ class MovieDescriptionTableCell: UITableViewCell {
     }
     
     func containerStyle(){
-        containerStackViewIcon.layer.cornerRadius = containerStackViewIcon.frame.height / 10
         imgView.layer.borderWidth = 2.0
         imgView.layer.borderColor = UIColor.white.cgColor
-        
         selectionStyle = .none
-        imgView.layer.cornerRadius = imgView.frame.height / 10
+        containerStackViewIcon.makeCornerRadius(20, maskedCorner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        imgView.makeCornerRadius(20, maskedCorner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+
     }
     
     func setupfavButton(){

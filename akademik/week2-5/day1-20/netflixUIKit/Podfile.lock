@@ -129,9 +129,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Firebase/Core
-  - FirebaseAuth (>= 9.6.0)
-  - FirebaseStorage (= 10.18.0)
-  - GoogleSignIn (= 7.0.0)
+  - FirebaseAuth
+  - FirebaseStorage
+  - GoogleSignIn
   - Hero
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -210,6 +210,6 @@ SPEC CHECKSUMS:
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
 
-PODFILE CHECKSUM: 6a3b33427068f27b14f01d14c2e25961c7541b32
+PODFILE CHECKSUM: 027bc1f73161f4ca1fa1b469f1fb6469bf0df125
 
 COCOAPODS: 1.14.3

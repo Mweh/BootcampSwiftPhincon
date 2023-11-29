@@ -17,13 +17,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleMovieLabel: UILabel!
     @IBOutlet weak var ratingLabel: UIButton!
     @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var viewsTotalLabel: UILabel!
-    @IBOutlet weak var likedTotalLabel: UILabel!
+    @IBOutlet weak var lovedLabel: UILabel!
+    @IBOutlet weak var runtimeLabel: UILabel!
     @IBOutlet weak var slidingTabs: UIView!
-    
+    @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var tappableFadedImageView: TappableFadedImageView!
     
     var data: ResultNowPlaying?
+    let vm = SearchViewModel()
+    var dataDetails: Details?
     
     var counterValue: Int = 0
     var counterTimer: Timer?
@@ -32,19 +34,26 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupUp()
         setUpPagingVC()
-        setUpInfo()
         showNaviItem()
         
         setupHero()
-        setupShare()
+        setupRightNavBarButtons()
         tappableFadedImageView.tapDelegate = self
+        setupDetails()
     }
     
-    func setupShare(){
-        let shareButton = UIBarButtonItem(systemItem: .action)
-        shareButton.target = self
-        shareButton.action = #selector(shareButtonTapped)
-        navigationItem.rightBarButtonItem = shareButton
+    func setupDetails(){
+        if let data = data{
+            self.vm.api.makeAPICall(endpoint: .getDetails(id: data.id)) { (response: Result<Details, Error>)  in
+                switch response {
+                case .success(let detailsId):
+                    self.dataDetails = detailsId
+                    self.setUpInfo()
+                case .failure(let error):
+                    print("Error fetching top rated movies: \(error)")
+                }
+            }
+        }
     }
     
     @objc func shareButtonTapped() {
@@ -52,12 +61,35 @@ class DetailViewController: UIViewController {
         let movieLink = "https://www.imdb.com/title/example" //change this later
         // Create an instance of UIActivityViewController
         let activityViewController = UIActivityViewController(activityItems: [movieLink], applicationActivities: nil)
-        
+        //
         // Exclude some activities if needed (optional)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.assignToContact]
         
         // Present the share sheet
-        present(activityViewController, animated: true, completion: nil)    }
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func setupRightNavBarButtons() {
+        let shareButton = UIBarButtonItem(systemItem: .action)
+        shareButton.target = self
+        shareButton.action = #selector(shareButtonTapped)
+        
+        let browserURLButton = UIBarButtonItem(image: UIImage(systemName: "safari"), style: .plain, target: self, action: #selector(browserURLButtonTapped))
+        browserURLButton.imageInsets = UIEdgeInsets(top: 0, left: -15, bottom: 0, right: 0)
+        
+        navigationItem.rightBarButtonItems = [shareButton, browserURLButton]
+    }
+    
+    @objc func browserURLButtonTapped() {
+        // Your browser URL
+        let browserURL = "https://www.example.com"
+        
+        // Open the URL in Safari
+        if let url = URL(string: browserURL), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     
     func setupHero(){
         self.hero.isEnabled = true
@@ -94,12 +126,16 @@ class DetailViewController: UIViewController {
     }
     
     func setUpInfo(){
+        let totalLike = Int(data?.popularity ?? 0)+(data?.voteCount ?? 0)
+        
         yearLabel.setSystemSymbolWithFormattedDate("calendar", date: data?.releaseDate, format: "yyyy")
-        viewsTotalLabel.animateCounting(to: Int(data?.popularity ?? 0), systemName: "flame")
-        likedTotalLabel.animateCounting(to: data?.voteCount ?? 0, systemName: "heart")
+        runtimeLabel.animateCounting(to: dataDetails?.runtime ?? 0, systemName: "clock")
+        lovedLabel.animateCounting(to: totalLike, systemName: "heart")
+        genreLabel.text = dataDetails?.genres?.prefix(3).compactMap { $0.name }.joined(separator: " • ")
     }
     
     func setupUp(){
+        hidesBottomBarWhenPushed = true
         self.navigationItem.title = data?.originalTitle ?? "Detail"
         backdropImgView.makeRounded(30)
         posterImgView.makeImageRounded(10)
@@ -153,7 +189,7 @@ extension DetailViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        hidesBottomBarWhenPushed = false
+        //        hidesBottomBarWhenPushed = false
         // Show the tab bar when inside DetailViewController
         UINavigationBar.appearance().isHidden = false
     }
@@ -176,9 +212,9 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
         case .Cast:
             return CastingViewController(index: index, data: self.data)
         case .Reviews:
-            return ReviewsViewController()
+            return ReviewsViewController(index: index, data: self.data)
         case .Similar:
-            return SimilarViewController()
+            return SimilarViewController(dataResult: self.data)
         }
         
     }

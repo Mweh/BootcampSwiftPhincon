@@ -202,7 +202,9 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
 
             cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
             let backDropPath = data[indexPath.row].backdropPath ?? ""
-            let imageName = "https://image.tmdb.org/t/p/w500/\(backDropPath)"
+            let tmdbImgBase = TMDBImageURL.url(size: .w780)
+
+            let imageName = "\(tmdbImgBase)\(backDropPath)"
             if let url = URL(string: imageName) {
                 cell.imgView.kf.indicatorType = .activity
                 cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass"))

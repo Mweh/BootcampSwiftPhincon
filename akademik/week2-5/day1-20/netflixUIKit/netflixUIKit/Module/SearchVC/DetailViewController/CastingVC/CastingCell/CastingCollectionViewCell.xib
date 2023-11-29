@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrd-Na-nUs">
-                        <rect key="frame" x="0.0" y="0.0" width="253" height="180.66666666666666"/>
+                        <rect key="frame" x="0.0" y="0.0" width="253" height="174.66666666666666"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vmb-jc-mSW">
-                                <rect key="frame" x="76.666666666666671" y="41.999999999999993" width="100.00000000000001" height="97.333333333333314"/>
+                                <rect key="frame" x="76.666666666666671" y="38.999999999999993" width="100.00000000000001" height="97.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Vkg-wb-av0"/>
                                     <constraint firstAttribute="width" constant="100" id="ncX-9w-fKx"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="Nrd-Na-nUs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xla-m5-pzd"/>
                 <constraint firstItem="3UA-xG-olD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gjL-TK-Y1S"/>
                 <constraint firstItem="Nrd-Na-nUs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t35-cR-m3Q"/>
-                <constraint firstItem="OV6-VV-4aD" firstAttribute="top" secondItem="Nrd-Na-nUs" secondAttribute="bottom" id="u9H-O6-aru"/>
+                <constraint firstItem="OV6-VV-4aD" firstAttribute="top" secondItem="Nrd-Na-nUs" secondAttribute="bottom" constant="6" id="u9H-O6-aru"/>
                 <constraint firstAttribute="trailing" secondItem="Nrd-Na-nUs" secondAttribute="trailing" id="zp7-gx-HEf"/>
             </constraints>
             <size key="customSize" width="253" height="240"/>

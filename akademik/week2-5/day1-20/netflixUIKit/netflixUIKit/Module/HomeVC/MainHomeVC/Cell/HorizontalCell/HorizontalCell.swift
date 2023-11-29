@@ -158,7 +158,8 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             self.titleLabel.text = typeCell.title
             
             if indexPath.row < collectionDiscoverTV?.count ?? 1 {
-                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
+                let tmdbImgBase = TMDBImageURL.url(size: .w500)
+                let imageName = "\(tmdbImgBase)\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
                 
                 let url = URL(string: imageName)
                 cell.imgView.kf.setImage(with: url)

@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - Reviews
+// MARK: - Welcome
 struct Reviews: Codable {
-    let id, page: Int
-    let results: [ResultReviews]
-    let totalPages, totalResults: Int
+    let id, page: Int?
+    let results: [ResultReviews]?
+    let totalPages, totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, page, results
@@ -22,10 +22,10 @@ struct Reviews: Codable {
 
 // MARK: - Result
 struct ResultReviews: Codable {
-    let author: String
-    let authorDetails: AuthorDetails
-    let content, createdAt, id, updatedAt: String
-    let url: String
+    let author: String?
+    let authorDetails: AuthorDetails?
+    let content, createdAt, id, updatedAt: String?
+    let url: String?
 
     enum CodingKeys: String, CodingKey {
         case author
@@ -40,9 +40,9 @@ struct ResultReviews: Codable {
 
 // MARK: - AuthorDetails
 struct AuthorDetails: Codable {
-    let name, username: String
+    let name, username: String?
     let avatarPath: String?
-    let rating: Int
+    let rating: Int?
 
     enum CodingKeys: String, CodingKey {
         case name, username
