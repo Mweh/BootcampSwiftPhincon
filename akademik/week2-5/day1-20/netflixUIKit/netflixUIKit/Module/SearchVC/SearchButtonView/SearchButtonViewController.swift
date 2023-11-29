@@ -10,6 +10,7 @@ import Lottie
 import RxCocoa
 import RxSwift
 import UIKit
+import Vision
 
 class SearchButtonViewController: UIViewController {
     
@@ -17,6 +18,11 @@ class SearchButtonViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var animationView: LottieAnimationView!
+    @IBOutlet weak var scanButton: UIButton!
+    
+    var picker: UIImagePickerController? = UIImagePickerController()
+    var visionTextRecognitionRequest: VNRecognizeTextRequest?
+    var selectedImage: UIImage? // Add this variable
     
     var nowPlaying: NowPlaying?  {
         didSet {
@@ -36,6 +42,9 @@ class SearchButtonViewController: UIViewController {
         configure()
         showNaviItem()
         toBackVC()
+        scanButtonTap()
+        setupVision()
+        setupImagePicker()
     }
     
     func toBackVC(){
@@ -154,6 +163,129 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
+extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func setupVision() {
+        visionTextRecognitionRequest = VNRecognizeTextRequest(completionHandler: handleVisionTextRecognition)
+        
+        // You can customize the recognition level as needed. For example:
+        // visionTextRecognitionRequest?.recognitionLevel = .accurate
+    }
+    
+    func handleVisionTextRecognition(request: VNRequest, error: Error?) {
+        guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+        
+        var recognizedText = ""
+        for observation in observations {
+            guard let topCandidate = observation.topCandidates(1).first else { continue }
+            recognizedText += topCandidate.string + "\n"
+        }
+        
+        DispatchQueue.main.async {
+            // Update the searchSubject with the recognized text
+            self.searchSubject.accept(recognizedText)
+            
+            // Set the recognized text to the textFieldSearch
+            self.textFieldSearch.text = recognizedText.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Show a popup message with the recognized text
+            if !recognizedText.isEmpty {
+                self.showPopupMessage(title: "Scanned Image's Result[AI]:\n", message: recognizedText)
+            }
+        }
+    }
+    
+    func performVisionTextRecognition(on image: UIImage?) {
+        guard let image = image,
+              let cgImage = image.cgImage else {
+            print("Selected image is nil")
+            return
+        }
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        
+        do {
+            try handler.perform([visionTextRecognitionRequest!])
+        } catch {
+            print("Error performing Vision request: \(error)")
+        }
+    }
+    
+    func scanButtonTap() {
+        scanButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.showImagePicker()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func setupImagePicker() {
+        picker!.allowsEditing = false
+        picker!.delegate = self
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: true, completion: nil)
+        
+        if let selectedImage = info[.originalImage] as? UIImage {
+            // Store the selected image
+            self.selectedImage = selectedImage
+            
+            // Perform vision text recognition on the selected image
+            performVisionTextRecognition(on: selectedImage)
+            
+            // Hide the animation view when an image is selected
+            animationView.isHidden = true
+        }
+    }
+    
+    func showImagePicker() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.picker!.sourceType = .camera
+            self.present(self.picker!, animated: true, completion: nil)
+        }
+        alert.addAction(cameraAction)
+        
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { _ in
+            self.picker!.sourceType = .photoLibrary
+            self.present(self.picker!, animated: true, completion: nil)
+        }
+        alert.addAction(galleryAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+class ContentContainerViewController: UIViewController {
+    let contentContainerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupContentContainer()
+    }
+    
+    func setupContentContainer() {
+        view.addSubview(contentContainerView)
+        // Adjust the frame of contentContainerView to position it beside the navigation item
+        // You may also want to consider safe area insets
+        contentContainerView.frame = CGRect(x: 20, y: 40, width: view.bounds.width, height: view.bounds.height)
+    }
+}
+
 extension SearchButtonViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -170,25 +302,5 @@ extension SearchButtonViewController{
     func showNaviItem(){
         navigationController?.navigationBar.isHidden = true
         navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-}
-
-class ContentContainerViewController: UIViewController {
-    
-    let contentContainerView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupContentContainer()
-    }
-    
-    func setupContentContainer() {
-        view.addSubview(contentContainerView)
-        // Adjust the frame of contentContainerView to position it beside the navigation item
-        // You may also want to consider safe area insets
-        contentContainerView.frame = CGRect(x: 20, y: 40, width: view.bounds.width, height: view.bounds.height)
     }
 }

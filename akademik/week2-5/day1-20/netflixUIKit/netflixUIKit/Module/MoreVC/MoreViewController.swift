@@ -146,7 +146,6 @@ class MoreViewController: UIViewController {
         // Add the gradient layer to your view
         gradientView.layer.addSublayer(gradientLayer)
     }
-    
 }
 
 extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UINavigationControllerDelegate {

@@ -72,11 +72,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add recommendationVC inside slidingtabs
 - [ ] A feature to push to other detailView when click the moviePoster inside detailView itself
 - [ ] Add a suggest when searching a movie 
-- [ ] Add a feature that can show all list of items
-- [ ] Add a share button
 - [ ] Remove duplicate unnecessary Model
-- [ ] Add a changelog inside the app
-- [ ] Add CV, images to Text in searchTextField
 - [ ] Add changelog in MoreVC
 
 - ...
@@ -96,6 +92,9 @@ Tasks that have been completed.
 - [x] Add sliding tabs in detailView using Parchment
 - [x] Add creditsVC inside slidingtabs
 - [x] Add download when doing longpress
+- [x] Add CV, images to Text in searchTextField
+- [x] Add a share button
+- [x] Add a feature that can show all list of items
 
 ## BUG
 
