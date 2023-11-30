@@ -90,7 +90,6 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
     func setupHero(){
         self.hero.isEnabled = true
     }
@@ -129,7 +128,7 @@ class DetailViewController: UIViewController {
         let totalLike = Int(data?.popularity ?? 0)+(data?.voteCount ?? 0)
         
         yearLabel.setSystemSymbolWithFormattedDate("calendar", date: data?.releaseDate, format: "yyyy")
-        runtimeLabel.animateCounting(to: dataDetails?.runtime ?? 0, systemName: "clock")
+        runtimeLabel.animateCounting(to: dataDetails?.runtime ?? 0, systemName: "clock", suffix: "Minutes")
         lovedLabel.animateCounting(to: totalLike, systemName: "heart")
         genreLabel.text = dataDetails?.genres?.prefix(3).compactMap { $0.name }.joined(separator: " • ")
     }
@@ -167,31 +166,6 @@ class DetailViewController: UIViewController {
             
             ratingLabel.setAttributedTitle(attributedText, for: .normal)
         }
-    }
-}
-
-extension DetailViewController{
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        showNaviItem()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        showNaviItem()
-    }
-    
-    func showNaviItem(){
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //        hidesBottomBarWhenPushed = false
-        // Show the tab bar when inside DetailViewController
-        UINavigationBar.appearance().isHidden = false
     }
 }
 
@@ -253,4 +227,29 @@ enum DetailSlidingTabs: Int, CaseIterable{
     case Cast
     case Reviews
     case Similar
+}
+
+extension DetailViewController{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar
+        showNaviItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Re-enable the navigation bar when leaving this view
+        showNaviItem()
+    }
+    
+    func showNaviItem(){
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //        hidesBottomBarWhenPushed = false
+        // Show the tab bar when inside DetailViewController
+        UINavigationBar.appearance().isHidden = false
+    }
 }

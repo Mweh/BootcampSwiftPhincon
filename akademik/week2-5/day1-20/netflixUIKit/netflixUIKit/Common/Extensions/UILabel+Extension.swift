@@ -50,7 +50,7 @@ extension UILabel {
         }
     }
     
-    func animateCounting(to targetValue: Int, duration: TimeInterval = 1.0, systemName: String? = nil) {
+    func animateCounting(to targetValue: Int, duration: TimeInterval = 1.0, systemName: String? = nil, suffix: String = "") {
         guard targetValue > 0 else {
             // Do nothing if the target value is not positive
             return
@@ -58,21 +58,19 @@ extension UILabel {
 
         var startValue = 0
         let animationSteps = targetValue <= 100 ? 10 : 100
-
         let stepSize = targetValue / animationSteps
 
         // Create a Timer to update the label's text
         Timer.scheduledTimer(withTimeInterval: duration / Double(animationSteps), repeats: true) { timer in
             startValue += stepSize
-            self.setSystemSymbol(systemName ?? "", withAdditionalText: "\(startValue)")
+            self.setSystemSymbol(systemName ?? "", withAdditionalText: "\(startValue) \(suffix)")
 
             if startValue >= targetValue {
                 // Stop the timer when the target value is reached
                 timer.invalidate()
-                self.setSystemSymbol(systemName ?? "", withAdditionalText: "\(targetValue)")
+                self.setSystemSymbol(systemName ?? "", withAdditionalText: "\(targetValue) \(suffix)")
             }
         }
     }
-
     
 }

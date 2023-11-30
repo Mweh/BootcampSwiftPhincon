@@ -72,7 +72,6 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add recommendationVC inside slidingtabs
 - [ ] A feature to push to other detailView when click the moviePoster inside detailView itself
 - [ ] Add a suggest when searching a movie 
-- [ ] Remove duplicate unnecessary Model
 - [ ] Add changelog in MoreVC
 
 - ...
@@ -95,6 +94,7 @@ Tasks that have been completed.
 - [x] Add CV, images to Text in searchTextField
 - [x] Add a share button
 - [x] Add a feature that can show all list of items
+- [x] Remove duplicate unnecessary Model
 
 ## BUG
 
@@ -102,4 +102,3 @@ Tasks that have been completed.
 - [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
 - [ ] Add filter with viewModel using RxSwift, so my app can filter what genre should the user want by tapping the genre option and will filter the movie based on the selected genre.
 - [ ] Make my project full MVVM by adding viewModel in every module folder.
-

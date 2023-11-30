@@ -120,6 +120,7 @@
 		CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */; };
 		CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */; };
 		CDD85AD62AFDBE5B00683CFE /* SystemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */; };
+		CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE034252B180F4C00914F2E /* PagingViewController.swift */; };
 		CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */; };
 		CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */; };
 		CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1472AFBC73C00D2963D /* Protocol.swift */; };
@@ -243,6 +244,7 @@
 		CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDescriptionTableCell.swift; sourceTree = "<group>"; };
 		CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDescriptionTableCell.xib; sourceTree = "<group>"; };
 		CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConfiguration.swift; sourceTree = "<group>"; };
+		CDE034252B180F4C00914F2E /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
 		CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		CDFAB1472AFBC73C00D2963D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */,
 				CD6254002B071EAE00C000CC /* UIView+Extension.swift */,
 				CDB9FD612B0BBCD800128B03 /* UILabel+Extension.swift */,
+				CDE034252B180F4C00914F2E /* PagingViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1042,6 +1045,7 @@
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
+				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,
 				CDB9FD642B0C3CD900128B03 /* DetailViewModel.swift in Sources */,
