@@ -73,4 +73,50 @@ extension UILabel {
         }
     }
     
+    func animateCountingHour(to targetValue: Int, duration: TimeInterval = 1.0, systemName: String? = nil, suffix: String? = nil) {
+        guard targetValue > 0 else {
+            // Do nothing if the target value is not positive
+            return
+        }
+        
+        var startValue = 0
+        let animationSteps = targetValue <= 100 ? 10 : 100
+        
+        let stepSize = targetValue / animationSteps
+        
+        // Create a Timer to update the label's text
+        Timer.scheduledTimer(withTimeInterval: duration / Double(animationSteps), repeats: true) { timer in
+            startValue += stepSize
+            
+            let hours = startValue / 60
+            let minutes = startValue % 60
+            
+            let formattedText: String
+            if hours > 0 {
+                formattedText = "\(hours)h\(minutes)m"
+            } else {
+                formattedText = "\(minutes)m"
+            }
+            
+            self.setSystemSymbol(systemName ?? "", withAdditionalText: formattedText + (suffix ?? ""))
+            
+            if startValue >= targetValue {
+                // Stop the timer when the target value is reached
+                timer.invalidate()
+                
+                let finalHours = targetValue / 60
+                let finalMinutes = targetValue % 60
+                
+                let finalFormattedText: String
+                if finalHours > 0 {
+                    finalFormattedText = "\(finalHours)h\(finalMinutes)m"
+                } else {
+                    finalFormattedText = "\(finalMinutes)m"
+                }
+                
+                self.setSystemSymbol(systemName ?? "", withAdditionalText: finalFormattedText + (suffix ?? ""))
+            }
+        }
+    }
+    
 }

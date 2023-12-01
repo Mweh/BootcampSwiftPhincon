@@ -12,12 +12,12 @@ class SeeAllViewController: UIViewController {
 
     @IBOutlet weak var seeAllCollectionView: UICollectionView!
     
-    var dataNowPlaying: [ResultNowPlaying]?
+    var dataMovie: [ResultMovie]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        if let dataNowPlaying = dataNowPlaying {
+        if let dataMovie = dataMovie {
             seeAllCollectionView.reloadData()
         }
     }
@@ -32,11 +32,11 @@ class SeeAllViewController: UIViewController {
 
 extension SeeAllViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataNowPlaying?.count ?? 0
+        return dataMovie?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let validData = dataNowPlaying {
+        if let validData = dataMovie {
             let cell = seeAllCollectionView.dequeueReusableCell(withReuseIdentifier: "SeeAllCollectionViewCell", for: indexPath) as! SeeAllCollectionViewCell
             cell.setup(imageName: validData[indexPath.row].posterPath ?? "")
             return cell

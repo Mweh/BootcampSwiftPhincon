@@ -22,8 +22,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var slidingTabs: UIView!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var tappableFadedImageView: TappableFadedImageView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var revenueLabel: UILabel!
     
-    var data: ResultNowPlaying?
+    var data: ResultMovie?
     let vm = SearchViewModel()
     var dataDetails: Details?
     
@@ -58,15 +61,17 @@ class DetailViewController: UIViewController {
     
     @objc func shareButtonTapped() {
         // Your movie link from IMDb
-        let movieLink = "https://www.imdb.com/title/example" //change this later
-        // Create an instance of UIActivityViewController
-        let activityViewController = UIActivityViewController(activityItems: [movieLink], applicationActivities: nil)
-        //
-        // Exclude some activities if needed (optional)
-        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.assignToContact]
-        
-        // Present the share sheet
-        present(activityViewController, animated: true, completion: nil)
+        if let data = dataDetails?.homepage{
+            let movieLink = data
+            // Create an instance of UIActivityViewController
+            let activityViewController = UIActivityViewController(activityItems: [movieLink], applicationActivities: nil)
+            //
+            // Exclude some activities if needed (optional)
+            activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.assignToContact]
+            
+            // Present the share sheet
+            present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     func setupRightNavBarButtons() {
@@ -75,18 +80,20 @@ class DetailViewController: UIViewController {
         shareButton.action = #selector(shareButtonTapped)
         
         let browserURLButton = UIBarButtonItem(image: UIImage(systemName: "safari"), style: .plain, target: self, action: #selector(browserURLButtonTapped))
-        browserURLButton.imageInsets = UIEdgeInsets(top: 0, left: -15, bottom: 0, right: 0)
+        browserURLButton.imageInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         
         navigationItem.rightBarButtonItems = [shareButton, browserURLButton]
     }
     
     @objc func browserURLButtonTapped() {
         // Your browser URL
-        let browserURL = "https://www.example.com"
-        
-        // Open the URL in Safari
-        if let url = URL(string: browserURL), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        if let dataToIMDB = dataDetails?.imdbID{
+            let browserURL = "https://www.imdb.com/title/\(dataToIMDB)"
+            
+            // Open the URL in Safari
+            if let url = URL(string: browserURL), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
     }
     
@@ -128,9 +135,28 @@ class DetailViewController: UIViewController {
         let totalLike = Int(data?.popularity ?? 0)+(data?.voteCount ?? 0)
         
         yearLabel.setSystemSymbolWithFormattedDate("calendar", date: data?.releaseDate, format: "yyyy")
-        runtimeLabel.animateCounting(to: dataDetails?.runtime ?? 0, systemName: "clock", suffix: "Minutes")
+        runtimeLabel.animateCountingHour(to: dataDetails?.runtime ?? 0, systemName: "clock")
         lovedLabel.animateCounting(to: totalLike, systemName: "heart")
         genreLabel.text = dataDetails?.genres?.prefix(3).compactMap { $0.name }.joined(separator: " • ")
+        statusLabel.text = dataDetails?.status
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.currencyCode = "USD"
+
+        if let budget = dataDetails?.budget, budget > 0 {
+            budgetLabel.text = "Budget: " + numberFormatter.string(from: NSNumber(value: budget))!
+            budgetLabel.animateCounting(to: budget)
+        } else {
+            budgetLabel.text = "Budget: N/A"
+        }
+
+        if let revenue = dataDetails?.revenue, revenue > 0 {
+            revenueLabel.text = "Revenue: " + numberFormatter.string(from: NSNumber(value: revenue))!
+        } else {
+            revenueLabel.text = "Revenue: N/A"
+        }
+
     }
     
     func setupUp(){

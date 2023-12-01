@@ -22,16 +22,30 @@ class CodeHelper {
 }
 
 class HalfModalPresentationController: UIPresentationController {
-    override var frameOfPresentedViewInContainerView: CGRect {
-        guard let containerView = containerView else { return CGRect.zero }
-        
-        let height: CGFloat = containerView.bounds.height / 4 // Adjust the height as needed
-        return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
-    }
+//    override var frameOfPresentedViewInContainerView: CGRect {
+//        guard let containerView = containerView else { return CGRect.zero }
+//
+//        let height: CGFloat = containerView.bounds.height / 4 // Pls make this flexible so whenever I call this I can modify this value inside parameter when calling it, chatgpt
+//        return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
+//    }
     
     private var initialY: CGFloat = 0
     private var blurView: UIVisualEffectView!
+    private let heightPercentage: CGFloat
+
+    init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, heightPercentage: CGFloat = 0.25) {
+        self.heightPercentage = heightPercentage
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+    }
     
+    override var frameOfPresentedViewInContainerView: CGRect {
+        guard let containerView = containerView else { return CGRect.zero }
+
+        let height: CGFloat = containerView.bounds.height * heightPercentage
+        return CGRect(x: 0, y: containerView.bounds.height - height, width: containerView.bounds.width, height: height)
+    }
+
+
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
         

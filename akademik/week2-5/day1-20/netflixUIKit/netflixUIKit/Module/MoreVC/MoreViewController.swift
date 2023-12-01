@@ -25,6 +25,7 @@ class MoreViewController: UIViewController {
     var resultImg: UIImage!
     
     var picker: UIImagePickerController? = UIImagePickerController()
+    
     let cellData: [MoreCellData] = [
         MoreCellData(title: "Account", symbolName: "person.circle"),
         MoreCellData(title: "App Settings", symbolName: "gear"),
@@ -146,6 +147,23 @@ class MoreViewController: UIViewController {
         // Add the gradient layer to your view
         gradientView.layer.addSublayer(gradientLayer)
     }
+    
+    func showAppSettingPanel() {
+        let contentVC = AppSettingsViewController()
+        contentVC.modalPresentationStyle = .custom
+        contentVC.transitioningDelegate = self
+        present(contentVC, animated: true, completion: nil)
+        
+        // Add swipe down gesture for dismissal
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissHalfModal))
+        swipeDown.direction = .down
+        contentVC.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func dismissHalfModal() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UINavigationControllerDelegate {
@@ -155,10 +173,17 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var chosenImage = info[.originalImage] as! UIImage
+        let chosenImage = info[.originalImage] as! UIImage
         imageView.image = chosenImage
         resultImg = chosenImage
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - FloatingPanel AppSettings
+extension MoreViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, heightPercentage: 0.4)
     }
 }
 
@@ -184,9 +209,42 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedOption = MoreOption(rawValue: indexPath.row) else {
+            return
+        }
+
+        switch selectedOption {
+        case .account:
+            // Handle Account option
+            break
+        case .appSettings:
+            showAppSettingPanel()
+        case .changelog:
+            // Handle Changelog option
+            break
+        case .help:
+            let vc = TermAgreementViewController()
+            let customURL = URL(string: "https://help.netflix.com/") // Replace with your desired URL
+            vc.setWeb(url: customURL!)
+
+            // Present the HelpNetflixViewController as a sheet
+            vc.modalPresentationStyle = .pageSheet
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+
 }
 
 struct MoreCellData {
     let title: String
     let symbolName: String
+}
+
+enum MoreOption: Int {
+    case account = 0
+    case appSettings
+    case changelog
+    case help
 }

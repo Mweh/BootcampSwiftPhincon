@@ -25,9 +25,13 @@ enum Endpoint {
     case getDetails(id: Int)
     
     func path() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = dateFormatter.string(from: Date())
+
         switch self {
         case .getNowPlaying:
-            return "movie/now_playing"
+            return "movie/now_playing?sort_by=popularity.desc&page=2"
         case .getPopular:
             return "movie/popular"
         case .getTopRated:
@@ -35,7 +39,7 @@ enum Endpoint {
         case .getDiscoverTV:
             return "discover/movie"
         case .getUpcoming:
-            return "discover/movie?primary_release_date.gte=2023-11-23"
+            return "discover/movie?primary_release_date.gte=\(currentDate)"
         case .searchMovie:
             return "search/movie"
         case .getFavoriteNoPaging:

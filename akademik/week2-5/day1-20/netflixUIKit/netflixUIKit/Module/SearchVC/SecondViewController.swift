@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
     let vm = SearchViewModel()
     let bag = DisposeBag()
     
-    var dataTopRated: NowPlaying? {
+    var dataTopRated: Movie? {
         didSet {
             tableView.reloadData()
         }
@@ -37,12 +37,12 @@ class SecondViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        vm.loadData(for: .getTopRated, resultType: NowPlaying.self)
+        vm.loadData(for: .getTopRated, resultType: Movie.self)
     }
     
     func bindApiData() {
-        vm.loadData(for: .getTopRated, resultType: NowPlaying.self)
-        vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
+        vm.loadData(for: .getTopRated, resultType: Movie.self)
+        vm.dataMovie.asObservable().subscribe(onNext: { [weak self] data in
             guard let self = self else {
                 return
             }
@@ -113,7 +113,7 @@ class SecondViewController: UIViewController {
     }
     
     @objc private func handleRefreshControl() {
-        vm.loadData(for: .getNowPlaying, resultType: NowPlaying.self)
+        vm.loadData(for: .getNowPlaying, resultType: Movie.self)
         // Start the Lottie animation
         refreshControl.subviews.forEach { view in
             if let animationView = animationView {

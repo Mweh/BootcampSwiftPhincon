@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class DetailViewModel {
-    private var data: ResultNowPlaying?
+    private var data: ResultMovie?
     
-    init(data: ResultNowPlaying) {
+    init(data: ResultMovie) {
         self.data = data
     }
     

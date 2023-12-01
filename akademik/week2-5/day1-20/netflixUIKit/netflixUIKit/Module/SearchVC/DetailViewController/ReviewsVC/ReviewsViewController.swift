@@ -15,7 +15,7 @@ class ReviewsViewController: UIViewController {
     let index: Int
     let vm = SearchViewModel()
     
-    var data: ResultNowPlaying?{
+    var data: ResultMovie?{
         didSet{
             tblView.reloadData()
         }
@@ -27,7 +27,7 @@ class ReviewsViewController: UIViewController {
         }
     }
     
-    init(index: Int, data: ResultNowPlaying?) {
+    init(index: Int, data: ResultMovie?) {
         self.index = index
         self.data = data
         super.init(nibName: nil, bundle: nil)

@@ -14,7 +14,7 @@ class SearchViewModel {
     let bag = DisposeBag()
     let stateLoading = BehaviorRelay<StateLoading>(value: .loading)
     
-    var dataNowPlaying = BehaviorRelay<NowPlaying?>(value: nil)
+    var dataMovie = BehaviorRelay<Movie?>(value: nil)
     
     func loadData<T: Codable>(for endpoint: Endpoint, resultType: T.Type) {
         
@@ -25,7 +25,7 @@ class SearchViewModel {
             case .success(let data):
                 switch endpoint { // Switch must be exhaustive
                 case .getTopRated:
-                    self.dataNowPlaying.accept(data as? NowPlaying )
+                    self.dataMovie.accept(data as? Movie )
                 default:
                     break
                 }

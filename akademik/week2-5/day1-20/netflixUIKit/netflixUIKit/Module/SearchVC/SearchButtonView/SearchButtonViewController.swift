@@ -24,7 +24,7 @@ class SearchButtonViewController: UIViewController {
     var visionTextRecognitionRequest: VNRecognizeTextRequest?
     var selectedImage: UIImage? // Add this variable
     
-    var nowPlaying: NowPlaying?  {
+    var dataMovie: Movie?  {
         didSet {
             self.collectionView.reloadData()
         }
@@ -96,11 +96,11 @@ class SearchButtonViewController: UIViewController {
         searchSubject
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMapLatest { (query: String) -> Observable<NowPlaying> in
+            .flatMapLatest { (query: String) -> Observable<Movie> in
                 return Observable.create { observer in
-                    self.vm.loadData(for: .searchMovie(query: query), resultType: NowPlaying.self)
+                    self.vm.loadData(for: .searchMovie(query: query), resultType: Movie.self)
                     self.vm.api.makeAPICall(endpoint: .searchMovie(query: query)){
-                        (result: Result<NowPlaying, Error>) in
+                        (result: Result<Movie, Error>) in
                         switch result {
                         case .success(let movies):
                             observer.onNext(movies)
@@ -112,8 +112,8 @@ class SearchButtonViewController: UIViewController {
                     return Disposables.create()
                 }
             }
-            .subscribe(onNext: { [weak self] (results: NowPlaying ) in
-                self?.nowPlaying = results
+            .subscribe(onNext: { [weak self] (results: Movie ) in
+                self?.dataMovie = results
             })
             .disposed(by: disposeBag)
         // Initial update of placeholder visibility
@@ -129,12 +129,12 @@ class SearchButtonViewController: UIViewController {
 
 extension SearchButtonViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let validCount = self.nowPlaying?.results.count ?? 0
+        let validCount = self.dataMovie?.results.count ?? 0
         return validCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let validData = self.nowPlaying?.results {
+        if let validData = self.dataMovie?.results {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
             let urlString = validData[indexPath.row].posterPath ?? ""
             let imageName = "https://image.tmdb.org/t/p/w500/\(urlString)"
@@ -153,7 +153,7 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let selectedMovie = nowPlaying?.results[indexPath.row] {
+        if let selectedMovie = dataMovie?.results[indexPath.row] {
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.data = selectedMovie
             detailViewController.hidesBottomBarWhenPushed = true

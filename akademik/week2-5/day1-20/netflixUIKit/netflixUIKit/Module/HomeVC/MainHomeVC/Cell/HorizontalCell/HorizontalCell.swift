@@ -28,17 +28,21 @@ class HorizontalCell: UITableViewCell {
     var typeCell: SectionCell = .CircleCell
     weak var delegate: HorizontalCellDelegate?
     
-    var collectionNowPlaying: [ResultNowPlaying]?
-    var collectionDiscoverTV: [ResultNowPlaying]?
+    var collectionMovieNowPlaying: [ResultMovie]? {
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    var collectionMoviePopular: [ResultMovie]? {
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     let bag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        collectionView.collectionViewLayout = layout
-        
         setUp()
         setUpSeeAll()
     }
@@ -66,25 +70,29 @@ class HorizontalCell: UITableViewCell {
     private func showAllForCircleCell() {
         // Example: Push a new view controller for "Show All" in CircleCell
         let seeAllVC = SeeAllViewController()
-        seeAllVC.dataNowPlaying = collectionNowPlaying
-//        seeAllVC.data = collectionNowPlaying // Pass the data to the next view controller if needed
+        seeAllVC.dataMovie = collectionMovieNowPlaying
         parentNavigationController?.present(seeAllVC, animated: true)
     }
     
     private func showAllForSquareCell() {
         // Example: Push a new view controller for "Show All" in CircleCell
         let seeAllVC = SeeAllViewController()
-        seeAllVC.dataNowPlaying = collectionDiscoverTV
-//        seeAllVC.data = collectionNowPlaying // Pass the data to the next view controller if needed
+        seeAllVC.dataMovie = collectionMoviePopular
         parentNavigationController?.present(seeAllVC, animated: true)
     }
     
     func setUp(){
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.register(UINib(nibName: "SquareCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SquareCollectionViewCell")
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+        if #available(iOS 15.0, *) {
+            collectionView.dataSource = self
+            collectionView.delegate = self
+        } else {
+            // Fallback on earlier versions
+        }
         // Add a tap gesture recognizer for didSelect functionality
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(collectionViewTapped))
         collectionView.addGestureRecognizer(tapGesture)
@@ -123,9 +131,9 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch typeCell {
         case .CircleCell:
-            return collectionNowPlaying?.count ?? 1
+            return collectionMovieNowPlaying?.count ?? 1
         case .SquareCell:
-            return collectionDiscoverTV?.count ?? 1
+            return collectionMoviePopular?.count ?? 1
         }
     }
     
@@ -144,9 +152,9 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         switch typeCell {
         case .CircleCell:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-            if indexPath.row < collectionNowPlaying?.count ?? 1 {
+            if indexPath.row < collectionMovieNowPlaying?.count ?? 1 {
                 self.titleLabel.text = typeCell.title
-                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionNowPlaying?[indexPath.row].posterPath ?? "")"
+                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionMovieNowPlaying?[indexPath.row].posterPath ?? "")"
                 let url = URL(string: imageName)
                 cell.movieImage.kf.setImage(with: url)
                 collectionViewHeightConstraint.constant = 50
@@ -157,14 +165,13 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareCollectionViewCell", for: indexPath) as! SquareCollectionViewCell
             self.titleLabel.text = typeCell.title
             
-            if indexPath.row < collectionDiscoverTV?.count ?? 1 {
+            if indexPath.row < collectionMoviePopular?.count ?? 1 {
                 let tmdbImgBase = TMDBImageURL.url(size: .w500)
-                let imageName = "\(tmdbImgBase)\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
+                let imageName = "\(tmdbImgBase)\(collectionMoviePopular?[indexPath.row].posterPath ?? "")"
                 
                 let url = URL(string: imageName)
                 cell.imgView.kf.setImage(with: url)
-                cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
-                //                print(collectionDiscoverTV?[indexPath.row].posterPath)
+//                cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
                 
                 // Set ratedNumberLabel only for the first 9 cells
                 (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
@@ -206,7 +213,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             identifier: nil,
             previewProvider: nil) {[weak self] _ in
                 let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
-                    let urlName = "https://image.tmdb.org/t/p/w500/\(self?.collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
+                    let urlName = "https://image.tmdb.org/t/p/w500/\(self?.collectionMoviePopular?[indexPath.row].posterPath ?? "")"
                     
                     let url = URL(string: urlName)
                     self?.downloadImageURL(imageURL: url!)
@@ -222,7 +229,6 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }
-        
         return config
     }
 }

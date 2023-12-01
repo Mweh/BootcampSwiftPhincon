@@ -17,13 +17,13 @@ class TableViewController: UITableViewController {
     let customAPIManager = CustomAPIManager()
     var vm = HomeViewModel()
 
-    var dataNowPlaying: NowPlaying? {
+    var dataMoviePreviews: Movie? {
         didSet {
             tblView.reloadData()
         }
     }
     
-    var dataDiscoverTV: NowPlaying? {
+    var dataMoviePopular: Movie? {
         didSet {
             tblView.reloadData()
         }
@@ -32,8 +32,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
-        vm.loadData(for: .getNowPlaying, resultType: NowPlaying.self)
-        vm.loadData(for: .getDiscoverTV, resultType: NowPlaying.self)
+        vm.loadData(for: .getNowPlaying, resultType: Movie.self)
+        vm.loadData(for: .getPopular, resultType: Movie.self)
         noSafeArea()
         bindData()
     }
@@ -51,19 +51,19 @@ class TableViewController: UITableViewController {
     }
     
     func bindData() {
-        vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
+        vm.dataMoviePreviews.asObservable().subscribe(onNext: { [weak self] data in
             guard let self = self else {
                 return
             }
-            self.dataNowPlaying = data
+            self.dataMoviePreviews = data
             self.tableView.reloadData()
         }).disposed(by: bag)
         
-        vm.dataDiscoverTV.asObservable().subscribe(onNext: { [weak self] data in
+        vm.dataMoviePopular.asObservable().subscribe(onNext: { [weak self] data in
             guard let self = self else {
                 return
             }
-            self.dataDiscoverTV = data
+            self.dataMoviePopular = data
             self.tableView.reloadData()
         }).disposed(by: bag)
     }
@@ -126,7 +126,7 @@ class TableViewController: UITableViewController {
             return cell
         case .HorizontalCell:
             
-            if let dataNowPlaying = dataNowPlaying, let dataDiscoverTV = dataDiscoverTV {
+            if let dataMoviePreviews = dataMoviePreviews, let dataMoviePopular = dataMoviePopular {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "HorizontalCell", for: indexPath) as! HorizontalCell
                 cell.parentNavigationController = self.navigationController
 
@@ -134,12 +134,12 @@ class TableViewController: UITableViewController {
                 case 0:
                     cell.delegate = self
                     cell.typeCell = .CircleCell
-                    cell.collectionNowPlaying = dataNowPlaying.results
+                    cell.collectionMovieNowPlaying = dataMoviePreviews.results
                     cell.collectionViewHeightConstraint.constant = 175
                 case 1:
                     cell.delegate = self
                     cell.typeCell = .SquareCell
-                    cell.collectionDiscoverTV = dataDiscoverTV.results
+                    cell.collectionMoviePopular = dataMoviePopular.results
                     
                 default:
                     break
@@ -160,19 +160,19 @@ class TableViewController: UITableViewController {
 
 extension TableViewController: HorizontalCellDelegate {
     func didTapCellCircle(index: Int) {
-        if let dataNowPlaying = dataNowPlaying {
+        if let dataMoviePreviews = dataMoviePreviews {
             let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
             videoTrailerVC.hidesBottomBarWhenPushed = true
-            videoTrailerVC.movieId = dataNowPlaying.results[index].id
+            videoTrailerVC.movieId = dataMoviePreviews.results[index].id
             self.navigationController?.pushViewController(videoTrailerVC, animated: true)
             
         }
     }
     func didTapCellSquare(index: Int) {
-        if let dataDiscoverTV = dataDiscoverTV  {
+        if let dataMoviePopular = dataMoviePopular  {
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.hidesBottomBarWhenPushed = true
-            detailViewController.data = dataDiscoverTV.results[index]
+            detailViewController.data = dataMoviePopular.results[index]
             
             self.navigationController?.hero.isEnabled = true
             
@@ -180,7 +180,5 @@ extension TableViewController: HorizontalCellDelegate {
         }
     }
 }
-enum TableViewCellType: Int, CaseIterable {
-    case VerticalCell
-    case HorizontalCell
-}
+
+

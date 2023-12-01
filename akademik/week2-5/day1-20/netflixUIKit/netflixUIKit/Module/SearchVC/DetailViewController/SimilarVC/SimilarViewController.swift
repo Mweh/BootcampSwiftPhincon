@@ -15,13 +15,13 @@ class SimilarViewController: UIViewController {
     let vm = SearchViewModel()
     var movieId: Int?
     
-    var dataResult: ResultNowPlaying?{
+    var dataResult: ResultMovie?{
         didSet{
             collectionView.reloadData()
         }
     }
     
-    var data: NowPlaying?{
+    var data: Movie?{
         didSet{
             collectionView.reloadData()
         }
@@ -32,10 +32,9 @@ class SimilarViewController: UIViewController {
 
         setupCollection()
         setupAPI()
-//        vm.loadData(for: .getSimilar(id: dataResult?.id ?? 100), resultType: NowPlaying.self)
     }
 
-    init(dataResult: ResultNowPlaying?) {
+    init(dataResult: ResultMovie?) {
         self.dataResult = dataResult
         super.init(nibName: nil, bundle: nil)
     }
@@ -46,7 +45,7 @@ class SimilarViewController: UIViewController {
     
     func setupAPI(){
         if let dataResult = dataResult{
-            self.vm.api.makeAPICall(endpoint: .getSimilar(id: dataResult.id)) { (response: Result<NowPlaying, Error>)  in
+            self.vm.api.makeAPICall(endpoint: .getSimilar(id: dataResult.id)) { (response: Result<Movie, Error>)  in
                 switch response {
                 case .success(let movieId):
                     self.data = movieId

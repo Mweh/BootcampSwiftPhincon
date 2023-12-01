@@ -1,5 +1,5 @@
 //
-//  NowPlaying.swift
+//  Movie.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 06/11/23.
@@ -8,10 +8,10 @@
 import Foundation
 
 // MARK: - TopRated
-struct NowPlaying: Codable {
+struct Movie: Codable {
     let dates: Dates?
     let page: Int
-    var results: [ResultNowPlaying]
+    var results: [ResultMovie]
     let totalPages, totalResults: Int
     
     enum CodingKeys: String, CodingKey {
@@ -28,7 +28,7 @@ struct Dates: Codable {
 }
 
 // MARK: - Result
-struct ResultNowPlaying: Codable {
+struct ResultMovie: Codable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]

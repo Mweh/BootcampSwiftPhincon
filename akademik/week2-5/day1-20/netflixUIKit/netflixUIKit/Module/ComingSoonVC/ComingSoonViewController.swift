@@ -21,7 +21,7 @@ class ComingSoonViewController: UIViewController {
     
     var currentPage = 1
     
-    var dataTable: NowPlaying? {
+    var dataTable: Movie? {
         didSet {
             tableView.reloadData()
         }
@@ -39,12 +39,12 @@ class ComingSoonViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        vm.loadData(for: .getUpcoming(page: currentPage), resultType: NowPlaying.self)
+        vm.loadData(for: .getUpcoming(page: currentPage), resultType: Movie.self)
     }
     
     func bindApiData() {
-        vm.loadData(for: .getUpcoming(page: 1), resultType: NowPlaying.self)
-        vm.dataNowPlaying.asObservable().subscribe(onNext: { [weak self] data in
+        vm.loadData(for: .getUpcoming(page: 1), resultType: Movie.self)
+        vm.dataMovie.asObservable().subscribe(onNext: { [weak self] data in
             guard let self = self else {
                 return
             }
@@ -144,17 +144,17 @@ class ComingSoonViewController: UIViewController {
     func loadData(page: Int = 1) {
         tableView.showAnimatedGradientSkeleton()
         
-        self.vm.api.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<NowPlaying, Error>)  in
+        self.vm.api.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<Movie, Error>)  in
             guard let self = self else { return }
             
             switch response {
-            case .success(let nowPlaying):
+            case .success(let dataMovie):
                 if page == 1 {
                     // For the initial load or refreshing, set the entire data
-                    self.dataTable = nowPlaying
+                    self.dataTable = dataMovie
                 } else {
                     // For pagination, append the new data to the existing data
-                    self.dataTable?.results.append(contentsOf: nowPlaying.results)
+                    self.dataTable?.results.append(contentsOf: dataMovie.results)
                 }
                 
                 self.tableView.reloadData()

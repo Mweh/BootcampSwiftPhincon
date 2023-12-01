@@ -64,7 +64,7 @@ class MovieDescriptionTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(data: ResultNowPlaying?, favoriteModel: ParamAddFavorite?) {
+    func setup(data: ResultMovie?, favoriteModel: ParamAddFavorite?) {
         if let validData = data {
             if let validData = data {
                 popularityLabel.text = "Views: \(validData.popularity)"

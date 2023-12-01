@@ -24,7 +24,7 @@ class ListMovieCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(data: ResultNowPlaying?) {
+    func setup(data: ResultMovie?) {
         if let validData = data {
             titleLabel.text = validData.title
             titleLabel.hero.id = "\(validData.title!)"

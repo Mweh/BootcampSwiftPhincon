@@ -12,9 +12,9 @@ class SynopsisViewController: UIViewController {
     
     let index: Int
     @IBOutlet weak var descLabel: UILabel!
-    var data: ResultNowPlaying?  // Add this variable
+    var data: ResultMovie?  // Add this variable
     
-    init(index: Int, data: ResultNowPlaying?) {
+    init(index: Int, data: ResultMovie?) {
         self.index = index
         self.data = data
         super.init(nibName: nil, bundle: nil)

@@ -95,7 +95,7 @@
 		CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD7DC02AFE065900BF41B8 /* UIViewController+Extension.swift */; };
 		CDAF8A682AF8A6B000CB670D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF8A672AF8A6B000CB670D /* String.swift */; };
 		CDAF8A692AF8B45700CB670D /* Keys.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CDAF8A662AF8A5B500CB670D /* Keys.xcconfig */; };
-		CDAF8A6B2AF8D48400CB670D /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF8A6A2AF8D48400CB670D /* NowPlaying.swift */; };
+		CDAF8A6B2AF8D48400CB670D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF8A6A2AF8D48400CB670D /* Movie.swift */; };
 		CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF8A762AF8DEF400CB670D /* SquareCollectionViewCell.swift */; };
 		CDAF8A792AF8DEF400CB670D /* SquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAF8A772AF8DEF400CB670D /* SquareCollectionViewCell.xib */; };
 		CDAF8A842AF95B5200CB670D /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAF8A822AF95B5200CB670D /* CarouselCollectionViewCell.swift */; };
@@ -121,6 +121,8 @@
 		CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */; };
 		CDD85AD62AFDBE5B00683CFE /* SystemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */; };
 		CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE034252B180F4C00914F2E /* PagingViewController.swift */; };
+		CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0342D2B186EF400914F2E /* AppSettingsViewController.swift */; };
+		CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE0342E2B186EF400914F2E /* AppSettingsViewController.xib */; };
 		CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */; };
 		CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */; };
 		CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAB1472AFBC73C00D2963D /* Protocol.swift */; };
@@ -219,7 +221,7 @@
 		CDAD7DC22AFE0DF200BF41B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDAF8A662AF8A5B500CB670D /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		CDAF8A672AF8A6B000CB670D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		CDAF8A6A2AF8D48400CB670D /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		CDAF8A6A2AF8D48400CB670D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CDAF8A762AF8DEF400CB670D /* SquareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDAF8A772AF8DEF400CB670D /* SquareCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCollectionViewCell.xib; sourceTree = "<group>"; };
 		CDAF8A822AF95B5200CB670D /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +247,8 @@
 		CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDescriptionTableCell.xib; sourceTree = "<group>"; };
 		CDD85AD52AFDBE5B00683CFE /* SystemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConfiguration.swift; sourceTree = "<group>"; };
 		CDE034252B180F4C00914F2E /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
+		CDE0342D2B186EF400914F2E /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		CDE0342E2B186EF400914F2E /* AppSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsViewController.xib; sourceTree = "<group>"; };
 		CDE7D5852B109B3B00C41630 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		CDE7D5862B109B3B00C41630 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		CDFAB1472AFBC73C00D2963D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -393,7 +397,7 @@
 		CD40E1E82AF874C9002D2407 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CDAF8A6A2AF8D48400CB670D /* NowPlaying.swift */,
+				CDAF8A6A2AF8D48400CB670D /* Movie.swift */,
 				CD723D042B03004C00C191A9 /* Favorites.swift */,
 				CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */,
 				CD729D162B102B59006D3046 /* Details.swift */,
@@ -662,6 +666,7 @@
 				CD79F6B92AEF83A300338C72 /* MoreViewController.swift */,
 				CD79F6BA2AEF83A300338C72 /* MoreViewController.xib */,
 				CDE7D5842B109B1200C41630 /* MoreViewControllerCell */,
+				CDE0342C2B186EDC00914F2E /* AppSettingsVC */,
 				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
 			);
 			path = MoreVC;
@@ -829,6 +834,15 @@
 			path = SystemConfiguration;
 			sourceTree = "<group>";
 		};
+		CDE0342C2B186EDC00914F2E /* AppSettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CDE0342D2B186EF400914F2E /* AppSettingsViewController.swift */,
+				CDE0342E2B186EF400914F2E /* AppSettingsViewController.xib */,
+			);
+			path = AppSettingsVC;
+			sourceTree = "<group>";
+		};
 		CDE7D5842B109B1200C41630 /* MoreViewControllerCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +937,7 @@
 				CDAF8A792AF8DEF400CB670D /* SquareCollectionViewCell.xib in Resources */,
 				CDA5BAD62B039D170053CF05 /* VideoTrailerVC.xib in Resources */,
 				CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */,
+				CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */,
 				CDB9FD602B0B8CBB00128B03 /* CastingViewController.xib in Resources */,
 				CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */,
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
@@ -1038,7 +1053,7 @@
 				CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */,
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
 				CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */,
-				CDAF8A6B2AF8D48400CB670D /* NowPlaying.swift in Sources */,
+				CDAF8A6B2AF8D48400CB670D /* Movie.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
 				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
@@ -1065,6 +1080,7 @@
 				CD6254012B071EAE00C000CC /* UIView+Extension.swift in Sources */,
 				CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */,
 				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
+				CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
 				CD2191812B0759250038BE86 /* Common.swift in Sources */,

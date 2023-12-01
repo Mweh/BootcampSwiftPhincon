@@ -61,7 +61,6 @@ class RegisterViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 let vc = TermAgreementViewController()
 
-                // Present the TermAgreementViewController as a sheet
                 vc.modalPresentationStyle = .pageSheet
                 self?.present(vc, animated: true, completion: nil)
             })

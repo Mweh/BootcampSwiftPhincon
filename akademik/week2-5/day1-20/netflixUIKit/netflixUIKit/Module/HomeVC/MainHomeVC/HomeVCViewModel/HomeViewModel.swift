@@ -8,11 +8,16 @@ import Foundation
 import RxCocoa
 import RxSwift
 
+enum TableViewCellType: Int, CaseIterable {
+    case VerticalCell
+    case HorizontalCell
+}
+
 class HomeViewModel {
     let api = CustomAPIManager()
     
-    var dataNowPlaying = BehaviorRelay<NowPlaying?>(value: nil)
-    var dataDiscoverTV = BehaviorRelay<NowPlaying?>(value: nil)
+    var dataMoviePreviews = BehaviorRelay<Movie?>(value: nil)
+    var dataMoviePopular = BehaviorRelay<Movie?>(value: nil)
     var dataFavoriteNoPaging = BehaviorRelay<Favorites?>(value: nil)
     
     func loadData<T: Codable>(for endpoint: Endpoint, resultType: T.Type) {
@@ -22,9 +27,9 @@ class HomeViewModel {
             case .success(let data):
                 switch endpoint {
                 case .getNowPlaying:
-                    self.dataNowPlaying.accept(data as? NowPlaying)
-                case .getDiscoverTV:
-                    self.dataDiscoverTV.accept(data as? NowPlaying)
+                    self.dataMoviePreviews.accept(data as? Movie)
+                case .getPopular:
+                    self.dataMoviePopular.accept(data as? Movie)
                 case .getFavoriteNoPaging:
                     self.dataFavoriteNoPaging.accept(data as? Favorites)
                 default:
