@@ -59,8 +59,9 @@ class RegisterViewController: UIViewController {
     func toTermAgreementWebTap() {
         toTermAgreementWeb.rx.tap
             .subscribe(onNext: { [weak self] in
-                let vc = TermAgreementViewController()
+                let vc = GoToWebViewController()
 
+                vc.urlString = URLs.netflixTermsOfUse
                 vc.modalPresentationStyle = .pageSheet
                 self?.present(vc, animated: true, completion: nil)
             })

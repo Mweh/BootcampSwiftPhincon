@@ -56,6 +56,7 @@ class CustomAPIManager: NSObject {
         }
         
         AF.download(imageURL, to: destination).validate().response { response in
+            
             switch response.result {
             case .success(let url):
                 completion(.success(url!))
@@ -63,5 +64,6 @@ class CustomAPIManager: NSObject {
                 completion(.failure(error))
             }
         }
+        
     }
 }

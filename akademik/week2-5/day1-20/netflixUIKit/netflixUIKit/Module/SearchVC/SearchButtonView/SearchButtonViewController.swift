@@ -183,14 +183,16 @@ extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigat
         
         DispatchQueue.main.async {
             // Update the searchSubject with the recognized text
-            self.searchSubject.accept(recognizedText)
+            var textPredict = recognizedText.trimmingCharacters(in: .whitespacesAndNewlines).truncateToWords(2).lowercased()
+            
+            self.searchSubject.accept(textPredict)
             
             // Set the recognized text to the textFieldSearch
-            self.textFieldSearch.text = recognizedText.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.textFieldSearch.text = textPredict
             
             // Show a popup message with the recognized text
             if !recognizedText.isEmpty {
-                self.showPopupMessage(title: "Scanned Image's Result[AI]:\n", message: recognizedText)
+                self.showPopupMessage(title: "Scanned's [AI] Result :\n", message: textPredict)
             }
         }
     }

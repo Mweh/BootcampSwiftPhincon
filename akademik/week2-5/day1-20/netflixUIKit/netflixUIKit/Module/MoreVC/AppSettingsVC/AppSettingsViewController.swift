@@ -49,10 +49,9 @@ class AppSettingsViewController: UIViewController {
     func setupSpeed(){
         speedButton.rx.tap
             .subscribe(onNext: {[weak self] in
-                let vc = TermAgreementViewController()
-                //                vc.setWeb(url: URL(string: "https://fast.com")!)
-                
-                // Present the HelpNetflixViewController as a sheet
+                let vc = GoToWebViewController()
+
+                vc.urlString = URLs.fastDotCom
                 vc.modalPresentationStyle = .pageSheet
                 self?.present(vc, animated: true, completion: nil)
                 
@@ -63,11 +62,9 @@ class AppSettingsViewController: UIViewController {
     func setupPrivacy(){
         privacyButton.rx.tap
             .subscribe(onNext: {[weak self] in
-                let vc = TermAgreementViewController()
-                let customURL = URL(string: "https://help.netflix.com/legal/privacy") // Replace with your desired URL
-                vc.setWeb(url: customURL!)
+                let vc = GoToWebViewController()
                 
-                // Present the HelpNetflixViewController as a sheet
+                vc.urlString = URLs.netflixPrivacy
                 vc.modalPresentationStyle = .pageSheet
                 self?.present(vc, animated: true, completion: nil)
                 

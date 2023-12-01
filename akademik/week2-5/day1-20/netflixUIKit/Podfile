@@ -39,6 +39,7 @@ target 'netflixUIKit' do
   
   # View
   pod 'Parchment'
+  pod "youtube-ios-player-helper"
   #pod 'SnapKit'
   #pod 'FloatingPanel'
 

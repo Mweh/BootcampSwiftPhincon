@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="descLabel" destination="2gS-ew-AYr" id="KvU-dO-OjQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="ytTrailerView" destination="Duh-5X-kva" id="xJr-3Y-aey"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,28 +23,42 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-Mh-rBH">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-ew-AYr" userLabel="desc">
+                            <rect key="frame" x="16" y="232" width="361" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duh-5X-kva" customClass="YTPlayerView">
+                            <rect key="frame" x="16" y="16" width="361" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="sB5-Zb-MBQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Duh-5X-kva" firstAttribute="leading" secondItem="YXH-Mh-rBH" secondAttribute="leading" constant="16" id="H4J-NE-vMH"/>
+                        <constraint firstItem="2gS-ew-AYr" firstAttribute="top" secondItem="Duh-5X-kva" secondAttribute="bottom" constant="16" id="J8Z-Ls-ckf"/>
+                        <constraint firstAttribute="trailing" secondItem="Duh-5X-kva" secondAttribute="trailing" constant="16" id="QTf-Aw-sOy"/>
+                        <constraint firstItem="Duh-5X-kva" firstAttribute="top" secondItem="YXH-Mh-rBH" secondAttribute="top" constant="16" id="V6c-GC-hsV"/>
+                        <constraint firstItem="2gS-ew-AYr" firstAttribute="leading" secondItem="YXH-Mh-rBH" secondAttribute="leading" constant="16" id="eRv-A6-nTb"/>
+                        <constraint firstAttribute="trailing" secondItem="2gS-ew-AYr" secondAttribute="trailing" constant="16" id="xvZ-Bh-wh9"/>
+                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-ew-AYr" userLabel="desc">
-                    <rect key="frame" x="16" y="75" width="361" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                    <size key="shadowOffset" width="0.0" height="0.0"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2gS-ew-AYr" secondAttribute="trailing" constant="16" id="E8u-23-8m3"/>
                 <constraint firstAttribute="trailing" secondItem="YXH-Mh-rBH" secondAttribute="trailing" id="PaY-9f-GMM"/>
                 <constraint firstItem="YXH-Mh-rBH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RJo-dq-LXa"/>
-                <constraint firstItem="2gS-ew-AYr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="la4-cg-4qh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YXH-Mh-rBH" secondAttribute="bottom" id="mS0-xl-a1i"/>
-                <constraint firstItem="2gS-ew-AYr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nxj-6Y-vY2"/>
                 <constraint firstItem="YXH-Mh-rBH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pM2-n8-Zgw"/>
             </constraints>
             <point key="canvasLocation" x="77" y="-12"/>

@@ -91,7 +91,7 @@
     </objects>
     <designables>
         <designable name="PGs-i3-ggG">
-            <size key="intrinsicContentSize" width="231" height="34"/>
+            <size key="intrinsicContentSize" width="192" height="34"/>
         </designable>
     </designables>
     <resources>

@@ -22,6 +22,16 @@ class VideoTrailerVC: UIViewController {
             loadYouTubeVideo(for: movieId)
         }
         showNaviItem()
+        let arButton = UIBarButtonItem(systemItem: .camera)
+        arButton.target = self
+        arButton.action = #selector(arButtonTapped)
+        navigationItem.rightBarButtonItem = arButton
+
+    }
+    
+    @objc func arButtonTapped() {
+        let vc = ARViewController()
+        present(vc, animated: true, completion: nil)
     }
     
     func loadYouTubeVideo(for movieId: Int) {

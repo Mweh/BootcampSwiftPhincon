@@ -125,6 +125,7 @@ PODS:
   - RxSwift (6.6.0)
   - SkeletonView (1.30.4)
   - StepSlider (1.8.0)
+  - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -142,6 +143,7 @@ DEPENDENCIES:
   - RxSwift
   - SkeletonView
   - StepSlider
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
@@ -176,6 +178,7 @@ SPEC REPOS:
     - RxSwift
     - SkeletonView
     - StepSlider
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
@@ -209,7 +212,8 @@ SPEC CHECKSUMS:
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 027bc1f73161f4ca1fa1b469f1fb6469bf0df125
+PODFILE CHECKSUM: fc72149a5a2379779157fc80cbbab8d328b00b46
 
 COCOAPODS: 1.14.3

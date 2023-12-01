@@ -1,6 +1,6 @@
 # My NetlixUIKit Clone Project
 
-An amazing project that does incredible things.
+A movie watch project that does incredible things.
 
 ## Table of Contents
 - [Features](#features)
@@ -68,9 +68,6 @@ Keep track of tasks, improvements, and future plans for your project.
 
 - [ ] Implement Onboarding View.
 - [ ] Integrate CoreData or UserDefault for data storage.
-- [ ] Add reviewsVC inside
-- [ ] Add recommendationVC inside slidingtabs
-- [ ] A feature to push to other detailView when click the moviePoster inside detailView itself
 - [ ] Add a suggest when searching a movie 
 - [ ] Add changelog in MoreVC
 
@@ -95,6 +92,11 @@ Tasks that have been completed.
 - [x] Add a share button
 - [x] Add a feature that can show all list of items
 - [x] Remove duplicate unnecessary Model
+- [x] Add recommendationVC inside slidingtabs
+- [x] Add reviewsVC inside
+- [x] A feature to push to other detailView when click the moviePoster inside detailView itself
+
+
 
 ## BUG
 

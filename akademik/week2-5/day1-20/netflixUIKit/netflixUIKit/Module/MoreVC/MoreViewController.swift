@@ -40,6 +40,7 @@ class MoreViewController: UIViewController {
         uploadToFire()
         setTextToCurrentAppVersion()
         setupTable()
+        loadSavedImage()
     }
     
     func setTextToCurrentAppVersion(){
@@ -59,32 +60,42 @@ class MoreViewController: UIViewController {
         plusImg.makeRounded(10)
     }
     
-    func uploadToFire(){
+    func uploadToFire() {
         uploadImg.rx.tap
-            .subscribe(onNext: {[weak self] in
-                guard let uid = Auth.auth().currentUser?.uid else{
+            .subscribe(onNext: { [weak self] in
+                guard let self = self , let uid = Auth.auth().currentUser?.uid else {
                     return
                 }
                 
                 let dispatchGroup = DispatchGroup()
                 
-                if let dataImg = self?.resultImg {
+                if let dataImg = self.resultImg {
                     let storagePath = "profileImages/profileId-\(uid)"
                     dispatchGroup.enter()
-                    FStorage.uploadImage(dataImg, toPath: storagePath){ result in
-                        switch result{
+                    FStorage.uploadImage(dataImg, toPath: storagePath) { result in
+                        switch result {
                         case .success(let downloadURL):
                             print("Image uploaded successfully. Download URL: \(downloadURL)")
+                            
+                            // Show alert on successful upload
+                            DispatchQueue.main.async {
+                                let title = "Upload Successful"
+                                let message = "Your image has been successfully uploaded."
+                                AlertUtility.showAlert(from: self, title: title, message: message) {
+                                    // Handle completion if needed
+                                }
+                            }
+                            
                             dispatchGroup.leave()
                         case .failure(let error):
-                            print("Something was error: \(error.localizedDescription)")
+                            print("Something went wrong: \(error.localizedDescription)")
                         }
                     }
-                    
                 }
             })
             .disposed(by: disposeBag)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -110,7 +121,6 @@ class MoreViewController: UIViewController {
         let hostingController = UIHostingController(rootView: moreViewWrapper)
         navigationController?.pushViewController(hostingController, animated: true)
     }
-    
     
     func openGallary() {
         picker!.allowsEditing = false
@@ -173,10 +183,38 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let chosenImage = info[.originalImage] as! UIImage
-        imageView.image = chosenImage
-        resultImg = chosenImage
+        if let chosenImage = info[.originalImage] as? UIImage {
+            imageView.image = chosenImage
+            resultImg = chosenImage
+            
+            // Save image to UserDefaults
+            saveImageToUserDefaults(chosenImage)
+        }
+        
         dismiss(animated: true, completion: nil)
+    }
+    
+    // Function to save image to UserDefaults
+    func saveImageToUserDefaults(_ image: UIImage) {
+        if let imageData = image.pngData() {
+            UserDefaults.standard.set(imageData, forKey: "savedImage")
+        }
+    }
+    
+    // Function to retrieve image from UserDefaults
+    func loadImageFromUserDefaults() -> UIImage? {
+        if let imageData = UserDefaults.standard.data(forKey: "savedImage") {
+            return UIImage(data: imageData)
+        }
+        return nil
+    }
+    
+    // Call this function in viewDidLoad to load the saved image
+    func loadSavedImage() {
+        if let savedImage = loadImageFromUserDefaults() {
+            imageView.image = savedImage
+            resultImg = savedImage
+        }
     }
 }
 
@@ -189,7 +227,7 @@ extension MoreViewController: UIViewControllerTransitioningDelegate {
 
 extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return cellData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -204,37 +242,34 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedOption = MoreOption(rawValue: indexPath.row) else {
             return
         }
-
+        
         switch selectedOption {
         case .account:
-            // Handle Account option
             break
         case .appSettings:
             showAppSettingPanel()
         case .changelog:
-            // Handle Changelog option
             break
         case .help:
-            let vc = TermAgreementViewController()
-            let customURL = URL(string: "https://help.netflix.com/") // Replace with your desired URL
-            vc.setWeb(url: customURL!)
-
+            let vc = GoToWebViewController()
+            vc.urlString =  URLs.netflixHelp
+            
             // Present the HelpNetflixViewController as a sheet
             vc.modalPresentationStyle = .pageSheet
             self.present(vc, animated: true, completion: nil)
         }
     }
-
+    
 }
 
 struct MoreCellData {

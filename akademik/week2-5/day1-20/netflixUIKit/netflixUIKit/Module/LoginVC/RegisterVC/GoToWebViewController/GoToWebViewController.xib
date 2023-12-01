@@ -5,11 +5,10 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermAgreementViewController" customModule="netflixUIKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoToWebViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webBrowser" destination="ZDW-uY-nkr" id="Tgn-nD-RTa"/>
@@ -21,10 +20,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-51-2dL">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QrL-VL-6R8">
+                            <rect key="frame" x="161.66666666666666" y="0.33333333333333215" width="70" height="33.333333333333343"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="CQl-KP-OAQ"/>
+                                <constraint firstAttribute="height" constant="50" id="f2Q-4C-KgP"/>
+                            </constraints>
+                        </imageView>
                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-uY-nkr">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <rect key="frame" x="0.0" y="32" width="393" height="761"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <wkWebViewConfiguration key="configuration">
                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -32,29 +38,29 @@
                             </wkWebViewConfiguration>
                         </wkWebView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="ZDW-uY-nkr" secondAttribute="trailing" id="9Dj-QL-WQ8"/>
                         <constraint firstAttribute="bottom" secondItem="ZDW-uY-nkr" secondAttribute="bottom" id="BR1-Ik-Hkg"/>
                         <constraint firstItem="ZDW-uY-nkr" firstAttribute="leading" secondItem="oJf-51-2dL" secondAttribute="leading" id="H5I-D6-SsD"/>
-                        <constraint firstItem="ZDW-uY-nkr" firstAttribute="top" secondItem="oJf-51-2dL" secondAttribute="top" id="MEK-I5-W1m"/>
+                        <constraint firstItem="QrL-VL-6R8" firstAttribute="centerX" secondItem="oJf-51-2dL" secondAttribute="centerX" id="IX4-OJ-sUZ"/>
+                        <constraint firstItem="ZDW-uY-nkr" firstAttribute="top" secondItem="oJf-51-2dL" secondAttribute="top" constant="32" id="MEK-I5-W1m"/>
+                        <constraint firstItem="ZDW-uY-nkr" firstAttribute="top" secondItem="QrL-VL-6R8" secondAttribute="bottom" constant="-10" id="ySP-bP-fQ5"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="oJf-51-2dL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4Y6-Cq-cXy"/>
                 <constraint firstItem="oJf-51-2dL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eFE-g8-lnu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oJf-51-2dL" secondAttribute="trailing" id="klG-pm-BoU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oJf-51-2dL" secondAttribute="bottom" id="kw2-cY-MnO"/>
+                <constraint firstAttribute="bottom" secondItem="oJf-51-2dL" secondAttribute="bottom" id="kw2-cY-MnO"/>
             </constraints>
             <point key="canvasLocation" x="76" y="-12"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="minus" catalog="system" width="128" height="26"/>
     </resources>
 </document>
