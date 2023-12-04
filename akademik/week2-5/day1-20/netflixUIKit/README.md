@@ -77,6 +77,7 @@ Keep track of tasks, improvements, and future plans for your project.
 
 Tasks that have been completed.
 
+
 - [x] Implement Login Authentication with the right logic.
 - [x] Add more pages dynamically when scrolling to the bottom/vertical.
 - [x] Integrate Netfox for API debugging.

@@ -15,6 +15,7 @@ class SearchViewModel {
     let stateLoading = BehaviorRelay<StateLoading>(value: .loading)
     
     var dataMovie = BehaviorRelay<Movie?>(value: nil)
+    var dataVideo = BehaviorRelay<VideoTrailer?>(value: nil)
     
     func loadData<T: Codable>(for endpoint: Endpoint, resultType: T.Type) {
         
@@ -26,6 +27,8 @@ class SearchViewModel {
                 switch endpoint { // Switch must be exhaustive
                 case .getTopRated:
                     self.dataMovie.accept(data as? Movie )
+                case .getVideoTrailer:
+                    self.dataVideo.accept(data as? VideoTrailer)
                 default:
                     break
                 }

@@ -39,6 +39,11 @@
 		CD40E1E72AF7DD56002D2407 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E62AF7DD56002D2407 /* Endpoint.swift */; };
 		CD4571552B19BE33002B4EE6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4571532B19BE33002B4EE6 /* ARViewController.swift */; };
 		CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4571542B19BE33002B4EE6 /* ARViewController.xib */; };
+		CD46592E2B1D984D00D86A26 /* floatingIconPlays.json in Resources */ = {isa = PBXBuildFile; fileRef = CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */; };
+		CD4659322B1DA10600D86A26 /* AllVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659302B1DA10600D86A26 /* AllVideoViewController.swift */; };
+		CD4659332B1DA10600D86A26 /* AllVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4659312B1DA10600D86A26 /* AllVideoViewController.xib */; };
+		CD4659372B1DA16C00D86A26 /* AllVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659352B1DA16C00D86A26 /* AllVideoTableViewCell.swift */; };
+		CD4659382B1DA16C00D86A26 /* AllVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */; };
 		CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B8F392B16BE8800F5F31D /* SimilarCollectionViewCell.swift */; };
 		CD4B8F3C2B16BE8800F5F31D /* SimilarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */; };
 		CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FA4432AF39ECE00226717 /* DetailViewController.swift */; };
@@ -167,6 +172,11 @@
 		CD40E1E62AF7DD56002D2407 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CD4571532B19BE33002B4EE6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		CD4571542B19BE33002B4EE6 /* ARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARViewController.xib; sourceTree = "<group>"; };
+		CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = floatingIconPlays.json; sourceTree = "<group>"; };
+		CD4659302B1DA10600D86A26 /* AllVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoViewController.swift; sourceTree = "<group>"; };
+		CD4659312B1DA10600D86A26 /* AllVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoViewController.xib; sourceTree = "<group>"; };
+		CD4659352B1DA16C00D86A26 /* AllVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoTableViewCell.swift; sourceTree = "<group>"; };
+		CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoTableViewCell.xib; sourceTree = "<group>"; };
 		CD4B8F392B16BE8800F5F31D /* SimilarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD4FA4432AF39ECE00226717 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -437,6 +447,25 @@
 			path = ARViewController;
 			sourceTree = "<group>";
 		};
+		CD46592F2B1DA0D400D86A26 /* AllVideoVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD4659302B1DA10600D86A26 /* AllVideoViewController.swift */,
+				CD4659312B1DA10600D86A26 /* AllVideoViewController.xib */,
+				CD4659342B1DA13F00D86A26 /* AllVideoTableViewCell */,
+			);
+			path = AllVideoVC;
+			sourceTree = "<group>";
+		};
+		CD4659342B1DA13F00D86A26 /* AllVideoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD4659352B1DA16C00D86A26 /* AllVideoTableViewCell.swift */,
+				CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */,
+			);
+			path = AllVideoTableViewCell;
+			sourceTree = "<group>";
+		};
 		CD4B8F382B16BD5500F5F31D /* SimilarVCCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +485,7 @@
 				CDB9FD572B0B8B4C00128B03 /* ReviewsVC */,
 				CDB9FD582B0B8B5800128B03 /* SimilarVC */,
 				CD678A9C2B0D92F700B2261F /* DetailViewModel */,
+				CD46592F2B1DA0D400D86A26 /* AllVideoVC */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -734,6 +764,7 @@
 		CDAD7DB82AFDD94E00BF41B8 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */,
 				CDB9FD672B0C917700128B03 /* fireAnimation.json */,
 				CDAD7DBC2AFDE82300BF41B8 /* loadingCheckMark.json */,
 				CD2191822B07654A0038BE86 /* loadingIndicator.json */,
@@ -959,6 +990,7 @@
 				CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */,
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
 				CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */,
+				CD46592E2B1D984D00D86A26 /* floatingIconPlays.json in Resources */,
 				CDB9FD5C2B0B8BA300128B03 /* SynopsisViewController.xib in Resources */,
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
 				CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */,
@@ -974,6 +1006,7 @@
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
 				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
 				CDB9FD682B0C917800128B03 /* fireAnimation.json in Resources */,
+				CD4659382B1DA16C00D86A26 /* AllVideoTableViewCell.xib in Resources */,
 				CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */,
 				CD4B8F3C2B16BE8800F5F31D /* SimilarCollectionViewCell.xib in Resources */,
 				CDAD7DBF2AFE03E200BF41B8 /* refreshDownArrow.json in Resources */,
@@ -993,6 +1026,7 @@
 				CD07093C2AFB3B500079FC45 /* SearchCollectionViewCell.xib in Resources */,
 				CDAD7DBD2AFDE82400BF41B8 /* loadingCheckMark.json in Resources */,
 				CD0A3EFA2B1498620029AE88 /* SeeAllCollectionViewCell.xib in Resources */,
+				CD4659332B1DA10600D86A26 /* AllVideoViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
 				CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
@@ -1063,6 +1097,7 @@
 				CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CD136FD12AFA33770046BB44 /* SearchViewModel.swift in Sources */,
+				CD4659372B1DA16C00D86A26 /* AllVideoTableViewCell.swift in Sources */,
 				CDFAB1482AFBC73C00D2963D /* Protocol.swift in Sources */,
 				CD21917B2B073A380038BE86 /* ModalHalfUIPresentationController.swift in Sources */,
 				CD678AAF2B0E293100B2261F /* Reviews.swift in Sources */,
@@ -1110,6 +1145,7 @@
 				CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */,
 				CD79F6B02AEF82B700338C72 /* MainTabBarViewController.swift in Sources */,
 				CDB9FD5F2B0B8CBB00128B03 /* CastingViewController.swift in Sources */,
+				CD4659322B1DA10600D86A26 /* AllVideoViewController.swift in Sources */,
 				CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */,
 				CD16F0332B197D9600B93857 /* FStorage.swift in Sources */,
 				CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */,

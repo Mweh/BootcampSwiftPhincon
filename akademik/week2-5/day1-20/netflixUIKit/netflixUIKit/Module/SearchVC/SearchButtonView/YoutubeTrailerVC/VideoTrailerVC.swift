@@ -42,14 +42,15 @@ class VideoTrailerVC: UIViewController {
             switch result {
             case .success(let videoTrailer):
                 // Assuming the first result is the video you want
-                if let firstVideo = videoTrailer.results.first {
+                if let firstVideo = videoTrailer.results?.first {
                     // Extract the key from the video information
-                    let videoKey = firstVideo.key
+                    guard let videoKey = firstVideo.key else { return  }
                     
                     // Use the video key to construct the YouTube URL and load it into WKWebView
-                    let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(videoKey)")
-                    let request = URLRequest(url: youtubeURL!)
-                    self?.webYoutubeView.load(request)
+                    if let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(videoKey)"){
+                        let request = URLRequest(url: youtubeURL)
+                        self?.webYoutubeView.load(request)
+                    }
                 }
             case .failure(let error):
                 print("Error fetching video trailer: \(error)")

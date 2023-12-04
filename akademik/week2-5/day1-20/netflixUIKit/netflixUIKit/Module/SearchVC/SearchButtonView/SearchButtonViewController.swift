@@ -183,7 +183,7 @@ extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigat
         
         DispatchQueue.main.async {
             // Update the searchSubject with the recognized text
-            var textPredict = recognizedText.trimmingCharacters(in: .whitespacesAndNewlines).truncateToWords(2).lowercased()
+            let textPredict = recognizedText.trimmingCharacters(in: .whitespacesAndNewlines).truncateToWords(2).lowercased()
             
             self.searchSubject.accept(textPredict)
             

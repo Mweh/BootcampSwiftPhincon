@@ -14,7 +14,6 @@ class SynopsisViewController: UIViewController {
     let index: Int
     @IBOutlet weak var descLabel: UILabel!
     var data: ResultMovie?  // Add this variable
-    @IBOutlet weak var ytTrailerView: YTPlayerView!
     
     init(index: Int, data: ResultMovie?) {
         self.index = index
@@ -30,7 +29,6 @@ class SynopsisViewController: UIViewController {
         super.viewDidLoad()
         
         setUpDesc()
-        ytTrailerView.load(withVideoId: "6TGg0_xtLoA")
     }
     
     func setUpDesc() {

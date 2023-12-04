@@ -43,6 +43,15 @@ class DetailViewController: UIViewController {
         setupRightNavBarButtons()
         tappableFadedImageView.tapDelegate = self
         setupDetails()
+        
+        addFloatingIcon(useLottie: true, lottieFileName: "floatingIconPlays", iconSize: 80)
+    }
+    
+    override func floatingIconTapped() {
+        // Implement the code to push to another view controller
+        let vc = AllVideoViewController()
+        vc.dataResultMovie = data
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func setupDetails(){
@@ -143,20 +152,20 @@ class DetailViewController: UIViewController {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.currencyCode = "USD"
-
+        
         if let budget = dataDetails?.budget, budget > 0 {
             budgetLabel.text = "Budget: " + numberFormatter.string(from: NSNumber(value: budget))!
             budgetLabel.animateCounting(to: budget)
         } else {
             budgetLabel.text = "Budget: N/A"
         }
-
+        
         if let revenue = dataDetails?.revenue, revenue > 0 {
             revenueLabel.text = "Revenue: " + numberFormatter.string(from: NSNumber(value: revenue))!
         } else {
             revenueLabel.text = "Revenue: N/A"
         }
-
+        
     }
     
     func setupUp(){
