@@ -4,12 +4,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppSettingsViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="clearCache" destination="gA6-Fl-sHY" id="PX9-gX-rFl"/>
                 <outlet property="privacyButton" destination="rFT-rg-JQB" id="cX2-8E-4h6"/>
                 <outlet property="speedButton" destination="Q6b-Ip-IwJ" id="TLj-Oe-6fh"/>
                 <outlet property="switchDarkMode" destination="ub5-cZ-XcT" id="tiE-h6-RPO"/>
@@ -22,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-br-vZh">
-                    <rect key="frame" x="0.0" y="30" width="393" height="400"/>
+                    <rect key="frame" x="0.0" y="30" width="393" height="285.66666666666669"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="App Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl2-86-qjT">
                             <rect key="frame" x="16" y="23.999999999999996" width="155.66666666666666" height="33.666666666666657"/>
@@ -31,17 +33,17 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Dark Mode" translatesAutoresizingMaskIntoConstraints="NO" id="ub5-cZ-XcT">
-                            <rect key="frame" x="16" y="85.333333333333329" width="51" height="31"/>
+                            <rect key="frame" x="32" y="85.333333333333329" width="51" height="31"/>
                             <color key="onTintColor" systemColor="tintColor"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-3d-pPy">
-                            <rect key="frame" x="76" y="91" width="80" height="20"/>
+                            <rect key="frame" x="92" y="91" width="80" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6b-Ip-IwJ">
-                            <rect key="frame" x="16" y="132.33333333333334" width="203.33333333333334" height="34"/>
+                            <rect key="frame" x="32.000000000000014" y="132.33333333333334" width="203.33333333333337" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                             <state key="normal" title="      Internet Speed Test" image="speedometer" catalog="system">
@@ -50,7 +52,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-rg-JQB">
-                            <rect key="frame" x="16" y="182.33333333333334" width="162" height="35.666666666666657"/>
+                            <rect key="frame" x="32" y="182.33333333333334" width="162" height="35.666666666666657"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                             <state key="normal" title="       Privacy Policy" image="doc" catalog="system">
@@ -58,18 +60,30 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                             </state>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA6-Fl-sHY">
+                            <rect key="frame" x="32" y="234" width="151.33333333333334" height="35.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="       Clear Cache" image="trash" catalog="system">
+                                <color key="titleColor" systemColor="labelColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                            </state>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gA6-Fl-sHY" secondAttribute="bottom" constant="16" id="8Qg-JJ-ybU"/>
+                        <constraint firstItem="gA6-Fl-sHY" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="JyH-o2-q5d"/>
                         <constraint firstItem="Wl2-86-qjT" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="16" id="KFy-ce-nms"/>
                         <constraint firstItem="ub5-cZ-XcT" firstAttribute="top" secondItem="Wl2-86-qjT" secondAttribute="bottom" constant="27.670000000000002" id="McA-xx-8dR"/>
                         <constraint firstItem="Wl2-86-qjT" firstAttribute="top" secondItem="bhb-br-vZh" secondAttribute="top" constant="24" id="Nbo-OX-x0b"/>
+                        <constraint firstItem="gA6-Fl-sHY" firstAttribute="top" secondItem="rFT-rg-JQB" secondAttribute="bottom" constant="16" id="PRu-Fj-PSy"/>
                         <constraint firstItem="rFT-rg-JQB" firstAttribute="top" secondItem="Q6b-Ip-IwJ" secondAttribute="bottom" constant="16" id="R4y-hI-8a5"/>
                         <constraint firstItem="HfH-3d-pPy" firstAttribute="leading" secondItem="ub5-cZ-XcT" secondAttribute="trailing" constant="11" id="Svr-7l-j0j"/>
-                        <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="16" id="UMe-1B-dX7"/>
-                        <constraint firstItem="ub5-cZ-XcT" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="16" id="g21-9m-ans"/>
+                        <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="UMe-1B-dX7"/>
+                        <constraint firstItem="ub5-cZ-XcT" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="g21-9m-ans"/>
                         <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="top" secondItem="ub5-cZ-XcT" secondAttribute="bottom" constant="16" id="hPY-ET-eRK"/>
-                        <constraint firstItem="rFT-rg-JQB" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="16" id="u1q-WL-QSR"/>
+                        <constraint firstItem="rFT-rg-JQB" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="u1q-WL-QSR"/>
                         <constraint firstItem="HfH-3d-pPy" firstAttribute="centerY" secondItem="ub5-cZ-XcT" secondAttribute="centerY" id="ujA-ud-dll"/>
                     </constraints>
                 </view>
@@ -81,13 +95,12 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="transparentBlack30"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bhb-br-vZh" secondAttribute="trailing" id="646-Yz-zoD"/>
                 <constraint firstItem="CAm-b5-IvR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MtS-dI-3Hu"/>
                 <constraint firstItem="bhb-br-vZh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OFU-qY-aBA"/>
                 <constraint firstItem="CAm-b5-IvR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-10" id="QJD-OG-f1c"/>
-                <constraint firstAttribute="bottom" secondItem="bhb-br-vZh" secondAttribute="bottom" constant="70" id="Rdm-K0-afQ"/>
                 <constraint firstItem="bhb-br-vZh" firstAttribute="top" secondItem="CAm-b5-IvR" secondAttribute="bottom" constant="-10" id="Wal-Hm-mkj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -98,11 +111,12 @@
         <image name="doc" catalog="system" width="115" height="128"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="speedometer" catalog="system" width="128" height="123"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <namedColor name="transparentBlack30">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

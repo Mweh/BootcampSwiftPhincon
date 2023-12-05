@@ -27,7 +27,7 @@ class MoreViewController: UIViewController {
     var picker: UIImagePickerController? = UIImagePickerController()
     
     let cellData: [MoreCellData] = [
-        MoreCellData(title: "Account", symbolName: "person.circle"),
+        MoreCellData(title: "History", symbolName: "clock.arrow.circlepath"),
         MoreCellData(title: "App Settings", symbolName: "gear"),
         MoreCellData(title: "Changelog", symbolName: "gearshape.arrow.triangle.2.circlepath"),
         MoreCellData(title: "Help", symbolName: "questionmark.circle")
@@ -254,8 +254,10 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         switch selectedOption {
-        case .account:
-            break
+        case .history:
+            let vc = HistoryViewController()
+            vc.navigationItem.title = "History"
+            self.navigationController?.pushViewController(vc, animated: true)
         case .appSettings:
             showAppSettingPanel()
         case .changelog:
@@ -278,7 +280,7 @@ struct MoreCellData {
 }
 
 enum MoreOption: Int {
-    case account = 0
+    case history = 0
     case appSettings
     case changelog
     case help

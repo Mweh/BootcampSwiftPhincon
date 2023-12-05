@@ -8,11 +8,10 @@
 import UIKit
 
 extension UILabel {
-    func setSystemSymbol(_ symbolName: String, withAdditionalText additionalText: String? = nil) {
-        // Create a system symbol image with the label's tint color
-        guard let symbolImage = UIImage(systemName: symbolName)?.withTintColor(UIColor.secondaryLabel) else {
+    func setSystemSymbol(_ symbolName: String, withColor symbolColor: UIColor = UIColor.secondaryLabel, withAdditionalText additionalText: String? = nil) {
+        // Create a system symbol image with the specified color
+        guard let symbolImage = UIImage(systemName: symbolName)?.withTintColor(symbolColor) else {
             return
-            // or self.tintColor
         }
         
         // Create an attachment with the symbol image
@@ -55,16 +54,16 @@ extension UILabel {
             // Do nothing if the target value is not positive
             return
         }
-
+        
         var startValue = 0
         let animationSteps = targetValue <= 100 ? 10 : 100
         let stepSize = targetValue / animationSteps
-
+        
         // Create a Timer to update the label's text
         Timer.scheduledTimer(withTimeInterval: duration / Double(animationSteps), repeats: true) { timer in
             startValue += stepSize
             self.setSystemSymbol(systemName ?? "", withAdditionalText: "\(startValue) \(suffix)")
-
+            
             if startValue >= targetValue {
                 // Stop the timer when the target value is reached
                 timer.invalidate()

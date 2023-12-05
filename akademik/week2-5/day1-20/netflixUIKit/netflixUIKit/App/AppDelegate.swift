@@ -5,14 +5,26 @@
 //  Created by Muhammad Fahmi on 30/10/23.
 //
 
-import GoogleSignIn
+import CoreData
 import FirebaseCore
+import GoogleSignIn
+import IQKeyboardManagerSwift
 import netfox
 import UIKit
-import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "RecentlyViewedMovie")
+        container.loadPersistentStores {
+            (storeDescription, error) in
+            if let error = error {
+                fatalError("Unresolved error \(error)")
+            }
+        }
+        return container
+    }()
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance.handle(url)

@@ -44,6 +44,14 @@
 		CD4659332B1DA10600D86A26 /* AllVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4659312B1DA10600D86A26 /* AllVideoViewController.xib */; };
 		CD4659372B1DA16C00D86A26 /* AllVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659352B1DA16C00D86A26 /* AllVideoTableViewCell.swift */; };
 		CD4659382B1DA16C00D86A26 /* AllVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */; };
+		CD46593A2B1EB38E00D86A26 /* HistoryModelMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659392B1EB38E00D86A26 /* HistoryModelMovie.swift */; };
+		CD46593D2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD46593B2B1EB41600D86A26 /* RecentlyViewedMovie.xcdatamodeld */; };
+		CD46593F2B1EB72E00D86A26 /* RecentlyViewedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46593E2B1EB72E00D86A26 /* RecentlyViewedManager.swift */; };
+		CD4659522B1EB9A700D86A26 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659512B1EB9A700D86A26 /* CoreDataStack.swift */; };
+		CD4659562B1EBEEF00D86A26 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659542B1EBEEF00D86A26 /* HistoryViewController.swift */; };
+		CD4659572B1EBEEF00D86A26 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4659552B1EBEEF00D86A26 /* HistoryViewController.xib */; };
+		CD46595B2B1EBF4200D86A26 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4659592B1EBF4200D86A26 /* HistoryTableViewCell.swift */; };
+		CD46595C2B1EBF4200D86A26 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD46595A2B1EBF4200D86A26 /* HistoryTableViewCell.xib */; };
 		CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4B8F392B16BE8800F5F31D /* SimilarCollectionViewCell.swift */; };
 		CD4B8F3C2B16BE8800F5F31D /* SimilarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */; };
 		CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FA4432AF39ECE00226717 /* DetailViewController.swift */; };
@@ -177,6 +185,14 @@
 		CD4659312B1DA10600D86A26 /* AllVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoViewController.xib; sourceTree = "<group>"; };
 		CD4659352B1DA16C00D86A26 /* AllVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoTableViewCell.swift; sourceTree = "<group>"; };
 		CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoTableViewCell.xib; sourceTree = "<group>"; };
+		CD4659392B1EB38E00D86A26 /* HistoryModelMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModelMovie.swift; sourceTree = "<group>"; };
+		CD46593C2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecentlyViewedMovie.xcdatamodel; sourceTree = "<group>"; };
+		CD46593E2B1EB72E00D86A26 /* RecentlyViewedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyViewedManager.swift; sourceTree = "<group>"; };
+		CD4659512B1EB9A700D86A26 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CD4659542B1EBEEF00D86A26 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CD4659552B1EBEEF00D86A26 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		CD4659592B1EBF4200D86A26 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		CD46595A2B1EBF4200D86A26 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		CD4B8F392B16BE8800F5F31D /* SimilarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD4FA4432AF39ECE00226717 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +450,7 @@
 				CD729D162B102B59006D3046 /* Details.swift */,
 				CD678A9D2B0DAD7500B2261F /* Credit.swift */,
 				CD678AAE2B0E293100B2261F /* Reviews.swift */,
+				CD4659502B1EB95E00D86A26 /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,6 +481,36 @@
 				CD4659362B1DA16C00D86A26 /* AllVideoTableViewCell.xib */,
 			);
 			path = AllVideoTableViewCell;
+			sourceTree = "<group>";
+		};
+		CD4659502B1EB95E00D86A26 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CD46593B2B1EB41600D86A26 /* RecentlyViewedMovie.xcdatamodeld */,
+				CD4659392B1EB38E00D86A26 /* HistoryModelMovie.swift */,
+				CD4659512B1EB9A700D86A26 /* CoreDataStack.swift */,
+				CD46593E2B1EB72E00D86A26 /* RecentlyViewedManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CD4659532B1EBECF00D86A26 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD4659542B1EBEEF00D86A26 /* HistoryViewController.swift */,
+				CD4659552B1EBEEF00D86A26 /* HistoryViewController.xib */,
+				CD4659582B1EBF2800D86A26 /* New Group */,
+			);
+			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		CD4659582B1EBF2800D86A26 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CD4659592B1EBF4200D86A26 /* HistoryTableViewCell.swift */,
+				CD46595A2B1EBF4200D86A26 /* HistoryTableViewCell.xib */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CD4B8F382B16BD5500F5F31D /* SimilarVCCell */ = {
@@ -729,6 +776,7 @@
 				CDE7D5842B109B1200C41630 /* MoreViewControllerCell */,
 				CDE0342C2B186EDC00914F2E /* AppSettingsVC */,
 				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
+				CD4659532B1EBECF00D86A26 /* HistoryVC */,
 			);
 			path = MoreVC;
 			sourceTree = "<group>";
@@ -987,6 +1035,7 @@
 				CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */,
 				CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */,
 				CDCEABDA2AF0E9EB004F37B8 /* SplashScreen.xib in Resources */,
+				CD46595C2B1EBF4200D86A26 /* HistoryTableViewCell.xib in Resources */,
 				CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */,
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
 				CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */,
@@ -1016,6 +1065,7 @@
 				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
 				CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
+				CD4659572B1EBEEF00D86A26 /* HistoryViewController.xib in Resources */,
 				CD678AAD2B0DF84D00B2261F /* SimilarViewController.xib in Resources */,
 				CD729D1E2B108981006D3046 /* GoToWebViewController.xib in Resources */,
 				CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */,
@@ -1093,6 +1143,7 @@
 				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */,
 				CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */,
+				CD46595B2B1EBF4200D86A26 /* HistoryTableViewCell.swift in Sources */,
 				CD678ABC2B0F04CB00B2261F /* DataPersistenceManager.swift in Sources */,
 				CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
@@ -1109,6 +1160,7 @@
 				CD4571552B19BE33002B4EE6 /* ARViewController.swift in Sources */,
 				CD87BC652B0344C0008B9531 /* FavHomeVC.swift in Sources */,
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
+				CD46593A2B1EB38E00D86A26 /* HistoryModelMovie.swift in Sources */,
 				CD723D052B03004C00C191A9 /* Favorites.swift in Sources */,
 				CDB9FD6B2B0CA95500128B03 /* FadedImageView.swift in Sources */,
 				CD16F0312B197D7600B93857 /* RefreshTextLabel.swift in Sources */,
@@ -1127,7 +1179,9 @@
 				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
+				CD4659522B1EB9A700D86A26 /* CoreDataStack.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
+				CD46593F2B1EB72E00D86A26 /* RecentlyViewedManager.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
@@ -1150,11 +1204,13 @@
 				CD16F0332B197D9600B93857 /* FStorage.swift in Sources */,
 				CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */,
 				CD6254012B071EAE00C000CC /* UIView+Extension.swift in Sources */,
+				CD46593D2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodeld in Sources */,
 				CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */,
 				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
 				CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
+				CD4659562B1EBEEF00D86A26 /* HistoryViewController.swift in Sources */,
 				CD2191812B0759250038BE86 /* Common.swift in Sources */,
 				CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,
@@ -1369,6 +1425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD46593B2B1EB41600D86A26 /* RecentlyViewedMovie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD46593C2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodel */,
+			);
+			currentVersion = CD46593C2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodel */;
+			path = RecentlyViewedMovie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CD5DD4912AEF38AA00140DFA /* Project object */;
 }

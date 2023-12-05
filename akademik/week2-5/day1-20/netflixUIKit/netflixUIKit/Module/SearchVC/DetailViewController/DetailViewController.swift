@@ -5,9 +5,15 @@
 //  Created by Muhammad Fahmi on 02/11/23.
 //
 
+import CoreData
 import Hero
 import Parchment
 import UIKit
+
+enum isFor{
+    case isForMainContent
+    case isForHistory
+}
 
 class DetailViewController: UIViewController {
     
@@ -30,6 +36,10 @@ class DetailViewController: UIViewController {
     let vm = SearchViewModel()
     var dataDetails: Details?
     
+    var isFor: isFor = .isForMainContent
+    
+    var movieId: Int?
+    
     var counterValue: Int = 0
     var counterTimer: Timer?
     
@@ -42,10 +52,12 @@ class DetailViewController: UIViewController {
         setupHero()
         setupRightNavBarButtons()
         tappableFadedImageView.tapDelegate = self
-        setupDetails()
+//        setupDetails()
         
         addFloatingIcon(useLottie: true, lottieFileName: "floatingIconPlays", iconSize: 80)
     }
+    
+    
     
     override func floatingIconTapped() {
         // Implement the code to push to another view controller
@@ -55,15 +67,15 @@ class DetailViewController: UIViewController {
     }
     
     func setupDetails(){
-        if let data = data{
-            self.vm.api.makeAPICall(endpoint: .getDetails(id: data.id)) { (response: Result<Details, Error>)  in
-                switch response {
-                case .success(let detailsId):
-                    self.dataDetails = detailsId
-                    self.setUpInfo()
-                case .failure(let error):
-                    print("Error fetching top rated movies: \(error)")
-                }
+        
+        let id = isFor == .isForHistory ? (movieId ?? 0 ): (data?.id ?? 0)
+        self.vm.api.makeAPICall(endpoint: .getDetails(id: id)) { (response: Result<Details, Error>)  in
+            switch response {
+            case .success(let detailsId):
+                self.dataDetails = detailsId
+                self.setUpInfo()
+            case .failure(let error):
+                print("Error fetching top rated movies: \(error)")
             }
         }
     }
@@ -137,7 +149,6 @@ class DetailViewController: UIViewController {
         pagingVC.menuBackgroundColor = UIColor.clear
         
         firstVC.descLabel?.text = data?.overview
-        
     }
     
     func setUpInfo(){
@@ -165,7 +176,6 @@ class DetailViewController: UIViewController {
         } else {
             revenueLabel.text = "Revenue: N/A"
         }
-        
     }
     
     func setupUp(){
@@ -244,17 +254,64 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
             return PagingIndexItem(index: index, title: "Similar")
         }
     }
-    
 }
 
 extension DetailViewController: Tappable {
     func didTap() {
         let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
         videoTrailerVC.hidesBottomBarWhenPushed = true
-        // Pass the movie ID to the VideoTrailerVC
         videoTrailerVC.movieId = data?.id
+        
+        saveToHistory()
         navigationController?.pushViewController(videoTrailerVC, animated: true)
     }
+    func saveToHistory() {
+        guard let data = data else {
+            return
+        }
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+
+        let context = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
+        fetchRequest.predicate = NSPredicate(format: "id == %d", data.id)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+
+            if let existingMovie = results.first as? NSManagedObject {
+                // Movie with the same ID already exists, you can update or skip
+                // For simplicity, let's just skip adding the duplicate
+                print("Movie with ID \(data.id) already exists in history.")
+            } else {
+                // Movie with this ID doesn't exist, proceed to add it
+                if let movieEntity = NSEntityDescription.entity(forEntityName: "MovieEntity", in: context) {
+                    let movieItem = NSManagedObject(entity: movieEntity, insertInto: context)
+
+                    movieItem.setValue(data.id, forKey: "id")
+                    movieItem.setValue(data.posterPath, forKey: "posterPath")
+                    movieItem.setValue(data.title, forKey: "title")
+                    movieItem.setValue(data.voteAverage, forKey: "voteAverage")
+                    movieItem.setValue(dataDetails?.genres?.first?.name, forKey: "genres")
+                    movieItem.setValue(dataDetails?.releaseDate, forKey: "releaseDate")
+                    movieItem.setValue(dataDetails?.runtime, forKey: "runtime")
+
+                    do {
+                        try context.save()
+                        print("Saved to history")
+                    } catch {
+                        print("Failed to save item to history: \(error)")
+                    }
+                }
+            }
+        } catch {
+            print("Error fetching existing movie: \(error)")
+        }
+    }
+
 }
 
 enum DetailSlidingTabs: Int, CaseIterable{
@@ -269,6 +326,7 @@ extension DetailViewController{
         super.viewWillAppear(animated)
         // Hide the navigation bar
         showNaviItem()
+        setupDetails()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
