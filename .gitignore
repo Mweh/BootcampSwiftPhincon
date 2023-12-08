@@ -1,3 +1,3 @@
 # .gitignore
-akademik/week2-4/day1-15/netflixUIKit/netflixUIKit/GoogleService-Info.plist  # or the name of your configuration file
-akademik/week2-4/day1-15/netflixUIKit/netflixUIKit/Info.plist # only if necessary, some projects may need to keep Info.plist
+akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/GoogleService-Info.plist  # Google
+akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Info.plist # Xcode
