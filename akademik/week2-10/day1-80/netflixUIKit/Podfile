@@ -6,10 +6,7 @@ target 'netflixUIKit' do
   use_frameworks!
 
   # Pods for netflixUIKit
-
-  # AI
-  # pod 'Firebase/MLVisionLabelModel
-  # pod 'FirebaseMLModelDownloader'
+  
   # Network
   pod 'Alamofire'
   pod 'netfox'
@@ -17,7 +14,6 @@ target 'netflixUIKit' do
   # Image
   pod 'Kingfisher'
   pod 'StepSlider'
-  #pod 'FirebaseStorage'
 
   # Placeholder
   pod 'SkeletonView'
@@ -29,29 +25,19 @@ target 'netflixUIKit' do
   # LogInWithGoogle
   pod 'Firebase/Core'
   pod 'FirebaseAuth'
-  #, '>= 9.6.0'
-  #pod 'GoogleSignIn'
+  pod 'GoogleSignIn'
+  pod 'FirebaseStorage'
 
   # Animation
   pod 'Hero'
   pod 'lottie-ios'
-  #pod "ViewAnimator"
   
   # View
   pod 'Parchment'
   pod "youtube-ios-player-helper"
   #pod 'SnapKit'
-  #pod 'FloatingPanel'
 
   # KeyboardManagement
   pod 'IQKeyboardManagerSwift'
-
-  # Temp
-  pod 'GoogleSignIn'
-  #, '7.0.0'
-  pod 'FirebaseStorage'
-  #, '10.18.0'
-#  pod 'GoogleMLKit/TextRecognition', '>= 0.6.0'
-  
-  
+    
 end

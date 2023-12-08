@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol CastingViewControllerDelegate: AnyObject {
+    func updateMenu(total: Int)
+}
+
 class CastingViewController: UIViewController {
     
-    @IBOutlet weak var collectionview: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     lazy var loadingIndicator = PopUpLoading(on: view)
     
     let index: Int
@@ -17,19 +21,22 @@ class CastingViewController: UIViewController {
     
     var data: ResultMovie?{
         didSet{
-            collectionview.reloadData()
-        }
-    }
-
-    var dataCredit: Credit?{
-        didSet{
-            collectionview.reloadData()
+            collectionView.reloadData()
         }
     }
     
-    init(index: Int, data: ResultMovie?) {
+    weak var delegate: CastingViewControllerDelegate?
+
+    var dataCredit: Credit? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    init(index: Int, data: ResultMovie?, delegate: CastingViewControllerDelegate?) {
         self.index = index
         self.data = data
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,8 +48,8 @@ class CastingViewController: UIViewController {
         super.viewDidLoad()
         loadingIndicator.dismissImmediately()
 
-        setupUICollection()
         setupAPI()
+        setupUICollection()
     }
     
     func setupAPI(){
@@ -51,6 +58,7 @@ class CastingViewController: UIViewController {
                 switch response {
                 case .success(let creditId):
                     self.dataCredit = creditId
+                    self.delegate?.updateMenu(total: creditId.cast.count)
                 case .failure(let error):
                     print("Error fetching top rated movies: \(error)")
                 }
@@ -59,9 +67,9 @@ class CastingViewController: UIViewController {
     }
     
     func setupUICollection(){
-        collectionview.delegate = self
-        collectionview.dataSource = self
-        collectionview.register(UINib(nibName: "CastingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CastingCollectionViewCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "CastingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CastingCollectionViewCell")
     }
 }
 
@@ -72,13 +80,12 @@ extension CastingViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CastingCollectionViewCell", for: indexPath) as! CastingCollectionViewCell
-        if let data = data{
-            let actorImgUrl = "https://image.tmdb.org/t/p/w200\(dataCredit?.cast[indexPath.row].profilePath ?? "noImageURL")"
-            let url = URL(string: actorImgUrl)
-            cell.actorImgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
-            cell.characterLabel.text = dataCredit?.cast[indexPath.row].character?.truncateToWords(2)
-            cell.actorLabel.text = dataCredit?.cast[indexPath.row].name.truncateToWords(2)
-        }
+        let tmdbImgBase = TMDBImageURL.url(size: .w200)
+        let actorImgUrl = "\(tmdbImgBase)\(dataCredit?.cast[indexPath.row].profilePath ?? "noImageURL")"
+        let url = URL(string: actorImgUrl)
+        cell.actorImgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
+        cell.characterLabel.text = dataCredit?.cast[indexPath.row].character?.truncateToWords(2)
+        cell.actorLabel.text = dataCredit?.cast[indexPath.row].name.truncateToWords(2)
         return cell
     }
     

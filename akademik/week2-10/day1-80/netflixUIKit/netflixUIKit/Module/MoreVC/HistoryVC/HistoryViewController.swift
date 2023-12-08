@@ -18,7 +18,7 @@ class HistoryViewController: UIViewController {
             tblView.reloadData()
         }
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,43 +38,22 @@ class HistoryViewController: UIViewController {
     }
     
     func fetchCoreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
-        
-        do {
-            let fetchedResults = try context.fetch(fetchRequest)
-            var historyMovies: [HistoryModelMovie] = []
-            
-            if let movieItems = fetchedResults as? [NSManagedObject] {
-                for item in movieItems {
-                    if let id = item.value(forKey: "id") as? Int,
-                       let posterPath = item.value(forKey: "posterPath") as? String,
-                       let title = item.value(forKey: "title") as? String,
-                       let genres = item.value(forKey: "genres") as? String,
-                       let voteAverage = item.value(forKey: "voteAverage") as? Double,
-                       let releaseDate = item.value(forKey: "releaseDate") as? String,
-                       let runtime = item.value(forKey: "runtime") as? Int
-                    {
-                        let movieItem = HistoryModelMovie(id: id, posterPath: posterPath, title: title, voteAverage: voteAverage, genres: genres, releaseDate: releaseDate, runtime: runtime)
-                        historyMovies.append(movieItem)
-                    }
-                }
-            }
-            
-            // Reverse the array to have the latest added item at the top
-            historyMovies.reverse()
-            
-            // Assign the array of history movies to dataHistoryMovie
-            dataHistoryMovie = historyMovies
-            tblView.reloadData()
-            
-        } catch {
-            print("Failed to fetch data: \(error)")
+        var historyMovies: [HistoryModelMovie] = []
+
+        // Fetch history movies from CoreDataHelper
+        if let movieItems = CoreDataHelper.shared.fetchHistoryMovies() {
+            historyMovies = movieItems
         }
+
+        // Reverse the array to have the latest added item at the top
+        historyMovies.reverse()
+
+        // Assign the array of history movies to dataHistoryMovie
+        dataHistoryMovie = historyMovies
+        tblView.reloadData()
+
+        let totalMovies = historyMovies.count
     }
-    
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
@@ -107,41 +86,12 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
             guard let movieId = dataHistoryMovie?[indexPath.row].id else {
                 return
             }
-            deleteMovieFromCoreData(movieId: movieId)
             
             // Remove the corresponding item from the data array
             dataHistoryMovie = dataHistoryMovie?.filter { $0.id != movieId }
             
             // Update the table view
             tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
-    // Function to delete movie data from Core Data
-    private func deleteMovieFromCoreData(movieId: Int) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
-        fetchRequest.predicate = NSPredicate(format: "id == %d", movieId)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            
-            if let movieToDelete = results.first as? NSManagedObject {
-                context.delete(movieToDelete)
-                
-                do {
-                    try context.save()
-                    print("Deleted movie with ID \(movieId) from Core Data")
-                } catch {
-                    print("Failed to save after deleting: \(error)")
-                }
-            }
-        } catch {
-            print("Error fetching movie to delete: \(error)")
         }
     }
     

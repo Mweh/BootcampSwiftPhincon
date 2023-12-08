@@ -136,8 +136,9 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let validData = self.dataMovie?.results {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
+            let tmdbImgBase = TMDBImageURL.url(size: .w342)
             let urlString = validData[indexPath.row].posterPath ?? ""
-            let imageName = "https://image.tmdb.org/t/p/w500/\(urlString)"
+            let imageName = "\(tmdbImgBase)\(urlString)"
             let url = URL(string: imageName)
             cell.imgView.kf.setImage(with: url)
             

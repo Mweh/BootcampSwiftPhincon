@@ -30,46 +30,24 @@ class AppSettingsViewController: UIViewController {
     func setupClearCache() {
         clearCache.rx.tap
             .subscribe(onNext: { [weak self] in
-                // Show confirmation alert before clearing the cache
-//                self?.showClearCacheConfirmation()
                 self?.clearCoreDataCache()
             })
             .disposed(by: bag)
     }
     
-//    // Function to show confirmation alert before clearing the Core Data cache
-//    private func showClearCacheConfirmation() {
-//        AlertUtility.showAlert(from: self,
-//                               title: "Clear Cache",
-//                               message: "Are you sure you want to clear the cache?",
-//                               positiveTitle: "Yes",
-//                               negativeTitle: "Cancel",
-//                               positiveAction: { [weak self] in
-//            // User confirmed, clear the Core Data cache
-//            self?.clearCoreDataCache()
-//        })
-//    }
-    
-    // Function to clear Core Data cache
     private func clearCoreDataCache() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
-        
-        do {
-            let entities = try context.fetch(fetchRequest)
-            for entity in entities {
-                context.delete(entity as! NSManagedObject)
+        CoreDataHelper.shared.clearCoreDataCache { result in
+            switch result {
+            case .success:
+                // Show success alert
+                self.showClearCacheSuccess()
+                NotificationCenter.default.post(name: .historyMovieSaved, object: nil)
+            case .failure(let error):
+                print("Failed to clear Core Data cache: \(error)")
+                
+                // Show failure alert
+                self.showClearCacheFailure()
             }
-            try context.save()
-            
-            // Show success alert
-            showClearCacheSuccess()
-        } catch {
-            print("Failed to clear Core Data cache: \(error)")
-            
-            // Show failure alert
-            showClearCacheFailure()
         }
     }
     

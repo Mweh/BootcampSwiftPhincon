@@ -9,13 +9,50 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     
+    let homeVC = TableViewController()
+    let searchVC = SecondViewController()
+    let comingSoonVC = ComingSoonViewController()
+    let moreVC = MoreViewController()
+    
+    let nav1 = UINavigationController(rootViewController: TableViewController())
+    let nav2 = UINavigationController(rootViewController: SecondViewController())
+    let nav3 = UINavigationController(rootViewController: ComingSoonViewController())
+    let nav4 = UINavigationController(rootViewController: MoreViewController())
+    
+    var totalHistoryMovie: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         configureUITabBarItems()
         navigationController?.setNavigationBarHidden(true, animated: true)
         removeTextNaviItem()
+        initHandleHistoryMovieSaved()
+        // Add this in viewDidLoad or wherever appropriate
+        NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
+        
+        
     }
+    
+    // Add this method to handle the notification
+    @objc func handleHistoryMovieSaved() {
+        initHandleHistoryMovieSaved()
+    }
+    
+    func initHandleHistoryMovieSaved(){
+        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
+        self.totalHistoryMovie = totalHistoryMovies
+
+        // Check if the count is 0, set badgeValue to nil; otherwise, set it to the count
+        let totalHistoryMoviesBadge = totalHistoryMovies == 0 ? nil : "\(totalHistoryMovies)"
+        nav4.tabBarItem.badgeValue = totalHistoryMoviesBadge
+    }
+    
+//    // Call this method when the history movies count changes
+//    func updateHistoryBadgeCount() {
+//        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
+//        tabBarDelegate?.updateHistoryBadge(count: totalHistoryMovies)
+//    }
     
     func removeTextNaviItem(){
         navigationItem.backButtonTitle = ""
@@ -36,31 +73,28 @@ class MainTabBarViewController: UITabBarController {
     }
     
     func configureUITabBarItems() {
-        let homeVC = TableViewController()
-        let searchVC = SecondViewController()
-        let comingSoonVC = ComingSoonViewController()
-        let moreVC = MoreViewController()
+      
         
         homeVC.navigationItem.largeTitleDisplayMode = .automatic
         searchVC.navigationItem.largeTitleDisplayMode = .automatic
         comingSoonVC.navigationItem.largeTitleDisplayMode = .automatic
         moreVC.navigationItem.largeTitleDisplayMode = .automatic
-                
-        let nav1 = UINavigationController(rootViewController: homeVC)
-        let nav2 = UINavigationController(rootViewController: searchVC)
-        let nav3 = UINavigationController(rootViewController: comingSoonVC)
-        let nav4 = UINavigationController(rootViewController: moreVC)
+        
+
         
         nav1.tabBarItem = UITabBarItem(title: "Home", image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
         nav2.tabBarItem = UITabBarItem(title: "Search", image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
         nav3.tabBarItem = UITabBarItem(title: "Coming Soon", image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
         nav4.tabBarItem = UITabBarItem(title: "More", image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
         
-        nav4.tabBarItem.badgeValue = "4"
         
+        
+       
+
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
-        
     }
+    
+    
 }
 
 extension MainTabBarViewController: UITabBarControllerDelegate {
@@ -71,6 +105,7 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
         }
         let selectedItem = tabBarItems[selectedViewControllerIndex]
         animateTabBarItem(selectedItem)
+        
     }
     
     private func animateTabBarItem(_ item: UITabBarItem) {
@@ -85,3 +120,4 @@ extension MainTabBarViewController: UITabBarControllerDelegate {
         }
     }
 }
+

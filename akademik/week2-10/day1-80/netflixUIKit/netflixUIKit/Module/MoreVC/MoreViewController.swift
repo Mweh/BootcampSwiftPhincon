@@ -24,6 +24,8 @@ class MoreViewController: UIViewController {
     
     var resultImg: UIImage!
     
+    var totalHistoryMovie: Int?
+    
     var picker: UIImagePickerController? = UIImagePickerController()
     
     let cellData: [MoreCellData] = [
@@ -41,6 +43,21 @@ class MoreViewController: UIViewController {
         setTextToCurrentAppVersion()
         setupTable()
         loadSavedImage()
+        
+        initHandleHistoryMovieSaved()
+        // Add this in viewDidLoad or wherever appropriate
+        NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
+    }
+    
+    // Add this method to handle the notification
+    @objc func handleHistoryMovieSaved() {
+        initHandleHistoryMovieSaved()
+    }
+    
+    func initHandleHistoryMovieSaved(){
+        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
+        self.totalHistoryMovie = totalHistoryMovies
+        self.tblView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
     
     func setTextToCurrentAppVersion(){
@@ -240,9 +257,19 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         cell.buttonLabel.setTitle(data.title, for: .normal)
         cell.buttonLabel.setImage(UIImage(systemName: data.symbolName), for: .normal)
         
+        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
+        
+        if indexPath.row == 0 {
+            if let totalHistoryMovie = totalHistoryMovie{
+                if totalHistoryMovies != 0 {
+                    cell.addBadge(count: totalHistoryMovie)
+                    
+                }
+            }
+        }
+        
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
@@ -271,7 +298,6 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(vc, animated: true, completion: nil)
         }
     }
-    
 }
 
 struct MoreCellData {

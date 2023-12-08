@@ -34,7 +34,46 @@ class ComingSoonViewController: UIViewController {
         loadData()
         lottieConfig()
         bindApiData()
+//    }
+        // Add a floating icon with conditions to show or hide
+        addFloatingIcon(useLottie: true, lottieFileName: "backToTop", iconSize: 100, trailingValue: 20, bottomValue: -60, showCloseButton: false)
+//        updateFloatingIconVisibility()
     }
+    
+    override func floatingIconTapped() {
+        // Add a function that when pressed makes your tableView scroll to the top
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        // Update the visibility of the floating icon when the table view is scrolled
+//        updateFloatingIconVisibility()
+//    }
+
+//    func updateFloatingIconVisibility() {
+//        let threshold: CGFloat = 10.0
+//
+//        if tableView.contentOffset.y > threshold {
+//            // Scrolled beyond the threshold, show the floating icon
+//            showFloatingIcon()
+//        } else {
+//            // Below the threshold, hide the floating icon
+//            hideFloatingIcon()
+//        }
+//    }
+
+//    func showFloatingIcon() {
+//        // Logic to show the floating icon
+//        // You may want to ensure it's not already visible to avoid unnecessary animations
+//        yourFloatingIcon.isHidden = false
+//    }
+
+//    func hideFloatingIcon() {
+//        // Logic to hide the floating icon
+//        // You may want to ensure it's not already hidden to avoid unnecessary animations
+//        yourFloatingIcon.isHidden = true
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

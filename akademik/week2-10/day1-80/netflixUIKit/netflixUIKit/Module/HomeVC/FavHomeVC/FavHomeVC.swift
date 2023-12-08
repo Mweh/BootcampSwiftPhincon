@@ -63,15 +63,13 @@ extension FavHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //        if let data = dataFavoriteNoPaging{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavHomeCollectionViewCell", for: indexPath) as! FavHomeCollectionViewCell
-        //
-        let imageName = "https://image.tmdb.org/t/p/w500/\(dataFavoriteNoPaging?.results[indexPath.row].posterPath ?? "" )"
-        print("Image URL: \(imageName)") // Add this line to print the URL to the console
+        let tmdbImgBase = TMDBImageURL.url(size: .w342)
+        let urlPath = dataFavoriteNoPaging?.results[indexPath.row].posterPath ?? ""
+        let imageName = "\(tmdbImgBase)\(urlPath)"
         let url = URL(string: imageName)
         cell.imgView.kf.setImage(with: url)
-        //            return cell
-        //        }
+
         return cell
     }
     

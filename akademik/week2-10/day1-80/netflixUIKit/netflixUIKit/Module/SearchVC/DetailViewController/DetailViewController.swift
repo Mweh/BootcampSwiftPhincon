@@ -36,6 +36,9 @@ class DetailViewController: UIViewController {
     let vm = SearchViewModel()
     var dataDetails: Details?
     
+    var totalCast: Int?
+    var pagingVC: PagingViewController?
+    
     var isFor: isFor = .isForMainContent
     
     var movieId: Int?
@@ -52,12 +55,8 @@ class DetailViewController: UIViewController {
         setupHero()
         setupRightNavBarButtons()
         tappableFadedImageView.tapDelegate = self
-//        setupDetails()
-        
         addFloatingIcon(useLottie: true, lottieFileName: "floatingIconPlays", iconSize: 80)
     }
-    
-    
     
     override func floatingIconTapped() {
         // Implement the code to push to another view controller
@@ -67,7 +66,6 @@ class DetailViewController: UIViewController {
     }
     
     func setupDetails(){
-        
         let id = isFor == .isForHistory ? (movieId ?? 0 ): (data?.id ?? 0)
         self.vm.api.makeAPICall(endpoint: .getDetails(id: id)) { (response: Result<Details, Error>)  in
             switch response {
@@ -124,30 +122,34 @@ class DetailViewController: UIViewController {
     
     func setUpPagingVC(){
         let firstVC = SynopsisViewController(index: 0, data: self.data)
-        let pagingVC = PagingViewController(viewControllers: [firstVC])
-        pagingVC.dataSource = self
-        pagingVC.delegate = self
-        pagingVC.menuItemSize = .selfSizing(estimatedWidth: 50, height: 40)
         
-        addChild(pagingVC)
-        slidingTabs.addSubview(pagingVC.view)
+        pagingVC = PagingViewController(viewControllers: [firstVC])
         
-        // Set constraints to make the pagingVC.view fill the slidingTabs view
-        pagingVC.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            pagingVC.view.topAnchor.constraint(equalTo: slidingTabs.topAnchor),
-            pagingVC.view.leadingAnchor.constraint(equalTo: slidingTabs.leadingAnchor),
-            pagingVC.view.trailingAnchor.constraint(equalTo: slidingTabs.trailingAnchor),
-            pagingVC.view.bottomAnchor.constraint(equalTo: slidingTabs.bottomAnchor)
-        ])
-        
-        pagingVC.didMove(toParent: self)
-        
-        pagingVC.selectedTextColor = UIColor.systemRed
-        pagingVC.indicatorColor = UIColor.systemRed
-        pagingVC.textColor = UIColor.label
-        pagingVC.menuBackgroundColor = UIColor.clear
-        
+        if let pagingVC = pagingVC {
+            
+            pagingVC.dataSource = self
+            pagingVC.delegate = self
+            pagingVC.menuItemSize = .selfSizing(estimatedWidth: 50, height: 40)
+            
+            addChild(pagingVC)
+            slidingTabs.addSubview(pagingVC.view)
+            
+            // Set constraints to make the pagingVC.view fill the slidingTabs view
+            pagingVC.view.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                pagingVC.view.topAnchor.constraint(equalTo: slidingTabs.topAnchor),
+                pagingVC.view.leadingAnchor.constraint(equalTo: slidingTabs.leadingAnchor),
+                pagingVC.view.trailingAnchor.constraint(equalTo: slidingTabs.trailingAnchor),
+                pagingVC.view.bottomAnchor.constraint(equalTo: slidingTabs.bottomAnchor)
+            ])
+            
+            pagingVC.didMove(toParent: self)
+            
+            pagingVC.selectedTextColor = UIColor.systemRed
+            pagingVC.indicatorColor = UIColor.systemRed
+            pagingVC.textColor = UIColor.secondaryLabel
+            pagingVC.menuBackgroundColor = UIColor.clear
+        }
         firstVC.descLabel?.text = data?.overview
     }
     
@@ -190,16 +192,17 @@ class DetailViewController: UIViewController {
             
             titleMovieLabel.hero.id = "\(data.title!)"
             
-            let backdropImgName = "https://image.tmdb.org/t/p/w500\(data.backdropPath ?? "")"
+            let tmdbImgBase500 = TMDBImageURL.url(size: .w500)
+            let backdropImgName = "\(tmdbImgBase500)\(data.backdropPath ?? "")"
             let backdropURL = URL(string: backdropImgName)
             backdropImgView.kf.setImage(with: backdropURL)
             backdropImgView.sizeToFit()
             
             backdropImgView.hero.id = "\(data.backdropPath ?? "")"
             
+            let tmdbImgBase342 = TMDBImageURL.url(size: .w342)
             let posterPath = data.posterPath ?? ""
-            
-            let posterImgName = "https://image.tmdb.org/t/p/w300\(posterPath)"
+            let posterImgName = "\(tmdbImgBase342)\(posterPath)"
             let posterURL = URL(string: posterImgName)
             posterImgView.kf.setImage(with: posterURL)
             posterImgView.sizeToFit()
@@ -229,7 +232,7 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
         case .Synopsis:
             return SynopsisViewController(index: index, data: self.data)
         case .Cast:
-            return CastingViewController(index: index, data: self.data)
+            return CastingViewController(index: index, data: self.data, delegate: self)
         case .Reviews:
             return ReviewsViewController(index: index, data: self.data)
         case .Similar:
@@ -247,11 +250,16 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
         case .Synopsis:
             return PagingIndexItem(index: index, title: "About Movie")
         case .Cast:
-            return PagingIndexItem(index: index, title: "Cast")
+            let vc = CastingViewController(index: index, data: self.data, delegate: self)
+            return PagingIndexItem(index: index, title: "Cast \(self.totalCast ?? 0)")
         case .Reviews:
-            return PagingIndexItem(index: index, title: "Reviews")
+            let vc = ReviewsViewController(index: index, data: self.data)
+            let total = vc.dataReviews?.totalResults ?? 0
+            return PagingIndexItem(index: index, title: "Reviews \(total)")
         case .Similar:
-            return PagingIndexItem(index: index, title: "Similar")
+            let vc = SimilarViewController(dataResult: self.data)
+            let total = vc.data?.totalResults ?? 0
+            return PagingIndexItem(index: index, title: "Similar \(total)")
         }
     }
 }
@@ -264,54 +272,38 @@ extension DetailViewController: Tappable {
         
         saveToHistory()
         navigationController?.pushViewController(videoTrailerVC, animated: true)
+        
     }
+    
     func saveToHistory() {
         guard let data = data else {
             return
         }
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
+        // Unwrap optional properties before creating HistoryModelMovie
+        if let posterPath = data.posterPath,
+           let title = data.title,
+           let releaseDate = data.releaseDate,
+           let genres = dataDetails?.genres?.first?.name,
+           let runtime = dataDetails?.runtime{
 
-        let context = appDelegate.persistentContainer.viewContext
+            let historyMovie = HistoryModelMovie(
+                id: data.id,
+                posterPath: posterPath,
+                title: title,
+                voteAverage: data.voteAverage,
+                genres: genres,
+                releaseDate: releaseDate,
+                runtime: runtime
+            )
 
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
-        fetchRequest.predicate = NSPredicate(format: "id == %d", data.id)
-
-        do {
-            let results = try context.fetch(fetchRequest)
-
-            if let existingMovie = results.first as? NSManagedObject {
-                // Movie with the same ID already exists, you can update or skip
-                // For simplicity, let's just skip adding the duplicate
-                print("Movie with ID \(data.id) already exists in history.")
-            } else {
-                // Movie with this ID doesn't exist, proceed to add it
-                if let movieEntity = NSEntityDescription.entity(forEntityName: "MovieEntity", in: context) {
-                    let movieItem = NSManagedObject(entity: movieEntity, insertInto: context)
-
-                    movieItem.setValue(data.id, forKey: "id")
-                    movieItem.setValue(data.posterPath, forKey: "posterPath")
-                    movieItem.setValue(data.title, forKey: "title")
-                    movieItem.setValue(data.voteAverage, forKey: "voteAverage")
-                    movieItem.setValue(dataDetails?.genres?.first?.name, forKey: "genres")
-                    movieItem.setValue(dataDetails?.releaseDate, forKey: "releaseDate")
-                    movieItem.setValue(dataDetails?.runtime, forKey: "runtime")
-
-                    do {
-                        try context.save()
-                        print("Saved to history")
-                    } catch {
-                        print("Failed to save item to history: \(error)")
-                    }
-                }
-            }
-        } catch {
-            print("Error fetching existing movie: \(error)")
+            // Save movie to history using CoreDataHelper
+            CoreDataHelper.shared.saveMovieToHistory(data: historyMovie)
+            
         }
     }
 
+    
 }
 
 enum DetailSlidingTabs: Int, CaseIterable{
@@ -341,8 +333,14 @@ extension DetailViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //        hidesBottomBarWhenPushed = false
         // Show the tab bar when inside DetailViewController
         UINavigationBar.appearance().isHidden = false
+    }
+}
+
+extension DetailViewController: CastingViewControllerDelegate{
+    func updateMenu(total: Int) {
+        self.totalCast = total
+        self.pagingVC?.reloadMenu()
     }
 }

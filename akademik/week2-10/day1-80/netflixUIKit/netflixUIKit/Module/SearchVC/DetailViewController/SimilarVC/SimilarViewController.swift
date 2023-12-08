@@ -60,6 +60,9 @@ class SimilarViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SimilarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SimilarCollectionViewCell")
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        collectionView.collectionViewLayout = layout
     }
 }
 
@@ -72,7 +75,8 @@ extension SimilarViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SimilarCollectionViewCell", for: indexPath) as! SimilarCollectionViewCell
         if let data = data{
             let index = data.results[indexPath.row]
-            let posterImgUrl = "https://image.tmdb.org/t/p/w200\(index.posterPath ?? "noImageURL")"
+            let tmdbImgBase = TMDBImageURL.url(size: .w200)
+            let posterImgUrl = "\(tmdbImgBase)\(index.posterPath ?? "noImageURL")"
             let url = URL(string: posterImgUrl)
             cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
             cell.titleLabel.text = index.title?.truncateToWords(3) ?? "N/A"

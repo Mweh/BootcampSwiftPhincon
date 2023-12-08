@@ -165,7 +165,6 @@ extension TableViewController: HorizontalCellDelegate {
             videoTrailerVC.hidesBottomBarWhenPushed = true
             videoTrailerVC.movieId = dataMoviePreviews.results[index].id
             self.navigationController?.pushViewController(videoTrailerVC, animated: true)
-            
         }
     }
     func didTapCellSquare(index: Int) {

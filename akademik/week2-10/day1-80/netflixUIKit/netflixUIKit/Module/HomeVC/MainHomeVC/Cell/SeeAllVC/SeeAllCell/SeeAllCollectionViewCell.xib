@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Jlw-XL-zrb" firstAttribute="leading" secondItem="SE1-Ju-lnt" secondAttribute="leading" id="19e-Sv-5hJ"/>
                             <constraint firstAttribute="trailing" secondItem="Jlw-XL-zrb" secondAttribute="trailing" id="Crl-dH-80L"/>
@@ -36,6 +35,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="SE1-Ju-lnt" secondAttribute="bottom" id="Atz-gn-yFR"/>
                 <constraint firstItem="SE1-Ju-lnt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bRw-IT-shS"/>
@@ -50,8 +50,5 @@
     </objects>
     <resources>
         <image name="movie7" width="1280" height="1920"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -67,13 +67,16 @@ Information about the project's license.
 Keep track of tasks, improvements, and future plans for your project.
 
 - [ ] Implement Onboarding View.
-- [ ] Integrate CoreData or UserDefault for data storage.
 - [ ] Add a suggest when searching a movie 
 - [ ] Add changelog in MoreVC
-- [ ] Add Recently viewed
 - [ ] New page when actor pressed
 - [ ] Download youtube video(?) *notlegal
-- [ ]
+- [ ] Edit theme in AppSettingsVC using Color well
+- [ ] Implement circle progressBar (in %) for voteAverage
+- [ ] Add Age Rating Icon
+- [ ] Add login as anonymous
+- [ ] Implement AdMob
+- [ ] Add buy me a coffee
 
 - ...
 
@@ -100,7 +103,10 @@ Tasks that have been completed.
 - [x] Add recommendationVC inside slidingtabs
 - [x] Add reviewsVC inside
 - [x] A feature to push to other detailView when click the moviePoster inside detailView itself
-
+- [x] Integrate CoreData or UserDefault for data storage.
+- [x] Add Recently viewed
+- [x] Add floatingIcon backToTop in ComingSoonVC
+- [x] Add iconNotificationBadge for HistoryVC
 
 
 ## BUG

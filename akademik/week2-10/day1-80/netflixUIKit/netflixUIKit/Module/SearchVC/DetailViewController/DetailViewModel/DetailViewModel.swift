@@ -21,12 +21,14 @@ class DetailViewModel {
     
     var backdropURL: URL? {
         guard let backdropPath = data?.backdropPath else { return nil }
-        return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath)")
+        let tmdbImgBase = TMDBImageURL.url(size: .w500)
+        return URL(string: "\(tmdbImgBase)\(backdropPath)")
     }
     
     var posterURL: URL? {
         guard let posterPath = data?.posterPath else { return nil }
-        return URL(string: "https://image.tmdb.org/t/p/w300\(posterPath)")
+        let tmdbImgBase = TMDBImageURL.url(size: .w300)
+        return URL(string: "\(tmdbImgBase)\(posterPath)")
     }
     
     var voteAverage: NSAttributedString {

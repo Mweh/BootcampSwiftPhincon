@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastingViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
-                <outlet property="collectionview" destination="YDN-Fq-Z25" id="Eqh-bA-CMW"/>
+                <outlet property="collectionView" destination="YDN-Fq-Z25" id="Eqh-bA-CMW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

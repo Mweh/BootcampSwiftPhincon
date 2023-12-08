@@ -26,6 +26,7 @@ class HorizontalCell: UITableViewCell {
     
     var parentNavigationController: UINavigationController?
     var typeCell: SectionCell = .CircleCell
+    
     weak var delegate: HorizontalCellDelegate?
     
     var collectionMovieNowPlaying: [ResultMovie]? {
@@ -153,10 +154,11 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         case .CircleCell:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             if indexPath.row < collectionMovieNowPlaying?.count ?? 1 {
-                self.titleLabel.text = typeCell.title
-                let imageName = "https://image.tmdb.org/t/p/w500/\(collectionMovieNowPlaying?[indexPath.row].posterPath ?? "")"
+                let tmdbImgBase = TMDBImageURL.url(size: .w342)
+                let imageName = "\(tmdbImgBase)\(collectionMovieNowPlaying?[indexPath.row].posterPath ?? "")"
                 let url = URL(string: imageName)
                 cell.movieImage.kf.setImage(with: url)
+                self.titleLabel.text = typeCell.title
                 collectionViewHeightConstraint.constant = 50
             }
             
@@ -213,8 +215,9 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             identifier: nil,
             previewProvider: nil) {[weak self] _ in
                 let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
-                    let urlName = "https://image.tmdb.org/t/p/w500/\(self?.collectionMoviePopular?[indexPath.row].posterPath ?? "")"
-                    
+                    let tmdbImgBase = TMDBImageURL.url(size: .w342)
+                    let urlPath = self?.collectionMoviePopular?[indexPath.row].posterPath ?? ""
+                    let urlName = "\(tmdbImgBase)\(urlPath)"
                     let url = URL(string: urlName)
                     self?.downloadImageURL(imageURL: url!)
                     // Assuming imageURL is the URL of the downloaded image

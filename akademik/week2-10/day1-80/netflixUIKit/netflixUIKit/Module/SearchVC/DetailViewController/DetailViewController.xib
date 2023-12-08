@@ -34,7 +34,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-Mp-bQ8">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-p3-MFT" userLabel="backdrop">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
@@ -169,7 +169,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9l-vU-uJA" userLabel="slidingTabs">
-                            <rect key="frame" x="0.0" y="381.33333333333326" width="393" height="377.66666666666674"/>
+                            <rect key="frame" x="0.0" y="381.33333333333326" width="393" height="411.66666666666674"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="budget" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR9-3U-BCZ">
@@ -249,7 +249,7 @@
                 <constraint firstItem="8Mb-Mp-bQ8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4hD-cn-8bj"/>
                 <constraint firstItem="8Mb-Mp-bQ8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cxl-fN-WqK"/>
                 <constraint firstItem="8Mb-Mp-bQ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eqX-5g-gZy"/>
-                <constraint firstItem="8Mb-Mp-bQ8" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="zrW-8q-PC4"/>
+                <constraint firstItem="8Mb-Mp-bQ8" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="zrW-8q-PC4"/>
             </constraints>
             <point key="canvasLocation" x="78.625954198473281" y="-11.267605633802818"/>
         </view>

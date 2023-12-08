@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-Mh-rBH">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-ew-AYr" userLabel="desc">
                             <rect key="frame" x="16" y="16" width="361" height="17"/>
@@ -47,7 +47,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="YXH-Mh-rBH" secondAttribute="trailing" id="PaY-9f-GMM"/>
                 <constraint firstItem="YXH-Mh-rBH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RJo-dq-LXa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YXH-Mh-rBH" secondAttribute="bottom" id="mS0-xl-a1i"/>
+                <constraint firstAttribute="bottom" secondItem="YXH-Mh-rBH" secondAttribute="bottom" id="mS0-xl-a1i"/>
                 <constraint firstItem="YXH-Mh-rBH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pM2-n8-Zgw"/>
             </constraints>
             <point key="canvasLocation" x="77" y="-12"/>

@@ -19,7 +19,8 @@ class SeeAllCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(imageName: String) {
-        let urlString = "https://image.tmdb.org/t/p/w500/\(imageName)"
+        let tmdbImgBase = TMDBImageURL.url(size: .w342)
+        let urlString = "\(tmdbImgBase)\(imageName)"
         let url = URL(string: urlString)
         imgView.kf.setImage(with: url)
     }

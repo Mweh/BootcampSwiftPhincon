@@ -11,7 +11,7 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func addFloatingIcon(useLottie: Bool = false, lottieFileName: String? = nil, iconSize: CGFloat = 45) {
+    func addFloatingIcon(useLottie: Bool = false, lottieFileName: String? = nil, iconSize: CGFloat = 45, trailingValue: CGFloat = -16, bottomValue: CGFloat = -16, showCloseButton: Bool = true) {
         var floatingIcon: UIView!
         
         // Create the floating icon as a UIView or Lottie animation view based on the parameter
@@ -33,14 +33,25 @@ extension UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(floatingIconTapped))
         floatingIcon.addGestureRecognizer(tapGesture)
         
-        // Create a close button
-        let closeButton = UIButton(type: .custom)
-        closeButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-        closeButton.tintColor = .white
-        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        
-        // Add the close button as a subview to the floating icon
-        floatingIcon.addSubview(closeButton)
+        if showCloseButton {
+            // Create a close button
+            let closeButton = UIButton(type: .custom)
+            closeButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+            closeButton.tintColor = .white
+            closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+            
+            // Add the close button as a subview to the floating icon
+            floatingIcon.addSubview(closeButton)
+            
+            // Add constraints for the close button inside the floating icon
+            closeButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                closeButton.trailingAnchor.constraint(equalTo: floatingIcon.trailingAnchor, constant: 0),
+                closeButton.topAnchor.constraint(equalTo: floatingIcon.topAnchor, constant: 0),
+                closeButton.widthAnchor.constraint(equalToConstant: iconSize / 2),
+                closeButton.heightAnchor.constraint(equalToConstant: iconSize / 2)
+            ])
+        }
         
         // Add the floating icon to the view
         view.addSubview(floatingIcon)
@@ -51,19 +62,10 @@ extension UIViewController {
         // Add constraints for the floating icon to be initially positioned at the bottom right corner
         floatingIcon.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            floatingIcon.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            floatingIcon.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            floatingIcon.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailingValue),
+            floatingIcon.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomValue),
             floatingIcon.widthAnchor.constraint(equalToConstant: iconSize),
             floatingIcon.heightAnchor.constraint(equalToConstant: iconSize)
-        ])
-        
-        // Add constraints for the close button inside the floating icon
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            closeButton.trailingAnchor.constraint(equalTo: floatingIcon.trailingAnchor, constant: 0),
-            closeButton.topAnchor.constraint(equalTo: floatingIcon.topAnchor, constant: 0),
-            closeButton.widthAnchor.constraint(equalToConstant: iconSize / 2),
-            closeButton.heightAnchor.constraint(equalToConstant: iconSize / 2)
         ])
         
         // Make the floating icon draggable
@@ -119,3 +121,4 @@ extension UIViewController {
         }
     }
 }
+
