@@ -8,6 +8,7 @@
 import CoreData
 import FirebaseCore
 import GoogleSignIn
+import GoogleMobileAds
 import IQKeyboardManagerSwift
 import netfox
 import UIKit
@@ -38,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         FirebaseApp.configure() // Firebase
+        GADMobileAds.sharedInstance().start(completionHandler: nil) // AdMob
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+        [ BaseConstant.testDeviceIdentifiers ] // Sample device ID
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in // GSignIn
             if error != nil || user == nil {
                 // if error

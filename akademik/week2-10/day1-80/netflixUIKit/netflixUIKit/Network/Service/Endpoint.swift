@@ -110,9 +110,3 @@ enum Endpoint {
         }
     }
 }
-
-class BaseConstant {
-    static var host = "https://api.themoviedb.org/3/"
-    static let tmdbApiKey = "TMDB_API_KEY".apiKeyTMDB
-    static let tmdbTokenKey = "TMDB_TOKEN_KEY".tokenKeyTMDB
-}

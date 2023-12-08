@@ -1,3 +1,4 @@
 # .gitignore
 akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/GoogleService-Info.plist  # Google
 akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Info.plist # Xcode
+akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Resource/Keys.xcconfig # Keys.xcconfig

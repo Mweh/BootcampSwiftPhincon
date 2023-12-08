@@ -17,7 +17,7 @@ class ListMovieCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        containerView.layer.cornerRadius = containerView.frame.height / 10
+//        containerView.layer.cornerRadius = containerView.frame.height / 10
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

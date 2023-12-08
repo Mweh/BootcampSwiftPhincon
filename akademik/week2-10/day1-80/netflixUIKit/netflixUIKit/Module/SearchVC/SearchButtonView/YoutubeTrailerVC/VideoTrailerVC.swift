@@ -5,6 +5,7 @@
 //  Created by Muhammad Fahmi on 14/11/23.
 //
 
+import GoogleMobileAds
 import UIKit
 import WebKit
 
@@ -12,16 +13,20 @@ class VideoTrailerVC: UIViewController {
     
     var movieId: Int?
     @IBOutlet weak var webYoutubeView: WKWebView!
+    @IBOutlet weak var viewContainer: UIView!
     let vm = SearchViewModel()
     
+    private var rewardedAd: GADRewardedAd?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Check if movieId is available before loading the YouTube video
-        if let movieId = movieId {
-            loadYouTubeVideo(for: movieId)
-        }
-        showNaviItem()
+        viewContainer.isHidden = true
+        loadRewardedAd()
+        setupBrowser()
+        setupAR()
+    }
+    
+    func setupAR(){
         let arButton = UIBarButtonItem(systemItem: .camera)
         arButton.target = self
         arButton.action = #selector(arButtonTapped)
@@ -32,6 +37,14 @@ class VideoTrailerVC: UIViewController {
     @objc func arButtonTapped() {
         let vc = ARViewController()
         present(vc, animated: true, completion: nil)
+    }
+    
+    func setupBrowser(){
+        // Check if movieId is available before loading the YouTube video
+        if let movieId = movieId {
+            loadYouTubeVideo(for: movieId)
+        }
+        showNaviItem()
     }
     
     func loadYouTubeVideo(for movieId: Int) {
@@ -55,6 +68,36 @@ class VideoTrailerVC: UIViewController {
             case .failure(let error):
                 print("Error fetching video trailer: \(error)")
             }
+        }
+    }
+    func loadRewardedAd() {
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: BaseConstant.adRewardedUnitID, request: request) { [weak self] ad, error in
+            guard let self = self else { return }
+
+            if let error = error {
+                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                return
+            }
+
+            self.rewardedAd = ad
+            print("Rewarded ad loaded.")
+//            self.rewardedAd?.fullScreenContentDelegate = self
+            viewContainer.isHidden = false
+            self.showRewardedAd()
+        }
+    }
+
+    func showRewardedAd() {
+        guard let ad = rewardedAd else {
+            print("Ad wasn't ready")
+            return
+        }
+
+        ad.present(fromRootViewController: self) {
+            let reward = ad.adReward
+            print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+            // TODO: Reward the user.
         }
     }
 }

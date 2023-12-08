@@ -80,6 +80,7 @@ class TableViewController: UITableViewController {
         tblView.delegate = self
         
         tblView.register(UINib(nibName: "HorizontalCell", bundle: nil), forCellReuseIdentifier: "HorizontalCell")
+        tblView.register(UINib(nibName: "AdBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "AdBannerTableViewCell")
         tblView.register(UINib(nibName: "VerticalCell", bundle: nil), forCellReuseIdentifier: "VerticalCell")
     }
     
@@ -123,6 +124,11 @@ class TableViewController: UITableViewController {
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
 
+            return cell
+        case .AdBanner:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AdBannerTableViewCell", for: indexPath) as! AdBannerTableViewCell
+            cell.adBannerView.rootViewController = self
+            print("This is AdBanner")
             return cell
         case .HorizontalCell:
             

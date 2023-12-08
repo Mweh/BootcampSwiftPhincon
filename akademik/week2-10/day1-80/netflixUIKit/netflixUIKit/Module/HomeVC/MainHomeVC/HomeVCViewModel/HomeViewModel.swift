@@ -10,6 +10,7 @@ import RxSwift
 
 enum TableViewCellType: Int, CaseIterable {
     case VerticalCell
+    case AdBanner
     case HorizontalCell
 }
 

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoTrailerVC" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="cSB-JF-lA3" id="xhq-Ur-Wtr"/>
                 <outlet property="webYoutubeView" destination="1BL-Ww-xOG" id="XB0-rc-5yZ"/>
             </connections>
         </placeholder>
@@ -21,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSB-JF-lA3">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BL-Ww-xOG">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <wkWebViewConfiguration key="configuration">
                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -45,7 +46,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cSB-JF-lA3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0SE-vR-95R"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cSB-JF-lA3" secondAttribute="bottom" id="Yng-qh-KRT"/>
+                <constraint firstAttribute="bottom" secondItem="cSB-JF-lA3" secondAttribute="bottom" id="Yng-qh-KRT"/>
                 <constraint firstItem="cSB-JF-lA3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aQB-Pe-hIF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cSB-JF-lA3" secondAttribute="trailing" id="bx8-7n-zxn"/>
             </constraints>

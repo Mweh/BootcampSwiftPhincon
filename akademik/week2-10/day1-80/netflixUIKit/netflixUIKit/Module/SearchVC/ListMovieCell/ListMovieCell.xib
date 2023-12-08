@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,8 +52,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.compact.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
-                                <rect key="frame" x="303.66666666666669" y="40.666666666666664" width="8.3333333333333144" height="18.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
+                                <rect key="frame" x="292.33333333333331" y="40" width="19.666666666666686" height="20.666666666666671"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -103,10 +104,22 @@
             </connections>
             <point key="canvasLocation" x="77.862595419847324" y="10.91549295774648"/>
         </tableViewCell>
+        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="IDm-Vx-ITB">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <menu key="menu" id="xRT-Iy-pab">
+                <children>
+                    <command title="Item 1" id="iHG-ue-xiN"/>
+                    <command title="Item 2" id="Fhi-ca-PA6"/>
+                </children>
+            </menu>
+            <state key="normal" title="Button"/>
+            <point key="canvasLocation" x="81.679389312977094" y="-65.140845070422543"/>
+        </button>
     </objects>
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
-        <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
         <image name="netflix" width="3000" height="2000"/>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

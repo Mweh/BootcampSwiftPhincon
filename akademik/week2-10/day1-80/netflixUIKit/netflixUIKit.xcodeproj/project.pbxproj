@@ -54,6 +54,11 @@
 		CD4B8F3C2B16BE8800F5F31D /* SimilarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */; };
 		CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FA4432AF39ECE00226717 /* DetailViewController.swift */; };
 		CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4FA4442AF39ECE00226717 /* DetailViewController.xib */; };
+		CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */; };
+		CD501FBC2B22AE8F00FE0254 /* AdBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */; };
+		CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */; };
+		CD501FC22B22C7E800FE0254 /* RewardedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */; };
+		CD501FC32B22C7E800FE0254 /* RewardedAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
 		CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A42B05F5DB005718D2 /* MoreView.swift */; };
@@ -194,6 +199,11 @@
 		CD4B8F3A2B16BE8800F5F31D /* SimilarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD4FA4432AF39ECE00226717 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD4FA4442AF39ECE00226717 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerTableViewCell.swift; sourceTree = "<group>"; };
+		CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerTableViewCell.xib; sourceTree = "<group>"; };
+		CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
+		CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdViewController.swift; sourceTree = "<group>"; };
+		CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedAdViewController.xib; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CD59D0A42B05F5DB005718D2 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
@@ -413,6 +423,7 @@
 				CD16F0322B197D9600B93857 /* FStorage.swift */,
 				CD16F0302B197D7600B93857 /* RefreshTextLabel.swift */,
 				CD16F02E2B197D3400B93857 /* URLs.swift */,
+				CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -533,6 +544,24 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		CD501FB82B22AE2C00FE0254 /* AdBannerViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */,
+				CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */,
+			);
+			path = AdBannerViewCell;
+			sourceTree = "<group>";
+		};
+		CD501FBF2B22C7B000FE0254 /* AdditionalVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */,
+				CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */,
+			);
+			path = AdditionalVC;
+			sourceTree = "<group>";
+		};
 		CD59D09E2B05CAB0005718D2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +642,7 @@
 				CD5DD4B72AEF3ADE00140DFA /* SearchVC */,
 				CD5DD4B82AEF3AE400140DFA /* ComingSoonVC */,
 				CD79F6B22AEF833500338C72 /* MoreVC */,
+				CD501FBF2B22C7B000FE0254 /* AdditionalVC */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -719,6 +749,7 @@
 				CD78337E2AEF61000030AA43 /* VerticalCell */,
 				CD78337D2AEF60E80030AA43 /* HorizontalCell */,
 				CD23A1382B1422D9000D2303 /* SeeAllVC */,
+				CD501FB82B22AE2C00FE0254 /* AdBannerViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1047,7 +1078,9 @@
 				CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD4659572B1EBEEF00D86A26 /* HistoryViewController.xib in Resources */,
+				CD501FC32B22C7E800FE0254 /* RewardedAdViewController.xib in Resources */,
 				CD678AAD2B0DF84D00B2261F /* SimilarViewController.xib in Resources */,
+				CD501FBC2B22AE8F00FE0254 /* AdBannerTableViewCell.xib in Resources */,
 				CD729D1E2B108981006D3046 /* GoToWebViewController.xib in Resources */,
 				CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */,
 				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
@@ -1156,12 +1189,15 @@
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
 				CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */,
 				CDAF8A6B2AF8D48400CB670D /* Movie.swift in Sources */,
+				CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
 				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
+				CD501FC22B22C7E800FE0254 /* RewardedAdViewController.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
+				CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */,
 				CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */,
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,

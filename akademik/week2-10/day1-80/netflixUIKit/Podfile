@@ -22,11 +22,12 @@ target 'netflixUIKit' do
   pod 'RxSwift'
   pod 'RxCocoa'
   
-  # LogInWithGoogle
+  # Google
   pod 'Firebase/Core'
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
   pod 'FirebaseStorage'
+  pod 'Google-Mobile-Ads-SDK'
 
   # Animation
   pod 'Hero'

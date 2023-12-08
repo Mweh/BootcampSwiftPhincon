@@ -76,6 +76,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add Age Rating Icon
 - [ ] Add login as anonymous
 - [ ] Implement AdMob
+- [ ] Add an optional to upgrade pro Version
 - [ ] Add buy me a coffee
 
 - ...

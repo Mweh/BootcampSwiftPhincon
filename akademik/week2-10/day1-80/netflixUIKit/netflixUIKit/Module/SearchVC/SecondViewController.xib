@@ -24,8 +24,8 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f21-eW-dbF">
-                            <rect key="frame" x="16" y="0.0" width="183.33333333333334" height="36"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                            <rect key="frame" x="16" y="0.0" width="164.66666666666666" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -58,7 +58,6 @@
                         <constraint firstItem="f21-eW-dbF" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" constant="16" id="fF4-wv-0br"/>
                         <constraint firstItem="EdW-va-ANe" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" id="hOU-LW-H7a"/>
                         <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="f21-eW-dbF" secondAttribute="bottom" constant="5" id="kHX-j7-fnV"/>
-                        <constraint firstAttribute="trailing" secondItem="f21-eW-dbF" secondAttribute="trailing" constant="193.66999999999999" id="mUG-u4-2Md"/>
                     </constraints>
                 </view>
             </subviews>

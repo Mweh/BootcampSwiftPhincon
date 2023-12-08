@@ -1,5 +1,31 @@
+import GoogleMobileAds
 import Lottie
 import UIKit
+
+extension UIViewController {
+    
+    func loadRewardedAd(completion: @escaping (GADRewardedAd?) -> Void) {
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: BaseConstant.adRewardedUnitID, request: request) { ad, error in
+            if let error = error {
+                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                completion(nil)
+            } else {
+                print("Rewarded ad loaded.")
+                completion(ad)
+            }
+        }
+    }
+
+    func showRewardedAd(ad: GADRewardedAd, completion: @escaping () -> Void) {
+        ad.present(fromRootViewController: self) {
+            let reward = ad.adReward
+            print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+            // TODO: Reward the user.
+            completion()
+        }
+    }
+}
 
 extension UIViewController {
     func showPopupMessage(title: String, message: String) {
