@@ -20,6 +20,8 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var uploadImg: UIButton!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var currentAppVersionLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    
     let disposeBag = DisposeBag()
     
     var resultImg: UIImage!
@@ -47,6 +49,36 @@ class MoreViewController: UIViewController {
         initHandleHistoryMovieSaved()
         // Add this in viewDidLoad or wherever appropriate
         NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
+        setProfileName()
+    }
+    
+    func setProfileName(){
+        // Assuming you have an authentication state listener set up
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                // The user's ID, unique to the Firebase project.
+                let uid = user.uid
+                let email = user.email
+                let photoURL = user.photoURL
+                
+                self.userLabel.text = email
+                // Additional user information can be retrieved here
+
+                // Now, you can pass this user information to your profile page
+                // You might use a segue if you're navigating to a new view controller
+                // or you might set properties if you're presenting the profile page in another way
+                // For example, assuming you have a property in your ProfileViewController:
+                
+//                let profileViewController = // instantiate your ProfileViewController here
+//                profileViewController.userID = uid
+//                profileViewController.userEmail = email
+                // Set other properties as needed
+
+                // Then, you can navigate to the profile page
+                // For example, if using a navigation controller:
+//                self.navigationController?.pushViewController(profileViewController, animated: true)
+            }
+        }
     }
     
     // Add this method to handle the notification

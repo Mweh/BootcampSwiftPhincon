@@ -24,8 +24,8 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f21-eW-dbF">
-                            <rect key="frame" x="16" y="0.0" width="164.66666666666666" height="36"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                            <rect key="frame" x="16" y="0.0" width="188.66666666666666" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

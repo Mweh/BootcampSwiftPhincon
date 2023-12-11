@@ -215,6 +215,7 @@ class ComingSoonViewController: UIViewController {
         videoTrailerVC.hidesBottomBarWhenPushed = true
         videoTrailerVC.movieId = movieId
         navigationController?.pushViewController(videoTrailerVC, animated: true)
+        
     }
 
 }

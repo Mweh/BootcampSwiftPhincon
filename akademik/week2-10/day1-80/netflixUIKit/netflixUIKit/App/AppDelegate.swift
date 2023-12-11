@@ -27,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
     
+    override init() {
+        super.init()
+        UIFont.overrideInitialize()
+    }
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance.handle(url)
     }

@@ -16,6 +16,7 @@
                 <outlet property="emailTextField" destination="9XY-wy-6CT" id="v9z-4o-0wg"/>
                 <outlet property="faceIdButton" destination="7py-Ng-ys2" id="5Ud-Dl-ThQ"/>
                 <outlet property="forgotPassButton" destination="2nb-Pz-m7S" id="Qby-e3-Sdg"/>
+                <outlet property="logInAnonymouslyButton" destination="Ghu-dZ-BpL" id="9iR-BS-Xdy"/>
                 <outlet property="passwordTextField" destination="7gf-WN-oFT" id="6Eh-yP-fse"/>
                 <outlet property="registerButton" destination="o68-TV-RJu" id="dfx-xl-ql9"/>
                 <outlet property="regularLoginButton" destination="Z2u-ux-gGh" id="R9A-P8-PLU"/>
@@ -31,7 +32,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Zk-nLQ" userLabel="netflixImage">
-                            <rect key="frame" x="-1303.6666666666667" y="6" width="3000.3333333333335" height="286"/>
+                            <rect key="frame" x="-1303.6666666666667" y="6" width="3000.3333333333335" height="285.66666666666669"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="roC-VC-UhX" userLabel="RegisterSv">
                             <rect key="frame" x="20" y="672.66666666666663" width="353" height="74.333333333333371"/>
@@ -58,10 +59,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-n8-SS5" userLabel="FormSV">
-                            <rect key="frame" x="71.666666666666686" y="244" width="250" height="165"/>
+                            <rect key="frame" x="71.666666666666686" y="243.66666666666669" width="250" height="166"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG" userLabel="Email/PassSV">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="105"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-Tw-BqG" userLabel="Email/PassSV">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="106"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XY-wy-6CT" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
@@ -79,7 +80,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-WN-oFT" customClass="DesignableUITextField" customModule="netflixUIKit" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="55" width="250" height="50"/>
+                                            <rect key="frame" x="0.0" y="56" width="250" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="WKD-A3-Eht"/>
                                                 <constraint firstAttribute="width" constant="250" id="Yq9-ot-vGi"/>
@@ -100,7 +101,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-MJ-CDI" userLabel="LoginSV">
-                                    <rect key="frame" x="0.0" y="125" width="250" height="40"/>
+                                    <rect key="frame" x="0.0" y="126" width="250" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-ux-gGh">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -116,66 +117,96 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------------  Or Login with  ------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-Ri-C5a">
-                            <rect key="frame" x="30" y="421" width="333.33333333333331" height="17"/>
+                            <rect key="frame" x="30" y="421.66666666666669" width="333.33333333333331" height="17"/>
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
-                            <rect key="frame" x="71.666666666666686" y="450" width="250" height="65.333333333333371"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-re-rez">
+                            <rect key="frame" x="71.666666666666686" y="450.66666666666669" width="250" height="112.33333333333331"/>
                             <subviews>
-                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="65.333333333333329"/>
-                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5d-Zv-DMV" userLabel="FaceID">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="65.333333333333329"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-lW-5De" userLabel="SIgnInGoogle" customClass="GIDSignInButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="65.333333333333329"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65.329999999999998" id="RIS-VH-fch"/>
+                                                <constraint firstAttribute="width" constant="190" id="ao5-dd-nGh"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
+                                            </connections>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2" userLabel="FaceID">
+                                            <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
+                                            </state>
+                                            <buttonConfiguration key="configuration" style="gray" cornerStyle="dynamic">
+                                                <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43"/>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="65.329999999999998" id="RIS-VH-fch"/>
-                                        <constraint firstAttribute="width" constant="190" id="ao5-dd-nGh"/>
+                                        <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="J5d-Zv-DMV" secondAttribute="top" id="KTd-ue-STn"/>
+                                        <constraint firstItem="7py-Ng-ys2" firstAttribute="leading" secondItem="g1F-lW-5De" secondAttribute="trailing" constant="10" id="VcC-WJ-CYI"/>
+                                        <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="J5d-Zv-DMV" secondAttribute="leading" id="XkO-Fq-4rZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="nUn-nF-n2M"/>
                                     </constraints>
-                                    <connections>
-                                        <action selector="googleSignInPressed:" destination="-1" eventType="valueChanged" id="Ojm-HC-RFw"/>
-                                    </connections>
-                                </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7py-Ng-ys2" userLabel="FaceID">
-                                    <rect key="frame" x="200" y="0.0" width="50" height="65.333333333333329"/>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghu-dZ-BpL">
+                                    <rect key="frame" x="0.0" y="72.333333333333314" width="250" height="40"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="fPl-vD-pX2"/>
+                                        <constraint firstAttribute="height" constant="40" id="ITU-Fo-zAj"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="tintColor" systemColor="secondaryLabelColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal">
-                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
-                                    </state>
-                                    <buttonConfiguration key="configuration" style="gray" cornerStyle="dynamic">
-                                        <imageReference key="image" image="faceid" catalog="system" symbolScale="small"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43"/>
-                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="Log in Anonymously"/>
+                                    <buttonConfiguration key="configuration" style="gray">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Log in Anonymously">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                     </buttonConfiguration>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="g1F-lW-5De" firstAttribute="top" secondItem="J5d-Zv-DMV" secondAttribute="top" id="KTd-ue-STn"/>
-                                <constraint firstItem="7py-Ng-ys2" firstAttribute="leading" secondItem="g1F-lW-5De" secondAttribute="trailing" constant="10" id="VcC-WJ-CYI"/>
-                                <constraint firstItem="g1F-lW-5De" firstAttribute="leading" secondItem="J5d-Zv-DMV" secondAttribute="leading" id="XkO-Fq-4rZ"/>
-                                <constraint firstAttribute="bottom" secondItem="g1F-lW-5De" secondAttribute="bottom" id="nUn-nF-n2M"/>
+                                <constraint firstItem="Ghu-dZ-BpL" firstAttribute="leading" secondItem="OJb-re-rez" secondAttribute="leading" id="CaL-Kx-EOw"/>
+                                <constraint firstAttribute="trailing" secondItem="Ghu-dZ-BpL" secondAttribute="trailing" id="tSj-2O-VbV"/>
                             </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="J5d-Zv-DMV" firstAttribute="top" secondItem="6Kq-Ri-C5a" secondAttribute="bottom" constant="12" id="3kz-Ov-MXb"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" secondItem="kxi-PK-mOr" secondAttribute="top" priority="750" constant="6" id="5Id-0j-Qsh"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="leading" secondItem="kxi-PK-mOr" secondAttribute="leading" constant="20" id="CVv-vH-vv8"/>
                         <constraint firstAttribute="trailing" secondItem="roC-VC-UhX" secondAttribute="trailing" constant="20" id="CnP-Vf-7fX"/>
+                        <constraint firstItem="OJb-re-rez" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="IWO-Z0-Tjo"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="ORS-kt-BNC"/>
                         <constraint firstItem="6Kq-Ri-C5a" firstAttribute="top" secondItem="j6b-n8-SS5" secondAttribute="bottom" constant="12" id="SIe-sw-m3c"/>
                         <constraint firstItem="6Kq-Ri-C5a" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="TaH-nU-PpO"/>
+                        <constraint firstItem="OJb-re-rez" firstAttribute="top" secondItem="kxi-PK-mOr" secondAttribute="top" constant="450.66666666666674" id="VAO-ny-nla"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="kxi-PK-mOr" secondAttribute="top" constant="85" id="YTn-vX-Q66"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="top" secondItem="cYH-Zk-nLQ" secondAttribute="bottom" constant="-48" id="ZBP-dD-Gpo"/>
+                        <constraint firstItem="OJb-re-rez" firstAttribute="top" secondItem="6Kq-Ri-C5a" secondAttribute="bottom" constant="12.000000000000057" id="dLK-h6-udY"/>
                         <constraint firstItem="roC-VC-UhX" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="dSV-cy-3vp"/>
                         <constraint firstAttribute="bottom" secondItem="roC-VC-UhX" secondAttribute="bottom" constant="12" id="hKj-SO-Br9"/>
-                        <constraint firstItem="J5d-Zv-DMV" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="lOe-hz-Zi5"/>
                         <constraint firstItem="j6b-n8-SS5" firstAttribute="centerY" secondItem="kxi-PK-mOr" secondAttribute="centerY" constant="-53" id="nQU-5f-PuA"/>
                         <constraint firstItem="cYH-Zk-nLQ" firstAttribute="centerX" secondItem="kxi-PK-mOr" secondAttribute="centerX" id="wWo-DL-WAE"/>
                     </constraints>

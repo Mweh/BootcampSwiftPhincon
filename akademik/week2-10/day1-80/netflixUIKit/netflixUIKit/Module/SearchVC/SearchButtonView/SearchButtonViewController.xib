@@ -99,7 +99,7 @@
                             <rect key="frame" x="90" y="229.66666666666669" width="300" height="300.00000000000006"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your movie and play a Trailer instantly!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-fH-AQ4">
-                                    <rect key="frame" x="0.0" y="260.33333333333331" width="213" height="39.666666666666686"/>
+                                    <rect key="frame" x="0.0" y="259.99999999999994" width="213" height="40"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

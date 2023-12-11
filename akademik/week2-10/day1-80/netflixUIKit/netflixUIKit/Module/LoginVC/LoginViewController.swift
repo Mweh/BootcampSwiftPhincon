@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var faceIdButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var forgotPassButton: UIButton!
+    @IBOutlet weak var logInAnonymouslyButton: UIButton!
     
     private let faceID = FaceID()
     private let disposeBag = DisposeBag()
@@ -34,6 +35,15 @@ class LoginViewController: UIViewController {
         performRegularLoginRx()
         toRegisterVCRx()
         performForgotPassRx()
+        setLogInAnonymouslyButton()
+    }
+    
+    func setLogInAnonymouslyButton(){
+        logInAnonymouslyButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                self?.navigateToHome()
+            })
+            .disposed(by: disposeBag)
     }
     
     func performGSignIn(){
@@ -96,7 +106,7 @@ class LoginViewController: UIViewController {
                 print("Login Error: \(error.localizedDescription)")
             } else {
                 // Successful login
-                self?.showAlert(title: "Success", message: "Login Successful", completion: {
+                self?.showAlert(title: "Success", message: "Login Successful, Welcome \(email)", completion: {
                     self?.navigateToHome()
                 })
             }
@@ -198,5 +208,3 @@ extension LoginViewController{
 }
 
 // TODO: - Crash when FaceID didnt match
-
-

@@ -80,6 +80,11 @@
 		CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */; };
 		CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */; };
 		CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */; };
+		CD7233FA2B25A50C006B156C /* NetflixSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */; };
+		CD7233FB2B25A50E006B156C /* NetflixSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F72B25A1A1006B156C /* NetflixSans-Light.otf */; };
+		CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */; };
+		CD7233FD2B25A513006B156C /* NetflixSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F62B25A1A1006B156C /* NetflixSans-Regular.otf */; };
+		CD7233FF2B25A585006B156C /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7233FE2B25A585006B156C /* UIFont.swift */; };
 		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
 		CD723D052B03004C00C191A9 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723D042B03004C00C191A9 /* Favorites.swift */; };
 		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
@@ -227,6 +232,11 @@
 		CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
 		CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		CD7233F62B25A1A1006B156C /* NetflixSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Regular.otf"; sourceTree = "<group>"; };
+		CD7233F72B25A1A1006B156C /* NetflixSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Light.otf"; sourceTree = "<group>"; };
+		CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Medium.otf"; sourceTree = "<group>"; };
+		CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Bold.otf"; sourceTree = "<group>"; };
+		CD7233FE2B25A585006B156C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
 		CD723D042B03004C00C191A9 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../../Downloads/UpcomingMovies/Favorites.swift; sourceTree = "<group>"; };
 		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
@@ -625,6 +635,7 @@
 		CD5DD4B12AEF38B700140DFA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CD7233F52B25A184006B156C /* CustomFonts */,
 				CDAD7DB82AFDD94E00BF41B8 /* LottieFiles */,
 				CDAF8A662AF8A5B500CB670D /* Keys.xcconfig */,
 				CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */,
@@ -703,6 +714,17 @@
 				CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */,
 			);
 			path = ReviewsCell;
+			sourceTree = "<group>";
+		};
+		CD7233F52B25A184006B156C /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */,
+				CD7233F72B25A1A1006B156C /* NetflixSans-Light.otf */,
+				CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */,
+				CD7233F62B25A1A1006B156C /* NetflixSans-Regular.otf */,
+			);
+			path = CustomFonts;
 			sourceTree = "<group>";
 		};
 		CD723CED2B023D5800C191A9 /* ComingSoonViewModel */ = {
@@ -931,6 +953,7 @@
 				CD21917E2B0757550038BE86 /* PopUpLoading.swift */,
 				CD2191802B0759250038BE86 /* Common.swift */,
 				CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */,
+				CD7233FE2B25A585006B156C /* UIFont.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1051,6 +1074,7 @@
 				CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */,
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
 				CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */,
+				CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */,
 				CD46592E2B1D984D00D86A26 /* floatingIconPlays.json in Resources */,
 				CDB9FD5C2B0B8BA300128B03 /* SynopsisViewController.xib in Resources */,
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
@@ -1064,8 +1088,10 @@
 				CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */,
 				CDB9FD602B0B8CBB00128B03 /* CastingViewController.xib in Resources */,
 				CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */,
+				CD7233FA2B25A50C006B156C /* NetflixSans-Bold.otf in Resources */,
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
 				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
+				CD7233FB2B25A50E006B156C /* NetflixSans-Light.otf in Resources */,
 				CDB9FD682B0C917800128B03 /* fireAnimation.json in Resources */,
 				CD4659382B1DA16C00D86A26 /* AllVideoTableViewCell.xib in Resources */,
 				CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */,
@@ -1084,6 +1110,7 @@
 				CD729D1E2B108981006D3046 /* GoToWebViewController.xib in Resources */,
 				CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */,
 				CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */,
+				CD7233FD2B25A513006B156C /* NetflixSans-Regular.otf in Resources */,
 				CD16E3112AF37B9400669456 /* RegisterViewController.xib in Resources */,
 				CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */,
 				CD678AA92B0DF65600B2261F /* ReviewsViewController.xib in Resources */,
@@ -1232,6 +1259,7 @@
 				CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,
 				CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */,
+				CD7233FF2B25A585006B156C /* UIFont.swift in Sources */,
 				CD79F6AE2AEF80C500338C72 /* SFSymbol.swift in Sources */,
 				CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */,
 				CD9F6D062B172BAB00DC8875 /* TMDBImageURL.swift in Sources */,

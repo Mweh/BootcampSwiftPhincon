@@ -5,26 +5,25 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="ListMovieCell" customModule="netflixUIKit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="KGk-i7-Jjw" customClass="ListMovieCell" customModule="netflixUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZa-hx-sMO">
-                        <rect key="frame" x="0.0" y="5" width="320" height="100"/>
+                        <rect key="frame" x="0.0" y="2" width="320" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-Bh-gql">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="NMH-hO-Gzg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NMH-hO-Gzg">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="rUG-du-0iX"/>
@@ -52,8 +51,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
-                                <rect key="frame" x="292.33333333333331" y="40" width="19.666666666666686" height="20.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.compact.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-hK-eBO">
+                                <rect key="frame" x="305.66666666666669" y="40.666666666666664" width="8.3333333333333144" height="18.666666666666671"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -67,7 +66,7 @@
                             <constraint firstAttribute="bottom" secondItem="MXs-hK-eBO" secondAttribute="bottom" constant="39" id="mwe-GK-fsJ"/>
                             <constraint firstItem="MXs-hK-eBO" firstAttribute="top" secondItem="QZa-hx-sMO" secondAttribute="top" constant="39" id="qxJ-Im-6he"/>
                             <constraint firstItem="iFF-Bh-gql" firstAttribute="leading" secondItem="QZa-hx-sMO" secondAttribute="leading" id="shW-T4-ze5"/>
-                            <constraint firstAttribute="trailing" secondItem="MXs-hK-eBO" secondAttribute="trailing" constant="8" id="xFf-pz-SlW"/>
+                            <constraint firstAttribute="trailing" secondItem="MXs-hK-eBO" secondAttribute="trailing" constant="6" id="xFf-pz-SlW"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -84,10 +83,10 @@
                 <constraints>
                     <constraint firstItem="qqx-Kw-92h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="1Sc-2u-uMA"/>
                     <constraint firstItem="QZa-hx-sMO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1pf-IO-WJz"/>
-                    <constraint firstItem="QZa-hx-sMO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="BRW-ha-pF1"/>
+                    <constraint firstItem="QZa-hx-sMO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="BRW-ha-pF1"/>
                     <constraint firstAttribute="trailing" secondItem="QZa-hx-sMO" secondAttribute="trailing" id="CG5-4k-6fF"/>
                     <constraint firstItem="qqx-Kw-92h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="ThE-Yd-xHv"/>
-                    <constraint firstAttribute="bottom" secondItem="QZa-hx-sMO" secondAttribute="bottom" constant="5" id="oGr-Qp-qsL"/>
+                    <constraint firstAttribute="bottom" secondItem="QZa-hx-sMO" secondAttribute="bottom" constant="2" id="oGr-Qp-qsL"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -102,24 +101,11 @@
                 <outlet property="imageFilm" destination="NMH-hO-Gzg" id="aBc-G4-EMT"/>
                 <outlet property="titleLabel" destination="wl2-EW-l7X" id="8Ue-Jk-692"/>
             </connections>
-            <point key="canvasLocation" x="77.862595419847324" y="10.91549295774648"/>
+            <point key="canvasLocation" x="77.862595419847324" y="8.4507042253521139"/>
         </tableViewCell>
-        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="IDm-Vx-ITB">
-            <rect key="frame" x="0.0" y="0.0" width="195" height="85"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <menu key="menu" id="xRT-Iy-pab">
-                <children>
-                    <command title="Item 1" id="iHG-ue-xiN"/>
-                    <command title="Item 2" id="Fhi-ca-PA6"/>
-                </children>
-            </menu>
-            <state key="normal" title="Button"/>
-            <point key="canvasLocation" x="81.679389312977094" y="-65.140845070422543"/>
-        </button>
     </objects>
     <resources>
         <image name="Netflix-N" width="70" height="126"/>
-        <image name="netflix" width="3000" height="2000"/>
-        <image name="play.circle" catalog="system" width="128" height="123"/>
+        <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
     </resources>
 </document>

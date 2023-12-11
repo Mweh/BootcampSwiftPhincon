@@ -19,6 +19,7 @@
                 <outlet property="uploadImg" destination="JFs-gT-Ecl" id="MHv-35-1yA"/>
                 <outlet property="user1Img" destination="ZS4-nq-3fx" id="Yoq-nm-QfL"/>
                 <outlet property="user2Img" destination="prD-Yn-K1B" id="7Qr-4d-mg6"/>
+                <outlet property="userLabel" destination="UmW-jb-pat" id="5rn-XU-Ebq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,7 +39,7 @@
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-gF-ib7">
-                            <rect key="frame" x="112" y="197.66666666666669" width="170" height="45"/>
+                            <rect key="frame" x="112" y="197" width="170" height="45"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="  Manage Profiles">
@@ -68,7 +69,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WX4-nV-4pU">
-                            <rect key="frame" x="0.0" y="266.66666666666663" width="394" height="385.66666666666663"/>
+                            <rect key="frame" x="0.0" y="266" width="394" height="386.33333333333326"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-ls-Soc">
                             <rect key="frame" x="152" y="676.33333333333337" width="90" height="34.333333333333371"/>
@@ -103,13 +104,17 @@
                                                 <constraint firstAttribute="width" constant="80" id="Whn-V5-ztn"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahmi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmW-jb-pat">
-                                            <rect key="frame" x="17.333333333333339" y="89.333333333333329" width="45.666666666666657" height="19.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahmi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmW-jb-pat">
+                                            <rect key="frame" x="0.0" y="89.333333333333329" width="80" height="19.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UmW-jb-pat" firstAttribute="leading" secondItem="lqA-Fa-HBC" secondAttribute="leading" id="895-Ua-0j3"/>
+                                        <constraint firstAttribute="trailing" secondItem="UmW-jb-pat" secondAttribute="trailing" id="qZj-LG-h6p"/>
+                                    </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HRI-cm-KXj">
                                     <rect key="frame" x="114" y="11.666666666666671" width="60" height="85.333333333333329"/>
@@ -174,6 +179,9 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Gex-s0-2iW" secondAttribute="trailing" id="msV-ha-XIh"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -182,7 +190,7 @@
                         <constraint firstAttribute="trailing" secondItem="WX4-nV-4pU" secondAttribute="trailing" id="Fom-FM-WTp"/>
                         <constraint firstItem="44l-gF-ib7" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="GJn-g3-kaw"/>
                         <constraint firstItem="6W1-JP-CuZ" firstAttribute="top" secondItem="JFs-gT-Ecl" secondAttribute="bottom" constant="16" id="NIS-Dz-Ew4"/>
-                        <constraint firstItem="44l-gF-ib7" firstAttribute="top" secondItem="6W1-JP-CuZ" secondAttribute="bottom" constant="36.670000000000002" id="PCv-HZ-CGh"/>
+                        <constraint firstItem="44l-gF-ib7" firstAttribute="top" secondItem="6W1-JP-CuZ" secondAttribute="bottom" constant="36" id="PCv-HZ-CGh"/>
                         <constraint firstItem="D4g-ls-Soc" firstAttribute="top" secondItem="WX4-nV-4pU" secondAttribute="bottom" constant="24" id="TVA-cV-UJP"/>
                         <constraint firstItem="JFs-gT-Ecl" firstAttribute="top" secondItem="aq4-iG-jAu" secondAttribute="top" constant="8" id="blr-eW-LQ1"/>
                         <constraint firstItem="WX4-nV-4pU" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" id="c8j-Ij-m1Q"/>

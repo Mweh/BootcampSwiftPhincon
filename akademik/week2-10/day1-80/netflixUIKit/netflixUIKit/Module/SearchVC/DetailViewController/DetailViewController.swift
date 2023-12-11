@@ -303,7 +303,6 @@ extension DetailViewController: Tappable {
         }
     }
 
-    
 }
 
 enum DetailSlidingTabs: Int, CaseIterable{

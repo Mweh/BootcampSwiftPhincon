@@ -71,8 +71,9 @@ class TableViewController: UITableViewController {
     func noSafeArea(){
         self.navigationController?.isNavigationBarHidden = true
         let topInset: CGFloat = -100  // Adjust this value as needed
-        tableView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+        tblView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+        tblView.scrollIndicatorInsets = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+//        tblView.contentInsetAdjustmentBehavior = .never
     }
     
     func configureTable() {

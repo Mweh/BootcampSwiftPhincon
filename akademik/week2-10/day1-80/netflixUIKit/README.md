@@ -74,10 +74,9 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Edit theme in AppSettingsVC using Color well
 - [ ] Implement circle progressBar (in %) for voteAverage
 - [ ] Add Age Rating Icon
-- [ ] Add login as anonymous
-- [ ] Implement AdMob
 - [ ] Add an optional to upgrade pro Version
 - [ ] Add buy me a coffee
+- [ ] Add audio to text searchBar
 
 - ...
 
@@ -103,12 +102,15 @@ Tasks that have been completed.
 - [x] Remove duplicate unnecessary Model
 - [x] Add recommendationVC inside slidingtabs
 - [x] Add reviewsVC inside
-- [x] A feature to push to other detailView when click the moviePoster inside detailView itself
+- [x] A feature to push to other detailView when click 
+      the moviePoster inside detailView itself
 - [x] Integrate CoreData or UserDefault for data storage.
 - [x] Add Recently viewed
 - [x] Add floatingIcon backToTop in ComingSoonVC
 - [x] Add iconNotificationBadge for HistoryVC
-
+- [x] Implement AdMob
+- [x] Add Custom Font
+- [x] Add login as anonymous
 
 ## BUG
 

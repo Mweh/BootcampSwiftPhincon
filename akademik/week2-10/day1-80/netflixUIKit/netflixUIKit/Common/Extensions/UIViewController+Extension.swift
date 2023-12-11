@@ -44,7 +44,8 @@ extension UIViewController {
         if useLottie, let lottieFileName = lottieFileName {
             let animationView = LottieAnimationView()
             animationView.animation = LottieAnimation.named(lottieFileName)
-            animationView.contentMode = .scaleAspectFit
+            animationView.contentMode = .scaleAspectFill
+            animationView.frame = view.bounds
             animationView.loopMode = .loop
             animationView.play()
             floatingIcon = animationView
@@ -132,9 +133,9 @@ extension UIViewController {
 
             // Calculate the final position based on the current position
             if floatingIcon.center.x < screenWidth / 2 {
-                finalX = 16 + floatingIcon.bounds.width / 2
+                finalX = 0 + floatingIcon.bounds.width / 2
             } else {
-                finalX = screenWidth - 16 - floatingIcon.bounds.width / 2
+                finalX = screenWidth - 0 - floatingIcon.bounds.width / 2
             }
 
             // You can customize the vertical position if needed
