@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = UINavigationController(rootViewController: SplashScreen()) // edit this to enable SplashScreen
 //        window.rootViewController = UINavigationController(rootViewController: LoginViewController())
         
-        window.rootViewController = UINavigationController(rootViewController: MainTabBarViewController())
+        window.rootViewController = UINavigationController(rootViewController: MainTabBarController())
 
 //        UINavigationBar.appearance().isHidden = true
         self.window = window

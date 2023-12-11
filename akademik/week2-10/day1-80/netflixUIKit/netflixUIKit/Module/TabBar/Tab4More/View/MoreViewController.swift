@@ -164,13 +164,6 @@ class MoreViewController: UIViewController {
         navigationController?.pushViewController(loginVC, animated: true)
     }
     
-    
-    @IBAction func toSwiftUI(_ sender: Any) {
-        let moreViewWrapper = MoreViewWrapper()
-        let hostingController = UIHostingController(rootView: moreViewWrapper)
-        navigationController?.pushViewController(hostingController, animated: true)
-    }
-    
     func openGallary() {
         picker!.allowsEditing = false
         picker!.sourceType = UIImagePickerController.SourceType.photoLibrary

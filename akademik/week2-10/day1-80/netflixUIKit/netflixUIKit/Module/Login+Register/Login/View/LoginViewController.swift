@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     
     private let faceID = FaceID()
     private let disposeBag = DisposeBag()
-    private let vc = MainTabBarViewController()
+    private let vc = MainTabBarController()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,8 +127,8 @@ class LoginViewController: UIViewController {
     }
     
     func navigateToHome() {
-        // Push to MainTabBarViewController
-        let mainTabVC = MainTabBarViewController()
+        // Push to MainTabBarController
+        let mainTabVC = MainTabBarController()
         self.navigationController?.pushViewController(mainTabVC, animated: true)
         // user: 1@a.com
         // pass: 123456

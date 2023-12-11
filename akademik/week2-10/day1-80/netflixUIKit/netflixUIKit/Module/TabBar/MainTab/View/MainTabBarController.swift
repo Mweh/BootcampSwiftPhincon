@@ -1,5 +1,5 @@
 //
-//  MainTabBarViewController.swift
+//  MainTabBarController.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 30/10/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+class MainTabBarController: UITabBarController {
     
     let homeVC = TableViewController()
     let searchVC = SecondViewController()
@@ -97,7 +97,7 @@ class MainTabBarViewController: UITabBarController {
     
 }
 
-extension MainTabBarViewController: UITabBarControllerDelegate {
+extension MainTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         guard let selectedViewControllerIndex = tabBarController.viewControllers?.firstIndex(of: viewController),
               let tabBarItems = tabBarController.tabBar.items else {
