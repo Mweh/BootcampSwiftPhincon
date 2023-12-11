@@ -8,6 +8,10 @@
 import Kingfisher
 import UIKit
 
+protocol SimilarViewControllerDelegate: AnyObject{
+    func updateTotalSimilars(total: Int)
+}
+
 class SimilarViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,6 +31,8 @@ class SimilarViewController: UIViewController {
         }
     }
     
+    var delegate: SimilarViewControllerDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,8 +40,9 @@ class SimilarViewController: UIViewController {
         setupAPI()
     }
 
-    init(dataResult: ResultMovie?) {
+    init(dataResult: ResultMovie?, delegate: SimilarViewControllerDelegate) {
         self.dataResult = dataResult
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -49,6 +56,7 @@ class SimilarViewController: UIViewController {
                 switch response {
                 case .success(let movieId):
                     self.data = movieId
+                    self.delegate.updateTotalSimilars(total: movieId.results.count)
                 case .failure(let error):
                     print("Error fetching top rated movies: \(error)")
                 }

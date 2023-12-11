@@ -8,6 +8,10 @@
 import Kingfisher
 import UIKit
 
+protocol ReviewsViewControllerDelegate: AnyObject {
+    func updateTotalReviews(total: Int)
+}
+
 class ReviewsViewController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
@@ -27,15 +31,18 @@ class ReviewsViewController: UIViewController {
         }
     }
     
-    init(index: Int, data: ResultMovie?) {
+    init(index: Int, data: ResultMovie?, delegate: ReviewsViewControllerDelegate) {
         self.index = index
         self.data = data
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    weak var delegate: ReviewsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +57,10 @@ class ReviewsViewController: UIViewController {
                 switch response {
                 case .success(let movieId):
                     self.dataReviews = movieId
+//                    guard let totalResults = movieId.totalResults else { return }
+                    
+                    self.delegate?.updateTotalReviews(total: movieId.results?.count ?? 0)
+                    
                 case .failure(let error):
                     print("Error fetching top rated movies: \(error)")
                 }

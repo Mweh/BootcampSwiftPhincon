@@ -37,6 +37,8 @@ class DetailViewController: UIViewController {
     var dataDetails: Details?
     
     var totalCast: Int?
+    var totalReviews: Int?
+    var totalSimilars: Int?
     var pagingVC: PagingViewController?
     
     var isFor: isFor = .isForMainContent
@@ -234,9 +236,9 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
         case .Cast:
             return CastingViewController(index: index, data: self.data, delegate: self)
         case .Reviews:
-            return ReviewsViewController(index: index, data: self.data)
+            return ReviewsViewController(index: index, data: self.data, delegate: self)
         case .Similar:
-            return SimilarViewController(dataResult: self.data)
+            return SimilarViewController(dataResult: self.data, delegate: self)
         }
         
     }
@@ -253,13 +255,11 @@ extension DetailViewController: PagingViewControllerDataSource, PagingViewContro
             let vc = CastingViewController(index: index, data: self.data, delegate: self)
             return PagingIndexItem(index: index, title: "Cast \(self.totalCast ?? 0)")
         case .Reviews:
-            let vc = ReviewsViewController(index: index, data: self.data)
-            let total = vc.dataReviews?.totalResults ?? 0
-            return PagingIndexItem(index: index, title: "Reviews \(total)")
+            let vc = ReviewsViewController(index: index, data: self.data, delegate: self)
+            return PagingIndexItem(index: index, title: "Reviews \(totalReviews == nil ? "" : String(totalReviews!))")
         case .Similar:
-            let vc = SimilarViewController(dataResult: self.data)
-            let total = vc.data?.totalResults ?? 0
-            return PagingIndexItem(index: index, title: "Similar \(total)")
+            let vc = SimilarViewController(dataResult: self.data, delegate: self)
+            return PagingIndexItem(index: index, title: "Similar \(totalSimilars == nil ? "" : String(totalSimilars!))")
         }
     }
 }
@@ -340,6 +340,20 @@ extension DetailViewController{
 extension DetailViewController: CastingViewControllerDelegate{
     func updateMenu(total: Int) {
         self.totalCast = total
+        self.pagingVC?.reloadMenu()
+    }
+}
+
+extension DetailViewController: ReviewsViewControllerDelegate{
+    func updateTotalReviews(total: Int) {
+        self.totalReviews = total
+        self.pagingVC?.reloadMenu()
+    }
+}
+
+extension DetailViewController: SimilarViewControllerDelegate{
+    func updateTotalSimilars(total: Int) {
+        self.totalSimilars = total
         self.pagingVC?.reloadMenu()
     }
 }
