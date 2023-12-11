@@ -313,8 +313,8 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         case .appSettings:
             showAppSettingPanel()
         case .changelog:
-            let vc = RewardedAdViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = ChangelogViewController()
+            self.present(vc, animated: true)
         case .help:
             let vc = GoToWebViewController()
             vc.urlString =  URLs.netflixHelp

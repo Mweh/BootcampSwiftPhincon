@@ -57,8 +57,6 @@
 		CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */; };
 		CD501FBC2B22AE8F00FE0254 /* AdBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */; };
 		CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */; };
-		CD501FC22B22C7E800FE0254 /* RewardedAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */; };
-		CD501FC32B22C7E800FE0254 /* RewardedAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
@@ -88,6 +86,9 @@
 		CD72340C2B26C3DA006B156C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD72340A2B26C3DA006B156C /* SplashScreen.swift */; };
 		CD7234142B26C54E006B156C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234132B26C54D006B156C /* MainTabBarController.swift */; };
 		CD7234372B26CDF6006B156C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234272B26CBFE006B156C /* Favorites.swift */; };
+		CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234392B26F395006B156C /* ChangelogViewController.swift */; };
+		CD72343C2B26F395006B156C /* ChangelogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD72343A2B26F395006B156C /* ChangelogViewController.xib */; };
+		CD72343E2B2707E5006B156C /* CompletedTasks.md in Resources */ = {isa = PBXBuildFile; fileRef = CD72343D2B26F9EC006B156C /* CompletedTasks.md */; };
 		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
 		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
 		CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D182B1054B3006D3046 /* TappableMovieView.swift */; };
@@ -204,8 +205,6 @@
 		CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerTableViewCell.swift; sourceTree = "<group>"; };
 		CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerTableViewCell.xib; sourceTree = "<group>"; };
 		CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
-		CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdViewController.swift; sourceTree = "<group>"; };
-		CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedAdViewController.xib; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +236,9 @@
 		CD72340A2B26C3DA006B156C /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		CD7234132B26C54D006B156C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CD7234272B26CBFE006B156C /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		CD7234392B26F395006B156C /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
+		CD72343A2B26F395006B156C /* ChangelogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangelogViewController.xib; sourceTree = "<group>"; };
+		CD72343D2B26F9EC006B156C /* CompletedTasks.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CompletedTasks.md; sourceTree = "<group>"; };
 		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
 		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		CD729D182B1054B3006D3046 /* TappableMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableMovieView.swift; sourceTree = "<group>"; };
@@ -548,7 +550,6 @@
 				CD0709332AFB32970079FC45 /* SearchFilm */,
 				CD4FA4472AF39ED700226717 /* DetailFilm */,
 				CD729D1A2B10894C006D3046 /* GoToWeb */,
-				CD72341D2B26C808006B156C /* RewardedAd */,
 				CDA5BAD22B039CD50053CF05 /* YoutubeTrailer */,
 			);
 			path = Additional;
@@ -603,6 +604,7 @@
 				CD7233F52B25A184006B156C /* CustomFonts */,
 				CDAD7DB82AFDD94E00BF41B8 /* LottieFiles */,
 				CDAF8A662AF8A5B500CB670D /* Keys.xcconfig */,
+				CD72343D2B26F9EC006B156C /* CompletedTasks.md */,
 				CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -784,15 +786,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CD72341D2B26C808006B156C /* RewardedAd */ = {
-			isa = PBXGroup;
-			children = (
-				CD501FC02B22C7E800FE0254 /* RewardedAdViewController.swift */,
-				CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */,
-			);
-			path = RewardedAd;
-			sourceTree = "<group>";
-		};
 		CD72341E2B26C8B7006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +841,7 @@
 				CD79F6BA2AEF83A300338C72 /* MoreViewController.xib */,
 				CDE7D5842B109B1200C41630 /* MoreViewControllerCell */,
 				CDE0342C2B186EDC00914F2E /* AppSettings */,
+				CD7234382B26F375006B156C /* Changelog */,
 				CD4659532B1EBECF00D86A26 /* History */,
 			);
 			path = View;
@@ -885,6 +879,15 @@
 				CD7234272B26CBFE006B156C /* Favorites.swift */,
 			);
 			path = ModelTMDB;
+			sourceTree = "<group>";
+		};
+		CD7234382B26F375006B156C /* Changelog */ = {
+			isa = PBXGroup;
+			children = (
+				CD7234392B26F395006B156C /* ChangelogViewController.swift */,
+				CD72343A2B26F395006B156C /* ChangelogViewController.xib */,
+			);
+			path = Changelog;
 			sourceTree = "<group>";
 		};
 		CD723CED2B023D5800C191A9 /* ViewModel */ = {
@@ -1255,8 +1258,9 @@
 				CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD4659572B1EBEEF00D86A26 /* HistoryViewController.xib in Resources */,
-				CD501FC32B22C7E800FE0254 /* RewardedAdViewController.xib in Resources */,
 				CD678AAD2B0DF84D00B2261F /* SimilarViewController.xib in Resources */,
+				CD72343C2B26F395006B156C /* ChangelogViewController.xib in Resources */,
+				CD72343E2B2707E5006B156C /* CompletedTasks.md in Resources */,
 				CD501FBC2B22AE8F00FE0254 /* AdBannerTableViewCell.xib in Resources */,
 				CD729D1E2B108981006D3046 /* GoToWebViewController.xib in Resources */,
 				CDE7D5882B109B3B00C41630 /* MoreTableViewCell.xib in Resources */,
@@ -1368,13 +1372,13 @@
 				CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
 				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
-				CD501FC22B22C7E800FE0254 /* RewardedAdViewController.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
 				CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */,
 				CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */,
+				CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */,
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,

@@ -34,10 +34,12 @@ class ComingSoonViewController: UIViewController {
         loadData()
         lottieConfig()
         bindApiData()
-//    }
+        setupFloatinIcon()
+    }
+    
+    func setupFloatinIcon(){
         // Add a floating icon with conditions to show or hide
         addFloatingIcon(useLottie: true, lottieFileName: "backToTop", iconSize: 100, trailingValue: 20, bottomValue: -60, showCloseButton: false)
-//        updateFloatingIconVisibility()
     }
     
     override func floatingIconTapped() {
@@ -45,35 +47,6 @@ class ComingSoonViewController: UIViewController {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
-
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        // Update the visibility of the floating icon when the table view is scrolled
-//        updateFloatingIconVisibility()
-//    }
-
-//    func updateFloatingIconVisibility() {
-//        let threshold: CGFloat = 10.0
-//
-//        if tableView.contentOffset.y > threshold {
-//            // Scrolled beyond the threshold, show the floating icon
-//            showFloatingIcon()
-//        } else {
-//            // Below the threshold, hide the floating icon
-//            hideFloatingIcon()
-//        }
-//    }
-
-//    func showFloatingIcon() {
-//        // Logic to show the floating icon
-//        // You may want to ensure it's not already visible to avoid unnecessary animations
-//        yourFloatingIcon.isHidden = false
-//    }
-
-//    func hideFloatingIcon() {
-//        // Logic to hide the floating icon
-//        // You may want to ensure it's not already hidden to avoid unnecessary animations
-//        yourFloatingIcon.isHidden = true
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -215,13 +188,10 @@ class ComingSoonViewController: UIViewController {
         videoTrailerVC.hidesBottomBarWhenPushed = true
         videoTrailerVC.movieId = movieId
         navigationController?.pushViewController(videoTrailerVC, animated: true)
-        
     }
-
 }
 
 extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
-  
     
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataTable?.results.count ?? 1
@@ -239,11 +209,11 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDescriptionTableCell", for: indexPath) as! MovieDescriptionTableCell
             // Assuming you have the necessary information to create a ParamAddFavorite instance
             let favoriteModel = ParamAddFavorite(mediaType: "movie", mediaId: data[indexPath.row].id, favorite: false)
-
+            
             cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
             let backDropPath = data[indexPath.row].backdropPath ?? ""
             let tmdbImgBase = TMDBImageURL.url(size: .w780)
-
+            
             let imageName = "\(tmdbImgBase)\(backDropPath)"
             if let url = URL(string: imageName) {
                 cell.imgView.kf.indicatorType = .activity
@@ -254,10 +224,10 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
             // Add a tap gesture recognizer to cell.movieImage
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
             cell.tappableFadedImageView.addGestureRecognizer(tapGesture)
-
+            
             // Set tag to the movie ID for later retrieval
             cell.tappableFadedImageView.tag = data[indexPath.row].id
-
+            
             return cell
         }
         
