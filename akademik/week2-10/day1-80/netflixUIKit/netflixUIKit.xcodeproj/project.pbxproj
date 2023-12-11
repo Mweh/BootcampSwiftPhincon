@@ -61,7 +61,6 @@
 		CD501FC32B22C7E800FE0254 /* RewardedAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
-		CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A42B05F5DB005718D2 /* MoreView.swift */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
@@ -211,7 +210,6 @@
 		CD501FC12B22C7E800FE0254 /* RewardedAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardedAdViewController.xib; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		CD59D0A42B05F5DB005718D2 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -581,14 +579,6 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */ = {
-			isa = PBXGroup;
-			children = (
-				CD59D0A42B05F5DB005718D2 /* MoreView.swift */,
-			);
-			path = SwiftUILittleProject;
-			sourceTree = "<group>";
-		};
 		CD5DD4902AEF38AA00140DFA = {
 			isa = PBXGroup;
 			children = (
@@ -816,7 +806,6 @@
 				CD79F6BA2AEF83A300338C72 /* MoreViewController.xib */,
 				CDE7D5842B109B1200C41630 /* MoreViewControllerCell */,
 				CDE0342C2B186EDC00914F2E /* AppSettingsVC */,
-				CD59D0A32B05F55B005718D2 /* SwiftUILittleProject */,
 				CD4659532B1EBECF00D86A26 /* HistoryVC */,
 			);
 			path = MoreVC;
@@ -1184,7 +1173,6 @@
 				CDCEABD92AF0E9EB004F37B8 /* SplashScreen.swift in Sources */,
 				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */,
-				CD59D0A52B05F5DB005718D2 /* MoreView.swift in Sources */,
 				CD46595B2B1EBF4200D86A26 /* HistoryTableViewCell.swift in Sources */,
 				CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
