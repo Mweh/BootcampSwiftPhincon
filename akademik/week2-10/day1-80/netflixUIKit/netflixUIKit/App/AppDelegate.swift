@@ -13,6 +13,11 @@ import IQKeyboardManagerSwift
 import netfox
 import UIKit
 
+postfix operator ~
+postfix func ~ (string: String) -> String {
+    return NSLocalizedString(string, comment: "")
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -27,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
     
+    // Set Custom Font globalically without swizzling
     override init() {
         super.init()
         UIFont.overrideInitialize()

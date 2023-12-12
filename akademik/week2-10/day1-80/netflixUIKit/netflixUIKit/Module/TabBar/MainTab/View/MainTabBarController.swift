@@ -30,8 +30,6 @@ class MainTabBarController: UITabBarController {
         initHandleHistoryMovieSaved()
         // Add this in viewDidLoad or wherever appropriate
         NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
-        
-        
     }
     
     // Add this method to handle the notification
@@ -47,12 +45,6 @@ class MainTabBarController: UITabBarController {
         let totalHistoryMoviesBadge = totalHistoryMovies == 0 ? nil : "\(totalHistoryMovies)"
         nav4.tabBarItem.badgeValue = totalHistoryMoviesBadge
     }
-    
-//    // Call this method when the history movies count changes
-//    func updateHistoryBadgeCount() {
-//        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
-//        tabBarDelegate?.updateHistoryBadge(count: totalHistoryMovies)
-//    }
     
     func removeTextNaviItem(){
         navigationItem.backButtonTitle = ""
@@ -73,23 +65,15 @@ class MainTabBarController: UITabBarController {
     }
     
     func configureUITabBarItems() {
-      
-        
         homeVC.navigationItem.largeTitleDisplayMode = .automatic
         searchVC.navigationItem.largeTitleDisplayMode = .automatic
         comingSoonVC.navigationItem.largeTitleDisplayMode = .automatic
         moreVC.navigationItem.largeTitleDisplayMode = .automatic
         
-
-        
-        nav1.tabBarItem = UITabBarItem(title: "Home", image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
-        nav2.tabBarItem = UITabBarItem(title: "Search", image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
-        nav3.tabBarItem = UITabBarItem(title: "Coming Soon", image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
-        nav4.tabBarItem = UITabBarItem(title: "More", image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
-        
-        
-        
-       
+        nav1.tabBarItem = UITabBarItem(title: "Home"~, image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
+        nav2.tabBarItem = UITabBarItem(title: "Search"~, image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
+        nav3.tabBarItem = UITabBarItem(title: "Coming Soon"~, image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
+        nav4.tabBarItem = UITabBarItem(title: "More"~, image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
 
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
     }

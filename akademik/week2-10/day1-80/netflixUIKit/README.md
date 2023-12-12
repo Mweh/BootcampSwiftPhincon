@@ -68,7 +68,6 @@ Keep track of tasks, improvements, and future plans for your project.
 
 - [ ] Implement Onboarding View.
 - [ ] Add a suggest when searching a movie 
-- [ ] Add changelog in MoreVC
 - [ ] New page when actor pressed
 - [ ] Download youtube video(?) *notlegal
 - [ ] Edit theme in AppSettingsVC using Color well
@@ -77,40 +76,40 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add an optional to upgrade pro Version
 - [ ] Add buy me a coffee
 - [ ] Add audio to text searchBar
-
+- [ ] Add localized for language
+- get interneet speed and save it in coredata
 - ...
 
 ## DONE
 
 Tasks that have been completed.
 
-
-- [x] Implement Login Authentication with the right logic.
-- [x] Add more pages dynamically when scrolling to the bottom/vertical.
-- [x] Integrate Netfox for API debugging.
-- [x] Implement POST method from TMDB API.
-- [x] Integrate YouTube API to play trailer videos.
-- [x] Implement Face ID feature for secure login.
-- [x] Add reset password feature
-- [x] add number(ranking 1-10) beside the imageView of best rated movie 
-- [x] Add sliding tabs in detailView using Parchment
-- [x] Add creditsVC inside slidingtabs
-- [x] Add download when doing longpress
-- [x] Add CV, images to Text in searchTextField
-- [x] Add a share button
-- [x] Add a feature that can show all list of items
-- [x] Remove duplicate unnecessary Model
-- [x] Add recommendationVC inside slidingtabs
-- [x] Add reviewsVC inside
-- [x] A feature to push to other detailView when click 
-      the moviePoster inside detailView itself
-- [x] Integrate CoreData or UserDefault for data storage.
-- [x] Add Recently viewed
-- [x] Add floatingIcon backToTop in ComingSoonVC
-- [x] Add iconNotificationBadge for HistoryVC
-- [x] Implement AdMob
-- [x] Add Custom Font
-- [x] Add login as anonymous
+- [x] Implemented Login Authentication with the appropriate logic.
+- [x] Added dynamic page loading when scrolling to the bottom/vertical.
+- [x] Integrated Netfox for API debugging.
+- [x] Implemented the POST method from TMDB API.
+- [x] Integrated YouTube API to play trailer videos.
+- [x] Implemented Face ID feature for secure login.
+- [x] Added a reset password feature.
+- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
+- [x] Added sliding tabs in detailView using Parchment.
+- [x] Added creditsVC inside sliding tabs.
+- [x] Added download functionality with long press.
+- [x] Added CV, images to Text in searchTextField.
+- [x] Added a share button.
+- [x] Added a feature that displays the entire list of items.
+- [x] Removed duplicate unnecessary Model.
+- [x] Added recommendationVC inside sliding tabs.
+- [x] Added reviewsVC inside.
+- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detailView itself.
+- [x] Integrated CoreData or UserDefaults for data storage.
+- [x] Added Recently viewed feature.
+- [x] Added a floating icon backToTop in ComingSoonVC.
+- [x] Added an iconNotificationBadge for HistoryVC.
+- [x] Implemented AdMob.
+- [x] Added Custom Font.
+- [x] Added login as anonymous feature.
+- [x] Added changelog in MoreVC.
 
 ## BUG
 

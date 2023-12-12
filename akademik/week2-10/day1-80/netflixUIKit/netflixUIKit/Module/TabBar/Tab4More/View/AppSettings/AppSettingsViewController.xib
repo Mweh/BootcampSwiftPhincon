@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppSettingsViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="changeColorWell" destination="eFs-5l-rw0" id="3X0-cK-ixN"/>
                 <outlet property="clearCache" destination="gA6-Fl-sHY" id="PX9-gX-rFl"/>
                 <outlet property="privacyButton" destination="rFT-rg-JQB" id="cX2-8E-4h6"/>
                 <outlet property="speedButton" destination="Q6b-Ip-IwJ" id="TLj-Oe-6fh"/>
@@ -24,67 +25,89 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-br-vZh">
-                    <rect key="frame" x="0.0" y="30" width="393" height="285.66666666666669"/>
+                    <rect key="frame" x="0.0" y="30" width="393" height="298.33333333333331"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="App Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl2-86-qjT">
-                            <rect key="frame" x="16" y="23.999999999999996" width="155.66666666666666" height="33.666666666666657"/>
+                            <rect key="frame" x="16" y="4" width="155.66666666666666" height="33.666666666666664"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Dark Mode" translatesAutoresizingMaskIntoConstraints="NO" id="ub5-cZ-XcT">
-                            <rect key="frame" x="32" y="85.333333333333329" width="51" height="31"/>
-                            <color key="onTintColor" systemColor="tintColor"/>
-                        </switch>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-3d-pPy">
-                            <rect key="frame" x="92" y="91" width="80" height="20"/>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6b-Ip-IwJ">
+                            <rect key="frame" x="32" y="147.66666666666666" width="181.66666666666666" height="28.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="  Internet Speed Test" image="speedometer" catalog="system">
+                                <color key="titleColor" systemColor="labelColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-rg-JQB">
+                            <rect key="frame" x="32" y="192" width="138" height="32.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="  Privacy Policy" image="doc" catalog="system">
+                                <color key="titleColor" systemColor="labelColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA6-Fl-sHY">
+                            <rect key="frame" x="32.000000000000007" y="240.33333333333331" width="126.66666666666669" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="  Clear Cache" image="trash" catalog="system">
+                                <color key="titleColor" systemColor="labelColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27"/>
+                            </state>
+                        </button>
+                        <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="" translatesAutoresizingMaskIntoConstraints="NO" id="eFs-5l-rw0">
+                            <rect key="frame" x="32" y="103.66666666666666" width="28" height="28"/>
+                        </colorWell>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTU-41-Lyw">
+                            <rect key="frame" x="72" y="108" width="110.66666666666669" height="19.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6b-Ip-IwJ">
-                            <rect key="frame" x="32.000000000000014" y="132.33333333333334" width="203.33333333333337" height="34"/>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Dark Mode" translatesAutoresizingMaskIntoConstraints="NO" id="ub5-cZ-XcT">
+                            <rect key="frame" x="328" y="57.333333333333329" width="51" height="31"/>
+                            <color key="onTintColor" systemColor="tintColor"/>
+                        </switch>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lightbulb.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lcn-pV-cdC">
+                            <rect key="frame" x="32" y="58.666666666666664" width="30" height="28.666666666666664"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="DBf-Iy-kjf"/>
+                                <constraint firstAttribute="height" constant="30" id="zvj-DT-fQh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-3d-pPy">
+                            <rect key="frame" x="72" y="62.666666666666679" width="79.333333333333314" height="20.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                            <state key="normal" title="      Internet Speed Test" image="speedometer" catalog="system">
-                                <color key="titleColor" systemColor="labelColor"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFT-rg-JQB">
-                            <rect key="frame" x="32" y="182.33333333333334" width="162" height="35.666666666666657"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                            <state key="normal" title="       Privacy Policy" image="doc" catalog="system">
-                                <color key="titleColor" systemColor="labelColor"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA6-Fl-sHY">
-                            <rect key="frame" x="32" y="234" width="151.33333333333334" height="35.666666666666686"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                            <state key="normal" title="       Clear Cache" image="trash" catalog="system">
-                                <color key="titleColor" systemColor="labelColor"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                            </state>
-                        </button>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="gA6-Fl-sHY" secondAttribute="bottom" constant="16" id="8Qg-JJ-ybU"/>
+                        <constraint firstItem="HfH-3d-pPy" firstAttribute="leading" secondItem="rTU-41-Lyw" secondAttribute="leading" id="3Ce-sT-aKv"/>
+                        <constraint firstItem="rTU-41-Lyw" firstAttribute="leading" secondItem="eFs-5l-rw0" secondAttribute="trailing" constant="12" id="463-1m-d7U"/>
+                        <constraint firstItem="eFs-5l-rw0" firstAttribute="top" secondItem="Lcn-pV-cdC" secondAttribute="bottom" constant="16" id="6d2-lO-ggg"/>
+                        <constraint firstAttribute="bottom" secondItem="gA6-Fl-sHY" secondAttribute="bottom" constant="24" id="8Qg-JJ-ybU"/>
+                        <constraint firstItem="Lcn-pV-cdC" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="APU-Ay-ZGb"/>
                         <constraint firstItem="gA6-Fl-sHY" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="JyH-o2-q5d"/>
                         <constraint firstItem="Wl2-86-qjT" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="16" id="KFy-ce-nms"/>
-                        <constraint firstItem="ub5-cZ-XcT" firstAttribute="top" secondItem="Wl2-86-qjT" secondAttribute="bottom" constant="27.670000000000002" id="McA-xx-8dR"/>
-                        <constraint firstItem="Wl2-86-qjT" firstAttribute="top" secondItem="bhb-br-vZh" secondAttribute="top" constant="24" id="Nbo-OX-x0b"/>
+                        <constraint firstItem="ub5-cZ-XcT" firstAttribute="centerY" secondItem="HfH-3d-pPy" secondAttribute="centerY" id="KoY-Qb-u0A"/>
+                        <constraint firstItem="Wl2-86-qjT" firstAttribute="top" secondItem="bhb-br-vZh" secondAttribute="top" constant="4" id="Nbo-OX-x0b"/>
                         <constraint firstItem="gA6-Fl-sHY" firstAttribute="top" secondItem="rFT-rg-JQB" secondAttribute="bottom" constant="16" id="PRu-Fj-PSy"/>
                         <constraint firstItem="rFT-rg-JQB" firstAttribute="top" secondItem="Q6b-Ip-IwJ" secondAttribute="bottom" constant="16" id="R4y-hI-8a5"/>
-                        <constraint firstItem="HfH-3d-pPy" firstAttribute="leading" secondItem="ub5-cZ-XcT" secondAttribute="trailing" constant="11" id="Svr-7l-j0j"/>
+                        <constraint firstAttribute="trailing" secondItem="ub5-cZ-XcT" secondAttribute="trailing" constant="16" id="TNg-dV-uJE"/>
                         <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="UMe-1B-dX7"/>
-                        <constraint firstItem="ub5-cZ-XcT" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="g21-9m-ans"/>
-                        <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="top" secondItem="ub5-cZ-XcT" secondAttribute="bottom" constant="16" id="hPY-ET-eRK"/>
+                        <constraint firstItem="HfH-3d-pPy" firstAttribute="centerY" secondItem="Lcn-pV-cdC" secondAttribute="centerY" id="aaR-fV-9or"/>
+                        <constraint firstItem="Q6b-Ip-IwJ" firstAttribute="top" secondItem="eFs-5l-rw0" secondAttribute="bottom" constant="16" id="dds-8p-yFn"/>
+                        <constraint firstItem="eFs-5l-rw0" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="pjd-Le-XCC"/>
+                        <constraint firstItem="rTU-41-Lyw" firstAttribute="centerY" secondItem="eFs-5l-rw0" secondAttribute="centerY" id="sKQ-ef-3Hd"/>
                         <constraint firstItem="rFT-rg-JQB" firstAttribute="leading" secondItem="bhb-br-vZh" secondAttribute="leading" constant="32" id="u1q-WL-QSR"/>
-                        <constraint firstItem="HfH-3d-pPy" firstAttribute="centerY" secondItem="ub5-cZ-XcT" secondAttribute="centerY" id="ujA-ud-dll"/>
+                        <constraint firstItem="Lcn-pV-cdC" firstAttribute="top" secondItem="Wl2-86-qjT" secondAttribute="bottom" constant="20" id="xsq-DG-ngp"/>
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-b5-IvR">
@@ -109,6 +132,7 @@
     </objects>
     <resources>
         <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="lightbulb.circle" catalog="system" width="128" height="123"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="speedometer" catalog="system" width="128" height="123"/>
         <image name="trash" catalog="system" width="117" height="128"/>

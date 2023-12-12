@@ -106,7 +106,7 @@ class LoginViewController: UIViewController {
                 print("Login Error: \(error.localizedDescription)")
             } else {
                 // Successful login
-                self?.showAlert(title: "Success", message: "Login Successful, Welcome \(email)", completion: {
+                self?.showAlert(title: "Success", message: "\("Login Successful, Welcome"~)\(email)", completion: {
                     self?.navigateToHome()
                 })
             }

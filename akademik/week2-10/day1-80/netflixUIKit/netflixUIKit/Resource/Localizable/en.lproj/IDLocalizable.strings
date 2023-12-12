@@ -1,0 +1,13 @@
+/* 
+  IDLocalizable.strings
+  netflixUIKit
+
+  Created by Muhammad Fahmi on 12/12/23.
+  
+*/
+
+// English
+"HELLO_WORLD" = "Hello, World!";
+
+// Bahasa
+"HELLO_WORLD" = "Halo, Dunia!";

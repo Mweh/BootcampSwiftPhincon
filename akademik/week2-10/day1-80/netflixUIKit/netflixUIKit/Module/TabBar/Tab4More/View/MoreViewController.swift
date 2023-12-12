@@ -31,10 +31,10 @@ class MoreViewController: UIViewController {
     var picker: UIImagePickerController? = UIImagePickerController()
     
     let cellData: [MoreCellData] = [
-        MoreCellData(title: "History", symbolName: "clock.arrow.circlepath"),
-        MoreCellData(title: "App Settings", symbolName: "gear"),
-        MoreCellData(title: "Changelog", symbolName: "gearshape.arrow.triangle.2.circlepath"),
-        MoreCellData(title: "Help", symbolName: "questionmark.circle")
+        MoreCellData(title: "History"~, symbolName: "clock.arrow.circlepath"),
+        MoreCellData(title: "App Settings"~, symbolName: "gear"),
+        MoreCellData(title: "Changelog"~, symbolName: "gearshape.arrow.triangle.2.circlepath"),
+        MoreCellData(title: "Help"~, symbolName: "questionmark.circle")
     ]
     
     override func viewDidLoad() {

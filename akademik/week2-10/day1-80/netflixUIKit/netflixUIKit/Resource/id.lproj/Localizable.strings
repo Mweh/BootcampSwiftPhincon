@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  netflixUIKit
+
+  Created by Muhammad Fahmi on 12/12/23.
+  
+*/
+
+// MARK: - Login+Register
+"Login Successful, Welcome" = "Masuk berhasil, Selamat datang";
+
+// MARK: - TabBar
+"Home" = "Beranda";
+"Search" = "Pencarian";
+"Coming Soon" = "Akan Tayang";
+"More" = "Lebih Banyak";
+
+// MARK: - Tab1Home
+
+
+// MARK: - Tab2Search
+
+
+// MARK: - Tab3ComingSoon
+
+
+// MARK: - Tab4More
+"History" = "Riwayat";
+"App Settings" = "Pengaturan Aplikasi";
+"Changelog" = "Catatan Perubahan";
+"Help" = "Bantuan";

@@ -48,6 +48,7 @@ class AllVideoViewController: UIViewController {
         tblView.delegate = self
         tblView.dataSource = self
         tblView.register(UINib(nibName: "AllVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "AllVideoTableViewCell")
+        navigationItem.title = "List of Videos"
     }
 }
 

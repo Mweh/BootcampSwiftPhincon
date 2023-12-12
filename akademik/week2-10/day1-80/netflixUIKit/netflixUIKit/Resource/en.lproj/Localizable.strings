@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  netflixUIKit
+
+  Created by Muhammad Fahmi on 12/12/23.
+  
+*/
+
+// MARK: - Login+Register
+"Login Successful, Welcome" = "Login Successful, Welcome";
+
+// MARK: - TabBar
+"Home" = "Home";
+"Search" = "Search";
+"Coming Soon" = "Coming Soon";
+"More" = "More";
+
+// MARK: - Tab1Home
+
+
+// MARK: - Tab2Search
+
+
+// MARK: - Tab3ComingSoon
+
+
+// MARK: - Tab4More
+"History" = "History";
+"App Settings" = "App Setting";
+"Changelog" = "Changelog";
+"Help" = "Help";

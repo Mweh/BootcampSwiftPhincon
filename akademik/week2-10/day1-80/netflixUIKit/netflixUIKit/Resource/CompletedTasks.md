@@ -48,3 +48,4 @@
 
 • Added login as anonymous feature.
 
+• Added changelog in MoreVC.

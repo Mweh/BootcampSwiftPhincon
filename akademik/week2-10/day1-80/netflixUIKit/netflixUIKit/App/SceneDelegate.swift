@@ -14,20 +14,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         let window = UIWindow(windowScene: windowScene)
         
-        
-        
-//        window.rootViewController = UINavigationController(rootViewController: SplashScreen()) // edit this to enable SplashScreen
-//        window.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        
-        window.rootViewController = UINavigationController(rootViewController: MainTabBarController())
+        // let vc = SplashScreen()
+        // let vc = LoginViewController()
+        let vc = MainTabBarController()
+        window.rootViewController = UINavigationController(rootViewController: vc)
 
-//        UINavigationBar.appearance().isHidden = true
         self.window = window
         window.makeKeyAndVisible()
-        window.tintColor = .systemRed /* or .orange on iOS < 13 */
-      }
+        
+        window.tintColor = .systemRed
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
