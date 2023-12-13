@@ -4,13 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComingSoonViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="pullSortedMenuButton" destination="FHs-z3-dKy" id="i1u-KZ-UKN"/>
                 <outlet property="tableView" destination="Ci5-mQ-ZN0" id="O1X-yY-gqF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,19 +27,46 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-mQ-ZN0">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <rect key="frame" x="0.0" y="42" width="393" height="717"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHs-z3-dKy">
+                            <rect key="frame" x="360" y="5.6666666666666714" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="AKR-p2-ptJ"/>
+                                <constraint firstAttribute="width" constant="25" id="eV7-LE-OYX"/>
+                            </constraints>
+                            <menu key="menu" id="hQV-e1-VrN" userLabel="SortBy">
+                                <children>
+                                    <command title="Popularity" id="sFO-Jh-kQy" userLabel="Popularity"/>
+                                    <command title="Revenue" id="0DN-Y9-h88"/>
+                                </children>
+                            </menu>
+                            <state key="normal">
+                                <color key="titleColor" systemColor="tintColor"/>
+                                <imageReference key="image" image="line.3.horizontal.decrease.circle" catalog="system" symbolScale="large"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43y-n8-V98">
+                            <rect key="frame" x="16.000000000000007" y="0.0" width="122.66666666666669" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="Ci5-mQ-ZN0" firstAttribute="top" secondItem="43y-n8-V98" secondAttribute="bottom" constant="6" id="1ox-0D-fno"/>
+                        <constraint firstItem="43y-n8-V98" firstAttribute="top" secondItem="qGM-ah-EWA" secondAttribute="top" id="3oP-PK-RfX"/>
+                        <constraint firstAttribute="trailing" secondItem="FHs-z3-dKy" secondAttribute="trailing" constant="8" id="QjZ-oV-1Vh"/>
                         <constraint firstItem="Ci5-mQ-ZN0" firstAttribute="leading" secondItem="qGM-ah-EWA" secondAttribute="leading" id="WtO-r4-Un8"/>
+                        <constraint firstItem="43y-n8-V98" firstAttribute="leading" secondItem="qGM-ah-EWA" secondAttribute="leading" constant="16" id="gdC-s0-J3m"/>
                         <constraint firstAttribute="trailing" secondItem="Ci5-mQ-ZN0" secondAttribute="trailing" id="ghU-hL-gAN"/>
                         <constraint firstAttribute="bottom" secondItem="Ci5-mQ-ZN0" secondAttribute="bottom" id="oZf-mV-oQH"/>
-                        <constraint firstItem="Ci5-mQ-ZN0" firstAttribute="top" secondItem="qGM-ah-EWA" secondAttribute="top" id="oeb-MI-Zg0"/>
+                        <constraint firstItem="FHs-z3-dKy" firstAttribute="centerY" secondItem="43y-n8-V98" secondAttribute="centerY" id="yGe-m1-t7q"/>
                     </constraints>
                 </view>
             </subviews>
@@ -52,8 +82,12 @@
         </view>
     </objects>
     <resources>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

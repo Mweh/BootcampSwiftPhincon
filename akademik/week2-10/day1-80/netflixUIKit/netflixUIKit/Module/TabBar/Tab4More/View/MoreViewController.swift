@@ -17,22 +17,20 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var user1Img: UIImageView!
     @IBOutlet weak var user2Img: UIImageView!
     @IBOutlet weak var plusImg: UIImageView!
-    @IBOutlet weak var uploadImg: UIButton!
+    @IBOutlet weak var uploadImgButton: UIButton!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var currentAppVersionLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     
     let disposeBag = DisposeBag()
-    
     var resultImg: UIImage!
-    
     var totalHistoryMovie: Int?
-    
     var picker: UIImagePickerController? = UIImagePickerController()
     
     let cellData: [MoreCellData] = [
         MoreCellData(title: "History"~, symbolName: "clock.arrow.circlepath"),
         MoreCellData(title: "App Settings"~, symbolName: "gear"),
+        MoreCellData(title: "Display Language"~, symbolName: "character.bubble.fill"),
         MoreCellData(title: "Changelog"~, symbolName: "gearshape.arrow.triangle.2.circlepath"),
         MoreCellData(title: "Help"~, symbolName: "questionmark.circle")
     ]
@@ -62,21 +60,6 @@ class MoreViewController: UIViewController {
                 let photoURL = user.photoURL
                 
                 self.userLabel.text = email
-                // Additional user information can be retrieved here
-
-                // Now, you can pass this user information to your profile page
-                // You might use a segue if you're navigating to a new view controller
-                // or you might set properties if you're presenting the profile page in another way
-                // For example, assuming you have a property in your ProfileViewController:
-                
-//                let profileViewController = // instantiate your ProfileViewController here
-//                profileViewController.userID = uid
-//                profileViewController.userEmail = email
-                // Set other properties as needed
-
-                // Then, you can navigate to the profile page
-                // For example, if using a navigation controller:
-//                self.navigationController?.pushViewController(profileViewController, animated: true)
             }
         }
     }
@@ -103,6 +86,9 @@ class MoreViewController: UIViewController {
         tblView.delegate = self
         tblView.dataSource = self
         tblView.register(UINib(nibName: "MoreTableViewCell", bundle: nil), forCellReuseIdentifier: "MoreTableViewCell")
+        
+        self.uploadImgButton.isHidden = true
+        
         imageView.makeRounded(10)
         user1Img.makeRounded(10)
         user2Img.makeRounded(10)
@@ -110,7 +96,7 @@ class MoreViewController: UIViewController {
     }
     
     func uploadToFire() {
-        uploadImg.rx.tap
+        uploadImgButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self , let uid = Auth.auth().currentUser?.uid else {
                     return
@@ -136,6 +122,7 @@ class MoreViewController: UIViewController {
                             }
                             
                             dispatchGroup.leave()
+                            self.uploadImgButton.isHidden.toggle()
                         case .failure(let error):
                             print("Something went wrong: \(error.localizedDescription)")
                         }
@@ -145,13 +132,13 @@ class MoreViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func openGalleryPressed(_ sender: Any) {
-        openGallary()
+        openGallery()
+        self.uploadImgButton.isHidden.toggle() // how can I show this after openGallary() finishing loading?
     }
     
     @IBAction func takePhotoPressed(_ sender: Any) {
@@ -164,7 +151,7 @@ class MoreViewController: UIViewController {
         navigationController?.pushViewController(loginVC, animated: true)
     }
     
-    func openGallary() {
+    func openGallery() {
         picker!.allowsEditing = false
         picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
         present(picker!, animated: true, completion: nil)
@@ -214,6 +201,18 @@ class MoreViewController: UIViewController {
     
     @objc func dismissHalfModal() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func showDisplayLanguagePanel() {
+        let contentVC = DisplayLanguageViewController()
+        contentVC.modalPresentationStyle = .custom
+        contentVC.transitioningDelegate = self
+        present(contentVC, animated: true, completion: nil)
+        
+        // Add swipe down gesture for dismissal
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissHalfModal))
+        swipeDown.direction = .down
+        contentVC.view.addGestureRecognizer(swipeDown)
     }
     
 }
@@ -297,7 +296,7 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -312,6 +311,8 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
         case .appSettings:
             showAppSettingPanel()
+        case .displayLanguage:
+            showDisplayLanguagePanel()
         case .changelog:
             let vc = ChangelogViewController()
             self.present(vc, animated: true)
@@ -334,6 +335,7 @@ struct MoreCellData {
 enum MoreOption: Int {
     case history = 0
     case appSettings
+    case displayLanguage
     case changelog
     case help
 }

@@ -13,6 +13,7 @@ import UIKit
 class ComingSoonViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var pullSortedMenuButton: UIButton!
     private let refreshControl = UIRefreshControl()
     private var animationView: LottieAnimationView?
     
@@ -31,10 +32,46 @@ class ComingSoonViewController: UIViewController {
         super.viewDidLoad()
         
         configureTable()
-        loadData()
         lottieConfig()
+        loadData()
         bindApiData()
         setupFloatinIcon()
+        setupMenu()
+    }
+
+    func setupMenu() {
+        // Use of this button
+        let menuClosure: (UIAction) -> Void = { [weak self] action in
+            if let sortingOption = SortingOption(rawValue: action.title) {
+                self?.update(option: sortingOption)
+            }
+        }
+        
+        let sortingOptions = SortingOption.allCases
+        
+        pullSortedMenuButton.menu = UIMenu(children: sortingOptions.map { option in
+            UIAction(title: option.rawValue, handler: menuClosure)
+        })
+        
+        pullSortedMenuButton.showsMenuAsPrimaryAction = true
+        if #available(iOS 15.0, *) {
+            pullSortedMenuButton.changesSelectionAsPrimaryAction = true
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+
+    // Update function where you get the selection
+    func update(option: SortingOption) {
+        print("\(option.rawValue) selected")
+        
+        // Handle the selected option
+        switch option {
+        case .mostRecent:
+            loadData()
+        default:
+            loadData(.discoverSort(sort_by: option.sortingString))
+        }
     }
     
     func setupFloatinIcon(){
@@ -153,10 +190,10 @@ class ComingSoonViewController: UIViewController {
         }
     }
     
-    func loadData(page: Int = 1) {
+    func loadData(page: Int = 1, _ endpoint: Endpoint = .getUpcoming(page: 1)) {
         tableView.showAnimatedGradientSkeleton()
         
-        self.vm.api.makeAPICall(endpoint: .getUpcoming(page: page)) { [weak self] (response: Result<Movie, Error>)  in
+        self.vm.api.makeAPICall(endpoint: endpoint) { [weak self] (response: Result<Movie, Error>)  in
             guard let self = self else { return }
             
             switch response {
@@ -168,7 +205,6 @@ class ComingSoonViewController: UIViewController {
                     // For pagination, append the new data to the existing data
                     self.dataTable?.results.append(contentsOf: dataMovie.results)
                 }
-                
                 self.tableView.reloadData()
             case .failure(let error):
                 // Handle the error
@@ -211,13 +247,14 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
             let favoriteModel = ParamAddFavorite(mediaType: "movie", mediaId: data[indexPath.row].id, favorite: false)
             
             cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
-            let backDropPath = data[indexPath.row].backdropPath ?? ""
+            let posterPath = data[indexPath.row].posterPath ?? ""
+            var backDropPath = data[indexPath.row].backdropPath ?? posterPath
             let tmdbImgBase = TMDBImageURL.url(size: .w780)
             
             let imageName = "\(tmdbImgBase)\(backDropPath)"
             if let url = URL(string: imageName) {
                 cell.imgView.kf.indicatorType = .activity
-                cell.imgView.kf.setImage(with: url, placeholder: UIImage(systemName: "hourglass"))
+                cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "netflix"))
             }
             print("Image URL: \(imageName)")
             
@@ -251,3 +288,42 @@ extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableView
         loadData(page: currentPage)
     }
 }
+
+enum SortingOption: String, CaseIterable {
+    case mostRecent = "Most Recent" // associated with "primary_release_date.desc"
+    case leastRecent = "Least Recent" // associated with "primary_release_date.asc"
+    case topRated = "Top Rated" // associated with "vote_average.desc"
+    case leastTopRated = "Least Rated" // associated with "vote_average.asc"
+    case mostVoted = "Most Voted" // associated with "vote_count.desc"
+    case leastVoted = "Least Voted" // associated with "vote_count.asc"
+    case mostPopular = "Most Popular" // associated with "popularity.desc"
+    case leastPopular = "Least Popular" // associated with "popularity.asc"
+    case highestRevenue = "Highest Revenue" // associated with "revenue.desc"
+    case lowestRevenue = "Lowest Revenue" // associated with "revenue.asc"
+    
+    var sortingString: String {
+        switch self {
+        case .mostRecent:
+            return ""
+        case .leastRecent:
+            return "primary_release_date.asc"
+        case .topRated:
+            return "vote_average.desc"
+        case .leastTopRated:
+            return "vote_average.asc"
+        case .mostVoted:
+            return "vote_count.desc"
+        case .leastVoted:
+            return "vote_count.asc"
+        case .mostPopular:
+            return "popularity.desc"
+        case .leastPopular:
+            return "popularity.asc"
+        case .highestRevenue:
+            return "revenue.desc"
+        case .lowestRevenue:
+            return "revenue.asc"
+        }
+    }
+}
+

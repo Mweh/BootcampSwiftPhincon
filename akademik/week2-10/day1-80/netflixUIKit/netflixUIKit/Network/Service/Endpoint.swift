@@ -17,12 +17,13 @@ enum Endpoint {
     case searchMovie(query: String)
     case getFavoriteNoPaging
     case getFavorite(page: Int)
-    case addFavorite(param: ParamAddFavorite)
+    case addFavorite(param: ParamAddFavorite) // POST BDOY
     case getVideoTrailer(id: Int)
     case getCredits(id: Int)
     case getSimilar(id: Int)
     case getReviews(id: Int)
     case getDetails(id: Int)
+    case discoverSort(sort_by: String)
     
     func path() -> String {
         let dateFormatter = DateFormatter()
@@ -46,7 +47,7 @@ enum Endpoint {
             return "account/20655384/favorite/movies"
         case .getFavorite:
             return "account/20655384/favorite/movies"
-        case .addFavorite:
+        case .addFavorite: // POST BDOY
             return "account/20655384/favorite"
         case .getVideoTrailer(let id):
             return "movie/\(id)/videos"
@@ -58,6 +59,8 @@ enum Endpoint {
             return "/movie/\(id)/reviews"
         case .getDetails(let id):
             return "/movie/\(id)"
+        case .discoverSort(let sort_by):
+            return "/discover/movie?sort_by=\(sort_by)"
         }
     }
     
@@ -72,17 +75,19 @@ enum Endpoint {
     
     var parameters: [String: Any]? {
         switch self {
-        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer, .getCredits, .getSimilar, .getReviews, .getDetails:
+        case .getNowPlaying, .getPopular, .getTopRated, .getDiscoverTV, .getFavoriteNoPaging, .getVideoTrailer, .getCredits, .getSimilar, .getReviews, .getDetails, .discoverSort: // PARAM GET
             return nil
         case .getUpcoming(let page), .getFavorite(page: let page):
             return ["page": page]
         case .searchMovie(let query):
             return ["query": query]
+//        case .discoverSort(let sort_by):
+//            return ["sort_by": sort_by.sort_by]
         case .addFavorite(let param):
             return [
                 "media_type": param.mediaType,
                 "media_id": param.mediaId,
-                "favorite": param.favorite
+                "favorite": param.favorite // BODY POST
             ]
         }
     }
@@ -104,9 +109,9 @@ enum Endpoint {
     
     var encoding: ParameterEncoding {
         switch self {
-        case .searchMovie, .getUpcoming, .getFavorite, .getFavoriteNoPaging, .getSimilar, .getReviews, .getDetails:
-            return URLEncoding.queryString
-        default: return JSONEncoding.default
+        case .searchMovie, .getUpcoming, .getFavorite, .getFavoriteNoPaging, .getSimilar, .getReviews, .getDetails, .discoverSort:
+            return URLEncoding.queryString // Usually for param(GET)
+        default: return JSONEncoding.default // Usually for body(POST)
         }
     }
 }

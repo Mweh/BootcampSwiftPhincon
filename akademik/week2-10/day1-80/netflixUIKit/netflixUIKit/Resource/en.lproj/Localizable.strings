@@ -12,7 +12,7 @@
 // MARK: - TabBar
 "Home" = "Home";
 "Search" = "Search";
-"Coming Soon" = "Coming Soon";
+"Discover" = "Discovery";
 "More" = "More";
 
 // MARK: - Tab1Home
@@ -21,7 +21,7 @@
 // MARK: - Tab2Search
 
 
-// MARK: - Tab3ComingSoon
+// MARK: - Tab3Discovery
 
 
 // MARK: - Tab4More

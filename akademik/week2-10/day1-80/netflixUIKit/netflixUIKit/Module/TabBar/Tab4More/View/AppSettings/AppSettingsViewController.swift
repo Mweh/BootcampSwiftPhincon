@@ -17,6 +17,7 @@ class AppSettingsViewController: UIViewController {
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var clearCache: UIButton!
     @IBOutlet weak var changeColorWell: UIColorWell!
+    @IBOutlet weak var speedValue: UILabel!
     
     let bag = DisposeBag()
     
@@ -28,6 +29,32 @@ class AppSettingsViewController: UIViewController {
         setupToggleDarkMode()
         setupClearCache()
         setThemeColor()
+        performSpeedTest()
+    }
+    
+    func performSpeedTest() {
+        let testingURL = URL(string: "https://images.apple.com/v/imac-with-retina/a/images/overview/5k_image.jpg")!
+        
+        let startTime = Date()
+        
+        URLSession.shared.downloadTask(with: testingURL) { (_, _, error) in
+            let endTime = Date()
+            let elapsedTime = endTime.timeIntervalSince(startTime)
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            } else {
+                let fileSize = 6_725_466 // Assuming a file size of 1 MB for simplicity
+                let speedMbps = Double(fileSize) / (elapsedTime * 1_000_00)
+                let formattedSpeed = String(format: "%.2f", speedMbps) // Format to two decimal places
+                print("Download Speed: \(formattedSpeed) Mbps")
+                
+                DispatchQueue.main.async {
+                    self.speedValue.text = "\(formattedSpeed) Mbps"
+                    // Update your label or perform any other action with the speed result
+                }
+            }
+        }.resume()
     }
     
     func setThemeColor() {
@@ -39,18 +66,18 @@ class AppSettingsViewController: UIViewController {
             })
             .bind(to: ThemeManager.currentTintColorRelay)
             .disposed(by: bag)
-
+        
         // Observe changes in the current tint color and update UI elements
         ThemeManager.currentTintColorRelay
             .observeOn(MainScheduler.instance) // Ensure UI updates are on the main thread
-            .subscribe(onNext: { [weak self] color in
-                // Change the window's tint color
-                if let window = UIApplication.shared.windows.first {
-                    window.tintColor = color
+                .subscribe(onNext: { [weak self] color in
+                    // Change the window's tint color
+                    if let window = UIApplication.shared.windows.first {
+                        window.tintColor = color
+                    }
+                })
+                .disposed(by: bag)
                 }
-            })
-            .disposed(by: bag)
-    }
     
     func setupClearCache() {
         clearCache.rx.tap

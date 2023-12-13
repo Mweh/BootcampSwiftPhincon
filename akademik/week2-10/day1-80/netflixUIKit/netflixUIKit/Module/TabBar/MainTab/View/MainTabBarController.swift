@@ -72,13 +72,11 @@ class MainTabBarController: UITabBarController {
         
         nav1.tabBarItem = UITabBarItem(title: "Home"~, image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
         nav2.tabBarItem = UITabBarItem(title: "Search"~, image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
-        nav3.tabBarItem = UITabBarItem(title: "Coming Soon"~, image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
+        nav3.tabBarItem = UITabBarItem(title: "Discover"~, image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
         nav4.tabBarItem = UITabBarItem(title: "More"~, image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
 
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
     }
-    
-    
 }
 
 extension MainTabBarController: UITabBarControllerDelegate {

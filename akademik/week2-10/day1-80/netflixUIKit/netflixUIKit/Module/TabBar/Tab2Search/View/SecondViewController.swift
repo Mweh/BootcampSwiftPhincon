@@ -165,7 +165,7 @@ extension SecondViewController: SkeletonTableViewDelegate, SkeletonTableViewData
 
             let imageName = "\(tmdbImgBase)\(data.results[indexPath.row].backdropPath ?? "")"
             cell.imageFilm.kf.indicatorType = .activity
-            cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(systemName: "hourglass"))
+            cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(named: "netflix"))
             cell.imageFilm.hero.id = "\(data.results[indexPath.row].backdropPath ?? "")"
             cell.imageFilm.sizeToFit()
             return cell

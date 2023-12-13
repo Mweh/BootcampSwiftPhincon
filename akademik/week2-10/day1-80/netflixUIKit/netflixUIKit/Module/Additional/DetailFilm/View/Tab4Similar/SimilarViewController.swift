@@ -86,7 +86,7 @@ extension SimilarViewController: UICollectionViewDelegate, UICollectionViewDataS
             let tmdbImgBase = TMDBImageURL.url(size: .w200)
             let posterImgUrl = "\(tmdbImgBase)\(index.posterPath ?? "noImageURL")"
             let url = URL(string: posterImgUrl)
-            cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
+            cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "netflix"))
             cell.titleLabel.text = index.title?.truncateToWords(3) ?? "N/A"
         }
         return cell

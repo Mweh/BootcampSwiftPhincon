@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,15 +31,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-bh-S31">
-                            <rect key="frame" x="359.33333333333331" y="2" width="25.666666666666686" height="37"/>
+                            <rect key="frame" x="360" y="5.6666666666666714" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="D2X-cd-H9f"/>
+                                <constraint firstAttribute="width" constant="25" id="OHf-pM-AUE"/>
+                            </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="magnifyingglass" catalog="system"/>
+                            <state key="normal">
+                                <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                            </state>
                             <connections>
                                 <action selector="buttonToSearchButtonVC:" destination="-1" eventType="touchUpInside" id="sk6-eg-S7E"/>
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-va-ANe">
-                            <rect key="frame" x="0.0" y="41" width="393" height="718"/>
+                            <rect key="frame" x="0.0" y="42" width="393" height="717"/>
                             <viewLayoutGuide key="contentLayoutGuide" id="hO7-hM-NHx"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="9uF-RT-XMY"/>
                             <color key="separatorColor" systemColor="systemFillColor"/>
@@ -50,14 +57,13 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="EdW-va-ANe" secondAttribute="trailing" id="2ue-FM-6ny"/>
-                        <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="oyE-bh-S31" secondAttribute="bottom" constant="2" id="7e0-EP-RIP"/>
                         <constraint firstItem="f21-eW-dbF" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" id="Dft-lb-qra"/>
-                        <constraint firstItem="oyE-bh-S31" firstAttribute="top" secondItem="XLE-OR-BwM" secondAttribute="top" constant="2" id="K4P-VW-Da5"/>
                         <constraint firstAttribute="trailing" secondItem="oyE-bh-S31" secondAttribute="trailing" constant="8" id="Nrh-lO-5OQ"/>
                         <constraint firstAttribute="bottom" secondItem="EdW-va-ANe" secondAttribute="bottom" id="adu-UW-0ZW"/>
                         <constraint firstItem="f21-eW-dbF" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" constant="16" id="fF4-wv-0br"/>
+                        <constraint firstItem="oyE-bh-S31" firstAttribute="centerY" secondItem="f21-eW-dbF" secondAttribute="centerY" id="g5c-Zb-hYU"/>
                         <constraint firstItem="EdW-va-ANe" firstAttribute="leading" secondItem="XLE-OR-BwM" secondAttribute="leading" id="hOU-LW-H7a"/>
-                        <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="f21-eW-dbF" secondAttribute="bottom" constant="5" id="kHX-j7-fnV"/>
+                        <constraint firstItem="EdW-va-ANe" firstAttribute="top" secondItem="f21-eW-dbF" secondAttribute="bottom" constant="6" id="kHX-j7-fnV"/>
                     </constraints>
                 </view>
             </subviews>

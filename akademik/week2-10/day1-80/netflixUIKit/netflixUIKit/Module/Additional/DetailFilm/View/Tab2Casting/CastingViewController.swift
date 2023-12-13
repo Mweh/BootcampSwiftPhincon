@@ -83,7 +83,7 @@ extension CastingViewController: UICollectionViewDelegate, UICollectionViewDataS
         let tmdbImgBase = TMDBImageURL.url(size: .w200)
         let actorImgUrl = "\(tmdbImgBase)\(dataCredit?.cast[indexPath.row].profilePath ?? "noImageURL")"
         let url = URL(string: actorImgUrl)
-        cell.actorImgView.kf.setImage(with: url, placeholder: UIImage(named: "hourglass"))
+        cell.actorImgView.kf.setImage(with: url, placeholder: UIImage(named: "netflix"))
         cell.characterLabel.text = dataCredit?.cast[indexPath.row].character?.truncateToWords(2)
         cell.actorLabel.text = dataCredit?.cast[indexPath.row].name.truncateToWords(2)
         return cell
