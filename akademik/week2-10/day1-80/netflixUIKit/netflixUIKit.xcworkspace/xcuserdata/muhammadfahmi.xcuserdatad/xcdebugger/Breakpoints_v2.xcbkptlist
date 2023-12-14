@@ -840,6 +840,21 @@
                   endingLineNumber = "14"
                   offsetFromSymbolStart = "156">
                </Location>
+               <Location
+                  uuid = "EAD1F5CF-93DE-40E5-8101-105AAE56E2C7 - b5312b87d1d3120f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in static netflixUIKit.PhotoLibraryManager.saveImageToPhotosLibrary(imageURL: Foundation.URL) -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Common/Helper/PhotoLibraryManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "196">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

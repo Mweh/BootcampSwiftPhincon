@@ -13,7 +13,6 @@ target 'netflixUIKit' do
 
   # Image
   pod 'Kingfisher'
-  pod 'StepSlider'
 
   # Placeholder
   pod 'SkeletonView'

@@ -11,4 +11,5 @@ struct URLs {
     static let netflixPrivacy = "https://help.netflix.com/legal/privacy"
     static let fastDotCom = "https://fast.com"
     static let netflixHelp = "https://help.netflix.com/"
+    static let testingURL = "https://images.apple.com/v/imac-with-retina/a/images/overview/5k_image.jpg"
 }

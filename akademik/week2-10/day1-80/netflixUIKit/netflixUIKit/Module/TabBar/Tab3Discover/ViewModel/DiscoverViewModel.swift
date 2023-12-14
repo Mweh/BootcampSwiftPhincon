@@ -1,5 +1,5 @@
 //
-//  ComingSoonViewModel.swift
+//  DiscoverViewModel.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 13/11/23.
@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class ComingSoonViewModel {
+class DiscoverViewModel {
     let api = CustomAPIManager()
     let bag = DisposeBag()
     let stateLoading = BehaviorRelay<StateLoading>(value: .loading)

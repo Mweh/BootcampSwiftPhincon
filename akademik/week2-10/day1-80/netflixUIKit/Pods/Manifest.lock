@@ -128,7 +128,6 @@ PODS:
     - RxSwift (= 6.6.0)
   - RxSwift (6.6.0)
   - SkeletonView (1.30.4)
-  - StepSlider (1.8.0)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
@@ -147,7 +146,6 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SkeletonView
-  - StepSlider
   - youtube-ios-player-helper
 
 SPEC REPOS:
@@ -184,7 +182,6 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SkeletonView
-    - StepSlider
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
@@ -220,9 +217,8 @@ SPEC CHECKSUMS:
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
-  StepSlider: 890db727e779fa99cb32afffc5887c1109e151f4
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 2dcdbe83910e36eaf515763f5b0961ca7f068b9e
+PODFILE CHECKSUM: 3ab646f1e75c52632e6012ef68e08d1615b968eb
 
 COCOAPODS: 1.14.3

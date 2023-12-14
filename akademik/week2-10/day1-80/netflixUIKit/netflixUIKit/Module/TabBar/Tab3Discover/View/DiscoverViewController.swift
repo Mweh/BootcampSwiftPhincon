@@ -1,5 +1,5 @@
 //
-//  ComingSoonViewController.swift
+//  DiscoverViewController.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 31/10/23.
@@ -10,14 +10,14 @@ import RxSwift
 import SkeletonView
 import UIKit
 
-class ComingSoonViewController: UIViewController {
+class DiscoverViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pullSortedMenuButton: UIButton!
     private let refreshControl = UIRefreshControl()
     private var animationView: LottieAnimationView?
     
-    let vm = ComingSoonViewModel()
+    let vm = DiscoverViewModel()
     let bag = DisposeBag()
     
     var currentPage = 1
@@ -208,7 +208,7 @@ class ComingSoonViewController: UIViewController {
                 self.tableView.reloadData()
             case .failure(let error):
                 // Handle the error
-                print("Error fetching upcoming movies: \(error)")
+                print("Error fetching movies: \(error)")
             }
             self.tableView.hideSkeleton()
         }
@@ -227,7 +227,7 @@ class ComingSoonViewController: UIViewController {
     }
 }
 
-extension ComingSoonViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
+extension DiscoverViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
     
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataTable?.results.count ?? 1

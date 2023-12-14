@@ -29,11 +29,11 @@ class AppSettingsViewController: UIViewController {
         setupToggleDarkMode()
         setupClearCache()
         setThemeColor()
-        performSpeedTest()
+        
     }
     
     func performSpeedTest() {
-        let testingURL = URL(string: "https://images.apple.com/v/imac-with-retina/a/images/overview/5k_image.jpg")!
+        let testingURL = URL(string: URLs.testingURL)!
         
         let startTime = Date()
         
@@ -44,14 +44,15 @@ class AppSettingsViewController: UIViewController {
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             } else {
-                let fileSize = 6_725_466 // Assuming a file size of 1 MB for simplicity
-                let speedMbps = Double(fileSize) / (elapsedTime * 1_000_00)
+                let fileSize = 6_725_466 // Assuming a file size of 6.7 MB
+                let speedMbps = Double(fileSize) / (elapsedTime * 100_000)
                 let formattedSpeed = String(format: "%.2f", speedMbps) // Format to two decimal places
                 print("Download Speed: \(formattedSpeed) Mbps")
                 
+                UserDefaults.standard.set(formattedSpeed, forKey: "downloadSpeed")
+                
                 DispatchQueue.main.async {
-                    self.speedValue.text = "\(formattedSpeed) Mbps"
-                    // Update your label or perform any other action with the speed result
+                    self.speedValue.text = "\(formattedSpeed) Mbps" // keep the value in UserDefault
                 }
             }
         }.resume()
@@ -141,8 +142,10 @@ class AppSettingsViewController: UIViewController {
     }
     
     func setupSpeed(){
+        
         speedButton.rx.tap
             .subscribe(onNext: {[weak self] in
+                self?.performSpeedTest()
                 let vc = GoToWebViewController()
                 
                 vc.urlString = URLs.fastDotCom
@@ -151,6 +154,10 @@ class AppSettingsViewController: UIViewController {
                 
             })
             .disposed(by: bag)
+        
+        if let storedSpeed = UserDefaults.standard.string(forKey: "downloadSpeed"){
+            speedValue.text = "\(storedSpeed) Mbps"
+        }
     }
     
     func setupPrivacy(){

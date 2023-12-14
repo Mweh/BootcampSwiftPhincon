@@ -11,12 +11,12 @@ class MainTabBarController: UITabBarController {
     
     let homeVC = TableViewController()
     let searchVC = SecondViewController()
-    let comingSoonVC = ComingSoonViewController()
+    let discoverVC = DiscoverViewController()
     let moreVC = MoreViewController()
     
     let nav1 = UINavigationController(rootViewController: TableViewController())
     let nav2 = UINavigationController(rootViewController: SecondViewController())
-    let nav3 = UINavigationController(rootViewController: ComingSoonViewController())
+    let nav3 = UINavigationController(rootViewController: DiscoverViewController())
     let nav4 = UINavigationController(rootViewController: MoreViewController())
     
     var totalHistoryMovie: Int?
@@ -67,12 +67,12 @@ class MainTabBarController: UITabBarController {
     func configureUITabBarItems() {
         homeVC.navigationItem.largeTitleDisplayMode = .automatic
         searchVC.navigationItem.largeTitleDisplayMode = .automatic
-        comingSoonVC.navigationItem.largeTitleDisplayMode = .automatic
+        discoverVC.navigationItem.largeTitleDisplayMode = .automatic
         moreVC.navigationItem.largeTitleDisplayMode = .automatic
         
         nav1.tabBarItem = UITabBarItem(title: "Home"~, image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
         nav2.tabBarItem = UITabBarItem(title: "Search"~, image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
-        nav3.tabBarItem = UITabBarItem(title: "Discover"~, image: SFSymbol.comingSoonSymbol, selectedImage: SFSymbol.comingFillSoonSymbol)
+        nav3.tabBarItem = UITabBarItem(title: "Discover"~, image: SFSymbol.discoverSymbol, selectedImage: SFSymbol.discoverFillSoonSymbol)
         nav4.tabBarItem = UITabBarItem(title: "More"~, image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
 
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
@@ -102,4 +102,3 @@ extension MainTabBarController: UITabBarControllerDelegate {
         }
     }
 }
-

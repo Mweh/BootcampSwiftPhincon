@@ -77,6 +77,7 @@
 		CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */; };
 		CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */; };
 		CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */; };
+		CD6B62102B2B444600E81279 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */; };
 		CD7233FA2B25A50C006B156C /* NetflixSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */; };
 		CD7233FB2B25A50E006B156C /* NetflixSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F72B25A1A1006B156C /* NetflixSans-Light.otf */; };
 		CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */; };
@@ -89,7 +90,7 @@
 		CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234392B26F395006B156C /* ChangelogViewController.swift */; };
 		CD72343C2B26F395006B156C /* ChangelogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD72343A2B26F395006B156C /* ChangelogViewController.xib */; };
 		CD72343E2B2707E5006B156C /* CompletedTasks.md in Resources */ = {isa = PBXBuildFile; fileRef = CD72343D2B26F9EC006B156C /* CompletedTasks.md */; };
-		CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */; };
+		CD723CEF2B023D8200C191A9 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD723CEE2B023D8200C191A9 /* DiscoverViewModel.swift */; };
 		CD729D172B102B5A006D3046 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D162B102B59006D3046 /* Details.swift */; };
 		CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D182B1054B3006D3046 /* TappableMovieView.swift */; };
 		CD729D1D2B108981006D3046 /* GoToWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D1B2B108981006D3046 /* GoToWebViewController.swift */; };
@@ -141,8 +142,8 @@
 		CDB9FD682B0C917800128B03 /* fireAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = CDB9FD672B0C917700128B03 /* fireAnimation.json */; };
 		CDB9FD6B2B0CA95500128B03 /* FadedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB9FD6A2B0CA95500128B03 /* FadedImageView.swift */; };
 		CDBF8E7C2B216E9A000FF0F5 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF8E7B2B216E9A000FF0F5 /* CoreDataHelper.swift */; };
-		CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */; };
-		CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */; };
+		CDC05AF12AF0AED100706AB7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC05AEF2AF0AED100706AB7 /* DiscoverViewController.swift */; };
+		CDC05AF22AF0AED100706AB7 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC05AF02AF0AED100706AB7 /* DiscoverViewController.xib */; };
 		CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC320DF2B07075300726140 /* ForgotPassViewController.swift */; };
 		CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC320E02B07075300726140 /* ForgotPassViewController.xib */; };
 		CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */; };
@@ -243,7 +244,7 @@
 		CD7234392B26F395006B156C /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
 		CD72343A2B26F395006B156C /* ChangelogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangelogViewController.xib; sourceTree = "<group>"; };
 		CD72343D2B26F9EC006B156C /* CompletedTasks.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CompletedTasks.md; sourceTree = "<group>"; };
-		CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
+		CD723CEE2B023D8200C191A9 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		CD729D162B102B59006D3046 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		CD729D182B1054B3006D3046 /* TappableMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableMovieView.swift; sourceTree = "<group>"; };
 		CD729D1B2B108981006D3046 /* GoToWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToWebViewController.swift; sourceTree = "<group>"; };
@@ -297,8 +298,8 @@
 		CDB9FD672B0C917700128B03 /* fireAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireAnimation.json; sourceTree = "<group>"; };
 		CDB9FD6A2B0CA95500128B03 /* FadedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadedImageView.swift; sourceTree = "<group>"; };
 		CDBF8E7B2B216E9A000FF0F5 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
-		CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComingSoonViewController.xib; sourceTree = "<group>"; };
+		CDC05AEF2AF0AED100706AB7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		CDC05AF02AF0AED100706AB7 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
 		CDC320DF2B07075300726140 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		CDC320E02B07075300726140 /* ForgotPassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassViewController.xib; sourceTree = "<group>"; };
 		CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarReusableCustomView.swift; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAA082175510BC83DFF5FA4 /* Pods_netflixUIKit.framework in Frameworks */,
+				CD6B62102B2B444600E81279 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,13 +642,13 @@
 			path = Tab2Search;
 			sourceTree = "<group>";
 		};
-		CD5DD4B82AEF3AE400140DFA /* Tab3ComingSoon */ = {
+		CD5DD4B82AEF3AE400140DFA /* Tab3Discover */ = {
 			isa = PBXGroup;
 			children = (
 				CD7234222B26C97B006B156C /* View */,
 				CD723CED2B023D5800C191A9 /* ViewModel */,
 			);
-			path = Tab3ComingSoon;
+			path = Tab3Discover;
 			sourceTree = "<group>";
 		};
 		CD60A6362AF1E89C00B2E511 /* MainTab */ = {
@@ -732,7 +734,7 @@
 				CD60A6362AF1E89C00B2E511 /* MainTab */,
 				CDC05AEE2AF0AE7E00706AB7 /* Tab1Home */,
 				CD5DD4B72AEF3ADE00140DFA /* Tab2Search */,
-				CD5DD4B82AEF3AE400140DFA /* Tab3ComingSoon */,
+				CD5DD4B82AEF3AE400140DFA /* Tab3Discover */,
 				CD79F6B22AEF833500338C72 /* Tab4More */,
 			);
 			path = TabBar;
@@ -837,8 +839,8 @@
 		CD7234222B26C97B006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDC05AEF2AF0AED100706AB7 /* ComingSoonViewController.swift */,
-				CDC05AF02AF0AED100706AB7 /* ComingSoonViewController.xib */,
+				CDC05AEF2AF0AED100706AB7 /* DiscoverViewController.swift */,
+				CDC05AF02AF0AED100706AB7 /* DiscoverViewController.xib */,
 				CDD2AE9F2AF49B08002362C6 /* Cell */,
 			);
 			path = View;
@@ -904,7 +906,7 @@
 		CD723CED2B023D5800C191A9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CD723CEE2B023D8200C191A9 /* ComingSoonViewModel.swift */,
+				CD723CEE2B023D8200C191A9 /* DiscoverViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -981,8 +983,8 @@
 		CD79F6B22AEF833500338C72 /* Tab4More */ = {
 			isa = PBXGroup;
 			children = (
-				CD7234232B26C9B6006B156C /* View */,
 				CD7234242B26C9BD006B156C /* ViewModel */,
+				CD7234232B26C9B6006B156C /* View */,
 			);
 			path = Tab4More;
 			sourceTree = "<group>";
@@ -1199,6 +1201,9 @@
 			dependencies = (
 			);
 			name = netflixUIKit;
+			packageProductDependencies = (
+				CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */,
+			);
 			productName = netflixUIKit;
 			productReference = CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -1228,6 +1233,9 @@
 				id,
 			);
 			mainGroup = CD5DD4902AEF38AA00140DFA;
+			packageReferences = (
+				CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = CD5DD49A2AEF38AA00140DFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1277,7 +1285,7 @@
 				CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */,
 				CD23A13C2B1422FB000D2303 /* SeeAllViewController.xib in Resources */,
 				CD678AA22B0DD44100B2261F /* CastingCollectionViewCell.xib in Resources */,
-				CDC05AF22AF0AED100706AB7 /* ComingSoonViewController.xib in Resources */,
+				CDC05AF22AF0AED100706AB7 /* DiscoverViewController.xib in Resources */,
 				CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */,
 				CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */,
 				CD4659572B1EBEEF00D86A26 /* HistoryViewController.xib in Resources */,
@@ -1357,7 +1365,7 @@
 				CD21917D2B074E600038BE86 /* AlertUtility.swift in Sources */,
 				CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */,
 				CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */,
-				CDC05AF12AF0AED100706AB7 /* ComingSoonViewController.swift in Sources */,
+				CDC05AF12AF0AED100706AB7 /* DiscoverViewController.swift in Sources */,
 				CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */,
 				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */,
@@ -1370,7 +1378,7 @@
 				CD21917B2B073A380038BE86 /* ModalHalfUIPresentationController.swift in Sources */,
 				CD678AAF2B0E293100B2261F /* Reviews.swift in Sources */,
 				CDAF8A842AF95B5200CB670D /* CarouselCollectionViewCell.swift in Sources */,
-				CD723CEF2B023D8200C191A9 /* ComingSoonViewModel.swift in Sources */,
+				CD723CEF2B023D8200C191A9 /* DiscoverViewModel.swift in Sources */,
 				CD0A3EF92B1498620029AE88 /* SeeAllCollectionViewCell.swift in Sources */,
 				CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */,
 				CD16E3142AF3826100669456 /* ListMovieCell.swift in Sources */,
@@ -1510,7 +1518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1565,7 +1573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1661,6 +1669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CD46593B2B1EB41600D86A26 /* RecentlyViewedMovie.xcdatamodeld */ = {

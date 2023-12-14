@@ -77,6 +77,10 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add buy me a coffee
 - [ ] Add audio to text searchBar
 - [ ] Add localized for language
+- [ ] Add my app's widget
+- [ ] Add chatAI using Google Gemini 
+- [ ] Implement deep links
+ 
 - get interneet speed and save it in coredata
 - ... tes 123
 
