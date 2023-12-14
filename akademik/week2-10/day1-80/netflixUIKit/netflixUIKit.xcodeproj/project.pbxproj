@@ -13,9 +13,6 @@
 		CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */; };
 		CD07093C2AFB3B500079FC45 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */; };
 		CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */; };
-		CD0717BE2B2A83D500C1C616 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD0717BD2B2A83D500C1C616 /* GoogleGenerativeAI */; };
-		CD0717C22B2A849400C1C616 /* GeminiAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0717C02B2A849400C1C616 /* GeminiAIViewController.swift */; };
-		CD0717C32B2A849400C1C616 /* GeminiAIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0717C12B2A849400C1C616 /* GeminiAIViewController.xib */; };
 		CD0A3EF92B1498620029AE88 /* SeeAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */; };
 		CD0A3EFA2B1498620029AE88 /* SeeAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */; };
 		CD136FD12AFA33770046BB44 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD136FD02AFA33770046BB44 /* SearchViewModel.swift */; };
@@ -168,8 +165,6 @@
 		CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		CD0717C02B2A849400C1C616 /* GeminiAIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiAIViewController.swift; sourceTree = "<group>"; };
-		CD0717C12B2A849400C1C616 /* GeminiAIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeminiAIViewController.xib; sourceTree = "<group>"; };
 		CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD136FD02AFA33770046BB44 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -325,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAA082175510BC83DFF5FA4 /* Pods_netflixUIKit.framework in Frameworks */,
-				CD0717BE2B2A83D500C1C616 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,15 +366,6 @@
 				CDE30EF72B21B17F0050DE18 /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		CD0717BF2B2A846900C1C616 /* GeminiAI */ = {
-			isa = PBXGroup;
-			children = (
-				CD0717C02B2A849400C1C616 /* GeminiAIViewController.swift */,
-				CD0717C12B2A849400C1C616 /* GeminiAIViewController.xib */,
-			);
-			path = GeminiAI;
 			sourceTree = "<group>";
 		};
 		CD0A3EF62B1498140029AE88 /* SeeAllCell */ = {
@@ -869,7 +854,6 @@
 				CD919E512B286235005D7171 /* DisplayLanguage */,
 				CD7234382B26F375006B156C /* Changelog */,
 				CD4659532B1EBECF00D86A26 /* History */,
-				CD0717BF2B2A846900C1C616 /* GeminiAI */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -997,8 +981,8 @@
 		CD79F6B22AEF833500338C72 /* Tab4More */ = {
 			isa = PBXGroup;
 			children = (
-				CD7234242B26C9BD006B156C /* ViewModel */,
 				CD7234232B26C9B6006B156C /* View */,
+				CD7234242B26C9BD006B156C /* ViewModel */,
 			);
 			path = Tab4More;
 			sourceTree = "<group>";
@@ -1215,9 +1199,6 @@
 			dependencies = (
 			);
 			name = netflixUIKit;
-			packageProductDependencies = (
-				CD0717BD2B2A83D500C1C616 /* GoogleGenerativeAI */,
-			);
 			productName = netflixUIKit;
 			productReference = CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -1247,9 +1228,6 @@
 				id,
 			);
 			mainGroup = CD5DD4902AEF38AA00140DFA;
-			packageReferences = (
-				CD0717BC2B2A83D500C1C616 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
-			);
 			productRefGroup = CD5DD49A2AEF38AA00140DFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1321,7 +1299,6 @@
 				CD4659332B1DA10600D86A26 /* AllVideoViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
 				CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */,
-				CD0717C32B2A849400C1C616 /* GeminiAIViewController.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
 				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
@@ -1450,7 +1427,6 @@
 				CD46593D2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodeld in Sources */,
 				CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */,
 				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
-				CD0717C22B2A849400C1C616 /* GeminiAIViewController.swift in Sources */,
 				CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
@@ -1685,25 +1661,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CD0717BC2B2A83D500C1C616 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/generative-ai-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CD0717BD2B2A83D500C1C616 /* GoogleGenerativeAI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD0717BC2B2A83D500C1C616 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
-			productName = GoogleGenerativeAI;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CD46593B2B1EB41600D86A26 /* RecentlyViewedMovie.xcdatamodeld */ = {
