@@ -78,7 +78,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add audio to text searchBar
 - [ ] Add localized for language
 - get interneet speed and save it in coredata
-- ...
+- ... tes 123
 
 ## DONE
 
