@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="currentAppVersionLabel" destination="M5O-Ls-lXs" id="FnR-sE-hX6"/>
                 <outlet property="imageView" destination="53P-v2-iH0" id="ytL-c2-VD6"/>
+                <outlet property="msFlixyAssistanceButton" destination="nP6-Jg-Ic2" id="s35-kg-qam"/>
                 <outlet property="plusImg" destination="gmw-ia-dje" id="sSv-Zi-VIH"/>
                 <outlet property="tblView" destination="WX4-nV-4pU" id="WLj-2B-G2L"/>
                 <outlet property="uploadImgButton" destination="JFs-gT-Ecl" id="MHv-35-1yA"/>
@@ -63,23 +64,14 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 15.21.1 (18) 5.0.1 - 001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5O-Ls-lXs">
-                            <rect key="frame" x="80.666666666666686" y="722.66666666666663" width="233" height="20.333333333333371"/>
+                            <rect key="frame" x="80.666666666666686" y="730.66666666666663" width="233" height="20.333333333333371"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WX4-nV-4pU">
-                            <rect key="frame" x="0.0" y="255.66666666666666" width="394" height="396.66666666666674"/>
+                            <rect key="frame" x="0.0" y="255.66666666666666" width="394" height="400.66666666666674"/>
                         </tableView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-ls-Soc">
-                            <rect key="frame" x="152" y="676.33333333333337" width="90" height="34.333333333333371"/>
-                            <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="tinted" title="Sign Out"/>
-                            <connections>
-                                <action selector="signOut:" destination="-1" eventType="touchUpInside" id="nLp-JA-1C0"/>
-                            </connections>
-                        </button>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="6W1-JP-CuZ">
                             <rect key="frame" x="16" y="42.000000000000007" width="362" height="108.66666666666669"/>
                             <subviews>
@@ -180,30 +172,54 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-1f-Mq6">
-                            <rect key="frame" x="16" y="0.0" width="71.666666666666657" height="36"/>
+                            <rect key="frame" x="16" y="0.0" width="71.666666666666671" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-ls-Soc">
+                            <rect key="frame" x="32" y="672.33333333333337" width="90" height="34.333333333333371"/>
+                            <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Sign Out"/>
+                            <connections>
+                                <action selector="signOut:" destination="-1" eventType="touchUpInside" id="nLp-JA-1C0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nP6-Jg-Ic2" userLabel="ChatAI">
+                            <rect key="frame" x="327" y="672" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="G74-8p-xg2"/>
+                                <constraint firstAttribute="width" constant="35" id="jGI-XI-tg8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" systemColor="tintColor"/>
+                                <imageReference key="image" image="langIcon" symbolScale="large"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="D4g-ls-Soc" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="0I3-EK-O6c"/>
                         <constraint firstItem="OEV-1f-Mq6" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="16" id="26w-y8-mCp"/>
+                        <constraint firstItem="D4g-ls-Soc" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="32" id="4AQ-Gt-BEt"/>
                         <constraint firstItem="6W1-JP-CuZ" firstAttribute="top" secondItem="OEV-1f-Mq6" secondAttribute="bottom" constant="6" id="9QL-f9-k5T"/>
                         <constraint firstAttribute="trailing" secondItem="WX4-nV-4pU" secondAttribute="trailing" id="Fom-FM-WTp"/>
                         <constraint firstItem="44l-gF-ib7" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="GJn-g3-kaw"/>
                         <constraint firstItem="JFs-gT-Ecl" firstAttribute="centerY" secondItem="OEV-1f-Mq6" secondAttribute="centerY" id="Jyw-PS-eGG"/>
                         <constraint firstItem="44l-gF-ib7" firstAttribute="top" secondItem="6W1-JP-CuZ" secondAttribute="bottom" constant="36" id="PCv-HZ-CGh"/>
-                        <constraint firstItem="D4g-ls-Soc" firstAttribute="top" secondItem="WX4-nV-4pU" secondAttribute="bottom" constant="24" id="TVA-cV-UJP"/>
+                        <constraint firstItem="D4g-ls-Soc" firstAttribute="top" secondItem="WX4-nV-4pU" secondAttribute="bottom" constant="16" id="TVA-cV-UJP"/>
+                        <constraint firstAttribute="trailing" secondItem="nP6-Jg-Ic2" secondAttribute="trailing" constant="32" id="WsQ-u2-KG8"/>
                         <constraint firstItem="WX4-nV-4pU" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" id="c8j-Ij-m1Q"/>
                         <constraint firstItem="M5O-Ls-lXs" firstAttribute="centerX" secondItem="aq4-iG-jAu" secondAttribute="centerX" id="eVI-uS-j4n"/>
-                        <constraint firstItem="M5O-Ls-lXs" firstAttribute="top" secondItem="D4g-ls-Soc" secondAttribute="bottom" constant="12" id="hnw-8E-LGS"/>
+                        <constraint firstItem="M5O-Ls-lXs" firstAttribute="top" secondItem="D4g-ls-Soc" secondAttribute="bottom" constant="24" id="hnw-8E-LGS"/>
                         <constraint firstItem="OEV-1f-Mq6" firstAttribute="top" secondItem="aq4-iG-jAu" secondAttribute="top" id="mUe-wG-WwU"/>
                         <constraint firstItem="6W1-JP-CuZ" firstAttribute="leading" secondItem="aq4-iG-jAu" secondAttribute="leading" constant="16" id="sjX-am-D6e"/>
-                        <constraint firstAttribute="bottom" secondItem="M5O-Ls-lXs" secondAttribute="bottom" constant="16" id="tny-oq-YSt"/>
+                        <constraint firstAttribute="bottom" secondItem="M5O-Ls-lXs" secondAttribute="bottom" constant="8" id="tny-oq-YSt"/>
                         <constraint firstItem="WX4-nV-4pU" firstAttribute="top" secondItem="44l-gF-ib7" secondAttribute="bottom" constant="24" id="ttS-fH-h4B"/>
                         <constraint firstAttribute="trailing" secondItem="6W1-JP-CuZ" secondAttribute="trailing" constant="16" id="vit-M9-pLZ"/>
+                        <constraint firstItem="nP6-Jg-Ic2" firstAttribute="centerY" secondItem="D4g-ls-Soc" secondAttribute="centerY" id="yMJ-wa-Qny"/>
                         <constraint firstAttribute="trailing" secondItem="JFs-gT-Ecl" secondAttribute="trailing" constant="8" id="zjo-WG-CRY"/>
                     </constraints>
                     <variation key="default">
@@ -224,11 +240,12 @@
         </view>
     </objects>
     <resources>
+        <image name="langIcon" width="48" height="48"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -238,6 +255,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

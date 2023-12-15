@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MsFlixyAssistanceViewController" customModule="netflixUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTableView" destination="YkL-qq-OCa" id="Cb2-3v-g8v"/>
+                <outlet property="userInputTextField" destination="wuV-PM-c7J" id="5xH-kD-IbU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50f-Gl-cYp">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-OT-GXm">
+                            <rect key="frame" x="0.0" y="718" width="393" height="75"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message to MsFlixy..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-PM-c7J" userLabel="messageTextField">
+                                    <rect key="frame" x="16" y="6" width="309" height="34"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-Pf-Yre" userLabel="sendMessage">
+                                    <rect key="frame" x="341" y="5" width="36" height="36"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="paperplane.circle.fill" catalog="system" symbolScale="large"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="wuV-PM-c7J" firstAttribute="top" secondItem="dhu-OT-GXm" secondAttribute="top" constant="6" id="4XB-v3-Eqn"/>
+                                <constraint firstItem="ufy-Pf-Yre" firstAttribute="leading" secondItem="wuV-PM-c7J" secondAttribute="trailing" constant="16" id="FBF-ES-4sx"/>
+                                <constraint firstItem="ufy-Pf-Yre" firstAttribute="centerY" secondItem="wuV-PM-c7J" secondAttribute="centerY" id="bZo-hK-32F"/>
+                                <constraint firstAttribute="height" constant="75" id="pMh-Lc-gPe"/>
+                                <constraint firstItem="wuV-PM-c7J" firstAttribute="leading" secondItem="dhu-OT-GXm" secondAttribute="leading" constant="16" id="rmi-0G-JxM"/>
+                                <constraint firstAttribute="trailing" secondItem="ufy-Pf-Yre" secondAttribute="trailing" constant="16" id="vMB-GT-2bA"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YkL-qq-OCa" userLabel="ChatTableView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="718"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dhu-OT-GXm" secondAttribute="bottom" id="1ua-A8-bgu"/>
+                        <constraint firstItem="dhu-OT-GXm" firstAttribute="top" secondItem="YkL-qq-OCa" secondAttribute="bottom" id="HlR-hW-Eyf"/>
+                        <constraint firstAttribute="trailing" secondItem="YkL-qq-OCa" secondAttribute="trailing" id="QXe-JL-E76"/>
+                        <constraint firstItem="dhu-OT-GXm" firstAttribute="leading" secondItem="50f-Gl-cYp" secondAttribute="leading" id="fzX-IW-wvE"/>
+                        <constraint firstItem="YkL-qq-OCa" firstAttribute="leading" secondItem="50f-Gl-cYp" secondAttribute="leading" id="kGP-L7-0my"/>
+                        <constraint firstItem="YkL-qq-OCa" firstAttribute="top" secondItem="50f-Gl-cYp" secondAttribute="top" id="wsN-hi-zhf"/>
+                        <constraint firstAttribute="trailing" secondItem="dhu-OT-GXm" secondAttribute="trailing" id="xZr-Z7-KeI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="50f-Gl-cYp" secondAttribute="bottom" id="1C3-mJ-mti"/>
+                <constraint firstItem="50f-Gl-cYp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="63Z-8R-HU7"/>
+                <constraint firstItem="50f-Gl-cYp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6ky-4W-AZW"/>
+                <constraint firstItem="50f-Gl-cYp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F1q-80-Xys"/>
+                <constraint firstItem="50f-Gl-cYp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pXc-tt-csf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="50f-Gl-cYp" secondAttribute="trailing" id="xKa-bA-bgr"/>
+                <constraint firstAttribute="bottom" secondItem="50f-Gl-cYp" secondAttribute="bottom" id="yRb-n5-ESs"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="-12"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="wuV-PM-c7J">
+            <size key="intrinsicContentSize" width="166" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

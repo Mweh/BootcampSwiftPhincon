@@ -37,6 +37,11 @@
 		CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */; };
 		CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */; };
 		CD40E1E72AF7DD56002D2407 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E62AF7DD56002D2407 /* Endpoint.swift */; };
+		CD42F93D2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42F93B2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift */; };
+		CD42F93E2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD42F93C2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib */; };
+		CD42F96C2B2B624A008A1F13 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD42F96B2B2B624A008A1F13 /* GoogleGenerativeAI */; };
+		CD42F9702B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42F96E2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.swift */; };
+		CD42F9712B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD42F96F2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib */; };
 		CD4571552B19BE33002B4EE6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4571532B19BE33002B4EE6 /* ARViewController.swift */; };
 		CD4571562B19BE33002B4EE6 /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4571542B19BE33002B4EE6 /* ARViewController.xib */; };
 		CD46592E2B1D984D00D86A26 /* floatingIconPlays.json in Resources */ = {isa = PBXBuildFile; fileRef = CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */; };
@@ -77,7 +82,6 @@
 		CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678AB52B0E29F300B2261F /* ReviewsTableViewCell.swift */; };
 		CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD678AB62B0E29F300B2261F /* ReviewsTableViewCell.xib */; };
 		CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */; };
-		CD6B62102B2B444600E81279 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */; };
 		CD7233FA2B25A50C006B156C /* NetflixSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */; };
 		CD7233FB2B25A50E006B156C /* NetflixSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F72B25A1A1006B156C /* NetflixSans-Light.otf */; };
 		CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */; };
@@ -190,6 +194,10 @@
 		CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedReusableCustomView.xib; sourceTree = "<group>"; };
 		CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAPIManager.swift; sourceTree = "<group>"; };
 		CD40E1E62AF7DD56002D2407 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CD42F93B2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsFlixyAssistanceViewController.swift; sourceTree = "<group>"; };
+		CD42F93C2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MsFlixyAssistanceViewController.xib; sourceTree = "<group>"; };
+		CD42F96E2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsFlixyAssistanceTableViewCell.swift; sourceTree = "<group>"; };
+		CD42F96F2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MsFlixyAssistanceTableViewCell.xib; sourceTree = "<group>"; };
 		CD4571532B19BE33002B4EE6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		CD4571542B19BE33002B4EE6 /* ARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARViewController.xib; sourceTree = "<group>"; };
 		CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = floatingIconPlays.json; sourceTree = "<group>"; };
@@ -321,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAA082175510BC83DFF5FA4 /* Pods_netflixUIKit.framework in Frameworks */,
-				CD6B62102B2B444600E81279 /* GoogleGenerativeAI in Frameworks */,
+				CD42F96C2B2B624A008A1F13 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +480,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CD42F93A2B2B5786008A1F13 /* MsFlixyAssistance */ = {
+			isa = PBXGroup;
+			children = (
+				CD42F93B2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift */,
+				CD42F93C2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib */,
+				CD42F96D2B2BDF03008A1F13 /* ChatTableCell */,
+			);
+			path = MsFlixyAssistance;
+			sourceTree = "<group>";
+		};
+		CD42F96D2B2BDF03008A1F13 /* ChatTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD42F96E2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.swift */,
+				CD42F96F2B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib */,
+			);
+			path = ChatTableCell;
+			sourceTree = "<group>";
+		};
 		CD4571522B19BDFD002B4EE6 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +586,7 @@
 		CD501FBF2B22C7B000FE0254 /* Additional */ = {
 			isa = PBXGroup;
 			children = (
+				CD42F93A2B2B5786008A1F13 /* MsFlixyAssistance */,
 				CD0709332AFB32970079FC45 /* SearchFilm */,
 				CD4FA4472AF39ED700226717 /* DetailFilm */,
 				CD729D1A2B10894C006D3046 /* GoToWeb */,
@@ -1202,7 +1230,7 @@
 			);
 			name = netflixUIKit;
 			packageProductDependencies = (
-				CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */,
+				CD42F96B2B2B624A008A1F13 /* GoogleGenerativeAI */,
 			);
 			productName = netflixUIKit;
 			productReference = CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */;
@@ -1234,7 +1262,7 @@
 			);
 			mainGroup = CD5DD4902AEF38AA00140DFA;
 			packageReferences = (
-				CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				CD42F96A2B2B624A008A1F13 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = CD5DD49A2AEF38AA00140DFA /* Products */;
 			projectDirPath = "";
@@ -1306,10 +1334,12 @@
 				CD7B417E2B2033850018726C /* backToTop.json in Resources */,
 				CD4659332B1DA10600D86A26 /* AllVideoViewController.xib in Resources */,
 				CD7833782AEF504D0030AA43 /* VerticalCell.xib in Resources */,
+				CD42F9712B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib in Resources */,
 				CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
 				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
+				CD42F93E2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1395,6 +1425,8 @@
 				CD678AA82B0DF65600B2261F /* ReviewsViewController.swift in Sources */,
 				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */,
+				CD42F9702B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.swift in Sources */,
+				CD42F93D2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift in Sources */,
 				CD23A13B2B1422FB000D2303 /* SeeAllViewController.swift in Sources */,
 				CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */,
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
@@ -1600,7 +1632,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1632,7 +1664,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1671,7 +1703,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+		CD42F96A2B2B624A008A1F13 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/generative-ai-swift";
 			requirement = {
@@ -1682,9 +1714,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD6B620F2B2B444600E81279 /* GoogleGenerativeAI */ = {
+		CD42F96B2B2B624A008A1F13 /* GoogleGenerativeAI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD6B620E2B2B444600E81279 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			package = CD42F96A2B2B624A008A1F13 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
 			productName = GoogleGenerativeAI;
 		};
 /* End XCSwiftPackageProductDependency section */

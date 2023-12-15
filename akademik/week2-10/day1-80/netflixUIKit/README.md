@@ -81,9 +81,6 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add chatAI using Google Gemini 
 - [ ] Implement deep links
  
-- get interneet speed and save it in coredata
-- ... tes 123
-
 ## DONE
 
 Tasks that have been completed.
@@ -114,6 +111,7 @@ Tasks that have been completed.
 - [x] Added Custom Font.
 - [x] Added login as anonymous feature.
 - [x] Added changelog in MoreVC.
+- [x] Get Internet speed and save it in UserDefault place it in label.text
 
 ## BUG
 

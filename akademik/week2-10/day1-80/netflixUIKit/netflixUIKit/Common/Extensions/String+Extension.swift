@@ -58,4 +58,10 @@ extension String {
         }
         return value
     }
+    var geminiApiKey: String {
+        guard let value = Bundle.main.infoDictionary?[self] as? String else {
+            fatalError("geminiApiKey '\(self)' not found in Info.plist")
+        }
+        return value
+    }
 }

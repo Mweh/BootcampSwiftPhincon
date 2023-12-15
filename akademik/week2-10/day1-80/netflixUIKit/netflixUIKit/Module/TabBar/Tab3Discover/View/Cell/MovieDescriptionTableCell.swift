@@ -37,8 +37,8 @@ class MovieDescriptionTableCell: UITableViewCell {
         imgView.layer.borderWidth = 2.0
         imgView.layer.borderColor = UIColor.white.cgColor
         selectionStyle = .none
-        containerStackViewIcon.makeCornerRadius(20, maskedCorner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
-        imgView.makeCornerRadius(20, maskedCorner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        containerStackViewIcon.makeCornerRadius(20, maskedCorners: [.topRight, .bottomRight])
+        imgView.makeCornerRadius(20, maskedCorners: [.topRight, .bottomRight])
 
     }
     

@@ -14,4 +14,5 @@ class BaseConstant {
     static let adBannerUnitID = "AD_BANNER_UNIT_ID".adBannerUnitID
     static let testDeviceIdentifiers = "TEST_DEVICE_AD".testDeviceIdentifiers
     static let adRewardedUnitID = "AD_REWARDED_UNIT_ID".adRewardedUnitID
+    static let geminiApiKey = "GEMINI_API_KEY".geminiApiKey
 }

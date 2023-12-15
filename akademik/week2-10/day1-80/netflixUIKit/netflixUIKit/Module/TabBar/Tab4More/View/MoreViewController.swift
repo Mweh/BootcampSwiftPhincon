@@ -21,6 +21,7 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var currentAppVersionLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var msFlixyAssistanceButton: UIButton!
     
     let disposeBag = DisposeBag()
     var resultImg: UIImage!
@@ -28,11 +29,12 @@ class MoreViewController: UIViewController {
     var picker: UIImagePickerController? = UIImagePickerController()
     
     let cellData: [MoreCellData] = [
-        MoreCellData(title: "History"~, symbolName: "clock.arrow.circlepath"),
-        MoreCellData(title: "App Settings"~, symbolName: "gear"),
-        MoreCellData(title: "Display Language"~, symbolName: "character.bubble.fill"),
-        MoreCellData(title: "Changelog"~, symbolName: "gearshape.arrow.triangle.2.circlepath"),
-        MoreCellData(title: "Help"~, symbolName: "questionmark.circle")
+        MoreCellData(title: " "+"History"~, symbolName: "clock.arrow.circlepath"),
+        MoreCellData(title: " "+"App Settings"~, symbolName: "gear"),
+//        MoreCellData(title: "Display Language"~, symbolName: "character.bubble.fill"),
+        MoreCellData(title: "Ask Ms. Flixy", symbolName: "bubble.left.and.text.bubble.right"),
+        MoreCellData(title: " "+"Changelog"~, symbolName: "gearshape.arrow.triangle.2.circlepath"),
+        MoreCellData(title: "  "+"Help"~, symbolName: "questionmark.circle")
     ]
     
     override func viewDidLoad() {
@@ -48,6 +50,18 @@ class MoreViewController: UIViewController {
         // Add this in viewDidLoad or wherever appropriate
         NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
         setProfileName()
+        setMsFlixyAssistance()
+    }
+    
+    func setMsFlixyAssistance(){
+        msFlixyAssistanceButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+//                let vc = MsFlixyAssistanceViewController()
+//                vc.hidesBottomBarWhenPushed = true
+//                self?.navigationController?.pushViewController(vc, animated: true)
+                self?.showDisplayLanguagePanel()
+            })
+            .disposed(by: disposeBag)
     }
     
     func setProfileName(){
@@ -205,6 +219,7 @@ class MoreViewController: UIViewController {
     
     func showDisplayLanguagePanel() {
         let contentVC = DisplayLanguageViewController()
+        
         contentVC.modalPresentationStyle = .custom
         contentVC.transitioningDelegate = self
         present(contentVC, animated: true, completion: nil)
@@ -280,7 +295,7 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         // Set title and image for the button
         cell.buttonLabel.setTitle(data.title, for: .normal)
         cell.buttonLabel.setImage(UIImage(systemName: data.symbolName), for: .normal)
-        
+                
         let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
         
         if indexPath.row == 0 {
@@ -312,7 +327,10 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
         case .appSettings:
             showAppSettingPanel()
         case .displayLanguage:
-            showDisplayLanguagePanel()
+//            showDisplayLanguagePanel()
+            let vc = MsFlixyAssistanceViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         case .changelog:
             let vc = ChangelogViewController()
             self.present(vc, animated: true)
