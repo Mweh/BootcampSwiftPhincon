@@ -6,34 +6,43 @@
 //
 
 import GoogleGenerativeAI
+import IQKeyboardManagerSwift
+import RxCocoa
+import RxSwift
 import UIKit
 
-class MsFlixyAssistanceViewController: UIViewController, UITextFieldDelegate {
+class MsFlixyAssistanceViewController: UIViewController {
     
     @IBOutlet weak var userInputTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
+    @IBOutlet weak var sendMessageButtonPressed: UIButton!
     
-    var generatedText: String? {
-        didSet {
-            chatTableView.reloadData() // Trigger a reload when the text is available
-        }
-    }
+    var chatMessages: [ChatMessage] = []
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the text field delegate
         userInputTextField.delegate = self
-        // Ensure that the function is called in an asynchronous context
-        
-        Task {
-            await setupAI()
-        }
-        
         setupChatTableView()
         setupNavi()
+        setupSendMessageButtonPressed()
     }
     
-    func setupNavi() {
+    func setupSendMessageButtonPressed(){
+        sendMessageButtonPressed.rx.tap
+            .subscribe(onNext: {[weak self] in
+                self?.userInputTextField.resignFirstResponder() // Dismiss the keyboard
+                // Call setupAI() when the return key is pressed
+                Task {
+                    await self?.setupAI()
+                }
+            })
+            .disposed(by: bag)
+    }
+    
+    func setupNavi(){
         self.navigationItem.title = "Ms. Flixy (powered by Gemini)"
         
         // Create a UIView with the desired image
@@ -46,7 +55,7 @@ class MsFlixyAssistanceViewController: UIViewController, UITextFieldDelegate {
         // Create a UIBarButtonItem with the custom view
         let leftBarButtonItem = UIBarButtonItem(customView: imageView)
         self.navigationItem.leftBarButtonItem = leftBarButtonItem
-
+        
         let removeChat = UIBarButtonItem(systemItem: .trash)
         removeChat.target = self
         removeChat.action = #selector(removeChatButtonTapped)
@@ -58,55 +67,64 @@ class MsFlixyAssistanceViewController: UIViewController, UITextFieldDelegate {
     
     @objc func removeChatButtonTapped() {
         // Logic to remove all chat
-        
+        chatMessages.removeAll()
+        chatTableView.reloadData()
     }
     
-    func setupChatTableView(){
+    func setupChatTableView() {
         chatTableView.delegate = self
         chatTableView.dataSource = self
         chatTableView.register(UINib(nibName: "MsFlixyAssistanceTableViewCell", bundle: nil), forCellReuseIdentifier: "MsFlixyAssistanceTableViewCell")
+        chatTableView.separatorStyle = .none
     }
     
     // Mark the function as asynchronous
     func setupAI() async {
         do {
-//            guard let userInput = userInputTextField.text, !userInput.isEmpty else {
-//                // Handle the case where the user input is empty
-//                return
-//            }
+            guard let userInput = userInputTextField.text, !userInput.isEmpty else {
+                // Handle the case where the user input is empty
+                return
+            }
             
-            // For text-only input, use the gemini-pro model
-            // Access your API key from your on-demand resource .plist file (see "Set up your API key" above)
+            addMessageToChat(userInput, isMsFlixy: false) // user
+            userInputTextField.text = "" // Clear the text field after sending
+            
             let model = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
             
-            // let prompt = userInput
-            let prompt = "Hi I am Fahmi, I am having trouble with this netflix App, can u explain in depth how to use this app? Like the entire guide"
+            let prompt = userInput
             let response = try await model.generateContent(prompt)
             
             if let text = response.text {
                 print(text)
-                generatedText = text // Update the property with the generated text
+                addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
             }
         } catch {
             print("Error: \(error.localizedDescription)")
         }
     }
+    
+    func addMessageToChat(_ text: String, isMsFlixy: Bool) {
+        let message = ChatMessage(text: text, isMsFlixy: isMsFlixy)
+        chatMessages.append(message)
+        chatTableView.reloadData()
+        scrollToBottom()
+    }
+    
+    func scrollToBottom() {
+        let indexPath = IndexPath(row: chatMessages.count - 1, section: 0)
+        chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
 }
 
-
-extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataSource{
+extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return chatMessages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "MsFlixyAssistanceTableViewCell", for: indexPath) as! MsFlixyAssistanceTableViewCell
-        
-        // Set the chatLabel.text using the generatedText property
-        if let generatedText = generatedText{
-            cell.chatLabel.text = generatedText
-        }
-        
+        let message = chatMessages[indexPath.row]
+        cell.configure(with: message)
         return cell
     }
     
@@ -119,7 +137,19 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
         dateUIHeaderView.label.text = "Today"
         return dateUIHeaderView
     }
+}
 
+
+// Conform to UITextFieldDelegate
+extension MsFlixyAssistanceViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Dismiss the keyboard
+        // Call setupAI() when the return key is pressed
+        Task {
+            await setupAI()
+        }
+        return true
+    }
 }
 
 class DateUIHeaderView: UITableViewHeaderFooterView {
@@ -148,3 +178,18 @@ class DateUIHeaderView: UITableViewHeaderFooterView {
     }
 }
 
+struct ChatMessage {
+    let text: String
+    let isMsFlixy: Bool
+}
+
+// TODO:
+/*
+ - Set userChar's chat bubble in right side
+ - fix time label "12.12 am...."
+ - format the text like .md like bold instead of "**"
+ - is typing lottie file
+ - implement coredata/userdefault
+ - implement paste for chat text
+ - add images to gemini
+ */

@@ -43,11 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//         Override point for customization after application launch.
         NFX.sharedInstance().start() // netfox
         
         IQKeyboardManager.shared.enable = true // enable property enables/disables IQKeyboardManager.
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+//        IQKeyboardManager.shared/*Manager().canAdjustAdditionalSafeAreaInsets*/ = true
         
         FirebaseApp.configure() // Firebase
         GADMobileAds.sharedInstance().start(completionHandler: nil) // AdMob

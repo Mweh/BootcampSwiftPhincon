@@ -80,6 +80,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add my app's widget
 - [ ] Add chatAI using Google Gemini 
 - [ ] Implement deep links
+- [ ] Add expanded tableview
  
 ## DONE
 
