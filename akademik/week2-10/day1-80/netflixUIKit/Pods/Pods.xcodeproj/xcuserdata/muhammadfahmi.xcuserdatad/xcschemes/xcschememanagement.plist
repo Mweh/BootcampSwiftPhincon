@@ -114,6 +114,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>InstantSearchVoiceOverlay.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher-Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>

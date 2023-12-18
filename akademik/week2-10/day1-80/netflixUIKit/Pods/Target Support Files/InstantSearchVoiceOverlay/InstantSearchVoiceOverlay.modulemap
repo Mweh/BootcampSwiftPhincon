@@ -1,0 +1,6 @@
+framework module InstantSearchVoiceOverlay {
+  umbrella header "InstantSearchVoiceOverlay-umbrella.h"
+
+  export *
+  module * { export * }
+}
