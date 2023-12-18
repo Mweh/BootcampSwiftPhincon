@@ -149,3 +149,32 @@ extension UIViewController {
     }
 }
 
+// MARK: Pop up camera and gallery
+extension UIViewController {
+    func showImagePicker(picker: UIImagePickerController) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        }
+        alert.addAction(cameraAction)
+
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { _ in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+        }
+        alert.addAction(galleryAction)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+
+        present(alert, animated: true, completion: nil)
+    }
+}

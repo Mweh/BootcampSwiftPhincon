@@ -76,9 +76,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add an optional to upgrade pro Version
 - [ ] Add buy me a coffee
 - [ ] Add audio to text searchBar
-- [ ] Add localized for language
 - [ ] Add my app's widget
-- [ ] Add chatAI using Google Gemini 
 - [ ] Implement deep links
 - [ ] Add expanded tableview
  
@@ -112,7 +110,13 @@ Tasks that have been completed.
 - [x] Added Custom Font.
 - [x] Added login as anonymous feature.
 - [x] Added changelog in MoreVC.
+- [x] Add chatAI using Google Gemini 
+ -> [x] Set userChar's chat bubble in right side
+ -> [x] Fix time label "12.12 am...." Constraint
+ -> [x] Userdefault for 
+ -> [x]  add images to gemini
 - [x] Get Internet speed and save it in UserDefault place it in label.text
+- [x] Add localized for language
 
 ## BUG
 
