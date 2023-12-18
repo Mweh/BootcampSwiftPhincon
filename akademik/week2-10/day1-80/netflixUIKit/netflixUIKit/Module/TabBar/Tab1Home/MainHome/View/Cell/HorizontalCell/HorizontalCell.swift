@@ -221,13 +221,18 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                     let url = URL(string: urlName)
                     self?.downloadImageURL(imageURL: url!)
                     // Assuming imageURL is the URL of the downloaded image
-                    PhotoLibraryManager.saveImageToPhotos(url: url!) { error in
-                        if let error = error {
-                            print("Error saving image: \(error.localizedDescription)")
-                        } else {
-                            print("Image saved successfully.")
+                    
+                   
+                        PhotoLibraryManager.saveImageToPhotos(url: url!) { error in
+                            if let error = error {
+                                print("Error saving image: \(error.localizedDescription)")
+                            } else {
+                                // Post a notification to notify other parts of the app about the tap
+                                NotificationCenter.default.post(name: .cellSquareTapped, object: nil)
+                                print("Image saved successfully.")
+                            }
                         }
-                    }
+                    
                     
                 }
                 return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])

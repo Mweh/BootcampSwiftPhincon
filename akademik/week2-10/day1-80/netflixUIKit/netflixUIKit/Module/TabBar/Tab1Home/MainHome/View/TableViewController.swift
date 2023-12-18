@@ -36,6 +36,12 @@ class TableViewController: UITableViewController {
         vm.loadData(for: .getPopular, resultType: Movie.self)
         noSafeArea()
         bindData()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCellSquareTap), name: .cellSquareTapped, object: nil)
+    }
+    
+    @objc func handleCellSquareTap() {
+        // Handle the notification, e.g., show the alert
+        AlertUtility.showAlert(from: self, title: "Success", message: "Image saved successfully!", completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -174,7 +180,7 @@ extension TableViewController: HorizontalCellDelegate {
             self.navigationController?.pushViewController(videoTrailerVC, animated: true)
         }
     }
-    func didTapCellSquare(index: Int) {
+    func didTapCellSquare(index: Int) {        
         if let dataMoviePopular = dataMoviePopular  {
             let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
             detailViewController.hidesBottomBarWhenPushed = true
@@ -184,6 +190,11 @@ extension TableViewController: HorizontalCellDelegate {
             
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
+        AlertUtility.showAlert(from: self,
+                               title: "Success",
+                               message: "Image saved successfully!",
+                               completion: nil)
+
     }
 }
 

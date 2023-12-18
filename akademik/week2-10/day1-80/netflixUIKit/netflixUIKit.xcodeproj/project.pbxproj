@@ -116,11 +116,11 @@
 		CD87BC662B0344C0008B9531 /* FavHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD87BC642B0344C0008B9531 /* FavHomeVC.xib */; };
 		CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87BC672B034683008B9531 /* FavHomeCollectionViewCell.swift */; };
 		CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */; };
+		CD890C692B30359A008DA065 /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */; };
 		CD919E392B27E560005D7171 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E382B27E560005D7171 /* ThemeManager.swift */; };
 		CD919E4D2B283E7A005D7171 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD919E4F2B283E7A005D7171 /* Localizable.strings */; };
 		CD919E542B286278005D7171 /* DisplayLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E522B286278005D7171 /* DisplayLanguageViewController.swift */; };
 		CD919E552B286278005D7171 /* DisplayLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD919E532B286278005D7171 /* DisplayLanguageViewController.xib */; };
-		CD919E572B29349F005D7171 /* DiscoverSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E562B29349F005D7171 /* DiscoverSort.swift */; };
 		CD9F6D062B172BAB00DC8875 /* TMDBImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F6D052B172BAB00DC8875 /* TMDBImageURL.swift */; };
 		CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */; };
 		CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */; };
@@ -275,12 +275,12 @@
 		CD87BC642B0344C0008B9531 /* FavHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavHomeVC.xib; sourceTree = "<group>"; };
 		CD87BC672B034683008B9531 /* FavHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
 		CD919E382B27E560005D7171 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CD919E4E2B283E7A005D7171 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD919E502B283E88005D7171 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD919E522B286278005D7171 /* DisplayLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLanguageViewController.swift; sourceTree = "<group>"; };
 		CD919E532B286278005D7171 /* DisplayLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayLanguageViewController.xib; sourceTree = "<group>"; };
-		CD919E562B29349F005D7171 /* DiscoverSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSort.swift; sourceTree = "<group>"; };
 		CD9F6D052B172BAB00DC8875 /* TMDBImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBImageURL.swift; sourceTree = "<group>"; };
 		CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailer.swift; sourceTree = "<group>"; };
 		CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailerVC.swift; sourceTree = "<group>"; };
@@ -377,6 +377,7 @@
 				CDB9FD612B0BBCD800128B03 /* UILabel+Extension.swift */,
 				CDE034252B180F4C00914F2E /* PagingViewController.swift */,
 				CDE30EF72B21B17F0050DE18 /* UITableViewCell+Extension.swift */,
+				CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,7 +479,6 @@
 			children = (
 				CD7234262B26CBFD006B156C /* ModelTMDB */,
 				CD4659502B1EB95E00D86A26 /* CoreData */,
-				CD919E562B29349F005D7171 /* DiscoverSort.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1437,6 +1437,7 @@
 				CDAF8A6B2AF8D48400CB670D /* Movie.swift in Sources */,
 				CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
+				CD890C692B30359A008DA065 /* Notification.Name+Extension.swift in Sources */,
 				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
@@ -1450,7 +1451,6 @@
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,
-				CD919E572B29349F005D7171 /* DiscoverSort.swift in Sources */,
 				CDB9FD642B0C3CD900128B03 /* DetailViewModel.swift in Sources */,
 				CDBF8E7C2B216E9A000FF0F5 /* CoreDataHelper.swift in Sources */,
 				CD16E30C2AF36F6300669456 /* HomeViewModel.swift in Sources */,

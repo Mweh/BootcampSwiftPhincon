@@ -151,8 +151,3 @@ class CoreDataHelper {
         }
     }
 }
-
-// Add this notification name as a static constant
-extension Notification.Name {
-    static let historyMovieSaved = Notification.Name("HistoryMovieSavedNotification")
-}
