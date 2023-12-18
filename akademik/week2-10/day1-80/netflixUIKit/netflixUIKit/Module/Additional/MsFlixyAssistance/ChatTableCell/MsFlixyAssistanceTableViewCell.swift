@@ -32,7 +32,6 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
     
     func configure(with message: ChatMessage) {
         chatLabel.text = message.text
-        photoImageView.makeRounded(20)
               
         if let image = message.image {
             // Display the selected image

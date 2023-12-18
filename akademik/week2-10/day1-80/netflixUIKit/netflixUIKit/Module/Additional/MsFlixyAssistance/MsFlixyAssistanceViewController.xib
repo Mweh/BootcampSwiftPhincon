@@ -17,6 +17,7 @@
                 <outlet property="sendMessageButtonPressed" destination="ufy-Pf-Yre" id="0h4-wh-SWn"/>
                 <outlet property="userInputTextField" destination="y5o-Si-mz1" id="fsT-Eb-6YC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voiceButton" destination="sw9-yw-L7a" id="G3U-c5-JIU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,7 +37,7 @@
                             <rect key="frame" x="0.0" y="718" width="393" height="75"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-Pf-Yre" userLabel="sendMessage">
-                                    <rect key="frame" x="341" y="5" width="36" height="36"/>
+                                    <rect key="frame" x="297" y="5" width="36" height="36"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal">
                                         <imageReference key="image" image="paperplane.circle.fill" catalog="system" symbolScale="large"/>
@@ -44,7 +45,7 @@
                                     </state>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message to MsFlixy..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-Si-mz1" userLabel="userInputTextField">
-                                    <rect key="frame" x="64" y="6" width="265" height="34"/>
+                                    <rect key="frame" x="64" y="6" width="221" height="34"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -60,18 +61,32 @@
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="medium"/>
                                     </state>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw9-yw-L7a" userLabel="voiceButton">
+                                    <rect key="frame" x="341" y="5" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="NHu-8k-8x5"/>
+                                        <constraint firstAttribute="height" constant="36" id="WeK-Nv-Ngs"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="waveform.circle.fill" catalog="system" symbolScale="large"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="ufy-Pf-Yre" firstAttribute="leading" secondItem="y5o-Si-mz1" secondAttribute="trailing" constant="12" id="6aN-CE-rDv"/>
+                                <constraint firstItem="sw9-yw-L7a" firstAttribute="leading" secondItem="ufy-Pf-Yre" secondAttribute="trailing" constant="8" id="GNU-SJ-AR6"/>
                                 <constraint firstItem="ufy-Pf-Yre" firstAttribute="centerY" secondItem="y5o-Si-mz1" secondAttribute="centerY" id="HJP-xy-Mef"/>
                                 <constraint firstItem="y5o-Si-mz1" firstAttribute="leading" secondItem="wbm-jO-Sif" secondAttribute="trailing" constant="12" id="HWR-4M-gRL"/>
+                                <constraint firstItem="sw9-yw-L7a" firstAttribute="centerY" secondItem="y5o-Si-mz1" secondAttribute="centerY" id="RtT-1W-1NV"/>
                                 <constraint firstAttribute="bottom" secondItem="y5o-Si-mz1" secondAttribute="bottom" constant="35" id="cDY-fY-bf3"/>
+                                <constraint firstAttribute="trailing" secondItem="sw9-yw-L7a" secondAttribute="trailing" constant="16" id="e83-qP-A4R"/>
                                 <constraint firstItem="wbm-jO-Sif" firstAttribute="centerY" secondItem="y5o-Si-mz1" secondAttribute="centerY" id="eNg-MD-zSL"/>
                                 <constraint firstAttribute="height" constant="75" id="pMh-Lc-gPe"/>
                                 <constraint firstItem="y5o-Si-mz1" firstAttribute="top" secondItem="dhu-OT-GXm" secondAttribute="top" constant="6" id="qjo-rk-Ca1"/>
                                 <constraint firstItem="wbm-jO-Sif" firstAttribute="leading" secondItem="dhu-OT-GXm" secondAttribute="leading" constant="16" id="uDd-cn-G0N"/>
-                                <constraint firstAttribute="trailing" secondItem="ufy-Pf-Yre" secondAttribute="trailing" constant="16" id="vMB-GT-2bA"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -105,11 +120,12 @@
     <resources>
         <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="waveform.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

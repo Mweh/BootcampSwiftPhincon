@@ -6,6 +6,7 @@
 //
 
 import GoogleGenerativeAI
+import InstantSearchVoiceOverlay
 import IQKeyboardManagerSwift
 import RxCocoa
 import RxSwift
@@ -16,11 +17,23 @@ class MsFlixyAssistanceViewController: UIViewController {
     @IBOutlet weak var userInputTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var sendMessageButtonPressed: UIButton!
-    
     @IBOutlet weak var insertPhotoButton: UIButton!
-    var selectedImage: UIImage? // Add this variable
+    @IBOutlet weak var voiceButton: UIButton!
+    
+    var selectedImage: UIImage?{
+        didSet{
+            chatTableView.reloadData()
+        }
+    }
     let bag = DisposeBag()
     var picker: UIImagePickerController? = UIImagePickerController()
+    
+    lazy var voiceOverlayController: VoiceOverlayController = {
+        let recordableHandler = {
+            return SpeechController(locale: Locale(identifier: "id_ID")) // "en_US" or "id_ID"
+        }
+        return VoiceOverlayController(speechControllerHandler: recordableHandler)
+    }()
     
     var chatMessages: [ChatMessage] {
         get {
@@ -37,18 +50,44 @@ class MsFlixyAssistanceViewController: UIViewController {
         }
     }
     
+    var voiceMessage: String = ""
+    var currentInputMode: InputMode = .text
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the text field delegate
-        userInputTextField.delegate = self
         setupChatTableView()
         setupNavi()
         setupSendMessageButtonPressed()
-        if chatMessages.count != 0{ 
-            scrollToBottom()
-        }
+        if chatMessages.count != 0 { scrollToBottom() }
         setupInsertPhoto()
+        setKeyboard()
+        voiceButtonPressed()
+    }
+    
+    func voiceButtonPressed() {
+        
+        voiceButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.voiceOverlayController.start(on: self!, textHandler: { (text, final, context) in
+                    if final {
+                        self?.addMessageToChat(text, isMsFlixy: false)
+                        self?.voiceMessage = text
+                        Task {
+                            await self?.setupAI()
+                        }
+                    }
+                }, errorHandler: { (error) in
+                    print("voice output: error \(String(describing: error))")
+                })
+            })
+            .disposed(by: bag)
+    }
+    
+    func setKeyboard(){
+        // Set the text field delegate
+        userInputTextField.delegate = self
+        IQKeyboardManager.shared.enableAutoToolbar = false
     }
     
     func setupSendMessageButtonPressed(){
@@ -99,41 +138,69 @@ class MsFlixyAssistanceViewController: UIViewController {
         chatTableView.separatorStyle = .none
     }
     
-    // Mark the function as asynchronous
     func setupAI() async {
         do {
-            guard let userInput = userInputTextField.text, !userInput.isEmpty else {
-                // Handle the case where the user input is empty
-                return
-            }
-            
-            addMessageToChat(userInput, isMsFlixy: false, image: selectedImage) // user
-            userInputTextField.text = "" // Clear the text field after sending
-            
-            let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
             let modelText = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
+            let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
             
-            if let selectedImage = selectedImage{
-                let resizedImage = selectedImage.resizedTo(maxWidth: 300, maxHeight: 300)
-                let image = resizedImage
-                let prompt = userInput
-                
-                let response = try await modelVision.generateContent(prompt, image) //text and image
-                
-                if let text = response.text {
-                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
-                }
+            if let selectedImage = selectedImage {
+                currentInputMode = .image
+            } else if voiceMessage != "" {
+                currentInputMode = .speech
             } else {
-                let prompt = userInput
-                let response = try await modelText.generateContent(prompt) //text only
-                
-                if let text = response.text {
-                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
-                }
+                currentInputMode = .text
             }
             
+            switch currentInputMode {
+            case .text:
+                // Handle text input
+                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
+                    // Handle the case where the user input is empty
+                    return
+                }
+                
+                addMessageToChat(userInput, isMsFlixy: false) // user
+                userInputTextField.text = "" // Clear the text field after sending
+                
+                let prompt = userInput
+                let response = try await modelText.generateContent(prompt)
+                if let text = response.text {
+                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                }
+                break
+            case .image:
+                // Handle image input
+                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
+                    // Handle the case where the user input is empty
+                    return
+                }
+                
+                addMessageToChat(userInput, isMsFlixy: false, image: selectedImage) // user
+                userInputTextField.text = "" // Clear the text field after sending
+                
+                if let selectedImage = selectedImage {
+                    let resizedImage = selectedImage.resizedTo(maxWidth: 300, maxHeight: 300)
+                    let image = resizedImage
+                    let prompt = userInput
+                    let response = try await modelVision.generateContent(prompt, image)
+                    if let text = response.text {
+                        addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                    }
+                }
+                self.selectedImage = nil
+                
+                break
+            case .speech:
+                // Handle speech input
+                let voicePrompt = voiceMessage
+                
+                let responseVoice = try await modelText.generateContent(voicePrompt) //voice only
+                if let text = responseVoice.text {
+                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                }
+                break
+            }
         } catch {
-            
             print("Error: \(error.localizedDescription)")
         }
     }
@@ -158,6 +225,7 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "MsFlixyAssistanceTableViewCell", for: indexPath) as! MsFlixyAssistanceTableViewCell
+        cell.photoImageView.makeRounded(20)
         let message = chatMessages[indexPath.row]
         cell.configure(with: message)
         return cell
@@ -167,14 +235,19 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
         return UITableView.automaticDimension
     }
     
+    // UITableViewDataSource method for providing a custom view for the header of a section.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // Create an instance of DateUIHeaderView with a specified reuseIdentifier.
         let dateUIHeaderView = DateUIHeaderView(reuseIdentifier: "headerReuseIdentifier")
+        
+        // Set the text of the label in the header view.
         dateUIHeaderView.label.text = "Today"
-        return dateUIHeaderView
+        
+        return dateUIHeaderView // Return the configured header view.
     }
 }
 
-
+// MARK: -- UITextFieldDelegate
 // Conform to UITextFieldDelegate
 extension MsFlixyAssistanceViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -187,32 +260,40 @@ extension MsFlixyAssistanceViewController: UITextFieldDelegate {
     }
 }
 
+// A custom UITableViewHeaderFooterView for displaying a centered UILabel as the header view.
 class DateUIHeaderView: UITableViewHeaderFooterView {
+    
+    // UILabel for displaying the header text.
     let label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
     
+    // Initialize the header view with a reuseIdentifier.
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        setupUI()
+        setupUI() // Call the setupUI method to configure the UI.
     }
     
+    // Required initializer for NSCoder. Not implemented, as this class is not meant to be loaded from a nib or storyboard.
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Set up the UI by adding the label as a subview to the contentView.
     private func setupUI() {
         contentView.addSubview(label)
     }
     
+    // Adjust the layout of the label to fill the contentView when the view's bounds change.
     override func layoutSubviews() {
         super.layoutSubviews()
         label.frame = contentView.bounds
     }
 }
 
+// MARK: -- UIImagePickerControllerDelegate
 extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func setupInsertPhoto(){
@@ -227,7 +308,7 @@ extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINa
             })
             .disposed(by: bag)
     }
-        
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
         
@@ -242,15 +323,15 @@ struct ChatMessage: Codable {
     let text: String
     let isMsFlixy: Bool
     let timestamp: Date
-    let imageData: Data? // Use Data instead of UIImage
-
+    let imageData: Data?
+    
     var image: UIImage? {
         if let imageData = imageData {
             return UIImage(data: imageData)
         }
         return nil
     }
-
+    
     init(text: String, isMsFlixy: Bool, image: UIImage? = nil) {
         self.text = text
         self.isMsFlixy = isMsFlixy
@@ -259,6 +340,9 @@ struct ChatMessage: Codable {
     }
 }
 
+enum InputMode {
+    case text, image, speech
+}
 
 // TODO:
 /*
