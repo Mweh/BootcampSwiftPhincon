@@ -109,6 +109,7 @@ PODS:
     - GTMSessionFetcher/Core (< 4.0, >= 1.5)
   - GTMSessionFetcher/Core (2.3.0)
   - Hero (1.6.2)
+  - InstantSearchVoiceOverlay (1.2.0)
   - IQKeyboardManagerSwift (6.5.16)
   - Kingfisher (7.10.0)
   - lottie-ios (4.3.3)
@@ -138,6 +139,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - Hero
+  - InstantSearchVoiceOverlay
   - IQKeyboardManagerSwift
   - Kingfisher
   - lottie-ios
@@ -170,6 +172,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - Hero
+    - InstantSearchVoiceOverlay
     - IQKeyboardManagerSwift
     - Kingfisher
     - lottie-ios
@@ -205,6 +208,7 @@ SPEC CHECKSUMS:
   GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
   GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
   Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
+  InstantSearchVoiceOverlay: d9d5db7314ec8416dcf4ed49df2000e8ee0abe2b
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
   lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
@@ -219,6 +223,6 @@ SPEC CHECKSUMS:
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 3ab646f1e75c52632e6012ef68e08d1615b968eb
+PODFILE CHECKSUM: fe96b2d63dd3d7212d6f6d81013674d78a4e9b65
 
 COCOAPODS: 1.14.3

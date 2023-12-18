@@ -78,7 +78,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add audio to text searchBar
 - [ ] Add my app's widget
 - [ ] Implement deep links
-- [ ] Add expanded tableview
+- [ ] Add expanded tableview 
  
 ## DONE
 
@@ -117,6 +117,7 @@ Tasks that have been completed.
  -> [x]  add images to gemini
 - [x] Get Internet speed and save it in UserDefault place it in label.text
 - [x] Add localized for language
+- [x] Added custom voice using pod InstantSearchVoiceOverlay
 
 ## BUG
 

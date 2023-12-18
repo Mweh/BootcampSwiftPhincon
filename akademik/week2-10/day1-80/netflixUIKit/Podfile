@@ -14,6 +14,9 @@ target 'netflixUIKit' do
   # Image
   pod 'Kingfisher'
 
+  # Voice
+  pod 'InstantSearchVoiceOverlay'
+
   # Placeholder
   pod 'SkeletonView'
   
