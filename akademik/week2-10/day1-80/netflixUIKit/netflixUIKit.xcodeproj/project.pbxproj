@@ -15,6 +15,7 @@
 		CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */; };
 		CD0A3EF92B1498620029AE88 /* SeeAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */; };
 		CD0A3EFA2B1498620029AE88 /* SeeAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */; };
+		CD0E989C2B2F4E9800910660 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */; };
 		CD136FD12AFA33770046BB44 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD136FD02AFA33770046BB44 /* SearchViewModel.swift */; };
 		CD16E30C2AF36F6300669456 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30B2AF36F6300669456 /* HomeViewModel.swift */; };
 		CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16E30E2AF37B9400669456 /* RegisterViewController.swift */; };
@@ -172,6 +173,7 @@
 		CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllCollectionViewCell.xib; sourceTree = "<group>"; };
+		CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		CD136FD02AFA33770046BB44 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		CD16E30B2AF36F6300669456 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CD16E30E2AF37B9400669456 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB9FD652B0C3D0B00128B03 /* String+Extension.swift */,
+				CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */,
 				CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */,
 				CDAD7DC02AFE065900BF41B8 /* UIViewController+Extension.swift */,
 				CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */,
@@ -1443,6 +1446,7 @@
 				CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */,
 				CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */,
 				CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */,
+				CD0E989C2B2F4E9800910660 /* UIImage+Extension.swift in Sources */,
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,

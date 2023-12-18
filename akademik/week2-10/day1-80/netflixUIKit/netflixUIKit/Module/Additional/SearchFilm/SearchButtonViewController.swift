@@ -217,7 +217,9 @@ extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigat
     func scanButtonTap() {
         scanButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.showImagePicker()
+                if let picker = self?.picker{
+                    self?.showImagePicker(picker: picker)
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -242,32 +244,6 @@ extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigat
         }
     }
     
-    func showImagePicker() {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
-            self.picker!.sourceType = .camera
-            self.present(self.picker!, animated: true, completion: nil)
-        }
-        alert.addAction(cameraAction)
-        
-        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { _ in
-            self.picker!.sourceType = .photoLibrary
-            self.present(self.picker!, animated: true, completion: nil)
-        }
-        alert.addAction(galleryAction)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
-        
-        if let popoverController = alert.popoverPresentationController {
-            popoverController.sourceView = self.view
-            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popoverController.permittedArrowDirections = []
-        }
-        
-        present(alert, animated: true, completion: nil)
-    }
 }
 
 class ContentContainerViewController: UIViewController {

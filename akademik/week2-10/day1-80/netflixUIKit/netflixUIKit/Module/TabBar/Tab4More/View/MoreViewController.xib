@@ -52,17 +52,6 @@
                                 <action selector="openGalleryPressed:" destination="-1" eventType="touchUpInside" id="vjU-4k-5in"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WC-zk-Lu4">
-                            <rect key="frame" x="8" y="7.9999999999999982" width="86.666666666666671" height="28.333333333333329"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Take Photo">
-                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="takePhotoPressed:" destination="-1" eventType="touchUpInside" id="Swk-Xy-hjP"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 15.21.1 (18) 5.0.1 - 001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5O-Ls-lXs">
                             <rect key="frame" x="80.666666666666686" y="730.66666666666663" width="233" height="20.333333333333371"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -222,11 +211,6 @@
                         <constraint firstItem="nP6-Jg-Ic2" firstAttribute="centerY" secondItem="D4g-ls-Soc" secondAttribute="centerY" id="yMJ-wa-Qny"/>
                         <constraint firstAttribute="trailing" secondItem="JFs-gT-Ecl" secondAttribute="trailing" constant="8" id="zjo-WG-CRY"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="9WC-zk-Lu4"/>
-                        </mask>
-                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

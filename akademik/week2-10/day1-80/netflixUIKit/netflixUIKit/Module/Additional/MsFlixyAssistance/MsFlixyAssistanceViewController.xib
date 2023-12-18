@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MsFlixyAssistanceViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
                 <outlet property="chatTableView" destination="YkL-qq-OCa" id="Cb2-3v-g8v"/>
+                <outlet property="insertPhotoButton" destination="wbm-jO-Sif" id="wVh-Cy-UgK"/>
                 <outlet property="sendMessageButtonPressed" destination="ufy-Pf-Yre" id="0h4-wh-SWn"/>
                 <outlet property="userInputTextField" destination="y5o-Si-mz1" id="fsT-Eb-6YC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -43,20 +44,33 @@
                                     </state>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message to MsFlixy..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-Si-mz1" userLabel="userInputTextField">
-                                    <rect key="frame" x="16" y="6" width="309" height="34"/>
+                                    <rect key="frame" x="64" y="6" width="265" height="34"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbm-jO-Sif" userLabel="insertPhoto">
+                                    <rect key="frame" x="16" y="5" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="GbP-9l-0j6"/>
+                                        <constraint firstAttribute="width" constant="36" id="Thr-4e-GwB"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="plus" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="medium"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="ufy-Pf-Yre" firstAttribute="leading" secondItem="y5o-Si-mz1" secondAttribute="trailing" constant="16" id="6aN-CE-rDv"/>
+                                <constraint firstItem="ufy-Pf-Yre" firstAttribute="leading" secondItem="y5o-Si-mz1" secondAttribute="trailing" constant="12" id="6aN-CE-rDv"/>
                                 <constraint firstItem="ufy-Pf-Yre" firstAttribute="centerY" secondItem="y5o-Si-mz1" secondAttribute="centerY" id="HJP-xy-Mef"/>
-                                <constraint firstItem="y5o-Si-mz1" firstAttribute="leading" secondItem="dhu-OT-GXm" secondAttribute="leading" constant="16" id="Luo-3M-cWg"/>
+                                <constraint firstItem="y5o-Si-mz1" firstAttribute="leading" secondItem="wbm-jO-Sif" secondAttribute="trailing" constant="12" id="HWR-4M-gRL"/>
                                 <constraint firstAttribute="bottom" secondItem="y5o-Si-mz1" secondAttribute="bottom" constant="35" id="cDY-fY-bf3"/>
+                                <constraint firstItem="wbm-jO-Sif" firstAttribute="centerY" secondItem="y5o-Si-mz1" secondAttribute="centerY" id="eNg-MD-zSL"/>
                                 <constraint firstAttribute="height" constant="75" id="pMh-Lc-gPe"/>
                                 <constraint firstItem="y5o-Si-mz1" firstAttribute="top" secondItem="dhu-OT-GXm" secondAttribute="top" constant="6" id="qjo-rk-Ca1"/>
+                                <constraint firstItem="wbm-jO-Sif" firstAttribute="leading" secondItem="dhu-OT-GXm" secondAttribute="leading" constant="16" id="uDd-cn-G0N"/>
                                 <constraint firstAttribute="trailing" secondItem="ufy-Pf-Yre" secondAttribute="trailing" constant="16" id="vMB-GT-2bA"/>
                             </constraints>
                         </view>
@@ -90,6 +104,7 @@
     </objects>
     <resources>
         <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

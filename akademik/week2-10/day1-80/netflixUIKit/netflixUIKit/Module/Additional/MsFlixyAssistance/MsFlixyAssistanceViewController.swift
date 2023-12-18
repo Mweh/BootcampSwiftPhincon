@@ -17,8 +17,25 @@ class MsFlixyAssistanceViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var sendMessageButtonPressed: UIButton!
     
-    var chatMessages: [ChatMessage] = []
+    @IBOutlet weak var insertPhotoButton: UIButton!
+    var selectedImage: UIImage? // Add this variable
     let bag = DisposeBag()
+    var picker: UIImagePickerController? = UIImagePickerController()
+    
+    var chatMessages: [ChatMessage] {
+        get {
+            if let data = UserDefaults.standard.data(forKey: "chatMessages"),
+               let messages = try? JSONDecoder().decode([ChatMessage].self, from: data) {
+                return messages
+            }
+            return []
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                UserDefaults.standard.set(data, forKey: "chatMessages")
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +45,10 @@ class MsFlixyAssistanceViewController: UIViewController {
         setupChatTableView()
         setupNavi()
         setupSendMessageButtonPressed()
+        if chatMessages.count != 0{ 
+            scrollToBottom()
+        }
+        setupInsertPhoto()
     }
     
     func setupSendMessageButtonPressed(){
@@ -86,25 +107,39 @@ class MsFlixyAssistanceViewController: UIViewController {
                 return
             }
             
-            addMessageToChat(userInput, isMsFlixy: false) // user
+            addMessageToChat(userInput, isMsFlixy: false, image: selectedImage) // user
             userInputTextField.text = "" // Clear the text field after sending
             
-            let model = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
+            let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
+            let modelText = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
             
-            let prompt = userInput
-            let response = try await model.generateContent(prompt)
-            
-            if let text = response.text {
-                print(text)
-                addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+            if let selectedImage = selectedImage{
+                let resizedImage = selectedImage.resizedTo(maxWidth: 300, maxHeight: 300)
+                let image = resizedImage
+                let prompt = userInput
+                
+                let response = try await modelVision.generateContent(prompt, image) //text and image
+                
+                if let text = response.text {
+                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                }
+            } else {
+                let prompt = userInput
+                let response = try await modelText.generateContent(prompt) //text only
+                
+                if let text = response.text {
+                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                }
             }
+            
         } catch {
+            
             print("Error: \(error.localizedDescription)")
         }
     }
     
-    func addMessageToChat(_ text: String, isMsFlixy: Bool) {
-        let message = ChatMessage(text: text, isMsFlixy: isMsFlixy)
+    func addMessageToChat(_ text: String, isMsFlixy: Bool, image: UIImage? = nil) {
+        let message = ChatMessage(text: text, isMsFlixy: isMsFlixy, image: image)
         chatMessages.append(message)
         chatTableView.reloadData()
         scrollToBottom()
@@ -178,18 +213,57 @@ class DateUIHeaderView: UITableViewHeaderFooterView {
     }
 }
 
-struct ChatMessage {
+extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func setupInsertPhoto(){
+        picker!.allowsEditing = false
+        picker!.delegate = self
+        
+        insertPhotoButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                if let picker = self?.picker{
+                    self?.showImagePicker(picker: picker)
+                }
+            })
+            .disposed(by: bag)
+    }
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: true, completion: nil)
+        
+        if let selectedImage = info[.originalImage] as? UIImage {
+            // Store the selected image
+            self.selectedImage = selectedImage
+        }
+    }
+}
+
+struct ChatMessage: Codable {
     let text: String
     let isMsFlixy: Bool
+    let timestamp: Date
+    let imageData: Data? // Use Data instead of UIImage
+
+    var image: UIImage? {
+        if let imageData = imageData {
+            return UIImage(data: imageData)
+        }
+        return nil
+    }
+
+    init(text: String, isMsFlixy: Bool, image: UIImage? = nil) {
+        self.text = text
+        self.isMsFlixy = isMsFlixy
+        self.timestamp = Date()
+        self.imageData = image?.jpegData(compressionQuality: 1.0) // Convert UIImage to Data
+    }
 }
+
 
 // TODO:
 /*
- - Set userChar's chat bubble in right side
- - fix time label "12.12 am...."
- - format the text like .md like bold instead of "**"
- - is typing lottie file
- - implement coredata/userdefault
- - implement paste for chat text
- - add images to gemini
+ - Format the text like .md like bold instead of "**"
+ - Ss typing lottie file
+ - Implement paste for chat text
+ - Implement speech to text
  */

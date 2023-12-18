@@ -12,7 +12,7 @@
 // MARK: - TabBar
 "Home" = "Home";
 "Search" = "Search";
-"Discover" = "Discovery";
+"Discover" = "Discover";
 "More" = "More";
 
 // MARK: - Tab1Home
@@ -21,11 +21,12 @@
 // MARK: - Tab2Search
 
 
-// MARK: - Tab3Discovery
+// MARK: - Tab3Discover
 
 
 // MARK: - Tab4More
 "History" = "History";
 "App Settings" = "App Setting";
+"Ask Ms. Flixy" = "Ask Ms. Flixy";
 "Changelog" = "Changelog";
 "Help" = "Help";

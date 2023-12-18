@@ -31,8 +31,7 @@ class MoreViewController: UIViewController {
     let cellData: [MoreCellData] = [
         MoreCellData(title: " "+"History"~, symbolName: "clock.arrow.circlepath"),
         MoreCellData(title: " "+"App Settings"~, symbolName: "gear"),
-//        MoreCellData(title: "Display Language"~, symbolName: "character.bubble.fill"),
-        MoreCellData(title: "Ask Ms. Flixy", symbolName: "bubble.left.and.text.bubble.right"),
+        MoreCellData(title: "Ask Ms. Flixy"~, symbolName: "bubble.left.and.text.bubble.right"),
         MoreCellData(title: " "+"Changelog"~, symbolName: "gearshape.arrow.triangle.2.circlepath"),
         MoreCellData(title: "  "+"Help"~, symbolName: "questionmark.circle")
     ]
@@ -154,11 +153,7 @@ class MoreViewController: UIViewController {
         openGallery()
         self.uploadImgButton.isHidden.toggle() // how can I show this after openGallary() finishing loading?
     }
-    
-    @IBAction func takePhotoPressed(_ sender: Any) {
-        openCamera()
-    }
-    
+        
     @IBAction func signOut(_ sender: Any) {
         let loginVC = LoginViewController()
         loginVC.hidesBottomBarWhenPushed = true // Hide the tab bar
@@ -168,13 +163,6 @@ class MoreViewController: UIViewController {
     func openGallery() {
         picker!.allowsEditing = false
         picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
-        present(picker!, animated: true, completion: nil)
-    }
-    
-    func openCamera() {
-        picker!.allowsEditing = false
-        picker!.sourceType = UIImagePickerController.SourceType.camera
-        //        picker!.cameraCaptureMode = .photo
         present(picker!, animated: true, completion: nil)
     }
     
