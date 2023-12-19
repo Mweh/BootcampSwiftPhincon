@@ -1631,6 +1631,11 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Value: We need access to the camera to capture photos for text recognition.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to secure your account.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need the mic for audio to text\nPrivacy - Speech Recognition Usage Description";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save images to your photo library.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need the speech recognition capabilities for searching tags";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1663,6 +1668,11 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = netflixUIKit/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Value: We need access to the camera to capture photos for text recognition.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to secure your account.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need the mic for audio to text\nPrivacy - Speech Recognition Usage Description";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save images to your photo library.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Need the speech recognition capabilities for searching tags";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

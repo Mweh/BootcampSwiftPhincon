@@ -66,7 +66,7 @@ class MsFlixyAssistanceViewController: UIViewController {
     }
     
     func voiceButtonPressed() {
-        
+        voiceOverlayController.settings.layout.inputScreen.inputButtonConstants.pulseColor = .systemRed
         voiceButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.voiceOverlayController.start(on: self!, textHandler: { (text, final, context) in
