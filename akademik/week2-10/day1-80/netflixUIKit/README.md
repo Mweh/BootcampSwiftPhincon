@@ -78,7 +78,8 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add audio to text searchBar
 - [ ] Add my app's widget
 - [ ] Implement deep links
-- [ ] Add expanded tableview 
+- [ ] Add expanded tableview
+- [ ] Add ErrorView
  
 ## DONE
 

@@ -216,12 +216,13 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             previewProvider: nil) {[weak self] _ in
                 let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
                     let tmdbImgBase = TMDBImageURL.url(size: .w342)
-                    let urlPath = self?.collectionMoviePopular?[indexPath.row].posterPath ?? ""
+                    
+                    let urlPath = (self?.typeCell == .CircleCell) ? self?.collectionMovieNowPlaying?[indexPath.row].posterPath ?? "" : self?.collectionMoviePopular?[indexPath.row].posterPath ?? ""
+                    
                     let urlName = "\(tmdbImgBase)\(urlPath)"
                     let url = URL(string: urlName)
                     self?.downloadImageURL(imageURL: url!)
                     // Assuming imageURL is the URL of the downloaded image
-                    
                    
                         PhotoLibraryManager.saveImageToPhotos(url: url!) { error in
                             if let error = error {
