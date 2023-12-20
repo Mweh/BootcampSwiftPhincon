@@ -133,14 +133,6 @@ class MsFlixyAssistanceViewController: UIViewController {
             let modelText = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
             let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
             
-//            if selectedImage != nil {
-//                currentInputMode = .image
-//            } else if voiceMessage != "" {
-//                currentInputMode = .speech
-//            } else {
-//                currentInputMode = .text
-//            }
-            
             switch currentInputMode {
             case .text:
                 // Handle text input
@@ -160,7 +152,7 @@ class MsFlixyAssistanceViewController: UIViewController {
                 break
             case .image:
                 // Handle image input
-b                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
+                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
                     // Handle the case where the user input is empty
                     return
                 }
@@ -208,6 +200,7 @@ b                guard let userInput = userInputTextField.text, !userInput.isEmp
     }
 }
 
+// MARK: -- UITableViewDelegate, UITableViewDataSource
 extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatMessages.count
@@ -215,9 +208,9 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "MsFlixyAssistanceTableViewCell", for: indexPath) as! MsFlixyAssistanceTableViewCell
-        cell.photoImageView.makeRounded(20)
         let message = chatMessages[indexPath.row]
         cell.configure(with: message)
+        cell.photoImageView.makeRounded(20)
         return cell
     }
     
@@ -291,6 +284,7 @@ extension MsFlixyAssistanceViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: -- UITableViewHeaderFooterView for DateUIHeaderView
 // A custom UITableViewHeaderFooterView for displaying a centered UILabel as the header view.
 class DateUIHeaderView: UITableViewHeaderFooterView {
     
@@ -353,6 +347,7 @@ extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINa
     }
 }
 
+// MARK: -- ChatMessage Model
 struct ChatMessage: Codable {
     let text: String
     let isMsFlixy: Bool
@@ -370,7 +365,7 @@ struct ChatMessage: Codable {
         self.text = text
         self.isMsFlixy = isMsFlixy
         self.timestamp = Date()
-        self.imageData = image?.jpegData(compressionQuality: 1.0) // Convert UIImage to Data
+        self.imageData = image?.jpegData(compressionQuality: 0.8) // Convert UIImage to Data
     }
 }
 
@@ -378,10 +373,8 @@ enum InputMode {
     case text, image, speech
 }
 
-// TODO:
+// TODO: List
 /*
  - Format the text like .md like bold instead of "**"
- - Ss typing lottie file
- - Implement paste for chat text
- - Implement speech to text
+ - Is typing lottie file
  */

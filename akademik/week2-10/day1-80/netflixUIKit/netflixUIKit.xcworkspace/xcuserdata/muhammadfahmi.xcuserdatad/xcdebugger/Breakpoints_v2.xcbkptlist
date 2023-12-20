@@ -2598,42 +2598,10 @@
             filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "setupAI(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A677E7C9-8AFF-4EBE-A54B-2B53608266E3 - 1c709b6272c9aa95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "628">
-               </Location>
-               <Location
-                  uuid = "A677E7C9-8AFF-4EBE-A54B-2B53608266E3 - 1c709b6272c9aa70"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "1176">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3037,180 +3005,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F55E56AB-F4AA-4BC8-BDD4-746CB5855E92"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F55E56AB-F4AA-4BC8-BDD4-746CB5855E92 - c1aa2dd6af853208"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "netflixUIKit.MsFlixyAssistanceViewController.setupChatTableView() -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  uuid = "F55E56AB-F4AA-4BC8-BDD4-746CB5855E92 - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "628">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5A8587E7-C5EC-4014-A5B4-D2DDFAD93E0F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5A8587E7-C5EC-4014-A5B4-D2DDFAD93E0F - c1aa2dd6af85324a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "netflixUIKit.MsFlixyAssistanceViewController.setupChatTableView() -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "928">
-               </Location>
-               <Location
-                  uuid = "5A8587E7-C5EC-4014-A5B4-D2DDFAD93E0F - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "628">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4C6BB1B2-DD88-4F8D-B81E-A0C7656BD91A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4C6BB1B2-DD88-4F8D-B81E-A0C7656BD91A - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "4C6BB1B2-DD88-4F8D-B81E-A0C7656BD91A - cd4e3912eacec2a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "4C6BB1B2-DD88-4F8D-B81E-A0C7656BD91A - 1c709b6272c9a8e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "224">
-               </Location>
-               <Location
-                  uuid = "4C6BB1B2-DD88-4F8D-B81E-A0C7656BD91A - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "628">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "96CF3FD0-B71A-4592-9766-F077370AED97"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -3218,215 +3012,13 @@
             filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "setupAI(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 1c709b6272c9a460"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "1460">
-               </Location>
-               <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 61fb3041665c21ac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - acc6932ccf1b2c6c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - e673be7b09d8cf61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - e673be7b09d8c056"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 1c709b6272c9a460"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "2304">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0AF4BEB0-7158-400D-BD9F-A4A91C5B3614"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B808F64F-B3B6-4431-A910-57AEFD1F4536"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B808F64F-B3B6-4431-A910-57AEFD1F4536 - 1c709b6272c9aa95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "628">
-               </Location>
-               <Location
-                  uuid = "B808F64F-B3B6-4431-A910-57AEFD1F4536 - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "B808F64F-B3B6-4431-A910-57AEFD1F4536 - 1c709b6272c9a919"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "628">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "setupAI(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 1c709b6272c9ab09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
-                  offsetFromSymbolStart = "1756">
-               </Location>
-               <Location
-                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 1c709b6272c9abcb"
+                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 1c709b6272c9abcb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3441,7 +3033,7 @@
                   offsetFromSymbolStart = "1796">
                </Location>
                <Location
-                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 1c709b6272c9abcb"
+                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 1c709b6272c9abcb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3456,22 +3048,7 @@
                   offsetFromSymbolStart = "2236">
                </Location>
                <Location
-                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 7f54aa951bacbbc3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
-                  moduleName = "netflixUIKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "163"
-                  endingLineNumber = "163"
-                  offsetFromSymbolStart = "568">
-               </Location>
-               <Location
-                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 7f54aa951bacbbc3"
+                  uuid = "96CF3FD0-B71A-4592-9766-F077370AED97 - 7f54aa951bacbbc3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3491,6 +3068,118 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0AF4BEB0-7158-400D-BD9F-A4A91C5B3614"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "setupAI(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0AF4BEB0-7158-400D-BD9F-A4A91C5B3614 - 1c709b6272c9a5bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "3180">
+               </Location>
+               <Location
+                  uuid = "0AF4BEB0-7158-400D-BD9F-A4A91C5B3614 - 7f54aa951bacb5b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B808F64F-B3B6-4431-A910-57AEFD1F4536"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "setupAI(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "setupAI(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 1c709b6272c9aad3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "1384">
+               </Location>
+               <Location
+                  uuid = "02DC7081-8B56-41C7-B243-D8CE5F072E0C - 1c709b6272c9aa11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -3498,13 +3187,13 @@
             filePath = "netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "setupAI(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - 1c709b6272c9a631"
+                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - 1c709b6272c9a547"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3514,24 +3203,69 @@
                   urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "185"
-                  endingLineNumber = "185"
-                  offsetFromSymbolStart = "3336">
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "2884">
                </Location>
                <Location
-                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - 1c709b6272c9a631"
+                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - 6e8e9d6e98b6e489"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  symbolName = "(4) await resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
                   moduleName = "netflixUIKit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "185"
-                  endingLineNumber = "185"
-                  offsetFromSymbolStart = "3372">
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - 7f54aa951bacb54f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - de88ba18ac3384f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "044B66F1-BC47-46DD-BC98-239B03BD2D0D - de88ba18ac338577"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for netflixUIKit.MsFlixyAssistanceViewController.setupAI(netflixUIKit.InputMode) async -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "192">
                </Location>
             </Locations>
          </BreakpointContent>
