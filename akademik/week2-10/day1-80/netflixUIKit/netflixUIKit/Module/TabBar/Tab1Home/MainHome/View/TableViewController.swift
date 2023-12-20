@@ -190,11 +190,6 @@ extension TableViewController: HorizontalCellDelegate {
             
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
-        AlertUtility.showAlert(from: self,
-                               title: "Success",
-                               message: "Image saved successfully!",
-                               completion: nil)
-
     }
 }
 

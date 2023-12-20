@@ -78,8 +78,10 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add audio to text searchBar
 - [ ] Add my app's widget
 - [ ] Implement deep links
-- [ ] Add expanded tableview
+- [ ] Add chatAI using Google Gemini 
+ -> [ ] Add is typing for gemini
 - [ ] Add ErrorView
+- [ ] Add expanded tableview
  
 ## DONE
 
@@ -115,10 +117,11 @@ Tasks that have been completed.
  -> [x] Set userChar's chat bubble in right side
  -> [x] Fix time label "12.12 am...." Constraint
  -> [x] Userdefault for 
- -> [x]  add images to gemini
+ -> [x] Add images to gemini
 - [x] Get Internet speed and save it in UserDefault place it in label.text
 - [x] Add localized for language
 - [x] Added custom voice using pod InstantSearchVoiceOverlay
+- [x] Pastecontrol for GeminiChat
 
 ## BUG
 

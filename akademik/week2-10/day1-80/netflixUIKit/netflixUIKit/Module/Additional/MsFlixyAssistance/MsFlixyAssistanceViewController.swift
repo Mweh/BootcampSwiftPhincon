@@ -59,10 +59,10 @@ class MsFlixyAssistanceViewController: UIViewController {
         setupChatTableView()
         setupNavi()
         setupSendMessageButtonPressed()
-        if chatMessages.count != 0 { scrollToBottom() }
         setupInsertPhoto()
-        setKeyboard()
         voiceButtonPressed()
+        if chatMessages.count != 0 { scrollToBottom() }
+        setKeyboard()
     }
     
     func voiceButtonPressed() {
@@ -74,7 +74,7 @@ class MsFlixyAssistanceViewController: UIViewController {
                         self?.addMessageToChat(text, isMsFlixy: false)
                         self?.voiceMessage = text
                         Task {
-                            await self?.setupAI()
+                            await self?.setupAI(.speech)
                         }
                     }
                 }, errorHandler: { (error) in
@@ -88,18 +88,6 @@ class MsFlixyAssistanceViewController: UIViewController {
         // Set the text field delegate
         userInputTextField.delegate = self
         IQKeyboardManager.shared.enableAutoToolbar = false
-    }
-    
-    func setupSendMessageButtonPressed(){
-        sendMessageButtonPressed.rx.tap
-            .subscribe(onNext: {[weak self] in
-                self?.userInputTextField.resignFirstResponder() // Dismiss the keyboard
-                // Call setupAI() when the return key is pressed
-                Task {
-                    await self?.setupAI()
-                }
-            })
-            .disposed(by: bag)
     }
     
     func setupNavi(){
@@ -138,18 +126,20 @@ class MsFlixyAssistanceViewController: UIViewController {
         chatTableView.separatorStyle = .none
     }
     
-    func setupAI() async {
+    func setupAI(_ currentInputMode: InputMode) async {
+        self.currentInputMode = currentInputMode
+
         do {
             let modelText = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
             let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
             
-            if let selectedImage = selectedImage {
-                currentInputMode = .image
-            } else if voiceMessage != "" {
-                currentInputMode = .speech
-            } else {
-                currentInputMode = .text
-            }
+//            if selectedImage != nil {
+//                currentInputMode = .image
+//            } else if voiceMessage != "" {
+//                currentInputMode = .speech
+//            } else {
+//                currentInputMode = .text
+//            }
             
             switch currentInputMode {
             case .text:
@@ -170,7 +160,7 @@ class MsFlixyAssistanceViewController: UIViewController {
                 break
             case .image:
                 // Handle image input
-                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
+b                guard let userInput = userInputTextField.text, !userInput.isEmpty else {
                     // Handle the case where the user input is empty
                     return
                 }
@@ -188,7 +178,7 @@ class MsFlixyAssistanceViewController: UIViewController {
                     }
                 }
                 self.selectedImage = nil
-                
+                self.currentInputMode = .text
                 break
             case .speech:
                 // Handle speech input
@@ -245,6 +235,23 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
         
         return dateUIHeaderView // Return the configured header view.
     }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) { [weak self] _ in
+                let copyAction = UIAction(title: "Copy", subtitle: nil, image: UIImage(systemName: "doc.on.doc"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                                        
+                    // Copy the content to the clipboard
+                    UIPasteboard.general.string = self?.chatMessages[indexPath.row].text
+                    
+                }
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction])
+            }
+        return config
+    }
+
 }
 
 // MARK: -- UITextFieldDelegate
@@ -253,10 +260,34 @@ extension MsFlixyAssistanceViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Dismiss the keyboard
         // Call setupAI() when the return key is pressed
-        Task {
-            await setupAI()
+        if currentInputMode == .image {
+            Task {
+                await setupAI(.image)
+            }
+        } else {
+            Task {
+                await setupAI(.text)
+            }
         }
         return true
+    }    
+    
+    func setupSendMessageButtonPressed(){
+        sendMessageButtonPressed.rx.tap
+            .subscribe(onNext: {[weak self] in
+                self?.userInputTextField.resignFirstResponder() // Dismiss the keyboard
+                // Call setupAI() when the return key is pressed
+                if self?.currentInputMode == .image {
+                    Task {
+                        await self?.setupAI(.image)
+                    }
+                } else {
+                    Task {
+                        await self?.setupAI(.text)
+                    }
+                }
+            })
+            .disposed(by: bag)
     }
 }
 
@@ -302,6 +333,9 @@ extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINa
         
         insertPhotoButton.rx.tap
             .subscribe(onNext: {[weak self] in
+                Task {
+                    await self?.setupAI(.image)
+                }
                 if let picker = self?.picker{
                     self?.showImagePicker(picker: picker)
                 }
