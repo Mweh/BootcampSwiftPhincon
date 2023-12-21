@@ -51,8 +51,11 @@ class MsFlixyAssistanceViewController: UIViewController {
     }
     
     var voiceMessage: String = ""
+    let isTyping: String = "Ms. Flixy is typing..."
     var currentInputMode: InputMode = .text
-    
+    var stateAI: StateAI = .failed
+    var stateAISubject: BehaviorRelay<StateAI> = BehaviorRelay(value: .failed)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +66,32 @@ class MsFlixyAssistanceViewController: UIViewController {
         voiceButtonPressed()
         if chatMessages.count != 0 { scrollToBottom() }
         setKeyboard()
+        bindStateAI()
+    }
+    
+    func bindStateAI(){
+        stateAISubject.asObservable().subscribe(onNext: {[weak self] state in
+            if let isTyping = self?.isTyping {
+                switch state {
+                case .loading:
+                    let delay = 0.5
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay){
+                        self?.addMessageToChat(isTyping, isMsFlixy: true) // Ms. Flixy
+                        self?.chatTableView.reloadData()
+                    }
+                    break
+                case .isFinished:
+                    if let typingMessageIndex = self?.chatMessages.firstIndex(where: { $0.text == isTyping }) {
+                        self?.chatMessages.remove(at: typingMessageIndex)
+                        self?.chatTableView.reloadData()
+                    }
+                    break
+                case .failed:
+                    break
+                }
+            }
+        })
+        .disposed(by: bag)
     }
     
     func voiceButtonPressed() {
@@ -142,12 +171,18 @@ class MsFlixyAssistanceViewController: UIViewController {
                 }
                 
                 addMessageToChat(userInput, isMsFlixy: false) // user
+                stateAISubject.accept(.loading)
                 userInputTextField.text = "" // Clear the text field after sending
                 
                 let prompt = userInput
-                let response = try await modelText.generateContent(prompt)
-                if let text = response.text {
-                    addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                do {
+                    let response = try await modelText.generateContent(prompt)
+                    if let text = response.text {
+                        stateAISubject.accept(.isFinished)
+                        addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
+                    }
+                } catch {
+                    print("Error: \(error.localizedDescription)")
                 }
                 break
             case .image:
@@ -156,8 +191,8 @@ class MsFlixyAssistanceViewController: UIViewController {
                     // Handle the case where the user input is empty
                     return
                 }
-                
                 addMessageToChat(userInput, isMsFlixy: false, image: selectedImage) // user
+                stateAISubject.accept(.loading)
                 userInputTextField.text = "" // Clear the text field after sending
                 
                 if let selectedImage = selectedImage {
@@ -166,6 +201,7 @@ class MsFlixyAssistanceViewController: UIViewController {
                     let prompt = userInput
                     let response = try await modelVision.generateContent(prompt, image)
                     if let text = response.text {
+                        stateAISubject.accept(.isFinished)
                         addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
                     }
                 }
@@ -174,15 +210,18 @@ class MsFlixyAssistanceViewController: UIViewController {
                 break
             case .speech:
                 // Handle speech input
+                stateAISubject.accept(.loading)
                 let voicePrompt = voiceMessage
                 
                 let responseVoice = try await modelText.generateContent(voicePrompt) //voice only
                 if let text = responseVoice.text {
+                    stateAISubject.accept(.isFinished)
                     addMessageToChat(text, isMsFlixy: true) // Ms. Flixy
                 }
                 break
             }
         } catch {
+            stateAISubject.accept(.failed)
             print("Error: \(error.localizedDescription)")
         }
     }
@@ -192,8 +231,9 @@ class MsFlixyAssistanceViewController: UIViewController {
         chatMessages.append(message)
         chatTableView.reloadData()
         scrollToBottom()
+        
     }
-    
+
     func scrollToBottom() {
         let indexPath = IndexPath(row: chatMessages.count - 1, section: 0)
         chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
@@ -238,9 +278,12 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
                                         
                     // Copy the content to the clipboard
                     UIPasteboard.general.string = self?.chatMessages[indexPath.row].text
-                    
                 }
-                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction])
+                let deteleAction = UIAction(title: "Delete", subtitle: nil, image: UIImage(systemName: "trash"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                                        
+                    self?.chatTableView.deleteRows(at: [indexPath], with: .fade)
+                } // remove
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction, deteleAction])
             }
         return config
     }
@@ -371,6 +414,10 @@ struct ChatMessage: Codable {
 
 enum InputMode {
     case text, image, speech
+}
+
+enum StateAI: Int { //isTyping
+    case loading, isFinished, failed
 }
 
 // TODO: List

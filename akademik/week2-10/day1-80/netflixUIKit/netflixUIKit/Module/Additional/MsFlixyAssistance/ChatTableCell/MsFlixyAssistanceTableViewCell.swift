@@ -7,6 +7,7 @@
 
 import FirebaseAuth
 import UIKit
+import Lottie
 
 class MsFlixyAssistanceTableViewCell: UITableViewCell {
 
@@ -24,10 +25,19 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
     @IBOutlet weak var leftLessConstraintStackView: NSLayoutConstraint!
     @IBOutlet weak var imgAndChatStackView: UIStackView!
     
+    @IBOutlet weak var isTypingLottieView: LottieAnimationView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupProfileImg()
+        setupAnimation()
+    }
+    
+    func setupAnimation() {
+        isTypingLottieView.animation = LottieAnimation.named("loadingChatIndicator")
+        isTypingLottieView.loopMode = .loop
+        isTypingLottieView.play()
     }
     
     func configure(with message: ChatMessage) {
@@ -36,6 +46,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
         if let image = message.image {
             // Display the selected image
             photoImageView.image = image
+            photoImageView.makeRounded(20)
         } else {
             // Hide the image view if there's no image
             photoImageView.image = nil
@@ -49,6 +60,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
             leftGreaterConstraintStackView.constant = 8
             leftLessConstraintStackView.constant = 8
             
+            isTypingLottieView.isHidden = false
             profileImgUser.isHidden = true
             profileImg.isHidden = false
             chatContainerView.backgroundColor = .darkGray
@@ -64,6 +76,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
             leftGreaterConstraintStackView.constant = 72
             leftLessConstraintStackView.constant = 1000
             
+            isTypingLottieView.isHidden = true
             profileImgUser.isHidden = false
             profileImg.isHidden = true
             chatContainerView.backgroundColor = UIColor(named: "chatColor") //maroon

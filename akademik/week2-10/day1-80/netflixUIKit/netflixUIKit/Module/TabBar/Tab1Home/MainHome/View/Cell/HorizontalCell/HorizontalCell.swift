@@ -216,7 +216,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         let config = UIContextMenuConfiguration(
             identifier: nil,
             previewProvider: nil) {[weak self] _ in
-                let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                let downloadAction = UIAction(title: "Download Image", subtitle: nil, image: UIImage(systemName: "square.and.arrow.down"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
                     let tmdbImgBase = TMDBImageURL.url(size: .w342)
                     
                     let urlPath = (self?.typeCell == .CircleCell) ? self?.collectionMovieNowPlaying?[indexPath.row].posterPath ?? "" : self?.collectionMoviePopular?[indexPath.row].posterPath ?? ""
