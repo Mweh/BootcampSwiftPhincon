@@ -34,6 +34,7 @@
 		CD23A13C2B1422FB000D2303 /* SeeAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */; };
 		CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C65122AEFB2340026B35B /* LoginViewController.swift */; };
 		CD2C65152AEFB2340026B35B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2C65132AEFB2340026B35B /* LoginViewController.xib */; };
+		CD3EE8322B33E11600A7FA62 /* loadingChatIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = CD3EE8312B33E11600A7FA62 /* loadingChatIndicator.json */; };
 		CD3F596A2AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */; };
 		CD3F596C2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */; };
 		CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */; };
@@ -192,6 +193,7 @@
 		CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllViewController.xib; sourceTree = "<group>"; };
 		CD2C65122AEFB2340026B35B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD2C65132AEFB2340026B35B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CD3EE8312B33E11600A7FA62 /* loadingChatIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingChatIndicator.json; sourceTree = "<group>"; };
 		CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedReusableCustomView.swift; sourceTree = "<group>"; };
 		CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundedReusableCustomView.xib; sourceTree = "<group>"; };
 		CD40E1E42AF7DC6B002D2407 /* CustomAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAPIManager.swift; sourceTree = "<group>"; };
@@ -1060,6 +1062,7 @@
 		CDAD7DB82AFDD94E00BF41B8 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CD3EE8312B33E11600A7FA62 /* loadingChatIndicator.json */,
 				CD7B417D2B2033850018726C /* backToTop.json */,
 				CD46592D2B1D984D00D86A26 /* floatingIconPlays.json */,
 				CDB9FD672B0C917700128B03 /* fireAnimation.json */,
@@ -1340,6 +1343,7 @@
 				CD42F9712B2BDF5C008A1F13 /* MsFlixyAssistanceTableViewCell.xib in Resources */,
 				CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */,
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
+				CD3EE8322B33E11600A7FA62 /* loadingChatIndicator.json in Resources */,
 				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
 				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
 				CD42F93E2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib in Resources */,
