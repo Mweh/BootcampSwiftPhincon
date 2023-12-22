@@ -42,7 +42,8 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
     
     func configure(with message: ChatMessage) {
         chatLabel.text = message.text
-              
+        isTypingLottieView.isHidden = true
+        
         if let image = message.image {
             // Display the selected image
             photoImageView.image = image
@@ -60,7 +61,9 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
             leftGreaterConstraintStackView.constant = 8
             leftLessConstraintStackView.constant = 8
             
-            isTypingLottieView.isHidden = false
+            if message.isTypingLoading == true {
+                isTypingLottieView.isHidden = false
+            }
             profileImgUser.isHidden = true
             profileImg.isHidden = false
             chatContainerView.backgroundColor = .darkGray

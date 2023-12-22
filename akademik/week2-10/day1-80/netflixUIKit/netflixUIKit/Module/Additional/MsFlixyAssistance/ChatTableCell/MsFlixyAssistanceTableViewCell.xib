@@ -141,6 +141,9 @@
             <point key="canvasLocation" x="100.00000000000001" y="10.379464285714285"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="qZ7-l2-TiM"/>
+    </designables>
     <resources>
         <image name="femaleAI" width="256" height="256"/>
         <image name="movie4" width="1280" height="1920"/>
