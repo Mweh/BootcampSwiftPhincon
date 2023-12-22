@@ -15,11 +15,11 @@ class VerticalCell: UITableViewCell {
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageAutoCarousel: UIPageControl!
-    @IBOutlet weak var playLabel: UIButton!
+    @IBOutlet weak var randomPlayButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var myFavButton: UIButton!
-
-    @IBOutlet weak var containerImgView: UIView!
+    @IBOutlet weak var iAmFeelingLuckyButton: UIButton!
+    
     let bag = DisposeBag()
     
     var images = (1...7).compactMap { UIImage(named: "movie\($0)") }
@@ -28,7 +28,7 @@ class VerticalCell: UITableViewCell {
     
     var searchAction: (() -> Void)?
     var myFavAction: (() -> Void)?
-
+    var randomPlayAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +37,16 @@ class VerticalCell: UITableViewCell {
         startAutoSlide()
         
         setupMyFav()
+        setupRandomPlayTapped()
+    }
+    
+    func setupRandomPlayTapped(){
+        randomPlayButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else { return }
+                self.randomPlayAction?()
+            })
+            .disposed(by: bag)
     }
     
     func setUpCollection(){

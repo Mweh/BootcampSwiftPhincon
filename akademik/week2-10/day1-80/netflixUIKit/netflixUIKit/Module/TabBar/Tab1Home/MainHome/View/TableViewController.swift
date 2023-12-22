@@ -117,18 +117,26 @@ class TableViewController: UITableViewController {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
             
+            cell.myFavAction = { [weak self] in
+                let vc = FavHomeVC()
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)                
+            }
+            
+            cell.randomPlayAction = { [weak self] in
+                let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
+                // Pass the movie ID to the next view controller
+                videoTrailerVC.hidesBottomBarWhenPushed = true
+                videoTrailerVC.movieId = self?.dataMoviePreviews?.results[Int.random(in: 0...19)].id
+                self?.navigationController?.pushViewController(videoTrailerVC, animated: true)
+            }
+            
             cell.searchAction = { [weak self] in
                 let vc = SearchButtonViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
                 print("Di push trus")
                 
-            }
-            
-            cell.myFavAction = { [weak self] in
-                let vc = FavHomeVC()
-                vc.hidesBottomBarWhenPushed = true
-                self?.navigationController?.pushViewController(vc, animated: true)
             }
 
             return cell

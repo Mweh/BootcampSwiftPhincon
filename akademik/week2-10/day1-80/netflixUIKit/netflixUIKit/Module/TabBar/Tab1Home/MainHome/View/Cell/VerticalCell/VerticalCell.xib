@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,10 +36,10 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n94-Ja-sIa" customClass="FadedImageView" customModule="netflixUIKit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="302" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="292" width="320" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="cDF-2x-bru"/>
+                                    <constraint firstAttribute="height" constant="80" id="cDF-2x-bru"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fadeColor">
@@ -50,45 +50,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DL8-sQ-LO1">
-                                <rect key="frame" x="0.0" y="50" width="336" height="50"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="QCi-Uw-JSs">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="GCM-Am-ttg"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK8-vG-f8L">
-                                        <rect key="frame" x="40" y="0.0" width="100" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="TV Shows"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qts-1V-NIo">
-                                        <rect key="frame" x="140" y="0.0" width="84" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Movies"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3Y-eg-tEV">
-                                        <rect key="frame" x="224" y="0.0" width="112" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="My List">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" name="transparentBlack30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3zX-w3-vk0"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9M-Pq-Dxc">
-                                <rect key="frame" x="16" y="302.66666666666669" width="288" height="53.333333333333314"/>
+                                <rect key="frame" x="16" y="299.66666666666669" width="288" height="56.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BX0-6X-W0G" userLabel="My Fav">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="53.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="56.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="star.square.on.square" catalog="system" imagePlacement="top" imagePadding="5">
+                                        <buttonConfiguration key="configuration" style="plain" image="star.square.on.square" catalog="system" imagePlacement="top" imagePadding="4">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="My Favorites">
                                                     <attributes>
@@ -100,15 +68,18 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-0F-NEX" userLabel="Play">
-                                        <rect key="frame" x="96" y="0.0" width="96" height="53.333333333333336"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-0F-NEX" userLabel="RandomPlay">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="56.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="play" catalog="system" title="Play" imagePadding="10"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system" imagePlacement="bottom" title="Random" imagePadding="4">
+                                            <fontDescription key="titleFontDescription" name="NetflixSans-Medium" family="Netflix Sans" pointSize="14"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-UT-Y7R">
-                                        <rect key="frame" x="192" y="0.0" width="96" height="53.333333333333336"/>
+                                        <rect key="frame" x="192" y="0.0" width="96" height="56.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="top">
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="top" imagePadding="4">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Search">
                                                     <attributes>
@@ -124,9 +95,37 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </stackView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-JC-wXb">
-                                <rect key="frame" x="102.33333333333331" y="253.33333333333337" width="115.66666666666669" height="26"/>
+                                <rect key="frame" x="102.33333333333331" y="250.66666666666666" width="115.66666666666669" height="25.666666666666657"/>
                                 <color key="pageIndicatorTintColor" systemColor="tintColor"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkm-jZ-kuo">
+                                <rect key="frame" x="0.0" y="48" width="320" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-N" translatesAutoresizingMaskIntoConstraints="NO" id="QCi-Uw-JSs">
+                                        <rect key="frame" x="16" y="4" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DTX-QJ-mhY"/>
+                                            <constraint firstAttribute="width" constant="40" id="GCM-Am-ttg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qts-1V-NIo" userLabel="iAmFeelingLuckyButton">
+                                        <rect key="frame" x="0.0" y="7.3333333333333357" width="320" height="33.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="I'am felling lucky">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="transparentBlack30"/>
+                                <constraints>
+                                    <constraint firstItem="QCi-Uw-JSs" firstAttribute="leading" secondItem="xkm-jZ-kuo" secondAttribute="leading" constant="16" id="605-Uj-BrF"/>
+                                    <constraint firstItem="qts-1V-NIo" firstAttribute="centerY" secondItem="QCi-Uw-JSs" secondAttribute="centerY" id="CNC-9i-4VY"/>
+                                    <constraint firstAttribute="trailing" secondItem="qts-1V-NIo" secondAttribute="trailing" id="GDb-Ch-r2c"/>
+                                    <constraint firstItem="QCi-Uw-JSs" firstAttribute="top" secondItem="xkm-jZ-kuo" secondAttribute="top" constant="4" id="UFE-Ep-Hmg"/>
+                                    <constraint firstAttribute="height" constant="50" id="lgY-71-GDx"/>
+                                    <constraint firstItem="qts-1V-NIo" firstAttribute="leading" secondItem="xkm-jZ-kuo" secondAttribute="leading" id="pmG-oF-81p"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -134,12 +133,15 @@
                             <constraint firstAttribute="trailing" secondItem="x9M-Pq-Dxc" secondAttribute="trailing" constant="16" id="2pb-pF-Mqd"/>
                             <constraint firstItem="v2H-9n-vZR" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" id="5QE-kS-HoA"/>
                             <constraint firstAttribute="bottom" secondItem="n94-Ja-sIa" secondAttribute="bottom" id="G1V-88-wXT"/>
+                            <constraint firstItem="xkm-jZ-kuo" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="Jd3-zK-DnH"/>
                             <constraint firstItem="v2H-9n-vZR" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="L6N-xM-v1P"/>
                             <constraint firstAttribute="trailing" secondItem="n94-Ja-sIa" secondAttribute="trailing" id="Lj2-sU-NgG"/>
                             <constraint firstItem="x9M-Pq-Dxc" firstAttribute="top" secondItem="tjO-JC-wXb" secondAttribute="bottom" constant="23.333333333333314" id="RER-C6-NFi"/>
                             <constraint firstAttribute="bottom" secondItem="x9M-Pq-Dxc" secondAttribute="bottom" constant="16" id="ZIG-BJ-yWH"/>
                             <constraint firstItem="tjO-JC-wXb" firstAttribute="centerX" secondItem="duh-tC-SQc" secondAttribute="centerX" id="mxv-x3-IJq"/>
+                            <constraint firstAttribute="trailing" secondItem="xkm-jZ-kuo" secondAttribute="trailing" id="oSD-6C-Tpl"/>
                             <constraint firstAttribute="bottom" secondItem="v2H-9n-vZR" secondAttribute="bottom" id="r9A-KE-dgr"/>
+                            <constraint firstItem="xkm-jZ-kuo" firstAttribute="top" secondItem="duh-tC-SQc" secondAttribute="top" constant="48" id="ted-dz-T4y"/>
                             <constraint firstItem="n94-Ja-sIa" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" id="uwh-T4-ZGT"/>
                             <constraint firstItem="x9M-Pq-Dxc" firstAttribute="leading" secondItem="duh-tC-SQc" secondAttribute="leading" constant="16" id="yWm-uA-qSF"/>
                         </constraints>
@@ -162,17 +164,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="DL8-sQ-LO1" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="50" id="0jU-0M-u0z"/>
-                <constraint firstItem="DL8-sQ-LO1" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="aio-t1-6H1"/>
-                <constraint firstItem="DL8-sQ-LO1" firstAttribute="trailing" secondItem="njF-e1-oar" secondAttribute="trailing" constant="16" id="if8-yo-phm"/>
-            </constraints>
             <connections>
                 <outlet property="collectionView" destination="v2H-9n-vZR" id="hOP-ko-KU6"/>
                 <outlet property="containerStackView" destination="x9M-Pq-Dxc" id="6JZ-qi-qkW"/>
+                <outlet property="iAmFeelingLuckyButton" destination="qts-1V-NIo" id="8UY-2j-LHX"/>
                 <outlet property="myFavButton" destination="BX0-6X-W0G" id="Mxg-sf-TmO"/>
                 <outlet property="pageAutoCarousel" destination="tjO-JC-wXb" id="uQj-d9-Ueg"/>
-                <outlet property="playLabel" destination="yfb-0F-NEX" id="9CF-xx-Z47"/>
+                <outlet property="randomPlayButton" destination="yfb-0F-NEX" id="Dsa-EK-HCJ"/>
                 <outlet property="searchButton" destination="aOu-UT-Y7R" id="jnJ-rc-aJ9"/>
             </connections>
             <point key="canvasLocation" x="48.854961832061065" y="127.46478873239437"/>
@@ -182,19 +180,19 @@
         <image name="Netflix-N" width="70" height="126"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="netflix" width="3000" height="2000"/>
-        <image name="play" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="star.square.on.square" catalog="system" width="128" height="116"/>
         <namedColor name="transparentBlack30">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -46,8 +46,6 @@ class HorizontalCell: UITableViewCell {
         super.awakeFromNib()
         setUp()
         setUpSeeAll()
-        // Calculate the total width of all cells
-        collectionView.isPagingEnabled = true
     }
     
     func setUpSeeAll(){
@@ -155,6 +153,8 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
         switch typeCell {
         case .CircleCell:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+            collectionView.isPagingEnabled = false
+            
             if indexPath.row < collectionMovieNowPlaying?.count ?? 1 {
                 let tmdbImgBase = TMDBImageURL.url(size: .w342)
                 let imageName = "\(tmdbImgBase)\(collectionMovieNowPlaying?[indexPath.row].posterPath ?? "")"
@@ -167,6 +167,7 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             return cell
         case .SquareCell:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareCollectionViewCell", for: indexPath) as! SquareCollectionViewCell
+            collectionView.isPagingEnabled = true
             self.titleLabel.text = typeCell.title
             
             if indexPath.row < collectionMoviePopular?.count ?? 1 {

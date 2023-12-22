@@ -75,11 +75,12 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Add Age Rating Icon
 - [ ] Add an optional to upgrade pro Version
 - [ ] Add buy me a coffee
-- [ ] Add audio to text searchBar
 - [ ] Add my app's widget
 - [ ] Implement deep links
 - [ ] Add ErrorView
 - [ ] Add expanded tableview
+- [ ] Change label to I'm feeling lucky in homeVC
+- [ ] Change button play to play random video
  
 ## DONE
 

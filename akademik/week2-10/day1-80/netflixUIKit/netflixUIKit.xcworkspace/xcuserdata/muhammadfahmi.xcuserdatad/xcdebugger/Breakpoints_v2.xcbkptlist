@@ -81,6 +81,21 @@
                   endingLineNumber = "91"
                   offsetFromSymbolStart = "1716">
                </Location>
+               <Location
+                  uuid = "A243ECFC-7B92-49A9-89FE-CC658A270C41 - 78a69b23bc08323f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (netflixUIKit.StateAI) -&gt; () in netflixUIKit.MsFlixyAssistanceViewController.bindStateAI() -&gt; ()"
+                  moduleName = "netflixUIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadfahmi/100hackingwithswift/Phincon/BootcampIOSPhincon/akademik/week2-10/day1-80/netflixUIKit/netflixUIKit/Module/Additional/MsFlixyAssistance/MsFlixyAssistanceViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "1720">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
