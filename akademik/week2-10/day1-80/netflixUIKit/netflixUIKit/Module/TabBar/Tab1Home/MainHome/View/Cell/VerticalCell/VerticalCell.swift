@@ -29,6 +29,7 @@ class VerticalCell: UITableViewCell {
     var searchAction: (() -> Void)?
     var myFavAction: (() -> Void)?
     var randomPlayAction: (() -> Void)?
+    var iAmFeelingLuckyAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +39,16 @@ class VerticalCell: UITableViewCell {
         
         setupMyFav()
         setupRandomPlayTapped()
+        setupIAmFeelingLuckyTapped()
+    }
+    
+    func setupIAmFeelingLuckyTapped(){
+        iAmFeelingLuckyButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else { return }
+                self.iAmFeelingLuckyAction?()
+            })
+            .disposed(by: bag)
     }
     
     func setupRandomPlayTapped(){

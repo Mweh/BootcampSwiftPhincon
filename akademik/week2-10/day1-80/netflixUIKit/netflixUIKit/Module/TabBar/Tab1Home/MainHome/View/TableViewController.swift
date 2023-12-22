@@ -117,10 +117,18 @@ class TableViewController: UITableViewController {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
             
+            cell.iAmFeelingLuckyAction = {[weak self] in
+                let vc = SearchButtonViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)
+                // Call the setupInitialText function after the view is loaded
+                vc.setupInitialText()
+            }
+            
             cell.myFavAction = { [weak self] in
                 let vc = FavHomeVC()
                 vc.hidesBottomBarWhenPushed = true
-                self?.navigationController?.pushViewController(vc, animated: true)                
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
             
             cell.randomPlayAction = { [weak self] in
@@ -136,7 +144,6 @@ class TableViewController: UITableViewController {
                 vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
                 print("Di push trus")
-                
             }
 
             return cell

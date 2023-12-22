@@ -35,6 +35,7 @@ class SearchButtonViewController: UIViewController {
     
     // Create a BehaviorRelay to hold the search query
     var searchSubject: BehaviorRelay<String> = BehaviorRelay(value: "")
+    var randomQuery = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,13 @@ class SearchButtonViewController: UIViewController {
         scanButtonTap()
         setupVision()
         setupImagePicker()
+        
     }
     
+    func setupRandomSearch(randomQuery: String){
+        self.randomQuery = randomQuery
+        textFieldSearch.text = randomQuery
+    }
     func toBackVC(){
         backButton.rx.tap
             .subscribe(onNext: {[weak self] in
