@@ -6,6 +6,7 @@ A movie watch project that does incredible things.
 - [Features](#features)
 - [Installation](#installation)
   - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
+- [Folder Structure](#folder structure)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -49,7 +50,6 @@ Before running the project, make sure to set up the `Info.plist` and `GoogleServ
    - Ensure that both `Info-dev.plist` and `GoogleService-Info.plist` are added to your `.gitignore` file to prevent them from being accidentally committed to version control.
 
 ### Continue with the rest of the installation steps...
-
 
 ## Folder Structure
 
