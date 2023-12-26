@@ -41,6 +41,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
     }
     
     func configure(with message: ChatMessage) {
+        selectionStyle = .none
         chatLabel.text = message.text
         isTypingLottieView.isHidden = true
         
@@ -83,7 +84,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
             profileImgUser.isHidden = false
             profileImg.isHidden = true
             chatContainerView.backgroundColor = UIColor(named: "chatColor") //maroon
-            imgAndChatStackView.alignment = .trailing
+            imgAndChatStackView.alignment = chatLabel.numberOfLines==1 ? .trailing : .leading
             // Assuming you have an authentication state listener set up
             Auth.auth().addStateDidChangeListener { (auth, user) in
                 if let user = user {

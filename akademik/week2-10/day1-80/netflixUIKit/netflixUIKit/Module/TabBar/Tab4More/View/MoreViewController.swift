@@ -21,7 +21,7 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var currentAppVersionLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var msFlixyAssistanceButton: UIButton!
+    @IBOutlet weak var changeLanguageButton: UIButton!
     
     let disposeBag = DisposeBag()
     var resultImg: UIImage!
@@ -49,15 +49,12 @@ class MoreViewController: UIViewController {
         // Add this in viewDidLoad or wherever appropriate
         NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
         setProfileName()
-        setMsFlixyAssistance()
+        setupChangeLanguage()
     }
     
-    func setMsFlixyAssistance(){
-        msFlixyAssistanceButton.rx.tap
+    func setupChangeLanguage(){
+        changeLanguageButton.rx.tap
             .subscribe(onNext: {[weak self] in
-//                let vc = MsFlixyAssistanceViewController()
-//                vc.hidesBottomBarWhenPushed = true
-//                self?.navigationController?.pushViewController(vc, animated: true)
                 self?.showDisplayLanguagePanel()
             })
             .disposed(by: disposeBag)
@@ -135,12 +132,13 @@ class MoreViewController: UIViewController {
                             }
                             
                             dispatchGroup.leave()
-                            self.uploadImgButton.isHidden.toggle()
+//                            self.uploadImgButton.isHidden = true
                         case .failure(let error):
                             print("Something went wrong: \(error.localizedDescription)")
                         }
                     }
                 }
+                self.uploadImgButton.isHidden = true
             })
             .disposed(by: disposeBag)
     }
@@ -151,7 +149,7 @@ class MoreViewController: UIViewController {
     
     @IBAction func openGalleryPressed(_ sender: Any) {
         openGallery()
-        self.uploadImgButton.isHidden.toggle() // how can I show this after openGallary() finishing loading?
+        self.uploadImgButton.isHidden = false
     }
         
     @IBAction func signOut(_ sender: Any) {
@@ -164,29 +162,6 @@ class MoreViewController: UIViewController {
         picker!.allowsEditing = false
         picker!.sourceType = UIImagePickerController.SourceType.photoLibrary
         present(picker!, animated: true, completion: nil)
-    }
-    
-    func addGradiation(){
-        let gradientView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        gradientView.center = view.center
-        view.addSubview(gradientView)
-        
-        // Create a CAGradientLayer
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = gradientView.bounds
-        
-        // Define your gradient colors
-        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
-        
-        // Define the locations for your colors (optional)
-        gradientLayer.locations = [0.0, 1.0]
-        
-        // Set the gradient's start and end points (0,0) to (1,0) for horizontal gradient
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        
-        // Add the gradient layer to your view
-        gradientView.layer.addSublayer(gradientLayer)
     }
     
     func showAppSettingPanel() {
@@ -224,6 +199,7 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+        self.uploadImgButton.isHidden = true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -234,8 +210,8 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
             // Save image to UserDefaults
             saveImageToUserDefaults(chosenImage)
         }
-        
         dismiss(animated: true, completion: nil)
+        self.uploadImgButton.isHidden = false
     }
     
     // Function to save image to UserDefaults
@@ -314,8 +290,7 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
         case .appSettings:
             showAppSettingPanel()
-        case .displayLanguage:
-//            showDisplayLanguagePanel()
+        case .askFlixy:
             let vc = MsFlixyAssistanceViewController()
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
@@ -341,7 +316,7 @@ struct MoreCellData {
 enum MoreOption: Int {
     case history = 0
     case appSettings
-    case displayLanguage
+    case askFlixy
     case changelog
     case help
 }

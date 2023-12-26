@@ -32,10 +32,10 @@ class SearchButtonViewController: UIViewController {
     // Update the data source for your collection view
     let disposeBag = DisposeBag() // Create a DisposeBag to manage disposables
     let vm = SearchViewModel()
+    var query: String?
     
     // Create a BehaviorRelay to hold the search query
     var searchSubject: BehaviorRelay<String> = BehaviorRelay(value: "")
-    var randomQuery = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +46,10 @@ class SearchButtonViewController: UIViewController {
         scanButtonTap()
         setupVision()
         setupImagePicker()
-        
+        textFieldSearch?.text = query
+        textFieldSearch.becomeFirstResponder()
     }
     
-    func setupRandomSearch(randomQuery: String){
-        self.randomQuery = randomQuery
-        textFieldSearch.text = randomQuery
-    }
     func toBackVC(){
         backButton.rx.tap
             .subscribe(onNext: {[weak self] in

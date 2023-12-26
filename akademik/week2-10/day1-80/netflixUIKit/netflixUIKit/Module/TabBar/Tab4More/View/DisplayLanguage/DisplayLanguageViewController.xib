@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,12 +37,22 @@
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op4-BO-cNf">
+                            <rect key="frame" x="32" y="109.66666666666666" width="53" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Bahasa">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="VCz-zS-iRT" firstAttribute="leading" secondItem="scW-8x-KJY" secondAttribute="leading" constant="16" id="1dY-dO-thV"/>
                         <constraint firstItem="VCz-zS-iRT" firstAttribute="top" secondItem="scW-8x-KJY" secondAttribute="top" constant="4" id="87t-DF-bve"/>
+                        <constraint firstItem="op4-BO-cNf" firstAttribute="leading" secondItem="sxm-NS-FkB" secondAttribute="leading" id="F9F-43-kjB"/>
                         <constraint firstItem="sxm-NS-FkB" firstAttribute="top" secondItem="VCz-zS-iRT" secondAttribute="bottom" constant="24" id="O8Q-nd-irH"/>
+                        <constraint firstItem="op4-BO-cNf" firstAttribute="top" secondItem="sxm-NS-FkB" secondAttribute="bottom" constant="16" id="PUC-Ob-jSd"/>
                         <constraint firstItem="sxm-NS-FkB" firstAttribute="leading" secondItem="VCz-zS-iRT" secondAttribute="leading" constant="16" id="vXK-p7-tUA"/>
                     </constraints>
                 </view>
@@ -54,7 +65,7 @@
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="transparentBlack30"/>
             <constraints>
                 <constraint firstItem="scW-8x-KJY" firstAttribute="top" secondItem="GBS-ky-NuX" secondAttribute="bottom" constant="-10" id="FSX-dc-eIt"/>
                 <constraint firstItem="GBS-ky-NuX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-10" id="MA8-we-GK5"/>
@@ -69,11 +80,11 @@
     </objects>
     <resources>
         <image name="minus" catalog="system" width="128" height="26"/>
+        <namedColor name="transparentBlack30">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

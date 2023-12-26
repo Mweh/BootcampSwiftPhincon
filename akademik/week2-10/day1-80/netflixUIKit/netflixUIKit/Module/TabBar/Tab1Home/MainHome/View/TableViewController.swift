@@ -116,13 +116,9 @@ class TableViewController: UITableViewController {
         switch tableViewCellType {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
-            
+            cell.delegate = self
             cell.iAmFeelingLuckyAction = {[weak self] in
-                let vc = SearchButtonViewController()
-                vc.hidesBottomBarWhenPushed = true
-                self?.navigationController?.pushViewController(vc, animated: true)
-                // Call the setupInitialText function after the view is loaded
-                vc.setupInitialText()
+                
             }
             
             cell.myFavAction = { [weak self] in
@@ -208,4 +204,12 @@ extension TableViewController: HorizontalCellDelegate {
     }
 }
 
-
+extension TableViewController: VerticalDelegate{
+    func didTapRandomSearch(query: String) {
+        let vc = SearchButtonViewController()
+        vc.hidesBottomBarWhenPushed = true
+        vc.query = dataMoviePopular?.results[Int.random(in: 0...19)].title
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}

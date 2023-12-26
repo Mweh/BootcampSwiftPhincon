@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,6 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashBG" translatesAutoresizingMaskIntoConstraints="NO" id="WtM-Q1-Y7h">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeW-mh-EdG">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
@@ -138,7 +143,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="transparentBlack30"/>
                             <constraints>
                                 <constraint firstItem="KhZ-nv-P3F" firstAttribute="top" secondItem="LDh-vF-czI" secondAttribute="top" id="2Ze-hY-5nh"/>
                                 <constraint firstAttribute="bottom" secondItem="KhZ-nv-P3F" secondAttribute="bottom" id="3ta-Cm-wxh"/>
@@ -171,7 +176,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="transparentBlack30"/>
                             <constraints>
                                 <constraint firstItem="UzB-nh-9ZD" firstAttribute="leading" secondItem="4yH-aJ-X0o" secondAttribute="trailing" constant="24" id="2ah-pq-Wvv"/>
                                 <constraint firstItem="UzB-nh-9ZD" firstAttribute="top" secondItem="Szq-P7-1i8" secondAttribute="top" id="8GN-jI-Jwi"/>
@@ -185,7 +190,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="bO2-sh-peG" firstAttribute="leading" secondItem="VeW-mh-EdG" secondAttribute="leading" constant="32" id="2mh-l9-bcs"/>
                         <constraint firstAttribute="trailing" secondItem="qQx-11-jM2" secondAttribute="trailing" constant="32" id="2wa-23-Hck"/>
@@ -224,24 +229,28 @@
     </objects>
     <designables>
         <designable name="5Qa-mX-InQ">
-            <size key="intrinsicContentSize" width="149.33333333333334" height="34"/>
+            <size key="intrinsicContentSize" width="150" height="34"/>
         </designable>
         <designable name="wOQ-Sa-DR8">
-            <size key="intrinsicContentSize" width="94.666666666666671" height="34"/>
+            <size key="intrinsicContentSize" width="97" height="34"/>
         </designable>
     </designables>
     <resources>
-        <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <image name="netflix" width="3000" height="2000"/>
+        <image name="splashBG" width="388" height="794"/>
+        <namedColor name="transparentBlack30">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

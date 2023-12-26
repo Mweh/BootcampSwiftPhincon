@@ -10,6 +10,10 @@ import RxCocoa
 import RxSwift
 import UIKit
 
+protocol VerticalDelegate: AnyObject{
+    func didTapRandomSearch(query: String)
+}
+
 class VerticalCell: UITableViewCell {
     
     @IBOutlet weak var containerStackView: UIStackView!
@@ -30,6 +34,7 @@ class VerticalCell: UITableViewCell {
     var myFavAction: (() -> Void)?
     var randomPlayAction: (() -> Void)?
     var iAmFeelingLuckyAction: (() -> Void)?
+    weak var delegate: VerticalDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +52,7 @@ class VerticalCell: UITableViewCell {
             .subscribe(onNext: {[weak self] in
                 guard let self = self else { return }
                 self.iAmFeelingLuckyAction?()
+                delegate?.didTapRandomSearch(query: "")
             })
             .disposed(by: bag)
     }
