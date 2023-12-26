@@ -6,7 +6,9 @@ Our NetflixUIKit Clone Project is a feature-rich movie-watching application desi
 - [Features](#features)
 - [Installation](#installation)
   - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
+  - [CocoaPods](#cocoapods)
 - [Folder Structure](#folder-structure)
+- [MVVM Design Pattern](#mvvm-design-pattern)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -50,7 +52,15 @@ Before running the project, ensure proper setup of the `Info.plist` and `GoogleS
 3. **Note:**
    - Ensure that both `Info-dev.plist` and `GoogleService-Info.plist` are added to your `.gitignore` file to prevent them from being accidentally committed to version control.
 
-### Continue with the rest of the installation steps...
+### CocoaPods
+
+Our project relies on various third-party libraries for enhanced functionality. Ensure you have CocoaPods installed, then run the following command:
+
+```bash
+pod install
+```
+
+This will install the required dependencies specified in the `Podfile`.
 
 ## Folder Structure
 
@@ -108,6 +118,24 @@ Our project's folder structure is designed for modularity and separation of conc
 
 Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
+## MVVM Design Pattern
+
+Our project follows the MVVM (Model-View-ViewModel) design pattern, a software architectural pattern that enhances separation of concerns, making the codebase more modular and maintainable.
+
+### Model
+
+The Model represents the data and business logic of the application. It includes data structures, data access, and business rules.
+
+### View
+
+The View represents the user interface and is responsible for displaying data to the user and capturing user inputs. In our project, Views are implemented using UIViewController and UIView subclasses.
+
+### ViewModel
+
+The ViewModel acts as an intermediary between the Model and the View. It transforms the data from the Model into a format that is easily consumable by the View and manages user interactions, often exposing data through bindings.
+
+![MVVM Diagram](https://user-images.githubusercontent.com/1812129/68319232-446cf900-00be-11ea-92cf-cad817b2af2c.png)
+
 ## Usage
 
 Instructions on how to use our project.
@@ -160,14 +188,14 @@ Tasks that have been completed.
 - [x] Removed duplicate unnecessary Model.
 - [x] Added recommendationVC inside sliding tabs.
 - [x] Added reviewsVC inside.
-- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detail View itself.
+- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detailView itself.
 - [x] Integrated CoreData or UserDefaults for data storage.
 - [x] Added Recently viewed feature.
 - [x] Added a floating icon backToTop in ComingSoonVC.
 - [x] Added an iconNotificationBadge for HistoryVC.
 - [x] Implemented AdMob.
 - [x] Added Custom Font.
-- [x] Added login as anonymous feature.
+- [x] Added login as an anonymous feature.
 - [x] Added changelog in MoreVC.
 - [x] Add chatAI using Google Gemini 
    -> [x] Set userChar's chat bubble on the right side
