@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreen" customModule="netflixUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-3z-OpO">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBGFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-ZY-AiP">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pFz-ZY-AiP" firstAttribute="top" secondItem="lNV-3z-OpO" secondAttribute="top" id="Cww-sW-gkB"/>
+                        <constraint firstItem="pFz-ZY-AiP" firstAttribute="leading" secondItem="lNV-3z-OpO" secondAttribute="leading" id="Ecq-Nc-gqm"/>
+                        <constraint firstAttribute="bottom" secondItem="pFz-ZY-AiP" secondAttribute="bottom" id="iwM-VC-kNE"/>
+                        <constraint firstAttribute="trailing" secondItem="pFz-ZY-AiP" secondAttribute="trailing" id="s9T-hZ-AUV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lNV-3z-OpO" secondAttribute="trailing" id="Acw-2A-cys"/>
+                <constraint firstItem="lNV-3z-OpO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="REI-zk-Vae"/>
+                <constraint firstItem="lNV-3z-OpO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T61-4a-1xO"/>
+                <constraint firstAttribute="bottom" secondItem="lNV-3z-OpO" secondAttribute="bottom" id="wUk-Ue-On0"/>
+            </constraints>
+            <point key="canvasLocation" x="129" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="splashBGFill" width="1600" height="2000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

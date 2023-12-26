@@ -5,21 +5,22 @@
 //  Created by Muhammad Fahmi on 30/10/23.
 //
 
+import RxSwift
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
         
-        // let vc = SplashScreen()
+        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
+//        let vc = SplashScreenViewController(viewModel: splashScreenViewModel)
         // let vc = LoginViewController()
-        let vc = MainTabBarController()
+         let vc = MainTabBarController()
         window.rootViewController = UINavigationController(rootViewController: vc)
 
         self.window = window

@@ -66,6 +66,7 @@
 		CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
+		CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
@@ -89,8 +90,8 @@
 		CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */; };
 		CD7233FD2B25A513006B156C /* NetflixSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD7233F62B25A1A1006B156C /* NetflixSans-Regular.otf */; };
 		CD7233FF2B25A585006B156C /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7233FE2B25A585006B156C /* UIFont.swift */; };
-		CD72340B2B26C3DA006B156C /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7234092B26C3DA006B156C /* SplashScreen.xib */; };
-		CD72340C2B26C3DA006B156C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD72340A2B26C3DA006B156C /* SplashScreen.swift */; };
+		CD72340B2B26C3DA006B156C /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7234092B26C3DA006B156C /* SplashScreenViewController.xib */; };
+		CD72340C2B26C3DA006B156C /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD72340A2B26C3DA006B156C /* SplashScreenViewController.swift */; };
 		CD7234142B26C54E006B156C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234132B26C54D006B156C /* MainTabBarController.swift */; };
 		CD7234372B26CDF6006B156C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234272B26CBFE006B156C /* Favorites.swift */; };
 		CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7234392B26F395006B156C /* ChangelogViewController.swift */; };
@@ -224,6 +225,7 @@
 		CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,8 +251,8 @@
 		CD7233F82B25A1A1006B156C /* NetflixSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Medium.otf"; sourceTree = "<group>"; };
 		CD7233F92B25A1A1006B156C /* NetflixSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NetflixSans-Bold.otf"; sourceTree = "<group>"; };
 		CD7233FE2B25A585006B156C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		CD7234092B26C3DA006B156C /* SplashScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
-		CD72340A2B26C3DA006B156C /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CD7234092B26C3DA006B156C /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		CD72340A2B26C3DA006B156C /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		CD7234132B26C54D006B156C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CD7234272B26CBFE006B156C /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		CD7234392B26F395006B156C /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
@@ -733,8 +735,8 @@
 		CD72340F2B26C4D6006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CD72340A2B26C3DA006B156C /* SplashScreen.swift */,
-				CD7234092B26C3DA006B156C /* SplashScreen.xib */,
+				CD72340A2B26C3DA006B156C /* SplashScreenViewController.swift */,
+				CD7234092B26C3DA006B156C /* SplashScreenViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -742,6 +744,7 @@
 		CD7234102B26C4DB006B156C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1016,8 +1019,8 @@
 		CD79F6B22AEF833500338C72 /* Tab4More */ = {
 			isa = PBXGroup;
 			children = (
-				CD7234242B26C9BD006B156C /* ViewModel */,
 				CD7234232B26C9B6006B156C /* View */,
+				CD7234242B26C9BD006B156C /* ViewModel */,
 			);
 			path = Tab4More;
 			sourceTree = "<group>";
@@ -1291,7 +1294,7 @@
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
 				CDAF8A852AF95B5200CB670D /* CarouselCollectionViewCell.xib in Resources */,
 				CD7233FC2B25A510006B156C /* NetflixSans-Medium.otf in Resources */,
-				CD72340B2B26C3DA006B156C /* SplashScreen.xib in Resources */,
+				CD72340B2B26C3DA006B156C /* SplashScreenViewController.xib in Resources */,
 				CD46592E2B1D984D00D86A26 /* floatingIconPlays.json in Resources */,
 				CDB9FD5C2B0B8BA300128B03 /* SynopsisViewController.xib in Resources */,
 				CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */,
@@ -1407,7 +1410,7 @@
 				CD729D172B102B5A006D3046 /* Details.swift in Sources */,
 				CDAD7DC12AFE065900BF41B8 /* UIViewController+Extension.swift in Sources */,
 				CD46595B2B1EBF4200D86A26 /* HistoryTableViewCell.swift in Sources */,
-				CD72340C2B26C3DA006B156C /* SplashScreen.swift in Sources */,
+				CD72340C2B26C3DA006B156C /* SplashScreenViewController.swift in Sources */,
 				CD678ABE2B0F116C00B2261F /* PhotoLibraryManager.swift in Sources */,
 				CD16E3102AF37B9400669456 /* RegisterViewController.swift in Sources */,
 				CD136FD12AFA33770046BB44 /* SearchViewModel.swift in Sources */,
@@ -1422,6 +1425,7 @@
 				CD4571552B19BE33002B4EE6 /* ARViewController.swift in Sources */,
 				CD87BC652B0344C0008B9531 /* FavHomeVC.swift in Sources */,
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
+				CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */,
 				CD46593A2B1EB38E00D86A26 /* HistoryModelMovie.swift in Sources */,
 				CDB9FD6B2B0CA95500128B03 /* FadedImageView.swift in Sources */,
 				CD16F0312B197D7600B93857 /* RefreshTextLabel.swift in Sources */,

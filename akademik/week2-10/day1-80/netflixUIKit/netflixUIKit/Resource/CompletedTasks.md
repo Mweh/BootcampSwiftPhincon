@@ -1,51 +1,78 @@
-• Implemented Login Authentication with the appropriate logic.
 
-• Added dynamic page loading when scrolling to the bottom/vertical.
+- [x] Implemented Login Authentication with the appropriate logic.
 
-• Integrated Netfox for API debugging.
+- [x] Added dynamic page loading when scrolling to the bottom/vertical.
 
-• Implemented the POST method from TMDB API.
+- [x] Integrated Netfox for API debugging.
 
-• Integrated YouTube API to play trailer videos.
+- [x] Implemented the POST method from TMDB API.
 
-• Implemented Face ID feature for secure login.
+- [x] Integrated YouTube API to play trailer videos.
 
-• Added a reset password feature.
+- [x] Implemented Face ID feature for secure login.
 
-• Added a number (ranking 1-10) beside the imageView of the best-rated movie.
+- [x] Added a reset password feature.
 
-• Added sliding tabs in detailView using Parchment.
+- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
 
-• Added creditsVC inside sliding tabs.
+- [x] Added sliding tabs in detailView using Parchment.
 
-• Added download functionality with long press.
+- [x] Added creditsVC inside sliding tabs.
 
-• Added CV, images to Text in searchTextField.
+- [x] Added download functionality with long press.
+- [x] Added CV, images to Text in searchTextField.
 
-• Added a share button.
+- [x] Added a share button.
 
-• Added a feature that displays the entire list of items.
+- [x] Added a feature that displays the entire list of items.
 
-• Removed duplicate unnecessary Model.
+- [x] Removed duplicate unnecessary Model.
 
-• Added recommendationVC inside sliding tabs.
+- [x] Added recommendationVC inside sliding tabs.
 
-• Added reviewsVC inside.
+- [x] Added reviewsVC inside.
 
-• Implemented a feature to push to another detailView when clicking the moviePoster inside detailView itself.
+- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside 
+detailView itself.
 
-• Integrated CoreData or UserDefaults for data storage.
+- [x] Integrated CoreData or UserDefaults for data storage.
 
-• Added Recently viewed feature.
+- [x] Added Recently viewed feature.
 
-• Added a floating icon backToTop in ComingSoonVC.
+- [x] Added a floating icon backToTop in ComingSoonVC.
 
-• Added an iconNotificationBadge for HistoryVC.
+- [x] Added an iconNotificationBadge for HistoryVC.
 
-• Implemented AdMob.
+- [x] Implemented AdMob.
 
-• Added Custom Font.
+- [x] Added Custom Font.
 
-• Added login as anonymous feature.
+- [x] Added login as anonymous feature.
 
-• Added changelog in MoreVC.
+- [x] Added changelog in MoreVC.
+
+- [x] Add chatAI using Google Gemini 
+
+ -> [x] Set userChar's chat bubble in right side
+
+ -> [x] Fix time label "12.12 am...." Constraint
+
+ -> [x] Userdefault for 
+
+ -> [x] Add images to gemini
+
+ -> [x] Add is typing for gemini
+
+ -> [x] Add gemini to speak
+
+- [x] Get Internet speed and save it in UserDefault place it in label.text
+
+- [x] Add localized for language
+
+- [x] Added custom voice using pod InstantSearchVoiceOverlay
+
+- [x] Pastecontrol for GeminiChat
+
+- [x] Change label to I'm feeling lucky button and its feature in homeVC
+
+- [x] Change button play to play random and its feature video

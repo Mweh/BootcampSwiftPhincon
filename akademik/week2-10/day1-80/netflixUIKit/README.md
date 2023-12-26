@@ -79,8 +79,7 @@ Keep track of tasks, improvements, and future plans for your project.
 - [ ] Implement deep links
 - [ ] Add ErrorView
 - [ ] Add expanded tableview
-- [ ] Change label to I'm feeling lucky in homeVC
-- [ ] Change button play to play random video
+- [ ] Fix if more profile photo want to be added
  
 ## DONE
 
@@ -123,6 +122,9 @@ Tasks that have been completed.
 - [x] Add localized for language
 - [x] Added custom voice using pod InstantSearchVoiceOverlay
 - [x] Pastecontrol for GeminiChat
+- [x] Change label to I'm feeling lucky button and its feature in homeVC
+- [x] Change button play to play random and its feature video
+- [x] MoreViewController Scrollable
 
 ## BUG
 
