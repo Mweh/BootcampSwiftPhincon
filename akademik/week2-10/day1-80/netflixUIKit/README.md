@@ -50,6 +50,62 @@ Before running the project, make sure to set up the `Info.plist` and `GoogleServ
 
 ### Continue with the rest of the installation steps...
 
+
+## Folder Structure
+
+- **AppDelegate**: Manages the application's lifecycle events.
+  
+- **SceneDelegate**: Handles the setup of the app's user interface upon launching.
+
+## Resource
+
+- **CustomFonts**: Contains custom font files used in the application.
+
+- **LottieFiles**: Houses Lottie animation files utilized in the app.
+
+- **Localizable**: Holds localization files for supporting multiple languages.
+
+- **Assets**: Stores general assets used in the application.
+
+## Common
+
+- **Constants**: Includes files for storing constants used throughout the app.
+
+- **Helper**: Contains utility classes and functions that provide common functionalities.
+
+- **Components**: Houses reusable UI components that are used across multiple modules.
+
+- **Extensions**: Contains Swift extensions for extending functionality of built-in classes.
+
+## Model
+
+- **TMDB...etc Model**: Houses data models related to specific modules, such as TMDB models.
+
+- **CoreData**: Contains files related to Core Data implementation.
+
+## Network
+
+- **APIManager**: Manages API requests and responses, providing a centralized location for networking logic.
+
+## Module
+
+- **SplashScreen**: Contains files specific to the splash screen module.
+
+- **Login+Register**: Holds files for the login and registration module.
+
+- **MainTabBar**: Includes files related to the main tab bar module.
+
+- **AdditionalVC**: Contains additional view controllers used in various parts of the app.
+
+## Info.plist
+
+- Stores configuration settings and metadata for the app.
+
+---
+
+Your project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
+
+
 ## Usage
 
 Instructions on how to use your project.
@@ -130,3 +186,4 @@ Tasks that have been completed.
 
 - [ ] Combine 2 endpoint/struct model buat perbandingan.
 - [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
+- [ ] Crash when FaceID didnt match
