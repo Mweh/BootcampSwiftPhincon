@@ -1,21 +1,22 @@
-# My NetlixUIKit Clone Project
+# MWTech's NetflixUIKit Clone Project
 
-A movie watch project that does incredible things.
+Our NetflixUIKit Clone Project is a feature-rich movie-watching application designed to deliver an exceptional user experience.
 
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
   - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
-- [Folder Structure](#folder structure)
+- [Folder Structure](#folder-structure)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [TODOs](#todos)
 - [DONE](#done)
+- [BUG](#bug)
 
 ## Features
 
-List of key features in your project.
+Explore the key features of our project:
 
 - Feature A
 - Feature B
@@ -23,24 +24,24 @@ List of key features in your project.
 
 ## Installation
 
-Steps to install and set up your project.
+Follow these steps to install and set up the project.
 
 ### Set up Info.plist and GoogleService-Info.plist
 
-Before running the project, make sure to set up the `Info.plist` and `GoogleService-Info.plist` files.
+Before running the project, ensure proper setup of the `Info.plist` and `GoogleService-Info.plist` files.
 
 1. **Info.plist:**
    - Duplicate the `Info.plist` file in the `netflixUIKit` folder.
    - Rename the duplicated file to `Info-dev.plist` for development.
-   - Update the necessary configurations such as API keys, endpoints, etc. in the `Info-dev.plist` file.
+   - Update necessary configurations like API keys and endpoints in the `Info-dev.plist` file.
 
    ```bash
    cp netflixUIKit/Info.plist netflixUIKit/Info-dev.plist
    ```
 
 2. **GoogleService-Info.plist:**
-   - If your project uses Firebase or Google services, make sure to create a `GoogleService-Info.plist` file and add it to the `netflixUIKit` folder.
-   - Update the configurations in the `GoogleService-Info.plist` file.
+   - If the project uses Firebase or Google services, create a `GoogleService-Info.plist` file and add it to the `netflixUIKit` folder.
+   - Update configurations in the `GoogleService-Info.plist` file.
 
    ```bash
    cp path/to/your/GoogleService-Info.plist netflixUIKit/GoogleService-Info.plist
@@ -53,11 +54,13 @@ Before running the project, make sure to set up the `Info.plist` and `GoogleServ
 
 ## Folder Structure
 
+Our project's folder structure is designed for modularity and separation of concerns, enhancing maintainability and organization.
+
 - **AppDelegate**: Manages the application's lifecycle events.
   
 - **SceneDelegate**: Handles the setup of the app's user interface upon launching.
 
-## Resource
+### Resource
 
 - **CustomFonts**: Contains custom font files used in the application.
 
@@ -67,27 +70,27 @@ Before running the project, make sure to set up the `Info.plist` and `GoogleServ
 
 - **Assets**: Stores general assets used in the application.
 
-## Common
+### Common
 
 - **Constants**: Includes files for storing constants used throughout the app.
 
 - **Helper**: Contains utility classes and functions that provide common functionalities.
 
-- **Components**: Houses reusable UI components that are used across multiple modules.
+- **Components**: Houses reusable UI components used across multiple modules.
 
 - **Extensions**: Contains Swift extensions for extending functionality of built-in classes.
 
-## Model
+### Model
 
 - **TMDB...etc Model**: Houses data models related to specific modules, such as TMDB models.
 
 - **CoreData**: Contains files related to Core Data implementation.
 
-## Network
+### Network
 
 - **APIManager**: Manages API requests and responses, providing a centralized location for networking logic.
 
-## Module
+### Module
 
 - **SplashScreen**: Contains files specific to the splash screen module.
 
@@ -97,22 +100,21 @@ Before running the project, make sure to set up the `Info.plist` and `GoogleServ
 
 - **AdditionalVC**: Contains additional view controllers used in various parts of the app.
 
-## Info.plist
+### Info.plist
 
 - Stores configuration settings and metadata for the app.
 
 ---
 
-Your project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
-
+Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
 ## Usage
 
-Instructions on how to use your project.
+Instructions on how to use our project.
 
 ## Contributing
 
-Guidelines for contributing to your project.
+Guidelines for contributing to our project.
 
 ## License
 
@@ -120,37 +122,37 @@ Information about the project's license.
 
 ## TODOs
 
-Keep track of tasks, improvements, and future plans for your project.
+Keep track of tasks, improvements, and future plans for our project.
 
 - [ ] Implement Onboarding View.
 - [ ] Add a suggest when searching a movie 
 - [ ] New page when actor pressed
-- [ ] Download youtube video(?) *notlegal
+- [ ] Download YouTube video(?) *not legal
 - [ ] Edit theme in AppSettingsVC using Color well
 - [ ] Implement circle progressBar (in %) for voteAverage
 - [ ] Add Age Rating Icon
-- [ ] Add an optional to upgrade pro Version
+- [ ] Add an option to upgrade to the pro version
 - [ ] Add buy me a coffee
-- [ ] Add my app's widget
+- [ ] Add our app's widget
 - [ ] Implement deep links
 - [ ] Add ErrorView
-- [ ] Add expanded tableview
-- [ ] Fix if more profile photo want to be added
+- [ ] Add expanded table view
+- [ ] Fix if more profile photos want to be added
  
 ## DONE
 
 Tasks that have been completed.
 
-- [x] Implemented Login Authentication with the appropriate logic.
-- [x] Added dynamic page loading when scrolling to the bottom/vertical.
-- [x] Integrated Netfox for API debugging.
-- [x] Implemented the POST method from TMDB API.
-- [x] Integrated YouTube API to play trailer videos.
-- [x] Implemented Face ID feature for secure login.
-- [x] Added a reset password feature.
-- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
-- [x] Added sliding tabs in detailView using Parchment.
-- [x] Added creditsVC inside sliding tabs.
+- [x] Implemented Login Authentication with the appropriate logic.
+- [x] Added dynamic page loading when scrolling to the bottom/vertical.
+- [x] Integrated Netfox for API debugging.
+- [x] Implemented the POST method from TMDB API.
+- [x] Integrated YouTube API to play trailer videos.
+- [x] Implemented Face ID feature for secure login.
+- [x] Added a reset password feature.
+- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
+- [x] Added sliding tabs in detailView using Parchment.
+- [x] Added creditsVC inside sliding tabs.
 - [x] Added download functionality with long press.
 - [x] Added CV, images to Text in searchTextField.
 - [x] Added a share button.
@@ -158,7 +160,7 @@ Tasks that have been completed.
 - [x] Removed duplicate unnecessary Model.
 - [x] Added recommendationVC inside sliding tabs.
 - [x] Added reviewsVC inside.
-- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detailView itself.
+- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detail View itself.
 - [x] Integrated CoreData or UserDefaults for data storage.
 - [x] Added Recently viewed feature.
 - [x] Added a floating icon backToTop in ComingSoonVC.
@@ -168,22 +170,22 @@ Tasks that have been completed.
 - [x] Added login as anonymous feature.
 - [x] Added changelog in MoreVC.
 - [x] Add chatAI using Google Gemini 
- -> [x] Set userChar's chat bubble in right side
- -> [x] Fix time label "12.12 am...." Constraint
- -> [x] Userdefault for 
- -> [x] Add images to gemini
- -> [x] Add is typing for gemini
- -> [x] Add gemini to speak
+   -> [x] Set userChar's chat bubble on the right side
+   -> [x] Fix time label "12.12 am...." Constraint
+   -> [x] User default for 
+   -> [x] Add images to Gemini
+   -> [x] Add is typing for Gemini
+   -> [x] Add Gemini to speak
 - [x] Get Internet speed and save it in UserDefault place it in label.text
 - [x] Add localized for language
 - [x] Added custom voice using pod InstantSearchVoiceOverlay
-- [x] Pastecontrol for GeminiChat
+- [x] Paste control for GeminiChat
 - [x] Change label to I'm feeling lucky button and its feature in homeVC
 - [x] Change button play to play random and its feature video
 - [x] MoreViewController Scrollable
 
 ## BUG
 
-- [ ] Combine 2 endpoint/struct model buat perbandingan.
-- [ ] di ComingSoonVC ketika di klik akan pop up alert "apakah akan di tambhkan ke favortie? yes or no", trus akan di cek ke userdefault apakah ada datanya atau tdk.
-- [ ] Crash when FaceID didnt match
+- [ ] Combine 2 endpoints/struct models for comparison.
+- [ ] In ComingSoonVC, when clicked, it will pop up an alert "Should it be added to favorites? Yes or no," then it will be checked in UserDefaults whether there is data or not.
+- [ ] Crash when FaceID doesn't match
