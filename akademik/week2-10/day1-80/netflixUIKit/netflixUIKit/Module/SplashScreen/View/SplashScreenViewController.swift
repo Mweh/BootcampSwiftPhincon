@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class SplashScreenViewController: UIViewController {
-    private var animationView: LottieAnimationView?
+    private var animationView: LottieAnimationView!
     private let viewModel: SplashScreenViewModel
     private let disposeBag = DisposeBag()
 
@@ -23,6 +23,8 @@ class SplashScreenViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +54,12 @@ class SplashScreenViewController: UIViewController {
 
     private func configureLottie() {
         animationView = .init(name: ConstantsSplashScreen.animationName)
-        animationView!.frame = view.bounds
-        animationView!.contentMode = .scaleAspectFit
-        animationView!.loopMode = .loop
-        animationView!.animationSpeed = ConstantsSplashScreen.animationSpeed
-        view.addSubview(animationView!)
-        animationView!.play()
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = ConstantsSplashScreen.animationSpeed
+        view.addSubview(animationView)
+        animationView.play()
     }
 
     // MARK: - Navigation
