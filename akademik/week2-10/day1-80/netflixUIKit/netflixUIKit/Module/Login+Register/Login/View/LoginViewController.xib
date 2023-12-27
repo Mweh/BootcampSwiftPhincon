@@ -91,11 +91,14 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock" catalog="system"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="15"/>
+                                                    <real key="value" value="16"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="showPasswordButton" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="shakeMagnitude">
                                                     <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                    <real key="value" value="-16"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -226,7 +229,7 @@
     </objects>
     <designables>
         <designable name="7gf-WN-oFT">
-            <size key="intrinsicContentSize" width="150" height="34"/>
+            <size key="intrinsicContentSize" width="151" height="34"/>
         </designable>
         <designable name="9XY-wy-6CT">
             <size key="intrinsicContentSize" width="97" height="34"/>

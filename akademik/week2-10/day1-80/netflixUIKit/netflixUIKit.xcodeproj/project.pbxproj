@@ -67,6 +67,9 @@
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
 		CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */; };
+		CD5A21DA2B3BA50A00AFF4E9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */; };
+		CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */; };
+		CD5A21E62B3C115400AFF4E9 /* LoginCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
@@ -226,6 +229,9 @@
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCommon.swift; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -474,6 +480,8 @@
 			children = (
 				CD7234172B26C781006B156C /* View */,
 				CD7234182B26C78E006B156C /* ViewModel */,
+				CD5A21D82B3BA4F700AFF4E9 /* Cordinator */,
+				CD5A21E42B3C112700AFF4E9 /* Common */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -602,6 +610,22 @@
 			path = Additional;
 			sourceTree = "<group>";
 		};
+		CD5A21D82B3BA4F700AFF4E9 /* Cordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */,
+			);
+			path = Cordinator;
+			sourceTree = "<group>";
+		};
+		CD5A21E42B3C112700AFF4E9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CD5DD4902AEF38AA00140DFA = {
 			isa = PBXGroup;
 			children = (
@@ -626,7 +650,7 @@
 			children = (
 				CD5DD4B02AEF38B100140DFA /* App */,
 				CD5DD4B12AEF38B700140DFA /* Resource */,
-				CD79F6AA2AEF806500338C72 /* Common */,
+				CD79F6AA2AEF806500338C72 /* Utility */,
 				CD40E1E82AF874C9002D2407 /* Model */,
 				CD16E3022AF352C200669456 /* Network */,
 				CD5DD4B22AEF38BC00140DFA /* Module */,
@@ -798,6 +822,7 @@
 		CD7234182B26C78E006B156C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1005,7 +1030,7 @@
 			path = VerticalCell;
 			sourceTree = "<group>";
 		};
-		CD79F6AA2AEF806500338C72 /* Common */ = {
+		CD79F6AA2AEF806500338C72 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				CD16F02D2B197D1B00B93857 /* Constant */,
@@ -1013,7 +1038,7 @@
 				CDCEABDD2AF0F453004F37B8 /* Components */,
 				CD0709412AFB59750079FC45 /* Extensions */,
 			);
-			path = Common;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		CD79F6B22AEF833500338C72 /* Tab4More */ = {
@@ -1431,6 +1456,7 @@
 				CD16F0312B197D7600B93857 /* RefreshTextLabel.swift in Sources */,
 				CD40E1E72AF7DD56002D2407 /* Endpoint.swift in Sources */,
 				CD7234142B26C54E006B156C /* MainTabBarController.swift in Sources */,
+				CD5A21DA2B3BA50A00AFF4E9 /* LoginViewModel.swift in Sources */,
 				CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */,
 				CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */,
 				CD678AA82B0DF65600B2261F /* ReviewsViewController.swift in Sources */,
@@ -1470,7 +1496,9 @@
 				CD678A9E2B0DAD7500B2261F /* Credit.swift in Sources */,
 				CD678AA12B0DD44100B2261F /* CastingCollectionViewCell.swift in Sources */,
 				CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */,
+				CD5A21E62B3C115400AFF4E9 /* LoginCommon.swift in Sources */,
 				CDB9FD5F2B0B8CBB00128B03 /* CastingViewController.swift in Sources */,
+				CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */,
 				CD4659322B1DA10600D86A26 /* AllVideoViewController.swift in Sources */,
 				CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */,
 				CD16F0332B197D9600B93857 /* FStorage.swift in Sources */,

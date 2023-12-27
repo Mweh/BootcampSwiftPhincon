@@ -82,9 +82,12 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="lock" catalog="system"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="15"/>
+                                                    <real key="value" value="16"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="showPasswordButton" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                    <real key="value" value="-16"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>
@@ -229,7 +232,7 @@
     </objects>
     <designables>
         <designable name="5Qa-mX-InQ">
-            <size key="intrinsicContentSize" width="150" height="34"/>
+            <size key="intrinsicContentSize" width="151" height="34"/>
         </designable>
         <designable name="wOQ-Sa-DR8">
             <size key="intrinsicContentSize" width="97" height="34"/>

@@ -37,7 +37,7 @@ target 'netflixUIKit' do
   
   # View
   pod 'Parchment'
-  pod "youtube-ios-player-helper"
+  pod 'youtube-ios-player-helper'
   #pod 'SnapKit'
 
   # KeyboardManagement

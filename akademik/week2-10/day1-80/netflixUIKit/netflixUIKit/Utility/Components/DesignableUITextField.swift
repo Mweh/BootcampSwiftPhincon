@@ -48,10 +48,6 @@ class DesignableUITextField: UITextField {
         updatePasswordVisibilityButton()
     }
     
-//    override var intrinsicContentSize: CGSize {
-//        return UIView.layoutFittingExpandedSize
-//    }
-    
     private func updatePasswordVisibilityButton() {
         if showPasswordButton {
             rightViewMode = .always
@@ -77,6 +73,13 @@ class DesignableUITextField: UITextField {
         return textRect
     }
     
+    // Provides right padding for images
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var textRect = super.rightViewRect(forBounds: bounds)
+        textRect.origin.x += rightPadding
+        return textRect
+    }
+    
     @IBInspectable var leftImage: UIImage? {
         didSet {
             updateView()
@@ -84,6 +87,7 @@ class DesignableUITextField: UITextField {
     }
     
     @IBInspectable var leftPadding: CGFloat = 0
+    @IBInspectable var rightPadding: CGFloat = 0
     
     @IBInspectable var color: UIColor = .systemRed {
         didSet {
@@ -109,31 +113,3 @@ class DesignableUITextField: UITextField {
         attributedPlaceholder = NSAttributedString(string: placeholder != nil ?  placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: UIColor.systemGray])
     }
 }
-
-//@IBDesignable
-//class ShakingTextField: UITextField {
-//
-//    @IBInspectable
-//    var shakeMagnitude: CGFloat = 10.0
-//
-//    @IBInspectable
-//    var shakeDuration: TimeInterval = 0.5
-//
-//    func shake() {
-//        let animation = CAKeyframeAnimation(keyPath: "position.x")
-//        animation.values = [0, shakeMagnitude, -shakeMagnitude, shakeMagnitude, 0]
-//        animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
-//        animation.duration = shakeDuration
-//        layer.add(animation, forKey: "shake")
-//    }
-//
-//    func stopShaking() {
-//        layer.removeAnimation(forKey: "shake")
-//    }
-//
-//    // Add any other customization or functionality you need for the UITextField
-//}
-//
-//// Usage:
-//// You can set the ShakingTextField class for your UITextField in the Interface Builder.
-//// You can customize the shakeMagnitude and shakeDuration properties from the Attributes Inspector.
