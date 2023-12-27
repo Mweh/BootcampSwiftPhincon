@@ -10,6 +10,7 @@ import FirebaseCore
 import GoogleSignIn
 import GoogleMobileAds
 import IQKeyboardManagerSwift
+import LanguageManager_iOS
 import netfox
 import UIKit
 
@@ -45,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //         Override point for customization after application launch.
         NFX.sharedInstance().start() // netfox
+        
+        LanguageManager.shared.defaultLanguage = .deviceLanguage // you can use .en or .deviceLanguage to keep the device default language.
         
         IQKeyboardManager.shared.enable = true // enable property enables/disables IQKeyboardManager.
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  LoginViewModel.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 27/12/23.
@@ -142,7 +142,7 @@ class LoginViewModel {
                   let idToken = user.idToken?.tokenString
             else { return }
             
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            _ = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
             
             // Show success alert and navigate to main tab view controller on successful Google Sign-In
             self.showAlert(title: ConstantsLogin.Titles.success, message: ConstantsLogin.Messages.successGoogle) {

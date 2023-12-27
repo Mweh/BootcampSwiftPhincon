@@ -27,6 +27,7 @@ class MoreViewController: UIViewController {
     var resultImg: UIImage!
     var totalHistoryMovie: Int?
     var picker: UIImagePickerController? = UIImagePickerController()
+    var isLanguageVC: Bool?
     
     let cellData: [MoreCellData] = [
         MoreCellData(title: " "+"History"~, symbolName: "clock.arrow.circlepath"),
@@ -55,6 +56,7 @@ class MoreViewController: UIViewController {
     func setupChangeLanguage(){
         changeLanguageButton.rx.tap
             .subscribe(onNext: {[weak self] in
+                self?.isLanguageVC = true
                 self?.showDisplayLanguagePanel()
             })
             .disposed(by: disposeBag)
@@ -241,7 +243,7 @@ extension MoreViewController: UIImagePickerControllerDelegate, UIPopoverControll
 // MARK: - FloatingPanel AppSettings
 extension MoreViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, heightPercentage: 0.4)
+        return HalfModalPresentationController(presentedViewController: presented, presenting: presenting, heightPercentage: (isLanguageVC == true ? 0.27 : 0.45))
     }
 }
 
@@ -289,6 +291,7 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
             vc.navigationItem.title = "History"
             self.navigationController?.pushViewController(vc, animated: true)
         case .appSettings:
+            isLanguageVC = false
             showAppSettingPanel()
         case .askFlixy:
             let vc = MsFlixyAssistanceViewController()

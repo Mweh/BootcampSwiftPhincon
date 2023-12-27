@@ -211,6 +211,7 @@ Tasks that have been completed.
 - [x] Change label to I'm feeling lucky button and its feature in homeVC
 - [x] Change button play to play random and its feature video
 - [x] MoreViewController Scrollable
+- [x] Complete languageVC task w/ 'LanguageManager-iOS', limited to UILabel, can't change programatically.
 
 ## BUG
 

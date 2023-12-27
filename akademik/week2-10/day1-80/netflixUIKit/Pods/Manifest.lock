@@ -112,6 +112,7 @@ PODS:
   - InstantSearchVoiceOverlay (1.2.0)
   - IQKeyboardManagerSwift (6.5.16)
   - Kingfisher (7.10.0)
+  - LanguageManager-iOS (1.2.7)
   - lottie-ios (4.3.3)
   - nanopb (2.30909.1):
     - nanopb/decode (= 2.30909.1)
@@ -142,6 +143,7 @@ DEPENDENCIES:
   - InstantSearchVoiceOverlay
   - IQKeyboardManagerSwift
   - Kingfisher
+  - LanguageManager-iOS
   - lottie-ios
   - netfox
   - Parchment
@@ -175,6 +177,7 @@ SPEC REPOS:
     - InstantSearchVoiceOverlay
     - IQKeyboardManagerSwift
     - Kingfisher
+    - LanguageManager-iOS
     - lottie-ios
     - nanopb
     - netfox
@@ -211,6 +214,7 @@ SPEC CHECKSUMS:
   InstantSearchVoiceOverlay: d9d5db7314ec8416dcf4ed49df2000e8ee0abe2b
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
+  LanguageManager-iOS: 6b2dbb3793445827114708f0759b76e96932d7c8
   lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
   nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
@@ -223,6 +227,6 @@ SPEC CHECKSUMS:
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: fe96b2d63dd3d7212d6f6d81013674d78a4e9b65
+PODFILE CHECKSUM: 0e0d4523bac1233e39e1b953493338e7c60b5ab7
 
 COCOAPODS: 1.14.3

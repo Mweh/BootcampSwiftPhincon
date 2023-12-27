@@ -28,9 +28,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashBG" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-xH-tu2">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBG" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-xH-tu2">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-PK-mOr">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
@@ -220,8 +219,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="kxi-PK-mOr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="877-Qj-oHa"/>
+                <constraint firstAttribute="bottom" secondItem="4hv-xH-tu2" secondAttribute="bottom" id="Bqm-px-bNJ"/>
                 <constraint firstItem="kxi-PK-mOr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="GWp-bE-EyH"/>
                 <constraint firstItem="kxi-PK-mOr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QmS-jF-q2W"/>
+                <constraint firstItem="4hv-xH-tu2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Sp8-n6-FcK"/>
+                <constraint firstItem="4hv-xH-tu2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mgt-rR-UfR"/>
+                <constraint firstItem="4hv-xH-tu2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6F-M2-bFy"/>
                 <constraint firstItem="kxi-PK-mOr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wIc-o9-VUb"/>
             </constraints>
             <point key="canvasLocation" x="35.877862595419849" y="-12.67605633802817"/>

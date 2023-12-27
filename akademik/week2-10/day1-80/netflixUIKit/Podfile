@@ -43,4 +43,6 @@ target 'netflixUIKit' do
   # KeyboardManagement
   pod 'IQKeyboardManagerSwift'
     
+  # Language
+  pod 'LanguageManager-iOS'
 end

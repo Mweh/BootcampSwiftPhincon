@@ -12,16 +12,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplayLanguageViewController" customModule="netflixUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="bahasaButton" destination="op4-BO-cNf" id="GJh-dt-cnR"/>
+                <outlet property="englishButton" destination="sxm-NS-FkB" id="WxI-QV-qx7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="380"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scW-8x-KJY">
-                    <rect key="frame" x="0.0" y="30" width="393" height="788"/>
+                    <rect key="frame" x="0.0" y="30" width="393" height="300"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Display Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCz-zS-iRT">
                             <rect key="frame" x="16" y="4" width="216" height="33.666666666666664"/>
@@ -71,7 +73,7 @@
                 <constraint firstItem="GBS-ky-NuX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-10" id="MA8-we-GK5"/>
                 <constraint firstItem="scW-8x-KJY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QBh-GB-jac"/>
                 <constraint firstItem="GBS-ky-NuX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bfO-Bp-MKb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="scW-8x-KJY" secondAttribute="bottom" id="dF6-Dz-5MJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="scW-8x-KJY" secondAttribute="bottom" constant="16" id="dF6-Dz-5MJ"/>
                 <constraint firstItem="scW-8x-KJY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sAE-bc-CPQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

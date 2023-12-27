@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ConstantsLogin.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 27/12/23.
@@ -45,4 +45,3 @@ extension LoginCoordinator: UIViewControllerTransitioningDelegate {
         return HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
-
