@@ -100,9 +100,6 @@
                                     <color key="tintColor" red="0.7607843876" green="0.21960783" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="gray" title="Register now!"/>
-                                    <connections>
-                                        <action selector="btnRegisterPressed:" destination="-1" eventType="touchUpInside" id="o5b-Xw-K7J"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -232,10 +229,10 @@
     </objects>
     <designables>
         <designable name="5Qa-mX-InQ">
-            <size key="intrinsicContentSize" width="151" height="34"/>
+            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
         </designable>
         <designable name="wOQ-Sa-DR8">
-            <size key="intrinsicContentSize" width="97" height="34"/>
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
         </designable>
     </designables>
     <resources>
@@ -247,13 +244,13 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -5,7 +5,6 @@
 //  Created by Muhammad Fahmi on 02/11/23.
 //
 
-import FirebaseAuth
 import RxCocoa
 import RxSwift
 import UIKit
@@ -16,34 +15,68 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var toTermAgreementWeb: UIButton!
+    
     private let bag = DisposeBag()
+    private lazy var coordinator = RegisterCoordinator(navigationController: self.navigationController!)
+    private lazy var viewModel = RegisterViewModel(coordinator: coordinator, navigationController: self.navigationController!)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupInitial()
-        setupRegister()
-        toTermAgreementWebTap()
+        setupNavi()
+        bindUI()
+        bindTextFields()
         setTextTermAgreement()
     }
     
-    func setupInitial(){
-        navigationItem.title = "Register"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func setupNavi(){
+        navigationItem.title = ConstantsRegister.String.naviTitle
         navigationController?.navigationBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    private func bindTextFields() {
+        emailTextField.rx.text.bind(to: viewModel.emailTextField).disposed(by: bag)
+        passTextField.rx.text.bind(to: viewModel.passTextField).disposed(by: bag)
+    }
+    
+    private func bindUI() {
+        toTermAgreementWebTap()
+        handleRegistration()
+    }
+    
+    func toTermAgreementWebTap() {
+        toTermAgreementWeb.rx.tap
+            .bind(to: viewModel.toTermAgreementWebTapped)
+            .disposed(by: bag)
+    }
+    
+    func handleRegistration() {
+        registerButton.rx.tap
+            .bind(to: viewModel.registerTapped)
+            .disposed(by: bag)
+    }
+    
     func setTextTermAgreement() {
-        let fullText = "By creating an account or signing you agree to our Terms and Conditions"
-        
+        let fullText = ConstantsRegister.String.fullTextTerm
         let attributedString = NSMutableAttributedString(string: fullText)
         
         // Find the range of "Terms and Conditions" in the full text
-        if let range = fullText.range(of: "Terms and Conditions") {
+        if let range = fullText.range(of: ConstantsRegister.String.trimTextTerm) {
             let nsRange = NSRange(range, in: fullText)
             
             // Apply bold and underline attributes to the specified range
-            attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 15), range: nsRange)
+            attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: ConstantsRegister.Int.fontSize), range: nsRange)
             attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
         }
         
@@ -54,87 +87,10 @@ class RegisterViewController: UIViewController {
         toTermAgreementWeb.contentHorizontalAlignment = .center
         
         // Adjust title label properties for centering
-        toTermAgreementWeb.titleLabel?.textAlignment = .center
-        toTermAgreementWeb.titleLabel?.adjustsFontSizeToFitWidth = true
-        toTermAgreementWeb.titleLabel?.minimumScaleFactor = 0.5
-    }
-    
-    func toTermAgreementWebTap() {
-        toTermAgreementWeb.rx.tap
-            .subscribe(onNext: { [weak self] in
-                let vc = GoToWebViewController()
-                
-                vc.urlString = URLs.netflixTermsOfUse
-                vc.modalPresentationStyle = .pageSheet
-                self?.present(vc, animated: true, completion: nil)
-            })
-            .disposed(by: bag)
-    }
-    
-    func setupRegister(){
-        registerButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.handleRegistration()
-            })
-            .disposed(by: bag)
-    }
-    
-    func handleRegistration(){
-        guard let email = emailTextField.text, !email.isEmpty,
-              let password  = passTextField.text, !password.isEmpty else{
-            // Show alert for empty fields
-            showAlert(title: "Error", message: "Please enter both email and password.")
-            return
+        if let titleTermAgreement = toTermAgreementWeb.titleLabel{
+            titleTermAgreement.textAlignment = .center
+            titleTermAgreement.adjustsFontSizeToFitWidth = true
+            titleTermAgreement.minimumScaleFactor = ConstantsRegister.Int.minimumScaleFactor
         }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
-            if let error = error {
-                // Print the error code for debugging
-                print("Firebase Error Code: \((error as NSError).code)")
-                
-                // Handle registration error and show alert
-                let errorCode = (error as NSError).code
-                
-                switch errorCode {
-                case AuthErrorCode.emailAlreadyInUse.rawValue:
-                    // Handle case where the email is already registered
-                    self?.showAlert(title: "Success", message: "Registration successful. Please use \(email) to log in."){
-                        self?.navigationController?.popViewController(animated: true)
-                    }
-                default:
-                    // Handle other registration errors
-                    self?.showAlert(title: "Error", message: "Registration failed: \(error.localizedDescription)")
-                }
-            } else {
-                // Registration successful, show success alert
-                self?.showAlert(title: "Success", message: "Registration successful") {
-                    self?.navigationController?.popViewController(animated: true)
-                }
-            }
-        }
-        
-    }
-    
-    @IBAction func btnRegisterPressed(_ sender: Any) {
-        handleRegistration()
-    }
-    
-    // Your showAlert function
-    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
-    }
-}
-
-extension RegisterViewController{
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Hide the navigation bar
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Re-enable the navigation bar when leaving this view
-        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }

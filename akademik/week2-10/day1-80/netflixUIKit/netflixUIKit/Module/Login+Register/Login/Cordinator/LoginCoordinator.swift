@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginCoordinator: NSObject {
+class LoginCoordinator: NSObject { // NSObject for Halfmodal/UIViewControllerTransitioningDelegate
     
     // MARK: - Properties
     
