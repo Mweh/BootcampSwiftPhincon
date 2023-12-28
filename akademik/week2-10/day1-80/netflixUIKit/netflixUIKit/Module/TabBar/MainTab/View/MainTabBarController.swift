@@ -58,7 +58,7 @@ class MainTabBarController: UITabBarController {
     }
     
     func removeTextNaviItem(){
-        navigationItem.backButtonTitle = ""
+        navigationItem.backButtonTitle = nil
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -70,10 +70,10 @@ class MainTabBarController: UITabBarController {
         discoverVC.navigationItem.largeTitleDisplayMode = .automatic
         moreVC.navigationItem.largeTitleDisplayMode = .automatic
         
-        nav1.tabBarItem = UITabBarItem(title: "Home"~, image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
-        nav2.tabBarItem = UITabBarItem(title: "Search"~, image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
-        nav3.tabBarItem = UITabBarItem(title: "Discover"~, image: SFSymbol.discoverSymbol, selectedImage: SFSymbol.discoverFillSoonSymbol)
-        nav4.tabBarItem = UITabBarItem(title: "More"~, image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
+        nav1.tabBarItem = UITabBarItem(title: MainTabBarConstant.String.home , image: SFSymbol.homeSymbol, selectedImage: SFSymbol.homeFillSymbol)
+        nav2.tabBarItem = UITabBarItem(title: MainTabBarConstant.String.search , image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
+        nav3.tabBarItem = UITabBarItem(title: MainTabBarConstant.String.discover , image: SFSymbol.discoverSymbol, selectedImage: SFSymbol.discoverFillSoonSymbol)
+        nav4.tabBarItem = UITabBarItem(title: MainTabBarConstant.String.more , image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
         
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
     }
@@ -91,12 +91,12 @@ extension MainTabBarController: UITabBarControllerDelegate {
     }
     
     private func animateTabBarItem(_ item: UITabBarItem) {
-        guard let imageView = item.value(forKey: "view") as? UIView else {
+        guard let imageView = item.value(forKey: MainTabBarConstant.String.keyUITabBarItem) as? UIView else {
             return
         }
         let originalTransform = imageView.transform
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.autoreverse, .curveEaseInOut], animations: {
-            imageView.transform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+        UIView.animate(withDuration: MainTabBarConstant.Animate.duration, delay: MainTabBarConstant.Animate.delay, options: [.autoreverse, .curveEaseInOut], animations: {
+            imageView.transform = originalTransform.scaledBy(x: MainTabBarConstant.Animate.x, y: MainTabBarConstant.Animate.y)
         }) { _ in
             imageView.transform = .identity
         }
