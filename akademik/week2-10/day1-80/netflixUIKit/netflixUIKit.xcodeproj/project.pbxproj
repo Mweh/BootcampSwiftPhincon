@@ -66,13 +66,16 @@
 		CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */; };
 		CD551C482B3C523E00D5AB2E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C472B3C523E00D5AB2E /* RegisterViewModel.swift */; };
 		CD551C4A2B3CF61D00D5AB2E /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C492B3CF61D00D5AB2E /* RegisterCoordinator.swift */; };
-		CD551C4E2B3CFD4900D5AB2E /* RegisterCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C4D2B3CFD4900D5AB2E /* RegisterCommon.swift */; };
+		CD551C4E2B3CFD4900D5AB2E /* RegisterConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C4D2B3CFD4900D5AB2E /* RegisterConstant.swift */; };
+		CD551C532B3D0A0900D5AB2E /* ForgotPassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C522B3D0A0900D5AB2E /* ForgotPassViewModel.swift */; };
+		CD551C572B3D0A3600D5AB2E /* ForgotPassConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C562B3D0A3600D5AB2E /* ForgotPassConstant.swift */; };
+		CD551C592B3D13C200D5AB2E /* NetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C582B3D13C200D5AB2E /* NetworkStatusManager.swift */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
 		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
 		CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */; };
 		CD5A21DA2B3BA50A00AFF4E9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */; };
 		CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */; };
-		CD5A21E62B3C115400AFF4E9 /* LoginCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */; };
+		CD5A21E62B3C115400AFF4E9 /* LoginConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21E52B3C115400AFF4E9 /* LoginConstant.swift */; };
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
@@ -129,6 +132,7 @@
 		CD919E4D2B283E7A005D7171 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD919E4F2B283E7A005D7171 /* Localizable.strings */; };
 		CD919E542B286278005D7171 /* DisplayLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E522B286278005D7171 /* DisplayLanguageViewController.swift */; };
 		CD919E552B286278005D7171 /* DisplayLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD919E532B286278005D7171 /* DisplayLanguageViewController.xib */; };
+		CD9F28342B3D585B00D3D2CE /* MainTabBarConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F28332B3D585B00D3D2CE /* MainTabBarConstant.swift */; };
 		CD9F6D062B172BAB00DC8875 /* TMDBImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F6D052B172BAB00DC8875 /* TMDBImageURL.swift */; };
 		CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */; };
 		CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */; };
@@ -231,13 +235,16 @@
 		CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
 		CD551C472B3C523E00D5AB2E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CD551C492B3CF61D00D5AB2E /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
-		CD551C4D2B3CFD4900D5AB2E /* RegisterCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommon.swift; sourceTree = "<group>"; };
+		CD551C4D2B3CFD4900D5AB2E /* RegisterConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConstant.swift; sourceTree = "<group>"; };
+		CD551C522B3D0A0900D5AB2E /* ForgotPassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewModel.swift; sourceTree = "<group>"; };
+		CD551C562B3D0A3600D5AB2E /* ForgotPassConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassConstant.swift; sourceTree = "<group>"; };
+		CD551C582B3D13C200D5AB2E /* NetworkStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusManager.swift; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCommon.swift; sourceTree = "<group>"; };
+		CD5A21E52B3C115400AFF4E9 /* LoginConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstant.swift; sourceTree = "<group>"; };
 		CD5DD4992AEF38AA00140DFA /* netflixUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflixUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -297,6 +304,7 @@
 		CD919E502B283E88005D7171 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD919E522B286278005D7171 /* DisplayLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLanguageViewController.swift; sourceTree = "<group>"; };
 		CD919E532B286278005D7171 /* DisplayLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayLanguageViewController.xib; sourceTree = "<group>"; };
+		CD9F28332B3D585B00D3D2CE /* MainTabBarConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarConstant.swift; sourceTree = "<group>"; };
 		CD9F6D052B172BAB00DC8875 /* TMDBImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBImageURL.swift; sourceTree = "<group>"; };
 		CDA5BAD02B039C280053CF05 /* VideoTrailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailer.swift; sourceTree = "<group>"; };
 		CDA5BAD32B039D170053CF05 /* VideoTrailerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTrailerVC.swift; sourceTree = "<group>"; };
@@ -447,7 +455,7 @@
 				CD72341C2B26C7D3006B156C /* View */,
 				CD72341B2B26C7CE006B156C /* ViewModel */,
 				CD551C4C2B3CFD1D00D5AB2E /* Coordinator */,
-				CD551C4B2B3CFD1B00D5AB2E /* Common */,
+				CD551C4B2B3CFD1B00D5AB2E /* Constant */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -489,7 +497,7 @@
 				CD7234172B26C781006B156C /* View */,
 				CD7234182B26C78E006B156C /* ViewModel */,
 				CD5A21D82B3BA4F700AFF4E9 /* Cordinator */,
-				CD5A21E42B3C112700AFF4E9 /* Common */,
+				CD5A21E42B3C112700AFF4E9 /* Constant */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -618,12 +626,12 @@
 			path = Additional;
 			sourceTree = "<group>";
 		};
-		CD551C4B2B3CFD1B00D5AB2E /* Common */ = {
+		CD551C4B2B3CFD1B00D5AB2E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				CD551C4D2B3CFD4900D5AB2E /* RegisterCommon.swift */,
+				CD551C4D2B3CFD4900D5AB2E /* RegisterConstant.swift */,
 			);
-			path = Common;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		CD551C4C2B3CFD1D00D5AB2E /* Coordinator */ = {
@@ -634,6 +642,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		CD551C502B3D09D400D5AB2E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CD551C562B3D0A3600D5AB2E /* ForgotPassConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		CD5A21D82B3BA4F700AFF4E9 /* Cordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -642,12 +658,12 @@
 			path = Cordinator;
 			sourceTree = "<group>";
 		};
-		CD5A21E42B3C112700AFF4E9 /* Common */ = {
+		CD5A21E42B3C112700AFF4E9 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				CD5A21E52B3C115400AFF4E9 /* LoginCommon.swift */,
+				CD5A21E52B3C115400AFF4E9 /* LoginConstant.swift */,
 			);
-			path = Common;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		CD5DD4902AEF38AA00140DFA = {
@@ -738,7 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				CD7234112B26C519006B156C /* View */,
-				CD7234122B26C522006B156C /* ViewModel */,
+				CD7234122B26C522006B156C /* Constant */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -805,11 +821,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CD7234122B26C522006B156C /* ViewModel */ = {
+		CD7234122B26C522006B156C /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				CD9F28332B3D585B00D3D2CE /* MainTabBarConstant.swift */,
 			);
-			path = ViewModel;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		CD7234152B26C6A3006B156C /* TabBar */ = {
@@ -863,6 +880,7 @@
 		CD72341A2B26C7C1006B156C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD551C522B3D0A0900D5AB2E /* ForgotPassViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1193,6 +1211,7 @@
 			children = (
 				CD7234192B26C7BB006B156C /* View */,
 				CD72341A2B26C7C1006B156C /* ViewModel */,
+				CD551C502B3D09D400D5AB2E /* Constant */,
 			);
 			path = ForgotPass;
 			sourceTree = "<group>";
@@ -1217,6 +1236,7 @@
 				CD7233FE2B25A585006B156C /* UIFont.swift */,
 				CD59D09F2B05CAC9005718D2 /* FaceID.swift */,
 				CD919E382B27E560005D7171 /* ThemeManager.swift */,
+				CD551C582B3D13C200D5AB2E /* NetworkStatusManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1471,7 +1491,7 @@
 				CD723CEF2B023D8200C191A9 /* DiscoverViewModel.swift in Sources */,
 				CD0A3EF92B1498620029AE88 /* SeeAllCollectionViewCell.swift in Sources */,
 				CD4FA4452AF39ECE00226717 /* DetailViewController.swift in Sources */,
-				CD551C4E2B3CFD4900D5AB2E /* RegisterCommon.swift in Sources */,
+				CD551C4E2B3CFD4900D5AB2E /* RegisterConstant.swift in Sources */,
 				CD16E3142AF3826100669456 /* ListMovieCell.swift in Sources */,
 				CD4571552B19BE33002B4EE6 /* ARViewController.swift in Sources */,
 				CD87BC652B0344C0008B9531 /* FavHomeVC.swift in Sources */,
@@ -1510,6 +1530,7 @@
 				CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */,
 				CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */,
 				CD0E989C2B2F4E9800910660 /* UIImage+Extension.swift in Sources */,
+				CD551C592B3D13C200D5AB2E /* NetworkStatusManager.swift in Sources */,
 				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,
@@ -1521,10 +1542,11 @@
 				CDB9FD662B0C3D0B00128B03 /* String+Extension.swift in Sources */,
 				CD729D1D2B108981006D3046 /* GoToWebViewController.swift in Sources */,
 				CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */,
+				CD551C572B3D0A3600D5AB2E /* ForgotPassConstant.swift in Sources */,
 				CD678A9E2B0DAD7500B2261F /* Credit.swift in Sources */,
 				CD678AA12B0DD44100B2261F /* CastingCollectionViewCell.swift in Sources */,
 				CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */,
-				CD5A21E62B3C115400AFF4E9 /* LoginCommon.swift in Sources */,
+				CD5A21E62B3C115400AFF4E9 /* LoginConstant.swift in Sources */,
 				CDB9FD5F2B0B8CBB00128B03 /* CastingViewController.swift in Sources */,
 				CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */,
 				CD4659322B1DA10600D86A26 /* AllVideoViewController.swift in Sources */,
@@ -1538,6 +1560,7 @@
 				CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,
+				CD9F28342B3D585B00D3D2CE /* MainTabBarConstant.swift in Sources */,
 				CD919E542B286278005D7171 /* DisplayLanguageViewController.swift in Sources */,
 				CD4659562B1EBEEF00D86A26 /* HistoryViewController.swift in Sources */,
 				CD2191812B0759250038BE86 /* Common.swift in Sources */,
@@ -1548,6 +1571,7 @@
 				CD79F6AE2AEF80C500338C72 /* SFSymbol.swift in Sources */,
 				CD7234372B26CDF6006B156C /* Favorites.swift in Sources */,
 				CDA5BAD12B039C280053CF05 /* VideoTrailer.swift in Sources */,
+				CD551C532B3D0A0900D5AB2E /* ForgotPassViewModel.swift in Sources */,
 				CD9F6D062B172BAB00DC8875 /* TMDBImageURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1618,7 +1642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1673,7 +1697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

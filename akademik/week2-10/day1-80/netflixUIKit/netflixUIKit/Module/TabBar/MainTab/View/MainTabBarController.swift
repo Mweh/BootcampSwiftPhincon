@@ -23,31 +23,10 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
         configureUITabBarItems()
-        navigationController?.setNavigationBarHidden(true, animated: true)
         removeTextNaviItem()
-        initHandleHistoryMovieSaved()
-        // Add this in viewDidLoad or wherever appropriate
-        NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
-    }
-    
-    // Add this method to handle the notification
-    @objc func handleHistoryMovieSaved() {
-        initHandleHistoryMovieSaved()
-    }
-    
-    func initHandleHistoryMovieSaved(){
-        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
-        self.totalHistoryMovie = totalHistoryMovies
-
-        // Check if the count is 0, set badgeValue to nil; otherwise, set it to the count
-        let totalHistoryMoviesBadge = totalHistoryMovies == 0 ? nil : "\(totalHistoryMovies)"
-        nav4.tabBarItem.badgeValue = totalHistoryMoviesBadge
-    }
-    
-    func removeTextNaviItem(){
-        navigationItem.backButtonTitle = ""
+        
+        setuphHandleHistoryMovieSaved()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +43,28 @@ class MainTabBarController: UITabBarController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    func setuphHandleHistoryMovieSaved(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleHistoryMovieSaved), name: .historyMovieSaved, object: nil)
+    }
+    
+    // Add this method to handle the notification
+    @objc func handleHistoryMovieSaved() {
+        let totalHistoryMovies = CoreDataHelper.shared.fetchTotalHistoryMovies()
+        self.totalHistoryMovie = totalHistoryMovies
+        
+        // Check if the count is 0, set badgeValue to nil; otherwise, set it to the count
+        let totalHistoryMoviesBadge = totalHistoryMovies == 0 ? nil : "\(totalHistoryMovies)"
+        nav4.tabBarItem.badgeValue = totalHistoryMoviesBadge
+    }
+    
+    func removeTextNaviItem(){
+        navigationItem.backButtonTitle = ""
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func configureUITabBarItems() {
+        delegate = self
+        
         homeVC.navigationItem.largeTitleDisplayMode = .automatic
         searchVC.navigationItem.largeTitleDisplayMode = .automatic
         discoverVC.navigationItem.largeTitleDisplayMode = .automatic
@@ -74,7 +74,7 @@ class MainTabBarController: UITabBarController {
         nav2.tabBarItem = UITabBarItem(title: "Search"~, image: SFSymbol.searchSymbol, selectedImage: SFSymbol.searchFillSymbol)
         nav3.tabBarItem = UITabBarItem(title: "Discover"~, image: SFSymbol.discoverSymbol, selectedImage: SFSymbol.discoverFillSoonSymbol)
         nav4.tabBarItem = UITabBarItem(title: "More"~, image: SFSymbol.moreSymbol, selectedImage: SFSymbol.moreFillSymbol)
-
+        
         setViewControllers([nav1, nav2, nav3, nav4], animated: true)
     }
 }

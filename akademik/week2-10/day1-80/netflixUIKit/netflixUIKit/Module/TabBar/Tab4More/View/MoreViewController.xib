@@ -61,12 +61,17 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahmi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmW-jb-pat">
-                                            <rect key="frame" x="17.333333333333339" y="86" width="45.666666666666657" height="19.333333333333329"/>
+                                            <rect key="frame" x="0.0" y="86" width="80" height="19.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UmW-jb-pat" firstAttribute="leading" secondItem="lqA-Fa-HBC" secondAttribute="leading" id="Lrt-wJ-wPB"/>
+                                        <constraint firstAttribute="trailing" secondItem="UmW-jb-pat" secondAttribute="trailing" id="SyO-HZ-Gxz"/>
+                                        <constraint firstAttribute="width" constant="80" id="tNM-0T-vLh"/>
+                                    </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6W1-JP-CuZ" userLabel="UserList">
                                     <rect key="frame" x="108" y="61.999999999999993" width="204" height="85.333333333333314"/>

@@ -20,6 +20,7 @@ ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/LanguageManager-iOS/LanguageManager_iOS.framework
 ${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
 ${BUILT_PRODUCTS_DIR}/RecaptchaInterop/RecaptchaInterop.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework

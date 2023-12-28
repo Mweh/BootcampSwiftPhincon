@@ -99,14 +99,14 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
         return 150
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedData = dataHistoryMovie?[indexPath.row] {
-            let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
-            detailViewController.movieId = selectedData.id
-            detailViewController.isFor = .isForHistory
-            detailViewController.hidesBottomBarWhenPushed = true
-            //        self.navigationController?.hero.isEnabled = true
-            navigationController?.pushViewController(detailViewController, animated: true)
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let selectedData = dataHistoryMovie?[indexPath.row] {
+//            let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+//            detailViewController.movieId = selectedData.id
+//            detailViewController.isFor = .isForHistory
+//            detailViewController.hidesBottomBarWhenPushed = true
+//            //        self.navigationController?.hero.isEnabled = true
+//            navigationController?.pushViewController(detailViewController, animated: true)
+//        }
+//    }
 }

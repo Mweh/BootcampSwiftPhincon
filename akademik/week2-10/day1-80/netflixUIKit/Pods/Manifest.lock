@@ -122,6 +122,7 @@ PODS:
   - netfox (1.21.0)
   - Parchment (3.2.0)
   - PromisesObjC (2.3.1)
+  - ReachabilitySwift (5.0.0)
   - RecaptchaInterop (100.0.0)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - lottie-ios
   - netfox
   - Parchment
+  - ReachabilitySwift
   - RxCocoa
   - RxSwift
   - SkeletonView
@@ -183,6 +185,7 @@ SPEC REPOS:
     - netfox
     - Parchment
     - PromisesObjC
+    - ReachabilitySwift
     - RecaptchaInterop
     - RxCocoa
     - RxRelay
@@ -220,6 +223,7 @@ SPEC CHECKSUMS:
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   Parchment: a43c440b22c8a60f7e0196b74339446d4d1d18ea
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
@@ -227,6 +231,6 @@ SPEC CHECKSUMS:
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 0e0d4523bac1233e39e1b953493338e7c60b5ab7
+PODFILE CHECKSUM: 6465389eb12e144c0c24d3fae615f6645eae4d7c
 
 COCOAPODS: 1.14.3

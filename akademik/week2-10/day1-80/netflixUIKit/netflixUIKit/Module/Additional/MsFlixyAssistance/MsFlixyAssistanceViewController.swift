@@ -297,11 +297,7 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
                     // Copy the content to the clipboard
                     UIPasteboard.general.string = self?.chatMessages[indexPath.row].text
                 }
-                let deteleAction = UIAction(title: "Delete", subtitle: nil, image: UIImage(systemName: "trash"), identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
-                                        
-                    self?.chatTableView.deleteRows(at: [indexPath], with: .fade)
-                } // remove
-                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction, deteleAction])
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction])
             }
         return config
     }

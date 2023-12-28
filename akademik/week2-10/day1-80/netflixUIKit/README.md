@@ -166,6 +166,9 @@ Keep track of tasks, improvements, and future plans for our project.
 - [ ] Add ErrorView
 - [ ] Add expanded table view
 - [ ] Fix if more profile photos want to be added
+- [ ] Negative case
+   -> [x] TrailerVC when there is no Data
+- [ ] cellForRowAt inside DiscoverViewController add void closure var insinde its cell for passing
  
 ## DONE
 

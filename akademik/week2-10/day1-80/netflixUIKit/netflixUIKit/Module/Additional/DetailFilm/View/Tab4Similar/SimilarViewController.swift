@@ -76,7 +76,8 @@ class SimilarViewController: UIViewController {
 
 extension SimilarViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        let result = data?.results.count ?? 0
+        return result > 20 ? 20 : result
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

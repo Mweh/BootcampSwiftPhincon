@@ -1,5 +1,5 @@
 //
-//  RegisterCommon.swift
+//  RegisterModel.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 28/12/23.

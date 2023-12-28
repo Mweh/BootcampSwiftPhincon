@@ -70,9 +70,10 @@ class AppSettingsViewController: UIViewController {
         
         // Observe changes in the current tint color and update UI elements
         ThemeManager.currentTintColorRelay
-            .observeOn(MainScheduler.instance) // Ensure UI updates are on the main thread
-                .subscribe(onNext: { [weak self] color in
+            .observe(on: MainScheduler.instance) // Ensure UI updates are on the main thread
+                .subscribe(onNext: {  color in
                     // Change the window's tint color
+                    
                     if let window = UIApplication.shared.windows.first {
                         window.tintColor = color
                     }
@@ -122,9 +123,10 @@ class AppSettingsViewController: UIViewController {
     func setupToggleDarkMode(){
         // Observe switch value changes using RxSwift
         switchDarkMode.rx.value
-            .subscribe(onNext: { [weak self] isDarkMode in
+            .subscribe(onNext: { isDarkMode in
                 // Toggle between light and dark mode based on the switch state
                 let userInterfaceStyle: UIUserInterfaceStyle = isDarkMode ? .dark : .light
+                
                 UIApplication.shared.windows.forEach { window in
                     window.overrideUserInterfaceStyle = userInterfaceStyle
                 }

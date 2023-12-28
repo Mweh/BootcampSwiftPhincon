@@ -24,9 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashBG" translatesAutoresizingMaskIntoConstraints="NO" id="WtM-Q1-Y7h">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBG" translatesAutoresizingMaskIntoConstraints="NO" id="WtM-Q1-Y7h">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeW-mh-EdG">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
@@ -219,10 +218,14 @@
             <viewLayoutGuide key="safeArea" id="aTJ-AM-Lbv"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="WtM-Q1-Y7h" secondAttribute="bottom" id="1me-eJ-k3M"/>
                 <constraint firstItem="VeW-mh-EdG" firstAttribute="top" secondItem="aTJ-AM-Lbv" secondAttribute="top" id="Etd-29-TXY"/>
+                <constraint firstItem="WtM-Q1-Y7h" firstAttribute="leading" secondItem="JXr-IL-R0L" secondAttribute="leading" id="J19-f9-iY7"/>
                 <constraint firstItem="VeW-mh-EdG" firstAttribute="bottom" secondItem="aTJ-AM-Lbv" secondAttribute="bottom" id="QF0-VK-sug"/>
                 <constraint firstItem="VeW-mh-EdG" firstAttribute="trailing" secondItem="aTJ-AM-Lbv" secondAttribute="trailing" id="UKC-tW-kcC"/>
+                <constraint firstItem="WtM-Q1-Y7h" firstAttribute="trailing" secondItem="JXr-IL-R0L" secondAttribute="trailing" id="VIm-c6-3sg"/>
                 <constraint firstItem="VeW-mh-EdG" firstAttribute="leading" secondItem="aTJ-AM-Lbv" secondAttribute="leading" id="l44-SY-l7C"/>
+                <constraint firstItem="WtM-Q1-Y7h" firstAttribute="top" secondItem="JXr-IL-R0L" secondAttribute="top" id="uGD-bm-gcn"/>
             </constraints>
             <point key="canvasLocation" x="35.877862595419849" y="-12.67605633802817"/>
         </view>

@@ -149,6 +149,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RecaptchaInterop.xcscheme</key>
 		<dict>
 			<key>isShown</key>

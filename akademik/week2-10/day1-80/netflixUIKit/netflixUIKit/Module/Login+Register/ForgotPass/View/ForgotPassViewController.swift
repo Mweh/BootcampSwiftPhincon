@@ -11,58 +11,59 @@ import RxCocoa
 import UIKit
 
 class ForgotPassViewController: UIViewController {
-
-    @IBOutlet weak var emailTextField: DesignableUITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var resetEmailButton: UIButton!
-
+    
     lazy var loadingIndicator = PopUpLoading(on: view)
     let bag = DisposeBag()
-
+    
+    lazy var viewModel = ForgotPassViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingIndicator.dismissImmediately()
-        setupRx()
+        
+        setupBinding()
     }
-
-    func setupRx() {
-        // Bind the email text field to a variable
-
-        emailTextField.rx.text.orEmpty.bind(to: emailTextField.rx.text ).disposed(by: bag)
-        // Bind the reset button tap event to a variable
-        let resetButtonTapObservable = resetEmailButton.rx.tap.asObservable()
-
-        // CombineLatest to ensure both email and reset button taps are valid
-        resetButtonTapObservable.subscribe(onNext: { [weak self] _ in
-            
-            self?.resetPassword(email: self?.emailTextField?.text ?? "")
-            })
-            .disposed(by: bag)
-    }
-
-    func resetPassword(email: String) {
-        // Disable the reset button and show activity indicator during the reset process
-        resetEmailButton.isEnabled = false
-        loadingIndicator.showInFull()
-
-        Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
-            // Re-enable the reset button and hide activity indicator after the process
-            self?.resetEmailButton.isEnabled = true
-            self?.loadingIndicator.dismissImmediately()
-
-            if let error = error {
-                // Handle reset password error
-                print("Reset Password Error: \(error.localizedDescription)")
-                self?.showAlert(title: "Error", message: "Reset Password Error: \(error.localizedDescription)")
-            } else {
-                // Password reset email sent successfully
-                print("Password reset email sent to \(email)")
-                self?.showAlert(title: "Success", message: "Password reset email sent to \(email)", completion: {
-
-                })
+    
+    func setupBinding() {
+        resetEmailButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.resetEmailTap(email: self?.emailTextField.text ?? "")
+            }).disposed(by: bag)
+        
+        viewModel.isLoading.asObservable().subscribe(onNext: {[weak self] state in
+            guard let self = self else {
+                return
             }
-        }
+            switch state {
+            case .loading:
+                self.loadingIndicator.showInFull()
+            case .fisnished:
+                self.loadingIndicator.dismissImmediately()
+            }
+        })
+        
+        viewModel.isLoadingForgotPass.asObservable().subscribe(onNext: {[weak self] state in
+            self?.loadingIndicator.dismissImmediately()
+            switch state {
+            case .isSuccess:
+                if let email = self?.viewModel.email {
+                    let successMessage = String(format: ConstantsForgotPass.Alert.passwordResetSuccessMessageTemplate, email)
+                    self?.showAlert(title: ConstantsForgotPass.Alert.successTitle, message: successMessage, completion: {
+                        // Completion handler code here
+                    })
+                }
+            case .isFailed:
+                if let errorMessage = self?.viewModel.errorMessage {
+                    let errorMessage = String(format: ConstantsForgotPass.Alert.resetPasswordErrorMessageTemplate, errorMessage)
+                    self?.showAlert(title: ConstantsForgotPass.Alert.errorTitle, message: errorMessage)
+                }
+            }
+        })
+        .disposed(by: bag)
     }
-
+    
     func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
     }

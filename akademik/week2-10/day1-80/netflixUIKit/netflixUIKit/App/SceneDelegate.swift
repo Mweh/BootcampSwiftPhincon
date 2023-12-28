@@ -17,9 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
+//        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
 //        let vc = SplashScreenViewController(viewModel: splashScreenViewModel)
-        // let vc = LoginViewController()
+//         let vc = LoginViewController()
          let vc = MainTabBarController()
         window.rootViewController = UINavigationController(rootViewController: vc)
 

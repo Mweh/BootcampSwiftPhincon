@@ -44,4 +44,5 @@ class SearchViewModel {
 
 enum StateLoading: Int {
     case loading, fisnished
+//    , failed
 }

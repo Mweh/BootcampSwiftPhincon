@@ -6,8 +6,8 @@
 //
 
 import Hero
-import Lottie
 import Kingfisher
+import Lottie
 import RxSwift
 import SkeletonView
 import UIKit
@@ -28,16 +28,43 @@ class SecondViewController: UIViewController {
         }
     }
     
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
+    
+    private let waitingLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Waiting for network"
+        label.textColor = .gray
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
         lottieConfig()
         bindApiData()
+        setupNetworkStatusManager()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         vm.loadData(for: .getTopRated, resultType: Movie.self)
+    }
+    
+    private func setupNetworkStatusManager() {
+        // Add loading indicator to navigation title view
+        let titleView = UIStackView(arrangedSubviews: [loadingIndicator, waitingLabel])
+        titleView.axis = .horizontal
+        titleView.spacing = 8
+        navigationItem.titleView = titleView
+        // Use the shared instance of NetworkStatusManager
+        let networkStatusManager = NetworkStatusManager.shared
+
+        // You can customize further actions based on network status if needed
+        // For example, update your UI or trigger a network request
     }
     
     func bindApiData() {
