@@ -5,6 +5,7 @@
 //  Created by Muhammad Fahmi on 14/12/23.
 //
 
+import AVFoundation
 import GoogleGenerativeAI
 import InstantSearchVoiceOverlay
 import IQKeyboardManagerSwift
@@ -56,6 +57,8 @@ class MsFlixyAssistanceViewController: UIViewController {
     var currentInputMode: InputMode = .text
     var stateAISubject: PublishSubject<StateAI> = PublishSubject()
     var delay = 0.5
+    
+    private let synthesizer = AVSpeechSynthesizer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -297,7 +300,24 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
                     // Copy the content to the clipboard
                     UIPasteboard.general.string = self?.chatMessages[indexPath.row].text
                 }
-                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction])
+                
+                let speakAction = UIAction(title: "Speak", image: UIImage(systemName: "speaker.wave.2")) { [weak self] _ in
+                    guard let textToSpeak = self?.chatMessages[indexPath.row].text else { return }
+                    
+                    // Create an utterance. it Refers to a piece of spoken language
+                    let utterance = AVSpeechUtterance(string: textToSpeak)
+                    
+                    // Configure the utterance if needed.
+                    utterance.rate = 0.35 // speed the sound
+                    utterance.pitchMultiplier = 0.8
+                    utterance.postUtteranceDelay = 0.2
+                    utterance.volume = 0.8
+                    
+                    // Pass the utterance to the synthesizer to produce spoken audio.
+                    self?.synthesizer.speak(utterance)
+                }
+                
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [copyAction, speakAction])
             }
         return config
     }

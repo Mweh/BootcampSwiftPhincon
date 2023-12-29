@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  HomeTableViewController.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 30/10/23.
@@ -9,7 +9,7 @@ import Hero
 import RxSwift
 import UIKit
 
-class TableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController {
     
     @IBOutlet var tblView: UITableView!
     
@@ -182,7 +182,7 @@ class TableViewController: UITableViewController {
 }
 
 
-extension TableViewController: HorizontalCellDelegate {
+extension HomeTableViewController: HorizontalCellDelegate {
     func didTapCellCircle(index: Int) {
         if let dataMoviePreviews = dataMoviePreviews {
             let videoTrailerVC = VideoTrailerVC(nibName: "VideoTrailerVC", bundle: nil)
@@ -204,7 +204,7 @@ extension TableViewController: HorizontalCellDelegate {
     }
 }
 
-extension TableViewController: VerticalDelegate{
+extension HomeTableViewController: VerticalDelegate{
     func didTapRandomSearch(query: String) {
         let vc = SearchButtonViewController()
         vc.hidesBottomBarWhenPushed = true

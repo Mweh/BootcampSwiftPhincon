@@ -1,25 +1,26 @@
 
-- [x] Implemented Login Authentication with the appropriate logic.
+- [x] Implemented Login Authentication with the appropriate logic.
 
-- [x] Added dynamic page loading when scrolling to the bottom/vertical.
+- [x] Added dynamic page loading when scrolling to the bottom/vertical.
 
-- [x] Integrated Netfox for API debugging.
+- [x] Integrated Netfox for API debugging.
 
-- [x] Implemented the POST method from TMDB API.
+- [x] Implemented the POST method from TMDB API.
 
-- [x] Integrated YouTube API to play trailer videos.
+- [x] Integrated YouTube API to play trailer videos.
 
-- [x] Implemented Face ID feature for secure login.
+- [x] Implemented Face ID feature for secure login.
 
-- [x] Added a reset password feature.
+- [x] Added a reset password feature.
 
-- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
+- [x] Added a number (ranking 1-10) beside the imageView of the best-rated movie.
 
-- [x] Added sliding tabs in detailView using Parchment.
+- [x] Added sliding tabs in detailView using Parchment.
 
-- [x] Added creditsVC inside sliding tabs.
+- [x] Added creditsVC inside sliding tabs.
 
 - [x] Added download functionality with long press.
+
 - [x] Added CV, images to Text in searchTextField.
 
 - [x] Added a share button.
@@ -32,8 +33,8 @@
 
 - [x] Added reviewsVC inside.
 
-- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside 
-detailView itself.
+- [x] Implemented a feature to push to another detailView when clicking the moviePoster inside detailView 
+itself.
 
 - [x] Integrated CoreData or UserDefaults for data storage.
 
@@ -47,23 +48,23 @@ detailView itself.
 
 - [x] Added Custom Font.
 
-- [x] Added login as anonymous feature.
+- [x] Added login as an anonymous feature.
 
 - [x] Added changelog in MoreVC.
 
 - [x] Add chatAI using Google Gemini 
 
- -> [x] Set userChar's chat bubble in right side
+   -> [x] Set userChar's chat bubble on the right side
 
- -> [x] Fix time label "12.12 am...." Constraint
+   -> [x] Fix time label "12.12 am...." Constraint
 
- -> [x] Userdefault for 
+   -> [x] User default for 
 
- -> [x] Add images to gemini
+   -> [x] Add images to Gemini
 
- -> [x] Add is typing for gemini
+   -> [x] Add is typing for Gemini
 
- -> [x] Add gemini to speak
+   -> [x] Add Gemini to speak
 
 - [x] Get Internet speed and save it in UserDefault place it in label.text
 
@@ -71,8 +72,13 @@ detailView itself.
 
 - [x] Added custom voice using pod InstantSearchVoiceOverlay
 
-- [x] Pastecontrol for GeminiChat
+- [x] Paste control for GeminiChat
 
 - [x] Change label to I'm feeling lucky button and its feature in homeVC
 
 - [x] Change button play to play random and its feature video
+
+- [x] MoreViewController Scrollable
+
+- [x] Complete languageVC task w/ 'LanguageManager-iOS', limited to UILabel, can't change programatically.
+

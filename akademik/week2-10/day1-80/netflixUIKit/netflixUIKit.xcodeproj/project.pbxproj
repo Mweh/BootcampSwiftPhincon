@@ -79,8 +79,8 @@
 		CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49C2AEF38AA00140DFA /* AppDelegate.swift */; };
 		CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */; };
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
-		CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */; };
-		CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */; };
+		CD5DD4B52AEF3AD300140DFA /* TopSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4B32AEF3AD300140DFA /* TopSearchViewController.swift */; };
+		CD5DD4B62AEF3AD300140DFA /* TopSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4B42AEF3AD300140DFA /* TopSearchViewController.xib */; };
 		CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */; };
 		CD6254012B071EAE00C000CC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6254002B071EAE00C000CC /* UIView+Extension.swift */; };
 		CD678A9E2B0DAD7500B2261F /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678A9D2B0DAD7500B2261F /* Credit.swift */; };
@@ -111,8 +111,8 @@
 		CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D182B1054B3006D3046 /* TappableMovieView.swift */; };
 		CD729D1D2B108981006D3046 /* GoToWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729D1B2B108981006D3046 /* GoToWebViewController.swift */; };
 		CD729D1E2B108981006D3046 /* GoToWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD729D1C2B108981006D3046 /* GoToWebViewController.xib */; };
-		CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */; };
-		CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */; };
+		CD78336E2AEF3EEA0030AA43 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78336C2AEF3EEA0030AA43 /* HomeTableViewController.swift */; };
+		CD78336F2AEF3EEA0030AA43 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD78336D2AEF3EEA0030AA43 /* HomeTableViewController.xib */; };
 		CD7833732AEF3EFD0030AA43 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */; };
 		CD7833742AEF3EFD0030AA43 /* HorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7833722AEF3EFD0030AA43 /* HorizontalCell.xib */; };
 		CD7833772AEF504D0030AA43 /* VerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7833752AEF504D0030AA43 /* VerticalCell.swift */; };
@@ -250,8 +250,8 @@
 		CD5DD49E2AEF38AA00140DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD5DD4AA2AEF38AB00140DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		CD5DD4B32AEF3AD300140DFA /* TopSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSearchViewController.swift; sourceTree = "<group>"; };
+		CD5DD4B42AEF3AD300140DFA /* TopSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSearchViewController.xib; sourceTree = "<group>"; };
 		CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD6254002B071EAE00C000CC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		CD678A9D2B0DAD7500B2261F /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		CD729D182B1054B3006D3046 /* TappableMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableMovieView.swift; sourceTree = "<group>"; };
 		CD729D1B2B108981006D3046 /* GoToWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToWebViewController.swift; sourceTree = "<group>"; };
 		CD729D1C2B108981006D3046 /* GoToWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoToWebViewController.xib; sourceTree = "<group>"; };
-		CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		CD78336C2AEF3EEA0030AA43 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		CD78336D2AEF3EEA0030AA43 /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		CD7833712AEF3EFD0030AA43 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
 		CD7833722AEF3EFD0030AA43 /* HorizontalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalCell.xib; sourceTree = "<group>"; };
 		CD7833752AEF504D0030AA43 /* VerticalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCell.swift; sourceTree = "<group>"; };
@@ -905,8 +905,8 @@
 		CD72341E2B26C8B7006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CD78336C2AEF3EEA0030AA43 /* TableViewController.swift */,
-				CD78336D2AEF3EEA0030AA43 /* TableViewController.xib */,
+				CD78336C2AEF3EEA0030AA43 /* HomeTableViewController.swift */,
+				CD78336D2AEF3EEA0030AA43 /* HomeTableViewController.xib */,
 				CD7833702AEF3EEB0030AA43 /* Cell */,
 				CD23A1382B1422D9000D2303 /* SeeAll */,
 			);
@@ -933,8 +933,8 @@
 		CD7234212B26C913006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CD5DD4B32AEF3AD300140DFA /* SecondViewController.swift */,
-				CD5DD4B42AEF3AD300140DFA /* SecondViewController.xib */,
+				CD5DD4B32AEF3AD300140DFA /* TopSearchViewController.swift */,
+				CD5DD4B42AEF3AD300140DFA /* TopSearchViewController.xib */,
 				CD16E3162AF3826400669456 /* ListMovieCell */,
 			);
 			path = View;
@@ -1358,7 +1358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD678AB82B0E29F300B2261F /* ReviewsTableViewCell.xib in Resources */,
-				CD5DD4B62AEF3AD300140DFA /* SecondViewController.xib in Resources */,
+				CD5DD4B62AEF3AD300140DFA /* TopSearchViewController.xib in Resources */,
 				CD46595C2B1EBF4200D86A26 /* HistoryTableViewCell.xib in Resources */,
 				CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */,
 				CDA849DD2AF09A5C0043F9AD /* netflixLottie.json in Resources */,
@@ -1377,7 +1377,7 @@
 				CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */,
 				CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */,
 				CDB9FD602B0B8CBB00128B03 /* CastingViewController.xib in Resources */,
-				CD78336F2AEF3EEA0030AA43 /* TableViewController.xib in Resources */,
+				CD78336F2AEF3EEA0030AA43 /* HomeTableViewController.xib in Resources */,
 				CD7233FA2B25A50C006B156C /* NetflixSans-Bold.otf in Resources */,
 				CD79F6BC2AEF83A300338C72 /* MoreViewController.xib in Resources */,
 				CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */,
@@ -1473,7 +1473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD21917D2B074E600038BE86 /* AlertUtility.swift in Sources */,
-				CD5DD4B52AEF3AD300140DFA /* SecondViewController.swift in Sources */,
+				CD5DD4B52AEF3AD300140DFA /* TopSearchViewController.swift in Sources */,
 				CDA5BAD82B03BD3F0053CF05 /* DesignableUITextField.swift in Sources */,
 				CDC05AF12AF0AED100706AB7 /* DiscoverViewController.swift in Sources */,
 				CDE7D5872B109B3B00C41630 /* MoreTableViewCell.swift in Sources */,
@@ -1556,7 +1556,7 @@
 				CD6254012B071EAE00C000CC /* UIView+Extension.swift in Sources */,
 				CD46593D2B1EB41700D86A26 /* RecentlyViewedMovie.xcdatamodeld in Sources */,
 				CD87BC692B034684008B9531 /* FavHomeCollectionViewCell.swift in Sources */,
-				CD78336E2AEF3EEA0030AA43 /* TableViewController.swift in Sources */,
+				CD78336E2AEF3EEA0030AA43 /* HomeTableViewController.swift in Sources */,
 				CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */,
 				CD0709362AFB32C40079FC45 /* SearchButtonViewController.swift in Sources */,
 				CD79F6BB2AEF83A300338C72 /* MoreViewController.swift in Sources */,

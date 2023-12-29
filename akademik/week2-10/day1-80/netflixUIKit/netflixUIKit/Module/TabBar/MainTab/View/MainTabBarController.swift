@@ -9,13 +9,13 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    let homeVC = TableViewController()
-    let searchVC = SecondViewController()
+    let homeVC = HomeTableViewController()
+    let searchVC = TopSearchViewController()
     let discoverVC = DiscoverViewController()
     let moreVC = MoreViewController()
     
-    let nav1 = UINavigationController(rootViewController: TableViewController())
-    let nav2 = UINavigationController(rootViewController: SecondViewController())
+    let nav1 = UINavigationController(rootViewController: HomeTableViewController())
+    let nav2 = UINavigationController(rootViewController: TopSearchViewController())
     let nav3 = UINavigationController(rootViewController: DiscoverViewController())
     let nav4 = UINavigationController(rootViewController: MoreViewController())
     

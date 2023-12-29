@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TopSearchViewController.swift
 //  netflixUIKit
 //
 //  Created by Muhammad Fahmi on 30/10/23.
@@ -12,7 +12,7 @@ import RxSwift
 import SkeletonView
 import UIKit
 
-class SecondViewController: UIViewController {
+class TopSearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl = UIRefreshControl()
@@ -171,7 +171,7 @@ class SecondViewController: UIViewController {
     }
 }
 
-extension SecondViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource{
+extension TopSearchViewController: SkeletonTableViewDelegate, SkeletonTableViewDataSource{
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataTopRated?.results.count ?? 0
     }
