@@ -26,10 +26,6 @@ enum Endpoint {
     case discoverSort(sort_by: String)
     
     func path() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let currentDate = dateFormatter.string(from: Date())
-
         switch self {
         case .getNowPlaying:
             return "movie/now_playing?sort_by=popularity.desc&page=2"
@@ -40,6 +36,10 @@ enum Endpoint {
         case .getDiscoverTV:
             return "discover/movie"
         case .getUpcoming:
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let currentDate = dateFormatter.string(from: Date())
+            
             return "discover/movie?primary_release_date.gte=\(currentDate)"
         case .searchMovie:
             return "search/movie"
@@ -81,8 +81,6 @@ enum Endpoint {
             return ["page": page]
         case .searchMovie(let query):
             return ["query": query]
-//        case .discoverSort(let sort_by):
-//            return ["sort_by": sort_by.sort_by]
         case .addFavorite(let param):
             return [
                 "media_type": param.mediaType,

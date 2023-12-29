@@ -9,9 +9,16 @@ import Foundation
 import Alamofire
 
 class CustomAPIManager: NSObject {
+    // Singleton instance
+    // The singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
     static let shared = CustomAPIManager()
-    override init() {}
-    
+
+    // Private initializer to enforce singleton pattern
+    // The initializer is marked as private, preventing external code from creating new instances of CustomAPIManager. This ensures that the only instance of the class is the one provided by the shared property.
+    private override init() {}
+
+    // MARK: - Generic API Call
+
     func makeAPICall<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) {
         let headers = endpoint.headers
         
@@ -31,6 +38,8 @@ class CustomAPIManager: NSObject {
         }
     }
     
+    // MARK: - Add to Favorites API Call
+
     func addToFavorites(param: ParamAddFavorite, completion: @escaping (Result<Favorites, Error>) -> Void) {
         let endpoint = Endpoint.addFavorite(param: param)
         
@@ -49,6 +58,8 @@ class CustomAPIManager: NSObject {
         }
     }
     
+    // MARK: - Download Image API Call
+
     func downloadImage(imageURL: URL, completion: @escaping (Result<URL, Error>) -> Void) {
         let destination: DownloadRequest.Destination = { _, _ in
             let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
@@ -64,6 +75,5 @@ class CustomAPIManager: NSObject {
                 completion(.failure(error))
             }
         }
-        
     }
 }

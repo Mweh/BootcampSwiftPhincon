@@ -78,7 +78,6 @@
 		CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4A52AEF38AB00140DFA /* Assets.xcassets */; };
 		CD5DD4B52AEF3AD300140DFA /* TopSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD4B32AEF3AD300140DFA /* TopSearchViewController.swift */; };
 		CD5DD4B62AEF3AD300140DFA /* TopSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5DD4B42AEF3AD300140DFA /* TopSearchViewController.xib */; };
-		CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */; };
 		CD6254012B071EAE00C000CC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6254002B071EAE00C000CC /* UIView+Extension.swift */; };
 		CD678A9E2B0DAD7500B2261F /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678A9D2B0DAD7500B2261F /* Credit.swift */; };
 		CD678AA12B0DD44100B2261F /* CastingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD678A9F2B0DD44100B2261F /* CastingCollectionViewCell.swift */; };
@@ -245,7 +244,6 @@
 		CD5DD4AA2AEF38AB00140DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5DD4B32AEF3AD300140DFA /* TopSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSearchViewController.swift; sourceTree = "<group>"; };
 		CD5DD4B42AEF3AD300140DFA /* TopSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSearchViewController.xib; sourceTree = "<group>"; };
-		CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD6254002B071EAE00C000CC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		CD678A9D2B0DAD7500B2261F /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 		CD678A9F2B0DD44100B2261F /* CastingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -683,7 +681,6 @@
 				CD16E3022AF352C200669456 /* Network */,
 				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
-				CD60A63B2AF1F61400B2E511 /* GoogleService-Info.plist */,
 			);
 			path = netflixUIKit;
 			sourceTree = "<group>";
@@ -1421,7 +1418,6 @@
 				CD78337C2AEF53F60030AA43 /* CollectionViewCell.xib in Resources */,
 				CD3EE8322B33E11600A7FA62 /* loadingChatIndicator.json in Resources */,
 				CD16E3152AF3826100669456 /* ListMovieCell.xib in Resources */,
-				CD60A63C2AF1F61400B2E511 /* GoogleService-Info.plist in Resources */,
 				CD42F93E2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
