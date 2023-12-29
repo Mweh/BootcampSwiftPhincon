@@ -16,18 +16,18 @@ import UIKit
 
 postfix operator ~
 postfix func ~ (string: String) -> String {
-    return NSLocalizedString(string, comment: "")
+    return NSLocalizedString(string, comment: ConstantApp.emptyString)
 }
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "RecentlyViewedMovie")
+        let container = NSPersistentContainer(name: ConstantApp.coreDataRecentlyViewedMovie)
         container.loadPersistentStores {
             (storeDescription, error) in
             if let error = error {
-                fatalError("Unresolved error \(error)")
+                fatalError(String(format: ConstantApp.unresolvedError, String(describing: error)))
             }
         }
         return container
@@ -40,23 +40,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
+        
+        return GIDSignIn.sharedInstance.handle(url) // Google Sign-In library (GIDSignIn) to handle a URL
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//         Override point for customization after application launch.
-        NFX.sharedInstance().start() // netfox
+        NFX.sharedInstance().start() // start netfox
         
         LanguageManager.shared.defaultLanguage = .deviceLanguage // you can use .en or .deviceLanguage to keep the device default language.
         
         IQKeyboardManager.shared.enable = true // enable property enables/disables IQKeyboardManager.
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-//        IQKeyboardManager.shared/*Manager().canAdjustAdditionalSafeAreaInsets*/ = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true // dismiss the keyboard when the user taps outside of a text field
         
-        FirebaseApp.configure() // Firebase
+        FirebaseApp.configure() // configure Firebase
+        
         GADMobileAds.sharedInstance().start(completionHandler: nil) // AdMob
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
         [ BaseConstant.testDeviceIdentifiers ] // Sample device ID
+        
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in // GSignIn
             if error != nil || user == nil {
                 // if error
@@ -64,7 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // if not
             }
         }
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default) // hide the button back in naviItem
+        
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: ConstantApp.horiNaviItem, vertical: ConstantApp.VertiNaviItem), for: .default) // hide the button back in naviItem
         
         return true
     }
@@ -74,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        return UISceneConfiguration(name: ConstantApp.uiSceneConfiguration, sessionRole: connectingSceneSession.role)
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {

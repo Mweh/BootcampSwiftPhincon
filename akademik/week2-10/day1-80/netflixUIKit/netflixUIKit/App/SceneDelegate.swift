@@ -13,20 +13,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Ensure the scene is of type UIWindowScene
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        // Create a new UIWindow using the provided UIWindowScene
         let window = UIWindow(windowScene: windowScene)
         
 //        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
 //        let vc = SplashScreenViewController(viewModel: splashScreenViewModel)
-//         let vc = LoginViewController()
+//
+//        let vc = LoginViewController()
          let vc = MainTabBarController()
+        
+        // Embed the VC in a navigation controller
         window.rootViewController = UINavigationController(rootViewController: vc)
 
-        self.window = window
-        window.makeKeyAndVisible()
-        
-        window.tintColor = .systemRed
+        self.window = window // Set the window property of the scene to the created UIWindow
+        window.makeKeyAndVisible() // Make the window visible
+
+        window.tintColor = .systemRed // make tint globally red
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
