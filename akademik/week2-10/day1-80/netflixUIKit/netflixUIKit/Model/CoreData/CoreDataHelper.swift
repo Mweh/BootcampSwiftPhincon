@@ -9,6 +9,8 @@ import CoreData
 import Foundation
 import UIKit
 
+// MARK: - CoreDataHelper
+
 class CoreDataHelper {
     static let shared = CoreDataHelper()
 
@@ -19,6 +21,8 @@ class CoreDataHelper {
         self.persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     }
     
+    // MARK: - Fetch History Movies
+
     func fetchHistoryMovies() -> [HistoryModelMovie]? {
         let context = persistentContainer.viewContext
         
@@ -51,6 +55,8 @@ class CoreDataHelper {
         }
     }
     
+    // MARK: - Fetch Total History
+    
     func fetchTotalHistoryMovies() -> Int {
         let context = persistentContainer.viewContext
         
@@ -65,29 +71,8 @@ class CoreDataHelper {
         }
     }
     
-    func deleteMovieFromCoreData(movieId: Int) {
-        let context = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MovieEntity")
-        fetchRequest.predicate = NSPredicate(format: "id == %d", movieId)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            
-            if let movieToDelete = results.first as? NSManagedObject {
-                context.delete(movieToDelete)
-                
-                do {
-                    try context.save()
-                    print("Deleted movie with ID \(movieId) from Core Data")
-                } catch {
-                    print("Failed to save after deleting: \(error)")
-                }
-            }
-        } catch {
-            print("Error fetching movie to delete: \(error)")
-        }
-    }
-    
+    // MARK: - Save HistoryModelMovie
+
     func saveMovieToHistory(data: HistoryModelMovie) {
         let context = persistentContainer.viewContext
         
@@ -130,6 +115,8 @@ class CoreDataHelper {
             print("Error fetching existing movie: \(error)")
         }
     }
+    
+    // MARK: - Clear Core Data Cache
     
     func clearCoreDataCache(completion: @escaping (Result<Void, Error>) -> Void) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

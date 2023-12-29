@@ -12,7 +12,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Details
 struct Details: Codable {
     let adult: Bool?
     let backdropPath: String?
@@ -55,8 +55,14 @@ struct Details: Codable {
     }
 }
 
+// MARK: - Genre
+struct Genre: Codable {
+    let id: Int?
+    let name: String?
+}
+
 // MARK: - BelongsToCollection
-struct BelongsToCollection: Codable {
+struct BelongsToCollection: Codable { // Unused as of now
     let id: Int?
     let name, posterPath, backdropPath: String?
 
@@ -67,14 +73,8 @@ struct BelongsToCollection: Codable {
     }
 }
 
-// MARK: - Genre
-struct Genre: Codable {
-    let id: Int?
-    let name: String?
-}
-
 // MARK: - ProductionCompany
-struct ProductionCompany: Codable {
+struct ProductionCompany: Codable { // Unused as of now
     let id: Int?
     let logoPath: String?
     let name, originCountry: String?
@@ -88,7 +88,7 @@ struct ProductionCompany: Codable {
 }
 
 // MARK: - ProductionCountry
-struct ProductionCountry: Codable {
+struct ProductionCountry: Codable { // Unused as of now
     let iso3166_1, name: String?
 
     enum CodingKeys: String, CodingKey {
@@ -98,7 +98,7 @@ struct ProductionCountry: Codable {
 }
 
 // MARK: - SpokenLanguage
-struct SpokenLanguage: Codable {
+struct SpokenLanguage: Codable { // Unused as of now
     let englishName, iso639_1, name: String?
 
     enum CodingKeys: String, CodingKey {

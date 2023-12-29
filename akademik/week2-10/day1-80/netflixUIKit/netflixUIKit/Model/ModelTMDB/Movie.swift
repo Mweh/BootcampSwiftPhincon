@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - TopRated
+// MARK: - Movie
 struct Movie: Codable {
     let dates: Dates?
     let page: Int
@@ -27,7 +27,7 @@ struct Dates: Codable {
     let maximum, minimum: String
 }
 
-// MARK: - Result
+// MARK: - ResultMovie
 struct ResultMovie: Codable {
     let adult: Bool?
     let backdropPath: String?

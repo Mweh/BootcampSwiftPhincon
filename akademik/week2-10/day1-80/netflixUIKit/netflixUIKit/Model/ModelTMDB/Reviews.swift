@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Reviews
 struct Reviews: Codable {
     let id, page: Int?
     let results: [ResultReviews]?
@@ -20,7 +20,7 @@ struct Reviews: Codable {
     }
 }
 
-// MARK: - Result
+// MARK: - ResultReviews
 struct ResultReviews: Codable {
     let author: String?
     let authorDetails: AuthorDetails?

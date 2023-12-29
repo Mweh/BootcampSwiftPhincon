@@ -13,7 +13,7 @@ struct VideoTrailer: Codable {
     let results: [ResultVideoTrailer]?
 }
 
-// MARK: - Result
+// MARK: - ResultVideoTrailer
 struct ResultVideoTrailer: Codable {
     let iso639_1, iso3166_1, name, key: String?
     let site: String?

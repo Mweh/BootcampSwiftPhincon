@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - ParamAddFavorite
+
 struct ParamAddFavorite { // this is for POST
     let mediaType: String
     let mediaId: Int
@@ -19,7 +21,7 @@ struct ParamAddFavorite { // this is for POST
 }
 
 // MARK: - Favorites
-struct Favorites: Codable { //this is for GET
+struct Favorites: Codable { // this is for GET
     let page: Int
     var results: [ResultFavorites]
     let totalPages, totalResults: Int
@@ -31,7 +33,7 @@ struct Favorites: Codable { //this is for GET
     }
 }
 
-// MARK: - Result
+// MARK: - ResultFavorites
 struct ResultFavorites: Codable {
     let adult: Bool
     let backdropPath: String?
