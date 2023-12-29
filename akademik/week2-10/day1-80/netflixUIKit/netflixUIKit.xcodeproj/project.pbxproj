@@ -12,7 +12,6 @@
 		CD0709372AFB32C40079FC45 /* SearchButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */; };
 		CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */; };
 		CD07093C2AFB3B500079FC45 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */; };
-		CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */; };
 		CD0A3EF92B1498620029AE88 /* SeeAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */; };
 		CD0A3EFA2B1498620029AE88 /* SeeAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */; };
 		CD0E989C2B2F4E9800910660 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */; };
@@ -28,7 +27,6 @@
 		CD21917B2B073A380038BE86 /* ModalHalfUIPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */; };
 		CD21917D2B074E600038BE86 /* AlertUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917C2B074E600038BE86 /* AlertUtility.swift */; };
 		CD21917F2B0757550038BE86 /* PopUpLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21917E2B0757550038BE86 /* PopUpLoading.swift */; };
-		CD2191812B0759250038BE86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2191802B0759250038BE86 /* Common.swift */; };
 		CD2191832B07654A0038BE86 /* loadingIndicator.json in Resources */ = {isa = PBXBuildFile; fileRef = CD2191822B07654A0038BE86 /* loadingIndicator.json */; };
 		CD23A13B2B1422FB000D2303 /* SeeAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23A1392B1422FB000D2303 /* SeeAllViewController.swift */; };
 		CD23A13C2B1422FB000D2303 /* SeeAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */; };
@@ -63,7 +61,7 @@
 		CD4FA4462AF39ECE00226717 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4FA4442AF39ECE00226717 /* DetailViewController.xib */; };
 		CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */; };
 		CD501FBC2B22AE8F00FE0254 /* AdBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */; };
-		CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */; };
+		CD501FBE2B22C59D00FE0254 /* ConstantAPIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD501FBD2B22C59D00FE0254 /* ConstantAPIStuff.swift */; };
 		CD551C482B3C523E00D5AB2E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C472B3C523E00D5AB2E /* RegisterViewModel.swift */; };
 		CD551C4A2B3CF61D00D5AB2E /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C492B3CF61D00D5AB2E /* RegisterCoordinator.swift */; };
 		CD551C4E2B3CFD4900D5AB2E /* RegisterConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C4D2B3CFD4900D5AB2E /* RegisterConstant.swift */; };
@@ -71,7 +69,6 @@
 		CD551C572B3D0A3600D5AB2E /* ForgotPassConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C562B3D0A3600D5AB2E /* ForgotPassConstant.swift */; };
 		CD551C592B3D13C200D5AB2E /* NetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD551C582B3D13C200D5AB2E /* NetworkStatusManager.swift */; };
 		CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D09F2B05CAC9005718D2 /* FaceID.swift */; };
-		CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */; };
 		CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */; };
 		CD5A21DA2B3BA50A00AFF4E9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */; };
 		CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */; };
@@ -164,11 +161,9 @@
 		CDC05AF22AF0AED100706AB7 /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC05AF02AF0AED100706AB7 /* DiscoverViewController.xib */; };
 		CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC320DF2B07075300726140 /* ForgotPassViewController.swift */; };
 		CDC320E22B07075300726140 /* ForgotPassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC320E02B07075300726140 /* ForgotPassViewController.xib */; };
-		CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */; };
-		CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */; };
 		CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */; };
 		CDD2AEA32AF49B5A002362C6 /* MovieDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */; };
-		CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE034252B180F4C00914F2E /* PagingViewController.swift */; };
+		CDE034262B180F4C00914F2E /* PagingViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE034252B180F4C00914F2E /* PagingViewController+Extension.swift */; };
 		CDE0342F2B186EF400914F2E /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0342D2B186EF400914F2E /* AppSettingsViewController.swift */; };
 		CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE0342E2B186EF400914F2E /* AppSettingsViewController.xib */; };
 		CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE30EF72B21B17F0050DE18 /* UITableViewCell+Extension.swift */; };
@@ -183,7 +178,6 @@
 		CD0709352AFB32C40079FC45 /* SearchButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchButtonViewController.xib; sourceTree = "<group>"; };
 		CD0709392AFB3B500079FC45 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD07093A2AFB3B500079FC45 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
-		CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CD0A3EF72B1498620029AE88 /* SeeAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD0A3EF82B1498620029AE88 /* SeeAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -199,7 +193,6 @@
 		CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHalfUIPresentationController.swift; sourceTree = "<group>"; };
 		CD21917C2B074E600038BE86 /* AlertUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtility.swift; sourceTree = "<group>"; };
 		CD21917E2B0757550038BE86 /* PopUpLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLoading.swift; sourceTree = "<group>"; };
-		CD2191802B0759250038BE86 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		CD2191822B07654A0038BE86 /* loadingIndicator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingIndicator.json; sourceTree = "<group>"; };
 		CD23A1392B1422FB000D2303 /* SeeAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewController.swift; sourceTree = "<group>"; };
 		CD23A13A2B1422FB000D2303 /* SeeAllViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllViewController.xib; sourceTree = "<group>"; };
@@ -233,7 +226,7 @@
 		CD4FA4442AF39ECE00226717 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CD501FB92B22AE8F00FE0254 /* AdBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerTableViewCell.swift; sourceTree = "<group>"; };
 		CD501FBA2B22AE8F00FE0254 /* AdBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerTableViewCell.xib; sourceTree = "<group>"; };
-		CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
+		CD501FBD2B22C59D00FE0254 /* ConstantAPIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantAPIStuff.swift; sourceTree = "<group>"; };
 		CD551C472B3C523E00D5AB2E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CD551C492B3CF61D00D5AB2E /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		CD551C4D2B3CFD4900D5AB2E /* RegisterConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConstant.swift; sourceTree = "<group>"; };
@@ -241,7 +234,6 @@
 		CD551C562B3D0A3600D5AB2E /* ForgotPassConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassConstant.swift; sourceTree = "<group>"; };
 		CD551C582B3D13C200D5AB2E /* NetworkStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusManager.swift; sourceTree = "<group>"; };
 		CD59D09F2B05CAC9005718D2 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
-		CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		CD5A21D62B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		CD5A21D92B3BA50A00AFF4E9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CD5A21DB2B3BA51E00AFF4E9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
@@ -338,11 +330,9 @@
 		CDC05AF02AF0AED100706AB7 /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
 		CDC320DF2B07075300726140 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		CDC320E02B07075300726140 /* ForgotPassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPassViewController.xib; sourceTree = "<group>"; };
-		CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarReusableCustomView.swift; sourceTree = "<group>"; };
-		CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarReusableCustomView.xib; sourceTree = "<group>"; };
 		CDD2AEA02AF49B5A002362C6 /* MovieDescriptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDescriptionTableCell.swift; sourceTree = "<group>"; };
 		CDD2AEA12AF49B5A002362C6 /* MovieDescriptionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDescriptionTableCell.xib; sourceTree = "<group>"; };
-		CDE034252B180F4C00914F2E /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
+		CDE034252B180F4C00914F2E /* PagingViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PagingViewController+Extension.swift"; sourceTree = "<group>"; };
 		CDE0342D2B186EF400914F2E /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		CDE0342E2B186EF400914F2E /* AppSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsViewController.xib; sourceTree = "<group>"; };
 		CDE30EF72B21B17F0050DE18 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -394,16 +384,14 @@
 		CD0709412AFB59750079FC45 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */,
+				CDE034252B180F4C00914F2E /* PagingViewController+Extension.swift */,
 				CDB9FD652B0C3D0B00128B03 /* String+Extension.swift */,
 				CD0E989B2B2F4E9800910660 /* UIImage+Extension.swift */,
-				CD0709422AFB599E0079FC45 /* UIImageView+Extension.swift */,
-				CDAD7DC02AFE065900BF41B8 /* UIViewController+Extension.swift */,
-				CD59D0A12B05E811005718D2 /* UIButton+Extension.swift */,
-				CD6254002B071EAE00C000CC /* UIView+Extension.swift */,
 				CDB9FD612B0BBCD800128B03 /* UILabel+Extension.swift */,
-				CDE034252B180F4C00914F2E /* PagingViewController.swift */,
 				CDE30EF72B21B17F0050DE18 /* UITableViewCell+Extension.swift */,
-				CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */,
+				CD6254002B071EAE00C000CC /* UIView+Extension.swift */,
+				CDAD7DC02AFE065900BF41B8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -475,10 +463,8 @@
 			isa = PBXGroup;
 			children = (
 				CD79F6AD2AEF80C500338C72 /* SFSymbol.swift */,
-				CD16F0322B197D9600B93857 /* FStorage.swift */,
-				CD16F0302B197D7600B93857 /* RefreshTextLabel.swift */,
 				CD16F02E2B197D3400B93857 /* URLs.swift */,
-				CD501FBD2B22C59D00FE0254 /* BaseConstant.swift */,
+				CD501FBD2B22C59D00FE0254 /* ConstantAPIStuff.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -1113,6 +1099,15 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		CD89412F2B3E6B5400B19616 /* RoundedReusableCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */,
+				CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */,
+			);
+			path = RoundedReusableCustomView;
+			sourceTree = "<group>";
+		};
 		CD919E512B286235005D7171 /* DisplayLanguage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1239,10 +1234,10 @@
 		CDCEABDC2AF0F44D004F37B8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				CD16F0322B197D9600B93857 /* FStorage.swift */,
 				CD21917C2B074E600038BE86 /* AlertUtility.swift */,
 				CD21917A2B073A380038BE86 /* ModalHalfUIPresentationController.swift */,
 				CD21917E2B0757550038BE86 /* PopUpLoading.swift */,
-				CD2191802B0759250038BE86 /* Common.swift */,
 				CD678ABD2B0F116C00B2261F /* PhotoLibraryManager.swift */,
 				CD7233FE2B25A585006B156C /* UIFont.swift */,
 				CD59D09F2B05CAC9005718D2 /* FaceID.swift */,
@@ -1255,12 +1250,10 @@
 		CDCEABDD2AF0F453004F37B8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CD16F0302B197D7600B93857 /* RefreshTextLabel.swift */,
 				CDB9FD6A2B0CA95500128B03 /* FadedImageView.swift */,
-				CDCEABDE2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift */,
-				CDCEABE02AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib */,
-				CD3F59692AFA3ECB00E6FCDD /* RoundedReusableCustomView.swift */,
-				CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */,
 				CDA5BAD72B03BD3E0053CF05 /* DesignableUITextField.swift */,
+				CD89412F2B3E6B5400B19616 /* RoundedReusableCustomView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1385,7 +1378,6 @@
 				CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */,
 				CDAF8A792AF8DEF400CB670D /* SquareCollectionViewCell.xib in Resources */,
 				CDA5BAD62B039D170053CF05 /* VideoTrailerVC.xib in Resources */,
-				CDCEABE12AF0F5BA004F37B8 /* SearchBarReusableCustomView.xib in Resources */,
 				CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */,
 				CDB9FD602B0B8CBB00128B03 /* CastingViewController.xib in Resources */,
 				CD78336F2AEF3EEA0030AA43 /* HomeTableViewController.xib in Resources */,
@@ -1517,7 +1509,6 @@
 				CD551C4A2B3CF61D00D5AB2E /* RegisterCoordinator.swift in Sources */,
 				CD5A21DA2B3BA50A00AFF4E9 /* LoginViewModel.swift in Sources */,
 				CD5DD49D2AEF38AA00140DFA /* AppDelegate.swift in Sources */,
-				CDCEABDF2AF0F5AD004F37B8 /* SearchBarReusableCustomView.swift in Sources */,
 				CD678AA82B0DF65600B2261F /* ReviewsViewController.swift in Sources */,
 				CDD2AEA22AF49B5A002362C6 /* MovieDescriptionTableCell.swift in Sources */,
 				CD678AB72B0E29F300B2261F /* ReviewsTableViewCell.swift in Sources */,
@@ -1526,24 +1517,22 @@
 				CD23A13B2B1422FB000D2303 /* SeeAllViewController.swift in Sources */,
 				CD729D192B1054B3006D3046 /* TappableMovieView.swift in Sources */,
 				CDB9FD622B0BBCD800128B03 /* UILabel+Extension.swift in Sources */,
-				CD59D0A22B05E811005718D2 /* UIButton+Extension.swift in Sources */,
 				CDAF8A6B2AF8D48400CB670D /* Movie.swift in Sources */,
 				CD501FBB2B22AE8F00FE0254 /* AdBannerTableViewCell.swift in Sources */,
 				CDAF8A782AF8DEF400CB670D /* SquareCollectionViewCell.swift in Sources */,
 				CD890C692B30359A008DA065 /* Notification.Name+Extension.swift in Sources */,
-				CD0709432AFB599E0079FC45 /* UIImageView+Extension.swift in Sources */,
 				CD551C482B3C523E00D5AB2E /* RegisterViewModel.swift in Sources */,
 				CD4B8F3B2B16BE8800F5F31D /* SimilarCollectionViewCell.swift in Sources */,
 				CDB9FD5B2B0B8BA300128B03 /* SynopsisViewController.swift in Sources */,
 				CD59D0A02B05CAC9005718D2 /* FaceID.swift in Sources */,
 				CD07093B2AFB3B500079FC45 /* SearchCollectionViewCell.swift in Sources */,
 				CD919E392B27E560005D7171 /* ThemeManager.swift in Sources */,
-				CD501FBE2B22C59D00FE0254 /* BaseConstant.swift in Sources */,
+				CD501FBE2B22C59D00FE0254 /* ConstantAPIStuff.swift in Sources */,
 				CDE30EF82B21B17F0050DE18 /* UITableViewCell+Extension.swift in Sources */,
 				CD72343B2B26F395006B156C /* ChangelogViewController.swift in Sources */,
 				CD0E989C2B2F4E9800910660 /* UIImage+Extension.swift in Sources */,
 				CD551C592B3D13C200D5AB2E /* NetworkStatusManager.swift in Sources */,
-				CDE034262B180F4C00914F2E /* PagingViewController.swift in Sources */,
+				CDE034262B180F4C00914F2E /* PagingViewController+Extension.swift in Sources */,
 				CD678AAC2B0DF84D00B2261F /* SimilarViewController.swift in Sources */,
 				CDC320E12B07075300726140 /* ForgotPassViewController.swift in Sources */,
 				CDB9FD642B0C3CD900128B03 /* DetailViewModel.swift in Sources */,
@@ -1575,7 +1564,6 @@
 				CD9F28342B3D585B00D3D2CE /* MainTabBarConstant.swift in Sources */,
 				CD919E542B286278005D7171 /* DisplayLanguageViewController.swift in Sources */,
 				CD4659562B1EBEEF00D86A26 /* HistoryViewController.swift in Sources */,
-				CD2191812B0759250038BE86 /* Common.swift in Sources */,
 				CDA5BAD52B039D170053CF05 /* VideoTrailerVC.swift in Sources */,
 				CD5DD49F2AEF38AA00140DFA /* SceneDelegate.swift in Sources */,
 				CD2C65142AEFB2340026B35B /* LoginViewController.swift in Sources */,

@@ -72,7 +72,7 @@ class VideoTrailerVC: UIViewController {
     }
     func loadRewardedAd() {
         let request = GADRequest()
-        GADRewardedAd.load(withAdUnitID: BaseConstant.adRewardedUnitID, request: request) { [weak self] ad, error in
+        GADRewardedAd.load(withAdUnitID: ConstantAPIStuff.adRewardedUnitID, request: request) { [weak self] ad, error in
             guard let self = self else { return }
 
             if let error = error {

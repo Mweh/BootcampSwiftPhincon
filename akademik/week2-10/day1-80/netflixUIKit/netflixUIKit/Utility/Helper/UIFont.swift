@@ -14,14 +14,16 @@ struct AppFontName {
     static let regular = "NetflixSans-Regular"
     static let bold = "NetflixSans-Bold"
     static let lightAlt = "NetflixSans-Light"
+    static let nsctFontUIUsage = "NSCTFontUIUsageAttribute"
+    static let uiFontDescriptor = "UIFontDescriptor"
 }
 
 // Customise font
 extension UIFontDescriptor.AttributeName {
-    static let nsctFontUIUsage = UIFontDescriptor.AttributeName(rawValue: "NSCTFontUIUsageAttribute")
+    static let nsctFontUIUsage = UIFontDescriptor.AttributeName(rawValue: AppFontName.nsctFontUIUsage)
 }
 
-extension UIFont {
+extension UIFont { // modify system Font to be customizable
     
     @objc class func mySystemFont(ofSize size: CGFloat) -> UIFont {
         if let customFont = UIFont(name: AppFontName.regular, size: size) {
@@ -52,7 +54,7 @@ extension UIFont {
     }
     
     @objc convenience init(myCoder aDecoder: NSCoder) {
-        guard let fontDescriptor = aDecoder.decodeObject(forKey: "UIFontDescriptor") as? UIFontDescriptor,
+        guard let fontDescriptor = aDecoder.decodeObject(forKey: AppFontName.uiFontDescriptor) as? UIFontDescriptor,
               let fontAttribute = fontDescriptor.fontAttributes[.nsctFontUIUsage] as? String else {
             self.init(myCoder: aDecoder)
             return
@@ -77,7 +79,6 @@ extension UIFont {
             self.init(myCoder: aDecoder)
         }
     }
-    
     
     class func overrideInitialize() {
         guard self == UIFont.self else { return }

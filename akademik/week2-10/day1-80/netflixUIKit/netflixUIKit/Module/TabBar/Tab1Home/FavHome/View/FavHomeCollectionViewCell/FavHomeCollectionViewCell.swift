@@ -13,7 +13,7 @@ class FavHomeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imgView.makeRounded(10)
+        imgView.makeAllRounded(devidedBy: 10)
     }
 
 }

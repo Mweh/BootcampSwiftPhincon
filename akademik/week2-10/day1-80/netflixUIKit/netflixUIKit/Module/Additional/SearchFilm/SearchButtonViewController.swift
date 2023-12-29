@@ -196,7 +196,7 @@ extension SearchButtonViewController: UIImagePickerControllerDelegate, UINavigat
             
             // Show a popup message with the recognized text
             if !recognizedText.isEmpty {
-                self.showPopupMessage(title: "Scanned's [AI] Result :\n", message: textPredict)
+                self.showAlert(title: "Scanned's [AI] Result :\n", message: textPredict)
             }
         }
     }
@@ -265,6 +265,15 @@ class ContentContainerViewController: UIViewController {
         // Adjust the frame of contentContainerView to position it beside the navigation item
         // You may also want to consider safe area insets
         contentContainerView.frame = CGRect(x: 20, y: 40, width: view.bounds.width, height: view.bounds.height)
+    }
+    
+}
+
+extension SearchButtonViewController {
+    
+    // Show alert utility function
+    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
+        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
     }
 }
 

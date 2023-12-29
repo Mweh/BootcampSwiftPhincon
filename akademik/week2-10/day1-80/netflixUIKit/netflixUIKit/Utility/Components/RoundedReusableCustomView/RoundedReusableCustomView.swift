@@ -7,6 +7,7 @@
 
 import UIKit
 
+// custom rounded UIView with shadow
 class RoundedReusableCustomView: UIView {
 
     required init?(coder: NSCoder) {

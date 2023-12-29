@@ -232,10 +232,10 @@
     </objects>
     <designables>
         <designable name="5Qa-mX-InQ">
-            <size key="intrinsicContentSize" width="151" height="34"/>
+            <size key="intrinsicContentSize" width="90.333333333333329" height="34"/>
         </designable>
         <designable name="wOQ-Sa-DR8">
-            <size key="intrinsicContentSize" width="97" height="34"/>
+            <size key="intrinsicContentSize" width="62.666666666666664" height="34"/>
         </designable>
     </designables>
     <resources>

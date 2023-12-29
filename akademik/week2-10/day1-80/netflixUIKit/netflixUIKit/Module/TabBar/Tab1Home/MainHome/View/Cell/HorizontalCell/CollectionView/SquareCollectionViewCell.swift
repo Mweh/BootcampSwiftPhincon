@@ -23,7 +23,7 @@ class SquareCollectionViewCell: UICollectionViewCell {
         container.layer.cornerRadius = container.frame.height / 20
         imgView.layer.cornerRadius = imgView.frame.height / 20
         imgView.clipsToBounds = true
-        containerNewMovie.makeRounded(20)
+        containerNewMovie.makeAllRounded(devidedBy: 20)
         container.clipsToBounds = true
         
         addStrokeToLabel()

@@ -96,15 +96,15 @@ enum Endpoint {
         let params: HTTPHeaders = [
             "content-type": "application/json",
             "accept": "application/json",
-            "Authorization": "\(BaseConstant.tmdbTokenKey)"
+            "Authorization": "\(ConstantAPIStuff.tmdbTokenKey)"
         ]
         return params
     }
     
     func urlString() -> String {
-        let basePath = BaseConstant.host + self.path()
+        let basePath = ConstantAPIStuff.host + self.path()
         let separator = basePath.contains("?") ? "&" : "?"
-        return basePath + separator + "api_key=" + BaseConstant.tmdbApiKey
+        return basePath + separator + "api_key=" + ConstantAPIStuff.tmdbApiKey
     }
     
     var encoding: ParameterEncoding {

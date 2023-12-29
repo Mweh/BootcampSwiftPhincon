@@ -185,9 +185,9 @@ class DetailViewController: UIViewController {
     func setupUp(){
         hidesBottomBarWhenPushed = true
         self.navigationItem.title = data?.originalTitle ?? "Detail"
-        backdropImgView.makeRounded(30)
-        posterImgView.makeImageRounded(10)
-        ratingContainer.makeRounded(10)
+        backdropImgView.makeAllRounded(devidedBy: 30)
+        posterImgView.makeAllRounded(devidedBy: 10)
+        ratingContainer.makeAllRounded(devidedBy: 10)
         
         if let data = data {
             titleMovieLabel.text = data.title ?? ""

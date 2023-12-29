@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable
+@IBDesignable // add faded to UIImageView
 class FadedImageView: UIImageView {
 
     private let gradientLayer = CAGradientLayer()

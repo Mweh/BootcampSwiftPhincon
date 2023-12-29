@@ -7,8 +7,7 @@
 
 import Foundation
 
-// Add this notification name as a static constant
-extension Notification.Name {
+extension Notification.Name { // list of notif name
     static let historyMovieSaved = Notification.Name("HistoryMovieSavedNotification")
     static let cellSquareTapped = Notification.Name("CellSquaredTappedNotification")
 }

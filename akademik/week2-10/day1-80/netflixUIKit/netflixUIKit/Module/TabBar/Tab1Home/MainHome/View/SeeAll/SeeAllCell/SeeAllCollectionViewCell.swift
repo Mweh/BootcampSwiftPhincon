@@ -15,7 +15,7 @@ class SeeAllCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imgView.makeImageRounded(10)
+        imgView.makeAllRounded(devidedBy: 10)
     }
     
     func setup(imageName: String) {

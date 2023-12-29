@@ -48,7 +48,7 @@ class MsFlixyAssistanceTableViewCell: UITableViewCell {
         if let image = message.image {
             // Display the selected image
             photoImageView.image = image
-            photoImageView.makeRounded(20)
+            photoImageView.makeAllRounded(devidedBy: 20)
         } else {
             // Hide the image view if there's no image
             photoImageView.image = nil

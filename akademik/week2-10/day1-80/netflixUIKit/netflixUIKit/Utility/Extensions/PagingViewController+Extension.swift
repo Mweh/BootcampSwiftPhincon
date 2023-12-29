@@ -8,7 +8,7 @@
 import Foundation
 import Parchment
 
-extension PagingViewController {
+extension PagingViewController { // PagingViewController for Parchment Tab's Manager
     func configure(parent: UIViewController, nslayoutTopAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>) {
         dataSource = parent as? PagingViewControllerDataSource
         delegate = parent as? PagingViewControllerDelegate

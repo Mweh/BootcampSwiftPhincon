@@ -13,7 +13,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imgView.makeImageRounded(10)
+        imgView.makeAllRounded(devidedBy: 10)
         // Initialization code
     }
 

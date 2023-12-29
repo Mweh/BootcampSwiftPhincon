@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum RefreshTextLabel{
+enum RefreshTextLabel{ // a label for pull down to refresh
     static func refreshTL() -> UILabel{
         let textLabel = UILabel()
         textLabel.text = "Pull to refresh"

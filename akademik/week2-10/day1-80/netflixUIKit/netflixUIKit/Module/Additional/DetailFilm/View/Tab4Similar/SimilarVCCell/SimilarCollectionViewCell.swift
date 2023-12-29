@@ -15,7 +15,7 @@ class SimilarCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imgView.makeImageRounded(10)
+        imgView.makeAllRounded(devidedBy: 10)
     }
 
 }

@@ -20,7 +20,7 @@ class AdBannerTableViewCell: UITableViewCell {
     }
     
     func setupAd(){
-        adBannerView.adUnitID = BaseConstant.adBannerUnitID
+        adBannerView.adUnitID = ConstantAPIStuff.adBannerUnitID
         adBannerView.load(GADRequest())
         adBannerView.delegate = self
     }

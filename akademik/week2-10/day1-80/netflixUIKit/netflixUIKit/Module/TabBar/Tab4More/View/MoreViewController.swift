@@ -101,10 +101,10 @@ class MoreViewController: UIViewController {
         
         self.uploadImgButton.isHidden = true
         
-        imageView.makeRounded(10)
-        user1Img.makeRounded(10)
-        user2Img.makeRounded(10)
-        plusImg.makeRounded(10)
+        imageView.makeAllRounded(devidedBy: 10)
+        user1Img.makeAllRounded(devidedBy: 10)
+        user2Img.makeAllRounded(devidedBy: 10)
+        plusImg.makeAllRounded(devidedBy: 10)
     }
     
     func uploadToFire() {

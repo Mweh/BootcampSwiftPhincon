@@ -179,8 +179,8 @@ class MsFlixyAssistanceViewController: UIViewController {
         self.currentInputMode = currentInputMode
 
         do {
-            let modelText = GenerativeModel(name: "gemini-pro", apiKey: BaseConstant.geminiApiKey)
-            let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: BaseConstant.geminiApiKey)
+            let modelText = GenerativeModel(name: "gemini-pro", apiKey: ConstantAPIStuff.geminiApiKey)
+            let modelVision = GenerativeModel(name: "gemini-pro-vision", apiKey: ConstantAPIStuff.geminiApiKey)
             
             switch currentInputMode {
             case .text:
@@ -271,7 +271,7 @@ extension MsFlixyAssistanceViewController: UITableViewDelegate, UITableViewDataS
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "MsFlixyAssistanceTableViewCell", for: indexPath) as! MsFlixyAssistanceTableViewCell
         let message = chatMessages[indexPath.row]
         cell.configure(with: message)
-        cell.photoImageView.makeRounded(20)
+        cell.photoImageView.makeAllRounded(devidedBy: 20)
         return cell
     }
     

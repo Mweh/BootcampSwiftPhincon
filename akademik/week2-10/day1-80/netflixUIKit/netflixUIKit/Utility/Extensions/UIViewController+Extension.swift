@@ -2,11 +2,12 @@ import GoogleMobileAds
 import Lottie
 import UIKit
 
+// MARK: -- AdMob
+
 extension UIViewController {
-    
     func loadRewardedAd(completion: @escaping (GADRewardedAd?) -> Void) {
         let request = GADRequest()
-        GADRewardedAd.load(withAdUnitID: BaseConstant.adRewardedUnitID, request: request) { ad, error in
+        GADRewardedAd.load(withAdUnitID: ConstantAPIStuff.adRewardedUnitID, request: request) { ad, error in
             if let error = error {
                 print("Failed to load rewarded ad with error: \(error.localizedDescription)")
                 completion(nil)
@@ -16,7 +17,7 @@ extension UIViewController {
             }
         }
     }
-
+    
     func showRewardedAd(ad: GADRewardedAd, completion: @escaping () -> Void) {
         ad.present(fromRootViewController: self) {
             let reward = ad.adReward
@@ -27,14 +28,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController {
-    func showPopupMessage(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
-}
+// MARK: -- Floating Icon with Lottie Programmatically
 
 extension UIViewController {
     func addFloatingIcon(useLottie: Bool = false, lottieFileName: String? = nil, iconSize: CGFloat = 45, trailingValue: CGFloat = -16, bottomValue: CGFloat = -16, showCloseButton: Bool = true) {

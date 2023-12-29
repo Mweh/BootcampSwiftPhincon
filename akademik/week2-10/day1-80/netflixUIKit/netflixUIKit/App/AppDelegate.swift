@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil) // AdMob
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
-        [ BaseConstant.testDeviceIdentifiers ] // Sample device ID
+        [ ConstantAPIStuff.testDeviceIdentifiers ] // Sample device ID
         
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in // GSignIn
             if error != nil || user == nil {
