@@ -121,7 +121,7 @@ Our project's folder structure is designed for modularity and separation of conc
 ---
 
 ## Tree - netflixUIKit
-
+```
 ├── App
 │   ├── AppDelegate.swift
 │   └── SceneDelegate.swift
@@ -162,7 +162,7 @@ Our project's folder structure is designed for modularity and separation of conc
     ├── Constant
     ├── Extensions
     └── Helper
-
+```
 Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
 ## MVVM Design Pattern
