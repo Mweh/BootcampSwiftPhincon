@@ -16,6 +16,10 @@ Our NetflixUIKit Clone Project is a feature-rich movie-watching application desi
 - [DONE](#done)
 - [BUG](#bug)
 
+## Tech Stack
+
+![Tech Stack](https://github.com/Mweh/BootcampSwiftPhincon/blob/142ae7df58db1e7e72e28df120ad6e98d686427b/akademik/week2-10/day1-80/techStack.png)
+
 ## Features
 
 Explore the key features of our project:
@@ -116,6 +120,49 @@ Our project's folder structure is designed for modularity and separation of conc
 
 ---
 
+## Tree - netflixUIKit
+
+├── App
+│   ├── AppDelegate.swift
+│   └── SceneDelegate.swift
+├── GoogleService-Info.plist
+├── Info.plist
+├── Model
+│   ├── CoreData
+│   └── ModelTMDB
+├── Module
+│   ├── Additional
+│   │   ├── DetailFilm
+│   ├── Login+Register
+│   ├── SplashScreen
+│   └── TabBar
+│       ├── MainTab
+│       ├── Tab1Home
+│       ├── Tab2Search
+│       ├── Tab3Discover
+│       └── Tab4More
+├── Network
+│   ├── Service
+│   └── TMDBImageURL
+├── Resource
+│   ├── Assets.xcassets
+│   │   ├── AppIcon
+│   │   ├── CustomColor
+│   │   ├── GeminiImage
+│   │   ├── LangIcon
+│   │   ├── MovieImages
+│   │   ├── NetflixLogo
+│   │   └── Splash
+│   ├── CompletedTasks.md
+│   ├── CustomFonts
+│   ├── LottieFiles
+│   ├── en.lproj
+└── Utility
+    ├── Components
+    ├── Constant
+    ├── Extensions
+    └── Helper
+
 Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
 ## MVVM Design Pattern
@@ -152,6 +199,7 @@ Information about the project's license.
 
 Keep track of tasks, improvements, and future plans for our project.
 
+- [ ] Implement SnapKit in all project
 - [ ] Implement Onboarding View.
 - [ ] Add a suggest when searching a movie 
 - [ ] New page when actor pressed
