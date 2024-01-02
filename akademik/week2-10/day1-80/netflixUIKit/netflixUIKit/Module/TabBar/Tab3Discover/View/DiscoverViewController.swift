@@ -62,9 +62,7 @@ class DiscoverViewController: UIViewController {
     }
 
     // Update function where you get the selection
-    func update(option: SortingOption) {
-        print("\(option.rawValue) selected")
-        
+    func update(option: SortingOption) {        
         // Handle the selected option
         switch option {
         case .mostRecent:
@@ -246,17 +244,18 @@ extension DiscoverViewController: SkeletonTableViewDelegate, SkeletonTableViewDa
             // Assuming you have the necessary information to create a ParamAddFavorite instance
             let favoriteModel = ParamAddFavorite(mediaType: "movie", mediaId: data[indexPath.row].id, favorite: false)
             
-            cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel) //Missing argument for parameter 'favoriteModel' in call
-            let posterPath = data[indexPath.row].posterPath ?? ""
-            var backDropPath = data[indexPath.row].backdropPath ?? posterPath
-            let tmdbImgBase = TMDBImageURL.url(size: .w780)
-            
-            let imageName = "\(tmdbImgBase)\(backDropPath)"
-            if let url = URL(string: imageName) {
-                cell.imgView.kf.indicatorType = .activity
-                cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "netflix"))
+            cell.setup(data: data[indexPath.row], favoriteModel: favoriteModel, viewController: self) //Missing argument for parameter 'favoriteModel' in call
+            if let posterPath = data[indexPath.row].posterPath {
+                var backDropPath = data[indexPath.row].backdropPath ?? posterPath
+                let tmdbImgBase = TMDBImageURL.url(size: .w780)
+                
+                let imageName = "\(tmdbImgBase)\(backDropPath)"
+                
+                if let url = URL(string: imageName) {
+                    cell.imgView.kf.indicatorType = .activity
+                    cell.imgView.kf.setImage(with: url, placeholder: UIImage(named: "netflix"))
+                }
             }
-            print("Image URL: \(imageName)")
             
             // Add a tap gesture recognizer to cell.movieImage
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))

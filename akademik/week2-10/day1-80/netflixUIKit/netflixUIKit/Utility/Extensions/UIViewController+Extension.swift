@@ -9,10 +9,10 @@ extension UIViewController {
         let request = GADRequest()
         GADRewardedAd.load(withAdUnitID: ConstantAPIStuff.adRewardedUnitID, request: request) { ad, error in
             if let error = error {
-                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                self.showAlert(title: "Error", message: "Failed to load rewarded ad with error: \(error.localizedDescription)")
                 completion(nil)
             } else {
-                print("Rewarded ad loaded.")
+                self.showAlert(title: "Success", message: "Rewarded ad loaded.")
                 completion(ad)
             }
         }
@@ -21,10 +21,14 @@ extension UIViewController {
     func showRewardedAd(ad: GADRewardedAd, completion: @escaping () -> Void) {
         ad.present(fromRootViewController: self) {
             let reward = ad.adReward
-            print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+            self.showAlert(title: "Success", message: "Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
             // TODO: Reward the user.
             completion()
         }
+    }
+    
+    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
+        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
     }
 }
 

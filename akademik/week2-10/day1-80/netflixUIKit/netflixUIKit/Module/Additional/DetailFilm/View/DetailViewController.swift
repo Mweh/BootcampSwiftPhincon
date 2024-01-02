@@ -190,26 +190,32 @@ class DetailViewController: UIViewController {
         ratingContainer.makeAllRounded(devidedBy: 10)
         
         if let data = data {
-            titleMovieLabel.text = data.title ?? ""
+            if let titleData = data.title{
+                titleMovieLabel.text = titleData
+            }
             
             titleMovieLabel.hero.id = "\(data.title!)"
             
             let tmdbImgBase500 = TMDBImageURL.url(size: .w500)
-            let backdropImgName = "\(tmdbImgBase500)\(data.backdropPath ?? "")"
-            let backdropURL = URL(string: backdropImgName)
-            backdropImgView.kf.setImage(with: backdropURL)
-            backdropImgView.sizeToFit()
-            
-            backdropImgView.hero.id = "\(data.backdropPath ?? "")"
+            if let backdropPath = data.backdropPath {
+                let backdropImgName = "\(tmdbImgBase500)\(backdropPath)"
+                let backdropURL = URL(string: backdropImgName)
+                backdropImgView.kf.setImage(with: backdropURL)
+                backdropImgView.sizeToFit()
+                
+                backdropImgView.hero.id = "\(backdropPath)"
+            }
             
             let tmdbImgBase342 = TMDBImageURL.url(size: .w342)
-            let posterPath = data.posterPath ?? ""
-            let posterImgName = "\(tmdbImgBase342)\(posterPath)"
-            let posterURL = URL(string: posterImgName)
-            posterImgView.kf.setImage(with: posterURL)
-            posterImgView.sizeToFit()
             
-            posterImgView.hero.id = "\(posterPath)"
+            if let posterPath = data.posterPath {
+                let posterPath = posterPath
+                let posterImgName = "\(tmdbImgBase342)\(posterPath)"
+                let posterURL = URL(string: posterImgName)
+                posterImgView.kf.setImage(with: posterURL)
+                posterImgView.sizeToFit()
+                posterImgView.hero.id = "\(posterPath)"
+            }
             
             let voteAverageText = String(format: "%.1f", data.voteAverage)
             let attributedText = NSAttributedString(string: voteAverageText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])

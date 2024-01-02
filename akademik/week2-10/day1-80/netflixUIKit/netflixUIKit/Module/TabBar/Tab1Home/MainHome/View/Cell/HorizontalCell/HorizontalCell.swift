@@ -60,10 +60,8 @@ class HorizontalCell: UITableViewCell {
     private func handleShowAll(){
         switch typeCell {
         case .CircleCell:
-            print("CircleCell in handleShowAll")
             showAllForCircleCell()
         case .SquareCell:
-            print("SquareCell in handleShowAll")
             showAllForSquareCell()
         }
     }
@@ -117,7 +115,6 @@ class HorizontalCell: UITableViewCell {
             case .success(let data):
                 // Handle downloaded image data
                 NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
-                print("Image downloaded successfully: \(data)")
             case .failure(let error):
                 // Handle download failure
                 print("Error downloading image: \(error)")
@@ -157,11 +154,13 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             
             if indexPath.row < collectionMovieNowPlaying?.count ?? 1 {
                 let tmdbImgBase = TMDBImageURL.url(size: .w342)
-                let imageName = "\(tmdbImgBase)\(collectionMovieNowPlaying?[indexPath.row].posterPath ?? "")"
-                let url = URL(string: imageName)
-                cell.movieImage.kf.setImage(with: url)
-                self.titleLabel.text = typeCell.title
-                collectionViewHeightConstraint.constant = 50
+                if let posterPathMovieNowPlaying = collectionMovieNowPlaying?[indexPath.row].posterPath {
+                    let imageName = "\(tmdbImgBase)\(posterPathMovieNowPlaying)"
+                    let url = URL(string: imageName)
+                    cell.movieImage.kf.setImage(with: url)
+                    self.titleLabel.text = typeCell.title
+                    collectionViewHeightConstraint.constant = 50
+                }
             }
             
             return cell
@@ -172,14 +171,14 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
             
             if indexPath.row < collectionMoviePopular?.count ?? 1 {
                 let tmdbImgBase = TMDBImageURL.url(size: .w500)
-                let imageName = "\(tmdbImgBase)\(collectionMoviePopular?[indexPath.row].posterPath ?? "")"
-                
-                let url = URL(string: imageName)
-                cell.imgView.kf.setImage(with: url)
-                //                cell.imgView.hero.id = "\(collectionDiscoverTV?[indexPath.row].posterPath ?? "")"
-                
-                // Set ratedNumberLabel only for the first 9 cells
-                (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
+                if let posterPathMovieNowPlaying = collectionMoviePopular?[indexPath.row].posterPath {
+                    
+                    let imageName = "\(tmdbImgBase)\(posterPathMovieNowPlaying)"
+                    
+                    let url = URL(string: imageName)
+                    cell.imgView.kf.setImage(with: url)
+                    (indexPath.row < 9) ? (cell.ratedNumberLabel.text = "\(indexPath.row + 1)") : (cell.ratedNumberLabel.text = nil)
+                }
             }
             
             // Show containerNewMovie only in the first cell
@@ -233,7 +232,6 @@ extension HorizontalCell: UICollectionViewDataSource, UICollectionViewDelegate, 
                         } else {
                             // Post a notification to notify other parts of the app about the tap
                             NotificationCenter.default.post(name: .cellSquareTapped, object: nil)
-                            print("Image saved successfully.")
                         }
                     }
                     

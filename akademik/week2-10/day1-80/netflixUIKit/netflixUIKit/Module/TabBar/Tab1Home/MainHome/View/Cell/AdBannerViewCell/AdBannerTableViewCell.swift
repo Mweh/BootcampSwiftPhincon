@@ -40,7 +40,6 @@ class AdBannerTableViewCell: UITableViewCell {
                 return
             }
             rewardedAd = ad
-            print("Rewarded ad loaded.")
         }
         )
     }
@@ -50,7 +49,6 @@ class AdBannerTableViewCell: UITableViewCell {
 
 extension AdBannerTableViewCell: GADBannerViewDelegate{
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("bannerViewDidReceiveAd")
         bannerView.alpha = 0
         UIView.animate(withDuration: 1, animations: {
             bannerView.alpha = 1

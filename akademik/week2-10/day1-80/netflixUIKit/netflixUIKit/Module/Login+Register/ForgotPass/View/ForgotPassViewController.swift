@@ -29,7 +29,9 @@ class ForgotPassViewController: UIViewController {
     func setupBinding() {
         resetEmailButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
-                self?.viewModel.resetEmailTap(email: self?.emailTextField.text ?? "")
+                if let textEmailTextField = self?.emailTextField.text{
+                    self?.viewModel.resetEmailTap(email: textEmailTextField)
+                }
             }).disposed(by: bag)
         
         viewModel.isLoading.asObservable().subscribe(onNext: {[weak self] state in
@@ -62,9 +64,5 @@ class ForgotPassViewController: UIViewController {
             }
         })
         .disposed(by: bag)
-    }
-    
-    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
     }
 }

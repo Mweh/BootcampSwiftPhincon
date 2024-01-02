@@ -46,7 +46,7 @@ class TopSearchViewController: UIViewController {
         configureTable()
         lottieConfig()
         bindApiData()
-        setupNetworkStatusManager()
+//        setupNetworkStatusManager()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -190,10 +190,13 @@ extension TopSearchViewController: SkeletonTableViewDelegate, SkeletonTableViewD
             cell.setup(data: data.results[indexPath.row])
             let tmdbImgBase = TMDBImageURL.url(size: .w500)
 
-            let imageName = "\(tmdbImgBase)\(data.results[indexPath.row].backdropPath ?? "")"
-            cell.imageFilm.kf.indicatorType = .activity
-            cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(named: "netflix"))
-            cell.imageFilm.hero.id = "\(data.results[indexPath.row].backdropPath ?? "")"
+            if let backdropPath = data.results[indexPath.row].backdropPath {
+                let imageName = "\(tmdbImgBase)\(backdropPath)"
+                cell.imageFilm.kf.indicatorType = .activity
+                cell.imageFilm.kf.setImage(with: URL(string: imageName), placeholder: UIImage(named: "netflix"))
+                
+                cell.imageFilm.hero.id = "\(backdropPath)"
+            }
             cell.imageFilm.sizeToFit()
             return cell
         }

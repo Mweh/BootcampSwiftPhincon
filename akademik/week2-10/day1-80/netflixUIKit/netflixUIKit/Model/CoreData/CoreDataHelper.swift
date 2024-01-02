@@ -50,7 +50,7 @@ class CoreDataHelper {
             
             return historyMovies
         } catch {
-            print("Failed to fetch data: \(error)")
+            // Failed to fetch data: \(error)
             return nil
         }
     }
@@ -65,8 +65,7 @@ class CoreDataHelper {
         do {
             let totalMovies = try context.count(for: fetchRequest)
             return totalMovies
-        } catch {
-            print("Failed to fetch total history movies: \(error)")
+        } catch { // Failed to fetch total history movies: \(error)"
             return 0
         }
     }
@@ -85,7 +84,8 @@ class CoreDataHelper {
             if let _ = results.first as? NSManagedObject {
                 // Movie with the same ID already exists, you can update or skip
                 // For simplicity, let's just skip adding the duplicate
-                print("Movie with ID \(data.id) already exists in history.")
+                
+                // if Movie with ID \(data.id) already exists in history.
             } else {
                 // Movie with this ID doesn't exist, proceed to add it
                 if let movieEntity = NSEntityDescription.entity(forEntityName: "MovieEntity", in: context) {

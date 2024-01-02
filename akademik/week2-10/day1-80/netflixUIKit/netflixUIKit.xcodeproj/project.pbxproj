@@ -125,6 +125,9 @@
 		CD87BC6A2B034684008B9531 /* FavHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */; };
 		CD890C692B30359A008DA065 /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */; };
 		CD89412E2B3E604400B19616 /* ConstantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD89412D2B3E604400B19616 /* ConstantApp.swift */; };
+		CD8941312B3EA72600B19616 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD8941302B3EA72600B19616 /* GoogleService-Info.plist */; };
+		CD8941332B43C11E00B19616 /* DateUIHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8941322B43C11E00B19616 /* DateUIHeaderView.swift */; };
+		CD8941362B43C18A00B19616 /* MsFlixyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8941352B43C18A00B19616 /* MsFlixyModel.swift */; };
 		CD919E392B27E560005D7171 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E382B27E560005D7171 /* ThemeManager.swift */; };
 		CD919E4D2B283E7A005D7171 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD919E4F2B283E7A005D7171 /* Localizable.strings */; };
 		CD919E542B286278005D7171 /* DisplayLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD919E522B286278005D7171 /* DisplayLanguageViewController.swift */; };
@@ -291,6 +294,9 @@
 		CD87BC682B034684008B9531 /* FavHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD890C682B30359A008DA065 /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
 		CD89412D2B3E604400B19616 /* ConstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApp.swift; sourceTree = "<group>"; };
+		CD8941302B3EA72600B19616 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD8941322B43C11E00B19616 /* DateUIHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUIHeaderView.swift; sourceTree = "<group>"; };
+		CD8941352B43C18A00B19616 /* MsFlixyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsFlixyModel.swift; sourceTree = "<group>"; };
 		CD919E382B27E560005D7171 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CD919E4E2B283E7A005D7171 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD919E502B283E88005D7171 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -502,6 +508,8 @@
 			children = (
 				CD42F93B2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.swift */,
 				CD42F93C2B2B57D6008A1F13 /* MsFlixyAssistanceViewController.xib */,
+				CD8941322B43C11E00B19616 /* DateUIHeaderView.swift */,
+				CD8941342B43C17300B19616 /* Model */,
 				CD42F96D2B2BDF03008A1F13 /* ChatTableCell */,
 			);
 			path = MsFlixyAssistance;
@@ -681,6 +689,7 @@
 				CD16E3022AF352C200669456 /* Network */,
 				CD5DD4B22AEF38BC00140DFA /* Module */,
 				CD5DD4AA2AEF38AB00140DFA /* Info.plist */,
+				CD8941302B3EA72600B19616 /* GoogleService-Info.plist */,
 			);
 			path = netflixUIKit;
 			sourceTree = "<group>";
@@ -909,13 +918,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CD7234202B26C8E2006B156C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		CD7234212B26C913006B156C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,13 +950,6 @@
 				CD4659532B1EBECF00D86A26 /* History */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CD7234242B26C9BD006B156C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CD7234252B26CA13006B156C /* View */ = {
@@ -1005,7 +1000,6 @@
 			isa = PBXGroup;
 			children = (
 				CD72341F2B26C8D8006B156C /* View */,
-				CD7234202B26C8E2006B156C /* ViewModel */,
 			);
 			path = FavHome;
 			sourceTree = "<group>";
@@ -1074,7 +1068,6 @@
 			isa = PBXGroup;
 			children = (
 				CD7234232B26C9B6006B156C /* View */,
-				CD7234242B26C9BD006B156C /* ViewModel */,
 			);
 			path = Tab4More;
 			sourceTree = "<group>";
@@ -1103,6 +1096,14 @@
 				CD3F596B2AFA3F0900E6FCDD /* RoundedReusableCustomView.xib */,
 			);
 			path = RoundedReusableCustomView;
+			sourceTree = "<group>";
+		};
+		CD8941342B43C17300B19616 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD8941352B43C18A00B19616 /* MsFlixyModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CD919E512B286235005D7171 /* DisplayLanguage */ = {
@@ -1373,6 +1374,7 @@
 				CDAD7DBA2AFDD96E00BF41B8 /* refreshControl.json in Resources */,
 				CDA5BAE02B03D4750053CF05 /* movieLoading.json in Resources */,
 				CD5DD4A62AEF38AB00140DFA /* Assets.xcassets in Resources */,
+				CD8941312B3EA72600B19616 /* GoogleService-Info.plist in Resources */,
 				CDAF8A792AF8DEF400CB670D /* SquareCollectionViewCell.xib in Resources */,
 				CDA5BAD62B039D170053CF05 /* VideoTrailerVC.xib in Resources */,
 				CDE034302B186EF400914F2E /* AppSettingsViewController.xib in Resources */,
@@ -1497,6 +1499,7 @@
 				CD87BC652B0344C0008B9531 /* FavHomeVC.swift in Sources */,
 				CD78337B2AEF53F60030AA43 /* CollectionViewCell.swift in Sources */,
 				CD5A21D72B3AFFBC00AFF4E9 /* SplashScreenViewModel.swift in Sources */,
+				CD8941362B43C18A00B19616 /* MsFlixyModel.swift in Sources */,
 				CD46593A2B1EB38E00D86A26 /* HistoryModelMovie.swift in Sources */,
 				CDB9FD6B2B0CA95500128B03 /* FadedImageView.swift in Sources */,
 				CD16F0312B197D7600B93857 /* RefreshTextLabel.swift in Sources */,
@@ -1544,6 +1547,7 @@
 				CD678AA12B0DD44100B2261F /* CastingCollectionViewCell.swift in Sources */,
 				CD40E1E52AF7DC6B002D2407 /* CustomAPIManager.swift in Sources */,
 				CD5A21E62B3C115400AFF4E9 /* LoginConstant.swift in Sources */,
+				CD8941332B43C11E00B19616 /* DateUIHeaderView.swift in Sources */,
 				CDB9FD5F2B0B8CBB00128B03 /* CastingViewController.swift in Sources */,
 				CD5A21DC2B3BA51E00AFF4E9 /* LoginCoordinator.swift in Sources */,
 				CD4659322B1DA10600D86A26 /* AllVideoViewController.swift in Sources */,

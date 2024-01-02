@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>Timestamp</key>
+					<string>725510351</string>
+					<key>XcodeLocation</key>
+					<string>{"MemberID":"i5M-Pr-FkT"}</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>netflixUIKit/netflixUIKit/Module/Additional/SearchFilm/SearchButtonViewController.xib</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>IBDocumentMemberLocation</string>
+			</dict>
+			<key>title</key>
+			<string>Error: Failed to render and update auto layout status for UIView (i5M-Pr-FkT): dlopen(netflixUIKit.app, 0x0001): tried: '/netflixUIKit' (no such file), '/Library/Developer/CoreSimulator/Volumes/iOS_21C62/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 17.2.simruntime/Contents/Resources/RuntimeRootnetflixUIKit.app' (no such file), 'netflixUIKit.app' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64'))</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>

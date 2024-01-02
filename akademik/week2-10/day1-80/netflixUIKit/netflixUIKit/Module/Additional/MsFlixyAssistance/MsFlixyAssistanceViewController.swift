@@ -361,40 +361,6 @@ extension MsFlixyAssistanceViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: -- UITableViewHeaderFooterView for DateUIHeaderView
-// A custom UITableViewHeaderFooterView for displaying a centered UILabel as the header view.
-class DateUIHeaderView: UITableViewHeaderFooterView {
-    
-    // UILabel for displaying the header text.
-    let label: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        return label
-    }()
-    
-    // Initialize the header view with a reuseIdentifier.
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-        setupUI() // Call the setupUI method to configure the UI.
-    }
-    
-    // Required initializer for NSCoder. Not implemented, as this class is not meant to be loaded from a nib or storyboard.
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // Set up the UI by adding the label as a subview to the contentView.
-    private func setupUI() {
-        contentView.addSubview(label)
-    }
-    
-    // Adjust the layout of the label to fill the contentView when the view's bounds change.
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        label.frame = contentView.bounds
-    }
-}
-
 // MARK: -- UIImagePickerControllerDelegate
 extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -423,41 +389,3 @@ extension MsFlixyAssistanceViewController: UIImagePickerControllerDelegate, UINa
         }
     }
 }
-
-// MARK: -- ChatMessage Model
-struct ChatMessage: Codable {
-    let text: String
-    let isMsFlixy: Bool
-    let timestamp: Date
-    let imageData: Data?
-    let isTypingLoading: Bool
-    
-    var image: UIImage? {
-        if let imageData = imageData {
-            return UIImage(data: imageData)
-        }
-        return nil
-    }
-    
-    init(text: String, isMsFlixy: Bool, image: UIImage? = nil, isTypingLoading: Bool = false) {
-        self.text = text
-        self.isMsFlixy = isMsFlixy
-        self.timestamp = Date()
-        self.imageData = image?.jpegData(compressionQuality: 0.8) // Convert UIImage to Data
-        self.isTypingLoading = isTypingLoading
-    }
-}
-
-enum InputMode {
-    case text, image, speech
-}
-
-enum StateAI: Int { //isTyping
-    case loading, isFinished, failed
-}
-
-// TODO: List
-/*
- - Format the text like .md like bold instead of "**"
- - Is typing lottie file
- */

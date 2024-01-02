@@ -22,7 +22,6 @@ class SeeAllViewController: UIViewController {
         }
     }
     
-
     func setup(){
         seeAllCollectionView.dataSource = self
         seeAllCollectionView.delegate = self
@@ -38,7 +37,9 @@ extension SeeAllViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let validData = dataMovie {
             let cell = seeAllCollectionView.dequeueReusableCell(withReuseIdentifier: "SeeAllCollectionViewCell", for: indexPath) as! SeeAllCollectionViewCell
-            cell.setup(imageName: validData[indexPath.row].posterPath ?? "")
+            if let posterPath = validData[indexPath.row].posterPath {
+                cell.setup(imageName: posterPath)
+            }
             return cell
             
         }

@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true // enable property enables/disables IQKeyboardManager.
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true // dismiss the keyboard when the user taps outside of a text field
         
-        FirebaseApp.configure() // configure Firebase
+        FirebaseApp.configure() // configure Firebase, need include GoogleService-Info.plist
         
         GADMobileAds.sharedInstance().start(completionHandler: nil) // AdMob
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =

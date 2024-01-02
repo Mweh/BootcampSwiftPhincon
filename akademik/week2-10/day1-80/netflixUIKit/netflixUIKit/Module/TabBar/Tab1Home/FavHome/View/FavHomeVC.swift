@@ -65,10 +65,11 @@ extension FavHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavHomeCollectionViewCell", for: indexPath) as! FavHomeCollectionViewCell
         let tmdbImgBase = TMDBImageURL.url(size: .w342)
-        let urlPath = dataFavoriteNoPaging?.results[indexPath.row].posterPath ?? ""
-        let imageName = "\(tmdbImgBase)\(urlPath)"
-        let url = URL(string: imageName)
-        cell.imgView.kf.setImage(with: url)
+        if let posterPath = dataFavoriteNoPaging?.results[indexPath.row].posterPath {
+            let imageName = "\(tmdbImgBase)\(posterPath)"
+            let url = URL(string: imageName)
+            cell.imgView.kf.setImage(with: url)
+        }
 
         return cell
     }

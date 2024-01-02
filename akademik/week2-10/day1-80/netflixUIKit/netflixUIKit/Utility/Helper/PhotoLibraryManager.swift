@@ -9,19 +9,6 @@ import Photos
 
 class PhotoLibraryManager {
     
-    static func saveImageToPhotosLibrary(imageURL: URL) {
-        PHPhotoLibrary.shared().performChanges({
-            let request = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: imageURL)
-            request?.creationDate = Date()
-        }) { (success, error) in
-            if success {
-                print("Image saved to Photos library successfully.")
-            } else {
-                print("Error saving image to Photos library: \(error?.localizedDescription ?? "Unknown error")")
-            }
-        }
-    }
-    
     static func saveImageToPhotos(url: URL, completion: @escaping (Error?) -> Void) {
         // Use URLSession to download the image asynchronously
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

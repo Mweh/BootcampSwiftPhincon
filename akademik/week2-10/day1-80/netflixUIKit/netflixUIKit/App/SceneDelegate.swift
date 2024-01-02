@@ -19,11 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create a new UIWindow using the provided UIWindowScene
         let window = UIWindow(windowScene: windowScene)
         
-//        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
-//        let vc = SplashScreenViewController(viewModel: splashScreenViewModel)
+        let splashScreenViewModel = SplashScreenViewModel(trigger: Observable.just(()))
+        let vc = SplashScreenViewController(viewModel: splashScreenViewModel)
 //
 //        let vc = LoginViewController()
-         let vc = MainTabBarController()
+//         let vc = MainTabBarController()
         
         // Embed the VC in a navigation controller
         window.rootViewController = UINavigationController(rootViewController: vc)

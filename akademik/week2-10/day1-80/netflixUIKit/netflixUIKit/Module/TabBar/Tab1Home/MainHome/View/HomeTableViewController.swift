@@ -139,14 +139,12 @@ class HomeTableViewController: UITableViewController {
                 let vc = SearchButtonViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
-                print("Di push trus")
             }
 
             return cell
         case .AdBanner:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdBannerTableViewCell", for: indexPath) as! AdBannerTableViewCell
             cell.adBannerView.rootViewController = self
-            print("This is AdBanner")
             return cell
         case .HorizontalCell:
             

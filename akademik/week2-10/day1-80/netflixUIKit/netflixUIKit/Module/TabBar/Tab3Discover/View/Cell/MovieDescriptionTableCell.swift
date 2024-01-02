@@ -64,7 +64,7 @@ class MovieDescriptionTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(data: ResultMovie?, favoriteModel: ParamAddFavorite?) {
+    func setup(data: ResultMovie?, favoriteModel: ParamAddFavorite?, viewController: UIViewController) {
         if let validData = data {
             if let validData = data {
                 popularityLabel.text = "Views: \(validData.popularity)"
@@ -73,8 +73,10 @@ class MovieDescriptionTableCell: UITableViewCell {
                 loremLabel.sizeToFit()
                 loremLabel.preferredMaxLayoutWidth = loremLabel.bounds.width
                 // Format releaseDate to a specific date format
-                let dateString = formatDate(validData.releaseDate ?? "")
-                releaseDateLabel.text = "Release date: \(dateString)"
+                if let releaseDate = validData.releaseDate {
+                    let dateString = formatDate(releaseDate)
+                    releaseDateLabel.text = "Release date: \(dateString)"
+                }
     
             }
             // Update isFav based on the favorite status of the movie
@@ -87,14 +89,14 @@ class MovieDescriptionTableCell: UITableViewCell {
                     self.isFav.accept(!self.isFav.value)
                     
                     // Call the API to update the favorite status
-                    self.updateFavoriteStatus(isFav: self.isFav.value, mediaId: validData.id)
+                    self.updateFavoriteStatus(isFav: self.isFav.value, mediaId: validData.id, viewController: viewController)
                 })
                 .disposed(by: bag)
         }
     }
     
     // Helper function to update favorite status via API call
-    private func updateFavoriteStatus(isFav: Bool, mediaId: Int) {
+    private func updateFavoriteStatus(isFav: Bool, mediaId: Int, viewController: UIViewController) {
         // Create the ParamAddFavorite
         let param = ParamAddFavorite(mediaType: "movie", mediaId: mediaId, favorite: isFav)
         
@@ -104,10 +106,10 @@ class MovieDescriptionTableCell: UITableViewCell {
             
             switch result {
             case .success(let favorites):
-                print("Added to favorites successfully: \(favorites)")
-                
-                // Update the favorite model
-                self.favoriteModel?.favorite = isFav
+                AlertUtility.showAlert(from: viewController, title: "Success", message: "Added to favorites successfully: \(favorites)"){
+                    // Update the favorite model
+                    self.favoriteModel?.favorite = isFav
+                }
             case .failure(let error):
                 print("Failed to add to favorites: \(error)")
                 

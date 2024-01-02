@@ -140,13 +140,13 @@ extension SearchButtonViewController: UICollectionViewDelegate, UICollectionView
         if let validData = self.dataMovie?.results {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as! SearchCollectionViewCell
             let tmdbImgBase = TMDBImageURL.url(size: .w342)
-            let urlString = validData[indexPath.row].posterPath ?? ""
-            let imageName = "\(tmdbImgBase)\(urlString)"
-            let url = URL(string: imageName)
-            cell.imgView.kf.setImage(with: url)
-            
-            cell.imgView.hero.id = "\(urlString)"
-            
+            if let posterPath = validData[indexPath.row].posterPath {
+                let imageName = "\(tmdbImgBase)\(posterPath)"
+                let url = URL(string: imageName)
+                cell.imgView.kf.setImage(with: url)
+                
+                cell.imgView.hero.id = "\(posterPath)"
+            }
             return cell
         }
         return UICollectionViewCell()
@@ -267,14 +267,6 @@ class ContentContainerViewController: UIViewController {
         contentContainerView.frame = CGRect(x: 20, y: 40, width: view.bounds.width, height: view.bounds.height)
     }
     
-}
-
-extension SearchButtonViewController {
-    
-    // Show alert utility function
-    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        AlertUtility.showAlert(from: self, title: title, message: message, completion: completion)
-    }
 }
 
 extension SearchButtonViewController{

@@ -48,9 +48,11 @@ class SquareCollectionViewCell: UICollectionViewCell {
         ]
         
         // Create an NSAttributedString with the stroke attributes
-        let attributedString = NSAttributedString(string: ratedNumberLabel.text ?? "", attributes: strokeTextAttributes)
-        
-        // Assign the attributed string to the label
-        ratedNumberLabel.attributedText = attributedString
+        if let textRatedNumberLabel = ratedNumberLabel.text {
+            let attributedString = NSAttributedString(string: textRatedNumberLabel, attributes: strokeTextAttributes)
+            
+            // Assign the attributed string to the label
+            ratedNumberLabel.attributedText = attributedString
+        }
     }
 }

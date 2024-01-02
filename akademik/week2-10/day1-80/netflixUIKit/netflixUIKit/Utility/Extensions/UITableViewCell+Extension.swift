@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 extension UITableViewCell {
+    
+    // MARK: - addBadge to label
     func addBadge(count: Int) {
         // Remove existing badge views
         self.contentView.subviews.filter { $0.tag == 999 }.forEach { $0.removeFromSuperview() }
@@ -32,7 +34,8 @@ extension UITableViewCell {
         self.contentView.addSubview(badgeLabel)
     }
     
-    func removeBadge() {
+    // MARK: - Remove Badge
+    func removeBadge() { // Not used
         // Remove existing badge views
         self.contentView.subviews.filter { $0.tag == 999 }.forEach { $0.removeFromSuperview() }
     }

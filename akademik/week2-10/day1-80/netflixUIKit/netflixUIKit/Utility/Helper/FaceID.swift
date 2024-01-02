@@ -19,20 +19,17 @@ class FaceID {
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             let reason = "Authentication required to access your data"
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, evaluateError in
-                if success {
-                    print("FaceID authentication successful")
+                if success { // FaceID authentication successful
                     completion(true)
                 } else {
-                    if let error = evaluateError {
-                        print("FaceID authentication error: \(error.localizedDescription)")
+                    if let error = evaluateError { // FaceID authentication error.localizedDescription
                         completion(false)
                     } else {
                         completion(false)
                     }
                 }
             }
-        } else {
-            print("FaceID authentication not available")
+        } else { // FaceID authentication not available
             completion(false)
         }
     }

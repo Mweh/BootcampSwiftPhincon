@@ -13,9 +13,7 @@ class CustomAPIManager: NSObject {
     // The singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
     static let shared = CustomAPIManager()
 
-    // Private initializer to enforce singleton pattern
-    // The initializer is marked as private, preventing external code from creating new instances of CustomAPIManager. This ensures that the only instance of the class is the one provided by the shared property.
-    private override init() {}
+    override init() {} // The initializer is accessible from outside, but it's still called only once, have to.
 
     // MARK: - Generic API Call
 
