@@ -7,6 +7,9 @@ Access the IMDb-like database for comprehensive movie information
 
 Our NetflixUIKit Clone Project is a feature-rich movie-watching application designed to deliver an exceptional user experience.
 
+## Demo
+![netflixDemo](https://github.com/Mweh/BootcampSwiftPhincon/blob/da354507bff6ee0c405fd7b0ce036d5489bccf21/akademik/week2-10/day1-80/netflixUIKitDemo.mp4)
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
