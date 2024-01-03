@@ -1,5 +1,5 @@
 # MWTech's NetflixUIKit Clone Project
-![netflixUIKit](https://github.com/Mweh/BootcampSwiftPhincon/blob/72358ed11a6b7bcb0cd3b49ad841ef341e374b50/akademik/week2-10/day1-80/netflixUIKit%20ezgif.gif)
+![netflixUIKit](https://github.com/Mweh/BootcampSwiftPhincon/blob/b86b4fad581683b3d0980fb00c4814e33e5c6df4/akademik/week2-10/day1-80/netflixUIKit%20ezgif.gif)
 
 Explore movie-watching experience  with NetflixUIKit Clone. Enjoy secure login, dynamic page loading, and more. Integrated with non-intrusive ads through AdMob to support the app. 
 Explore credits, reviews, and indulge in personalized features like Gemini AI – an advanced AI that can identify images, voice, and text, even speaking to enhance interaction. 
