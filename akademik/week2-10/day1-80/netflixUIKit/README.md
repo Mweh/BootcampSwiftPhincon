@@ -12,12 +12,14 @@ Our NetflixUIKit Clone Project is a feature-rich movie-watching application desi
 https://github.com/Mweh/BootcampSwiftPhincon/assets/40236619/a4bdbbe4-b389-4aee-afd3-2021c01d009a
 
 ## Table of Contents
+- [Tech Stack](#tech-stack)
 - [Features](#features)
 - [Installation](#installation)
   - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
   - [CocoaPods](#cocoapods)
 - [Folder Structure](#folder-structure)
-- [MVVM Design Pattern](#mvvm-design-pattern)
+- [Tree](#tree)
+- [Design Pattern](#design-pattern)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,9 +35,41 @@ https://github.com/Mweh/BootcampSwiftPhincon/assets/40236619/a4bdbbe4-b389-4aee-
 
 Explore the key features of our project:
 
-- Feature A
-- Feature B
-- ...
+- **Login Authentication:** Securely log in with implemented authentication logic.
+- **Dynamic Page Loading:** Enjoy dynamic page loading when scrolling vertically or to the bottom.
+- **API Debugging with Netfox:** Integrated Netfox for seamless API debugging.
+- **POST Method Integration:** Implemented the POST method from the TMDB API.
+- **YouTube Trailer Integration:** Watch trailer videos seamlessly using the integrated YouTube API.
+- **Face ID Security:** Ensure secure login with the Face ID feature.
+- **Reset Password:** Added a convenient reset password feature.
+- **Movie Ranking Display:** See movie rankings (1-10) beside the imageView for quick reference.
+- **Sliding Tabs in DetailView:** Enhanced navigation with sliding tabs in the detail view using Parchment.
+- **Credits View (creditsVC):** Explore credits for a comprehensive movie experience.
+- **Download Functionality:** Download movies with a long press for offline viewing.
+- **Text and Image Conversion:** Easily convert CV and images to text in the searchTextField.
+- **Share Button:** Share your favorite movies effortlessly.
+- **Display Entire List:** Explore the entire list of items with a dedicated feature.
+- **Duplicate Model Removal:** Enhance efficiency by removing duplicate unnecessary models.
+- **Recommendation View (recommendationVC):** Get personalized movie recommendations.
+- **Reviews View (reviewsVC):** Read and contribute reviews for a collaborative experience.
+- **Push to Another DetailView:** Seamlessly navigate to another detail view by clicking the movie poster inside itself.
+- **Data Storage:** Efficiently store data using integrated CoreData or UserDefaults.
+- **Recently Viewed Feature:** Quickly access recently viewed movies for a personalized experience.
+- **Floating Icon (backToTop):** Return to the top easily with a floating back-to-top icon in ComingSoonVC.
+- **Notification Badge (iconNotificationBadge):** Stay informed with a notification badge in HistoryVC.
+- **AdMob Integration:** Experience non-intrusive ads through AdMob for potential revenue generation.
+- **Custom Font Support:** Personalize your experience with added support for custom fonts.
+- **Anonymous Login:** Log in anonymously for a private browsing experience.
+- **Changelog in MoreVC:** Stay updated with a changelog feature in MoreVC.
+- **ChatAI (Google Gemini):** Interact with Gemini AI for image, voice, and text identification, including speech capabilities.
+- **Internet Speed Display:** Stay connected with real-time internet speed display.
+- **Localization (languageVC):** Enjoy a localized experience with language support.
+- **Custom Voice Support:** Enhance interaction with custom voice support using InstantSearchVoiceOverlay.
+- **Paste Control for GeminiChat:** Easily paste content in GeminiChat for seamless communication.
+- **Button Customization (I'm Feeling Lucky):** Change the label to "I'm Feeling Lucky" button with its unique feature in homeVC.
+- **Random Video Play:** Play random videos with the button, enhancing your viewing experience.
+- **Scrollable MoreViewController:** Effortlessly scroll through content in the MoreViewController.
+- **LanguageVC Task Completion:** Complete languageVC tasks with 'LanguageManager-iOS,' offering limited UILabel support (currently unable to change programmatically).
 
 ## Installation
 
@@ -93,7 +127,7 @@ Our project's folder structure is designed for modularity and separation of conc
 
 - **Assets**: Stores general assets used in the application.
 
-### Common
+### Utility
 
 - **Constants**: Includes files for storing constants used throughout the app.
 
@@ -174,7 +208,7 @@ Our project's folder structure is designed for modularity and separation of conc
 ```
 Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
-## MVVM Design Pattern
+## Design Pattern
 
 Our project follows the MVVM (Model-View-ViewModel) design pattern, a software architectural pattern that enhances separation of concerns, making the codebase more modular and maintainable.
 
@@ -190,7 +224,10 @@ The View represents the user interface and is responsible for displaying data to
 
 The ViewModel acts as an intermediary between the Model and the View. It transforms the data from the Model into a format that is easily consumable by the View and manages user interactions, often exposing data through bindings.
 
-![MVVM Diagram](https://user-images.githubusercontent.com/1812129/68319232-446cf900-00be-11ea-92cf-cad817b2af2c.png)
+### Coordinator
+Orchestrates navigation that helps in separating the navigation responsibility from the view controller.
+
+![MVVM-C Diagram](https://raya.engineering/wp-content/uploads/2022/02/Bildschirmfoto-2021-01-07-um-16.25.53-1024x501-1.png)
 
 ## Usage
 
