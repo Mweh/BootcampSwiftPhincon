@@ -34,7 +34,7 @@ class TopSearchViewController: UIViewController {
         return indicator
     }()
     
-    private let waitingLabel: UILabel = {
+    private let waitingLabel: UILabel = { // MARK: = TODO, not used
         let label = UILabel()
         label.text = "Waiting for network"
         label.textColor = .gray
@@ -46,7 +46,7 @@ class TopSearchViewController: UIViewController {
         configureTable()
         lottieConfig()
         bindApiData()
-//        setupNetworkStatusManager()
+//        setupNetworkStatusManager() // not used as of now
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,7 +54,7 @@ class TopSearchViewController: UIViewController {
         vm.loadData(for: .getTopRated, resultType: Movie.self)
     }
     
-    private func setupNetworkStatusManager() {
+    private func setupNetworkStatusManager() { // not used as of now
         // Add loading indicator to navigation title view
         let titleView = UIStackView(arrangedSubviews: [loadingIndicator, waitingLabel])
         titleView.axis = .horizontal

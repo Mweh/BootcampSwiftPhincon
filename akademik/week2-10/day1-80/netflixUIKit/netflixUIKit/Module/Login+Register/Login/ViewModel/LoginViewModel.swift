@@ -25,11 +25,14 @@ class LoginViewModel {
     
     // MARK: - Input
     
+    
     let emailText = BehaviorRelay<String?>(value: nil)
     let passwordText = BehaviorRelay<String?>(value: nil)
     
     // MARK: - Output
     
+    //konstisten menggunakan publishsubject atau BehaviorRelay
+
     let loginAnonymouslyTapped = PublishRelay<Void>()
     let regularLoginTapped = PublishRelay<Void>()
     let registerTapped = PublishRelay<Void>()
@@ -136,7 +139,7 @@ class LoginViewModel {
     
     func performGoogleSignIn(withPresenting viewController: UIViewController) {
         // Perform Google Sign-In
-        GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { [unowned self] result, error in
+        GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { [weak self] result, error in
             guard error == nil else { return }
             guard let user = result?.user,
                   let idToken = user.idToken?.tokenString
@@ -145,10 +148,12 @@ class LoginViewModel {
             _ = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
             
             // Show success alert and navigate to main tab view controller on successful Google Sign-In
-            self.showAlert(title: ConstantsLogin.Titles.success, message: ConstantsLogin.Messages.successGoogle) {
-                self.navigationController.pushViewController(self.coordinator.mainTabVC, animated: true)
+            self?.showAlert(title: ConstantsLogin.Titles.success, message: ConstantsLogin.Messages.successGoogle) {
+                if let mainTabVC = self?.coordinator.mainTabVC {
+                    self?.navigationController.pushViewController(, animated: true)
+                }
             }
         }
-    }
+//    }
 }
 

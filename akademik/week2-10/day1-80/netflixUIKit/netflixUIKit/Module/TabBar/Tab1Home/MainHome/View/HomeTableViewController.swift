@@ -62,7 +62,7 @@ class HomeTableViewController: UITableViewController {
                 return
             }
             self.dataMoviePreviews = data
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
         }).disposed(by: bag)
         
         vm.dataMoviePopular.asObservable().subscribe(onNext: { [weak self] data in
@@ -117,9 +117,6 @@ class HomeTableViewController: UITableViewController {
         case .VerticalCell:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VerticalCell", for: indexPath) as! VerticalCell
             cell.delegate = self
-            cell.iAmFeelingLuckyAction = {[weak self] in
-                
-            }
             
             cell.myFavAction = { [weak self] in
                 let vc = FavHomeVC()
@@ -209,5 +206,4 @@ extension HomeTableViewController: VerticalDelegate{
         vc.query = dataMoviePopular?.results[Int.random(in: 0...19)].title
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

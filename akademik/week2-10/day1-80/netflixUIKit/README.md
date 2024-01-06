@@ -8,7 +8,8 @@ Access the IMDb-like database for comprehensive movie information
 Our NetflixUIKit Clone Project is a feature-rich movie-watching application designed to deliver an exceptional user experience.
 
 ## Demo
-![netflixDemo](https://github.com/Mweh/BootcampSwiftPhincon/blob/da354507bff6ee0c405fd7b0ce036d5489bccf21/akademik/week2-10/day1-80/netflixUIKitDemo.mp4)
+
+<div><video controls src="https://github.com/Mweh/BootcampSwiftPhincon/blob/da354507bff6ee0c405fd7b0ce036d5489bccf21/akademik/week2-10/day1-80/netflixUIKitDemo.mp4" muted="false"></video></div>
 
 ## Table of Contents
 - [Features](#features)
@@ -225,6 +226,7 @@ Keep track of tasks, improvements, and future plans for our project.
 - [ ] Negative case
    -> [x] TrailerVC when there is no Data
 - [ ] cellForRowAt inside DiscoverViewController add void closure var insinde its cell for passing
+- [ ] Payment gateway
  
 ## DONE
 
@@ -277,3 +279,12 @@ Tasks that have been completed.
 - [ ] Combine 2 endpoints/struct models for comparison.
 - [ ] In ComingSoonVC, when clicked, it will pop up an alert "Should it be added to favorites? Yes or no," then it will be checked in UserDefaults whether there is data or not.
 - [ ] Crash when FaceID doesn't match
+
+
+## Notes:
+
+- Konstisten menggunakan publishsubject atau BehaviorRelay
+- Konsisten menggunakan Design pattern
+- Menfokus/implementasikan menyesuaikan fitur apa yang di presentasikan yg lbh berkualitas(critical, i.e: strong password), explore 2FA feature
+- Implement Payment gateway, kurang lengkap dlm ios development
+- Banyak fitur yang kurang dlm App ini
