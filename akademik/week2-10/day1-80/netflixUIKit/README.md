@@ -9,7 +9,7 @@ Our NetflixUIKit Clone Project is a feature-rich movie-watching application desi
 
 ## Demo
 
-<div><video controls src="https://github.com/Mweh/BootcampSwiftPhincon/blob/da354507bff6ee0c405fd7b0ce036d5489bccf21/akademik/week2-10/day1-80/netflixUIKitDemo.mp4" muted="false"></video></div>
+https://github.com/Mweh/BootcampSwiftPhincon/assets/40236619/a4bdbbe4-b389-4aee-afd3-2021c01d009a
 
 ## Table of Contents
 - [Features](#features)
