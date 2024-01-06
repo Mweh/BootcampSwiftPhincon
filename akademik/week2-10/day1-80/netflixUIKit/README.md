@@ -17,8 +17,8 @@ https://github.com/Mweh/BootcampSwiftPhincon/assets/40236619/a4bdbbe4-b389-4aee-
 - [Installation](#installation)
   - [Set up Info.plist and GoogleService-Info.plist](#set-up-infoplist-and-googleservice-infoplist)
   - [CocoaPods](#cocoapods)
-- [Folder Structure](#folder-structure)
 - [Tree](#tree)
+- [Folder Structure](#folder-structure)
 - [Design Pattern](#design-pattern)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -26,6 +26,7 @@ https://github.com/Mweh/BootcampSwiftPhincon/assets/40236619/a4bdbbe4-b389-4aee-
 - [TODOs](#todos)
 - [DONE](#done)
 - [BUG](#bug)
+- [Notes](#notes)
 
 ## Tech Stack
 
@@ -109,6 +110,51 @@ pod install
 
 This will install the required dependencies specified in the `Podfile`.
 
+## Tree
+```
+├── App
+│   ├── AppDelegate.swift
+│   └── SceneDelegate.swift
+├── GoogleService-Info.plist
+├── Info.plist
+├── Model
+│   ├── CoreData
+│   └── ModelTMDB
+├── Module
+│   ├── Additional
+│   │   ├── DetailFilm
+│   ├── Login+Register
+│   ├── SplashScreen
+│   └── TabBar
+│       ├── MainTab
+│       ├── Tab1Home
+│       ├── Tab2Search
+│       ├── Tab3Discover
+│       └── Tab4More
+├── Network
+│   ├── Service
+│   └── TMDBImageURL
+├── Resource
+│   ├── Assets.xcassets
+│   │   ├── AppIcon
+│   │   ├── CustomColor
+│   │   ├── GeminiImage
+│   │   ├── LangIcon
+│   │   ├── MovieImages
+│   │   ├── NetflixLogo
+│   │   └── Splash
+│   ├── CompletedTasks.md
+│   ├── CustomFonts
+│   ├── LottieFiles
+│   ├── en.lproj
+└── Utility
+    ├── Components
+    ├── Constant
+    ├── Extensions
+    └── Helper
+```
+Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
+
 ## Folder Structure
 
 Our project's folder structure is designed for modularity and separation of concerns, enhancing maintainability and organization.
@@ -162,51 +208,6 @@ Our project's folder structure is designed for modularity and separation of conc
 - Stores configuration settings and metadata for the app.
 
 ---
-
-## Tree - netflixUIKit
-```
-├── App
-│   ├── AppDelegate.swift
-│   └── SceneDelegate.swift
-├── GoogleService-Info.plist
-├── Info.plist
-├── Model
-│   ├── CoreData
-│   └── ModelTMDB
-├── Module
-│   ├── Additional
-│   │   ├── DetailFilm
-│   ├── Login+Register
-│   ├── SplashScreen
-│   └── TabBar
-│       ├── MainTab
-│       ├── Tab1Home
-│       ├── Tab2Search
-│       ├── Tab3Discover
-│       └── Tab4More
-├── Network
-│   ├── Service
-│   └── TMDBImageURL
-├── Resource
-│   ├── Assets.xcassets
-│   │   ├── AppIcon
-│   │   ├── CustomColor
-│   │   ├── GeminiImage
-│   │   ├── LangIcon
-│   │   ├── MovieImages
-│   │   ├── NetflixLogo
-│   │   └── Splash
-│   ├── CompletedTasks.md
-│   ├── CustomFonts
-│   ├── LottieFiles
-│   ├── en.lproj
-└── Utility
-    ├── Components
-    ├── Constant
-    ├── Extensions
-    └── Helper
-```
-Our project's folder structure is designed to be modular and follows a clear separation of concerns. Each folder has a specific purpose, contributing to the overall maintainability and organization of the codebase. As the project evolves, consider updating the structure to accommodate new features and maintain a clean and scalable architecture.
 
 ## Design Pattern
 
@@ -318,7 +319,7 @@ Tasks that have been completed.
 - [ ] Crash when FaceID doesn't match
 
 
-## Notes:
+## Notes
 
 - Konstisten menggunakan publishsubject atau BehaviorRelay
 - Konsisten menggunakan Design pattern
