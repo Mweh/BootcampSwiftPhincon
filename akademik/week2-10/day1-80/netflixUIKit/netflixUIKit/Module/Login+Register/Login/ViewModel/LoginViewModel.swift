@@ -150,10 +150,10 @@ class LoginViewModel {
             // Show success alert and navigate to main tab view controller on successful Google Sign-In
             self?.showAlert(title: ConstantsLogin.Titles.success, message: ConstantsLogin.Messages.successGoogle) {
                 if let mainTabVC = self?.coordinator.mainTabVC {
-                    self?.navigationController.pushViewController(, animated: true)
+                    self?.navigationController.pushViewController(mainTabVC, animated: true)
                 }
             }
         }
-//    }
+    }
 }
 
